@@ -1,0 +1,30 @@
+-----------------------------------------------------------------------------
+                                README 
+-----------------------------------------------------------------------------
+Last update:	01/11/2011
+
+Description:
+	An application that creates and maintains a routing tree between wireless sensor motes.
+	
+			
+DEFINE FLAGS:
+	SERIAL_EN	if defined, serial communication capabilities added to node.
+	
+	PRINTFDBG_MODE	if defined, printf module added and printf messages enabled. DO NOT enable that for simulation build.
+	
+Some helpful commands for testing:
+	motelist
+		lists connected motes in computer
+	
+	java net.tinyos.tools.MsgReader -comm serial@/dev/ttyUSB0:iris NotifyParentMsg 
+		reads NotifyParentMsg from serial of iris mote , mib520 uses /dev/ttyUSB1 for reading instead.  
+	
+	java net.tinyos.tools.Listen -comm serial@/dev/ttyUSB0:iris
+		listens the messages in bytes mode.
+	
+	make iris install,0 mib520,/dev/ttyUSB0
+		builds and installs application on iris mote connected on mib520 board and uses /dev/ttyUSB0 for writting.
+
+	make micaz sim
+		simulation
+		
