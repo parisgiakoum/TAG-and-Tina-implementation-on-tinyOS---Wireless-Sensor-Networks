@@ -7,9 +7,6 @@ module SRTreeC
 {
 	uses interface Boot;
 	uses interface SplitControl as RadioControl;
-#ifdef SERIAL_EN
-	uses interface SplitControl as SerialControl;
-#endif
 
 	uses interface Packet as RoutingPacket;
 	uses interface AMSend as RoutingAMSend;
@@ -19,21 +16,10 @@ module SRTreeC
 	uses interface AMPacket as NotifyAMPacket;
 	uses interface Packet as NotifyPacket;
 
-#ifdef SERIAL_EN
-	uses interface AMSend as SerialAMSend;
-	uses interface AMPacket as SerialAMPacket;
-	uses interface Packet as SerialPacket;
-#endif
-	uses interface Leds;
 	uses interface Timer<TMilli> as RoutingMsgTimer;
-	uses interface Timer<TMilli> as Led0Timer;
-	uses interface Timer<TMilli> as Led1Timer;
-	uses interface Timer<TMilli> as Led2Timer;
-	uses interface Timer<TMilli> as LostTaskTimer;
 	
 	uses interface Receive as RoutingReceive;
 	uses interface Receive as NotifyReceive;
-	uses interface Receive as SerialReceive;
 	
 	uses interface PacketQueue as RoutingSendQueue;
 	uses interface PacketQueue as RoutingReceiveQueue;
@@ -48,21 +34,8 @@ implementation
 	message_t radioRoutingSendPkt;
 	message_t radioNotifySendPkt;
 	
-	
-	message_t serialPkt;
-	//message_t serialRecPkt;
-	
 	bool RoutingSendBusy=FALSE;
 	bool NotifySendBusy=FALSE;
-
-#ifdef SERIAL_EN
-	bool serialBusy=FALSE;
-#endif
-	
-	bool lostRoutingSendTask=FALSE;
-	bool lostNotifySendTask=FALSE;
-	bool lostRoutingRecTask=FALSE;
-	bool lostNotifyRecTask=FALSE;
 	
 	uint8_t curdepth;
 	uint16_t parentID;
@@ -71,119 +44,18 @@ implementation
 	task void sendNotifyTask();
 	task void receiveRoutingTask();
 	task void receiveNotifyTask();
-	
-	void setLostRoutingSendTask(bool state)
-	{
-		atomic{
-			lostRoutingSendTask=state;
-		}
-		if(state==TRUE)
-		{
-			//call Leds.led2On();
-		}
-		else 
-		{
-			//call Leds.led2Off();
-		}
-	}
-	
-	void setLostNotifySendTask(bool state)
-	{
-		atomic{
-		lostNotifySendTask=state;
-		}
-		
-		if(state==TRUE)
-		{
-			//call Leds.led2On();
-		}
-		else 
-		{
-			//call Leds.led2Off();
-		}
-	}
-	
-	void setLostNotifyRecTask(bool state)
-	{
-		atomic{
-		lostNotifyRecTask=state;
-		}
-	}
-	
-	void setLostRoutingRecTask(bool state)
-	{
-		atomic{
-		lostRoutingRecTask=state;
-		}
-	}
-	void setRoutingSendBusy(bool state)
-	{
-		atomic{
-		RoutingSendBusy=state;
-		}
-		if(state==TRUE)
-		{
-			call Leds.led0On();
-			call Led0Timer.startOneShot(TIMER_LEDS_MILLI);
-		}
-		else 
-		{
-			//call Leds.led0Off();
-		}
-	}
-	
-	void setNotifySendBusy(bool state)
-	{
-		atomic{
-		NotifySendBusy=state;
-		}
-		dbg("SRTreeC","NotifySendBusy = %s\n", (state == TRUE)?"TRUE":"FALSE");
-#ifdef PRINTFDBG_MODE
-		printf("\t\t\t\t\t\tNotifySendBusy = %s\n", (state == TRUE)?"TRUE":"FALSE");
-#endif
-		
-		if(state==TRUE)
-		{
-			call Leds.led1On();
-			call Led1Timer.startOneShot(TIMER_LEDS_MILLI);
-		}
-		else 
-		{
-			//call Leds.led1Off();
-		}
-	}
-#ifdef SERIAL_EN
-	void setSerialBusy(bool state)
-	{
-		serialBusy=state;
-		if(state==TRUE)
-		{
-			call Leds.led2On();
-			call Led2Timer.startOneShot(TIMER_LEDS_MILLI);
-		}
-		else
-		{
-			//call Leds.led2Off();
-		}
-	}
-#endif
+
+////////////////////	
 	event void Boot.booted()
 	{
-		/////// arxikopoiisi radio kai serial
+		/////// arxikopoiisi radio
 		call RadioControl.start();
 		
-		setRoutingSendBusy(FALSE);
-		setNotifySendBusy(FALSE);
-#ifdef SERIAL_EN
-		setSerialBusy(FALSE);
-#endif
+
 		roundCounter =0;
 		
 		if(TOS_NODE_ID==0)
 		{
-#ifdef SERIAL_EN
-			call SerialControl.start();
-#endif
 			curdepth=0;
 			parentID=0;
 			dbg("Boot", "curdepth = %d  ,  parentID= %d \n", curdepth , parentID);
@@ -204,6 +76,7 @@ implementation
 		}
 	}
 	
+///////////////////
 	event void RadioControl.startDone(error_t err)
 	{
 		if (err == SUCCESS)
@@ -216,7 +89,6 @@ implementation
 			
 			//call RoutingMsgTimer.startOneShot(TIMER_PERIOD_MILLI);
 			//call RoutingMsgTimer.startPeriodic(TIMER_PERIOD_MILLI);
-			//call LostTaskTimer.startPeriodic(SEND_CHECK_MILLIS);
 			if (TOS_NODE_ID==0)
 			{
 				call RoutingMsgTimer.startOneShot(TIMER_FAST_PERIOD);
@@ -232,7 +104,8 @@ implementation
 			call RadioControl.start();
 		}
 	}
-	
+
+///////////////////
 	event void RadioControl.stopDone(error_t err)
 	{ 
 		dbg("Radio", "Radio stopped!\n");
@@ -241,73 +114,18 @@ implementation
 		printfflush();
 #endif
 	}
-	event void SerialControl.startDone(error_t err)
-	{
-		if (err == SUCCESS)
-		{
-			dbg("Serial" , "Serial initialized successfully! \n");
-#ifdef PRINTFDBG_MODE
-			printf("Serial initialized successfully! \n");
-			printfflush();
-#endif
-			//call RoutingMsgTimer.startPeriodic(TIMER_PERIOD_MILLI);
-		}
-		else
-		{
-			dbg("Serial" , "Serial initialization failed! Retrying... \n");
-#ifdef PRINTFDBG_MODE
-			printf("Serial initialization failed! Retrying... \n");
-			printfflush();
-#endif
-			call SerialControl.start();
-		}
-	}
-	event void SerialControl.stopDone(error_t err)
-	{
-		dbg("Serial", "Serial stopped! \n");
-#ifdef PRINTFDBG_MODE
-		printf("Serial stopped! \n");
-		printfflush();
-#endif
-	}
 	
-	event void LostTaskTimer.fired()
-	{
-		if (lostRoutingSendTask)
-		{
-			post sendRoutingTask();
-			setLostRoutingSendTask(FALSE);
-		}
-		
-		if( lostNotifySendTask)
-		{
-			post sendNotifyTask();
-			setLostNotifySendTask(FALSE);
-		}
-		
-		if (lostRoutingRecTask)
-		{
-			post receiveRoutingTask();
-			setLostRoutingRecTask(FALSE);
-		}
-		
-		if ( lostNotifyRecTask)
-		{
-			post receiveNotifyTask();
-			setLostNotifyRecTask(FALSE);
-		}
-	}
-	
+////////////////////////////
 	event void RoutingMsgTimer.fired()
 	{
 		message_t tmp;
 		error_t enqueueDone;
 		
 		RoutingMsg* mrpkt;
-		dbg("SRTreeC", "RoutingMsgTimer fired!  radioBusy = %s \n",(RoutingSendBusy)?"True":"False");
+		dbg("SRTreeC", "RoutingMsgTimer fired!");
 #ifdef PRINTFDBG_MODE
 		printfflush();
-		printf("RoutingMsgTimer fired!  radioBusy = %s \n",(RoutingSendBusy)?"True":"False");
+		printf("RoutingMsgTimer fired!  radioBusy");
 		printfflush();
 #endif
 		if (TOS_NODE_ID==0)
@@ -330,7 +148,6 @@ implementation
 			return;
 		}
 		
-		
 		mrpkt = (RoutingMsg*) (call RoutingPacket.getPayload(&tmp, sizeof(RoutingMsg)));
 		if(mrpkt==NULL)
 		{
@@ -351,9 +168,8 @@ implementation
 		printf("NodeID= %d : RoutingMsg sending...!!!! \n", TOS_NODE_ID);
 		printfflush();
 #endif		
-		call RoutingAMPacket.setDestination(&tmp, AM_BROADCAST_ADDR);
-		call RoutingPacket.setPayloadLength(&tmp, sizeof(RoutingMsg));
 		
+		// Enqueue
 		enqueueDone=call RoutingSendQueue.enqueue(tmp);
 		
 		if( enqueueDone==SUCCESS)
@@ -384,43 +200,24 @@ implementation
 		}		
 	}
 	
-	event void Led0Timer.fired()
-	{
-		call Leds.led0Off();
-	}
-	event void Led1Timer.fired()
-	{
-		call Leds.led1Off();
-	}
-	event void Led2Timer.fired()
-	{
-		call Leds.led2Off();
-	}
-	
+
+///////////////////////
 	event void RoutingAMSend.sendDone(message_t * msg , error_t err)
 	{
-		dbg("SRTreeC", "A Routing package sent... %s \n",(err==SUCCESS)?"True":"False");
-#ifdef PRINTFDBG_MODE
-		printf("A Routing package sent... %s \n",(err==SUCCESS)?"True":"False");
-		printfflush();
-#endif
-		
+
 		dbg("SRTreeC" , "Package sent %s \n", (err==SUCCESS)?"True":"False");
 #ifdef PRINTFDBG_MODE
 		printf("Package sent %s \n", (err==SUCCESS)?"True":"False");
 		printfflush();
 #endif
-		setRoutingSendBusy(FALSE);
-		
+
 		if(!(call RoutingSendQueue.empty()))
 		{
 			post sendRoutingTask();
-		}
-		//call Leds.led0Off();
-	
-		
+		}		
 	}
-	
+
+/////////////////////////////	
 	event void NotifyAMSend.sendDone(message_t *msg , error_t err)
 	{
 		dbg("SRTreeC", "A Notify package sent... %s \n",(err==SUCCESS)?"True":"False");
@@ -435,32 +232,12 @@ implementation
 		printf("Package sent %s \n", (err==SUCCESS)?"True":"False");
 		printfflush();
 #endif
-		setNotifySendBusy(FALSE);
 		
 		if(!(call NotifySendQueue.empty()))
 		{
 			post sendNotifyTask();
 		}
-		//call Leds.led0Off();
-		
-		
 	}
-	
-	event void SerialAMSend.sendDone(message_t* msg , error_t err)
-	{
-		if ( &serialPkt == msg)
-		{
-			dbg("Serial" , "Package sent %s \n", (err==SUCCESS)?"True":"False");
-#ifdef PRINTFDBG_MODE
-			printf("Package sent %s \n", (err==SUCCESS)?"True":"False");
-			printfflush();
-#endif
-			setSerialBusy(FALSE);
-			
-			//call Leds.led2Off();
-		}
-	}
-	
 	
 	event message_t* NotifyReceive.receive( message_t* msg , void* payload , uint8_t len)
 	{
@@ -477,18 +254,6 @@ implementation
 		printfflush();
 #endif
 
-		//if(len!=sizeof(NotifyParentMsg))
-		//{
-			//dbg("SRTreeC","\t\tUnknown message received!!!\n");
-//#ifdef PRINTFDBG_MODE
-			//printf("\t\t Unknown message received!!!\n");
-			//printfflush();
-//#endif
-			//return msg;http://courses.ece.tuc.gr/
-		//}
-		
-		//call Leds.led1On();
-		//call Led1Timer.startOneShot(TIMER_LEDS_MILLI);
 		atomic{
 		memcpy(&tmp,msg,sizeof(message_t));
 		//tmp=*(message_t*)msg;
@@ -512,7 +277,6 @@ implementation
 #endif			
 		}
 		
-		//call Leds.led1Off();
 		dbg("SRTreeC", "### NotifyReceive.receive() end ##### \n");
 		return msg;
 	}
@@ -531,20 +295,7 @@ implementation
 #ifdef PRINTFDBG_MODE		
 		printf("Something Received!!!, len = %u , npm=%u , rm=%u\n",len, sizeof(NotifyParentMsg), sizeof(RoutingMsg));
 		printfflush();
-#endif
-		//call Leds.led1On();
-		//call Led1Timer.startOneShot(TIMER_LEDS_MILLI);
-		
-		//if(len!=sizeof(RoutingMsg))
-		//{
-			//dbg("SRTreeC","\t\tUnknown message received!!!\n");
-//#ifdef PRINTFDBG_MODE
-			//printf("\t\t Unknown message received!!!\n");
-			//printfflush();
-//#endif
-			//return msg;
-		//}
-		
+#endif		
 		atomic{
 		memcpy(&tmp,msg,sizeof(message_t));
 		//tmp=*(message_t*)msg;
@@ -565,33 +316,19 @@ implementation
 			printf("RoutingMsg enqueue failed!!! \n");
 			printfflush();
 #endif			
-		}
-		
-		//call Leds.led1Off();
-		
+		}		
 		dbg("SRTreeC", "### RoutingReceive.receive() end ##### \n");
 		return msg;
 	}
 	
-	event message_t* SerialReceive.receive(message_t* msg , void* payload , uint8_t len)
-	{
-		// when receiving from serial port
-		dbg("Serial","Received msg from serial port \n");
-#ifdef PRINTFDBG_MODE
-		printf("Reveived message from serial port \n");
-		printfflush();
-#endif
-		return msg;
-	}
-	
+
 	////////////// Tasks implementations //////////////////////////////
 	
 	
+/////////////
 	task void sendRoutingTask()
 	{
 		//uint8_t skip;
-		uint8_t mlen;
-		uint16_t mdest;
 		error_t sendDone;
 		//message_t radioRoutingSendPkt;
 		
@@ -608,35 +345,10 @@ implementation
 #endif
 			return;
 		}
-		
-		
-		if(RoutingSendBusy)
-		{
-			dbg("SRTreeC","sendRoutingTask(): RoutingSendBusy= TRUE!!!\n");
-#ifdef PRINTFDBG_MODE
-			printf(	"sendRoutingTask(): RoutingSendBusy= TRUE!!!\n");
-			printfflush();
-#endif
-			setLostRoutingSendTask(TRUE);
-			return;
-		}
-		
+				
 		radioRoutingSendPkt = call RoutingSendQueue.dequeue();
-		
-		//call Leds.led2On();
-		//call Led2Timer.startOneShot(TIMER_LEDS_MILLI);
-		mlen= call RoutingPacket.payloadLength(&radioRoutingSendPkt);
-		mdest=call RoutingAMPacket.destination(&radioRoutingSendPkt);
-		if(mlen!=sizeof(RoutingMsg))
-		{
-			dbg("SRTreeC","\t\tsendRoutingTask(): Unknown message!!!\n");
-#ifdef PRINTFDBG_MODE
-			printf("\t\tsendRoutingTask(): Unknown message!!!!\n");
-			printfflush();
-#endif
-			return;
-		}
-		sendDone=call RoutingAMSend.send(mdest,&radioRoutingSendPkt,mlen);
+
+		sendDone=call RoutingAMSend.send(AM_BROADCAST_ADDR,&radioRoutingSendPkt,sizeof(RoutingMsg));
 		
 		if ( sendDone== SUCCESS)
 		{
@@ -645,7 +357,6 @@ implementation
 			printf("sendRoutingTask(): Send returned success!!!\n");
 			printfflush();
 #endif
-			setRoutingSendBusy(TRUE);
 		}
 		else
 		{
@@ -656,6 +367,9 @@ implementation
 			//setRoutingSendBusy(FALSE);
 		}
 	}
+
+
+
 	/**
 	 * dequeues a message and sends it
 	 */
@@ -689,14 +403,11 @@ implementation
 			printf(	"sendTask(): NotifySendBusy= TRUE!!!\n");
 			printfflush();
 #endif
-			setLostNotifySendTask(TRUE);
 			return;
 		}
 		
 		radioNotifySendPkt = call NotifySendQueue.dequeue();
 		
-		//call Leds.led2On();
-		//call Led2Timer.startOneShot(TIMER_LEDS_MILLI);
 		mlen=call NotifyPacket.payloadLength(&radioNotifySendPkt);
 		
 		mpayload= call NotifyPacket.getPayload(&radioNotifySendPkt,mlen);
@@ -728,7 +439,6 @@ implementation
 			printf("sendNotifyTask(): Send returned success!!!\n");
 			printfflush();
 #endif
-			setNotifySendBusy(TRUE);
 		}
 		else
 		{
@@ -736,9 +446,10 @@ implementation
 #ifdef PRINTFDBG_MODE
 			printf("SendNotifyTask(): send failed!!!\n");
 #endif
-			//setNotifySendBusy(FALSE);
 		}
 	}
+
+
 	////////////////////////////////////////////////////////////////////
 	//*****************************************************************/
 	///////////////////////////////////////////////////////////////////
@@ -918,7 +629,6 @@ implementation
 			printf("receiveRoutingTask():Empty message!!! \n");
 			printfflush();
 #endif
-			setLostRoutingRecTask(TRUE);
 			return;
 		}
 		
@@ -975,24 +685,7 @@ implementation
 			}
 			if ( TOS_NODE_ID==0)
 			{
-#ifdef SERIAL_EN
-				if (!serialBusy)
-				{ // mipos mporei na mpei san task?
-					NotifyParentMsg * m = (NotifyParentMsg *) (call SerialPacket.getPayload(&serialPkt, sizeof(NotifyParentMsg)));
-					m->senderID=mr->senderID;
-					m->depth = mr->depth;
-					m->parentID = mr->parentID;
-					dbg("Serial", "Sending NotifyParentMsg to PC... \n");
-#ifdef PRINTFDBG_MODE
-					printf("Sending NotifyParentMsg to PC..\n");
-					printfflush();
-#endif
-					if (call SerialAMSend.send(parentID, &serialPkt, sizeof(NotifyParentMsg))==SUCCESS)
-					{
-						setSerialBusy(TRUE);
-					}
-				}
-#endif
+
 			}
 			else
 			{
@@ -1032,7 +725,6 @@ implementation
 			printf("receiveNotifyTask():Empty message!!! \n");
 			printfflush();
 #endif
-			setLostNotifyRecTask(TRUE);
 			return;
 		}
 		
