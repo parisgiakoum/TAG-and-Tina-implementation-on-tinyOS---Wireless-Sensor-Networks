@@ -18,7 +18,7 @@ t.addChannel("Radio",f)
 t.addChannel("SRTreeC",f)
 #t.addChannel("PacketQueueC",f)
 
-for i in range(0,16):
+for i in range(0,64):
 	m=t.getNode(i)
 	m.bootAtTime(10*t.ticksPerSecond() + i)
 
@@ -46,10 +46,10 @@ for line in  lines:
 	str1=line.strip()
 	if str1:
 		val=int(str1)
-		for i in range(0,16):
+		for i in range(0,64):
 			t.getNode(i).addNoiseTraceReading(val)
 noiseF.close()
-for i in range(0,16):
+for i in range(0,64):
 	t.getNode(i).createNoiseModel()
 	
 ok=False

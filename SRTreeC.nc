@@ -136,7 +136,7 @@ implementation
 			dbg("SRTreeC", "#######   ROUND   %u    ############## \n", roundCounter);
 			dbg("SRTreeC", "#####################################\n");
 			
-			call RoutingMsgTimer.startOneShot(TIMER_PERIOD_MILLI);
+		//	call RoutingMsgTimer.startOneShot(TIMER_PERIOD_MILLI);
 		}
 		
 		if(call RoutingSendQueue.full())
@@ -218,7 +218,7 @@ implementation
 	}
 
 /////////////////////////////	
-	event void NotifyAMSend.sendDone(message_t *msg , error_t err)
+	event void NotifyAMSend.sendDone(message_t *msendDonesg , error_t err)
 	{
 		dbg("SRTreeC", "A Notify package sent... %s \n",(err==SUCCESS)?"True":"False");
 #ifdef PRINTFDBG_MODE
@@ -238,7 +238,9 @@ implementation
 			post sendNotifyTask();
 		}
 	}
-	
+
+
+///////////////////////////	
 	event message_t* NotifyReceive.receive( message_t* msg , void* payload , uint8_t len)
 	{
 		error_t enqueueDone;
@@ -280,7 +282,9 @@ implementation
 		dbg("SRTreeC", "### NotifyReceive.receive() end ##### \n");
 		return msg;
 	}
-//	event message_t* Receive.receive(message_t* msg, void* payload, uint8_t len)
+
+
+//////////////////////////////
 	event message_t* RoutingReceive.receive( message_t * msg , void * payload, uint8_t len)
 	{
 		error_t enqueueDone;
@@ -291,7 +295,6 @@ implementation
 		
 		dbg("SRTreeC", "### RoutingReceive.receive() start ##### \n");
 		dbg("SRTreeC", "Something received!!!  from %u  %u \n",((RoutingMsg*) payload)->senderID ,  msource);
-		//dbg("SRTreeC", "Something received!!!\n");
 #ifdef PRINTFDBG_MODE		
 		printf("Something Received!!!, len = %u , npm=%u , rm=%u\n",len, sizeof(NotifyParentMsg), sizeof(RoutingMsg));
 		printfflush();
@@ -328,7 +331,6 @@ implementation
 /////////////
 	task void sendRoutingTask()
 	{
-		//uint8_t skip;
 		error_t sendDone;
 		//message_t radioRoutingSendPkt;
 		
@@ -364,12 +366,10 @@ implementation
 #ifdef PRINTFDBG_MODE
 			printf("SendRoutingTask(): send failed!!!\n");
 #endif
-			//setRoutingSendBusy(FALSE);
 		}
 	}
 
-
-
+///////////////////////////////////////
 	/**
 	 * dequeues a message and sends it
 	 */
@@ -391,16 +391,6 @@ implementation
 			dbg("SRTreeC","sendNotifyTask(): Q is empty!\n");
 #ifdef PRINTFDBG_MODE		
 			printf("sendNotifyTask():Q is empty!\n");
-			printfflush();
-#endif
-			return;
-		}
-		
-		if(NotifySendBusy==TRUE)
-		{
-			dbg("SRTreeC","sendNotifyTask(): NotifySendBusy= TRUE!!!\n");
-#ifdef PRINTFDBG_MODE
-			printf(	"sendTask(): NotifySendBusy= TRUE!!!\n");
 			printfflush();
 #endif
 			return;
@@ -459,7 +449,6 @@ implementation
 	
 	task void receiveRoutingTask()
 	{
-		message_t tmp;
 		uint8_t len;
 		message_t radioRoutingRecPkt;
 		
@@ -482,7 +471,6 @@ implementation
 				
 		if(len == sizeof(RoutingMsg))
 		{
-			NotifyParentMsg* m;
 			RoutingMsg * mpkt = (RoutingMsg*) (call RoutingPacket.getPayload(&radioRoutingRecPkt,len));
 			
 			//if(TOS_NODE_ID >0)
@@ -502,125 +490,20 @@ implementation
 				// tote den exei akoma patera
 				parentID= call RoutingAMPacket.source(&radioRoutingRecPkt);//mpkt->senderID;q
 				curdepth= mpkt->depth + 1;
+				dbg("SRTreeC" , "NodeID= %d : curdepth= %d , parentID= %d \n", TOS_NODE_ID ,curdepth , parentID);
 #ifdef PRINTFDBG_MODE
 				printf("NodeID= %d : curdepth= %d , parentID= %d \n", TOS_NODE_ID ,curdepth , parentID);
 				printfflush();
 #endif
-				// tha stelnei kai ena minima NotifyParentMsg ston patera
-				
-				m = (NotifyParentMsg *) (call NotifyPacket.getPayload(&tmp, sizeof(NotifyParentMsg)));
-				m->senderID=TOS_NODE_ID;
-				m->depth = curdepth;
-				m->parentID = parentID;
-				dbg("SRTreeC" , "receiveRoutingTask():NotifyParentMsg sending to node= %d... \n", parentID);
-#ifdef PRINTFDBG_MODE
-				printf("NotifyParentMsg NodeID= %d sent!!! \n", TOS_NODE_ID);
-				printfflush();
-#endif
-				call NotifyAMPacket.setDestination(&tmp, parentID);
-				call NotifyPacket.setPayloadLength(&tmp,sizeof(NotifyParentMsg));
-				
-				if (call NotifySendQueue.enqueue(tmp)==SUCCESS)
-				{
-					dbg("SRTreeC", "receiveRoutingTask(): NotifyParentMsg enqueued in SendingQueue successfully!!!");
-#ifdef PRINTFDBG_MODE
-					printf("receiveRoutingTask(): NotifyParentMsg enqueued successfully!!!");
-					printfflush();
-#endif
-					if (call NotifySendQueue.size() == 1)
-					{
-						post sendNotifyTask();
-					}
-				}
-				if (TOS_NODE_ID!=0)
-				{
-					call RoutingMsgTimer.startOneShot(TIMER_FAST_PERIOD);
-				}
+	
+
+				call RoutingMsgTimer.startOneShot(TIMER_FAST_PERIOD);
 			}
 			else
 			{
-				
-				if (( curdepth > mpkt->depth +1) || (mpkt->senderID==parentID))
-				{
-					uint16_t oldparentID = parentID;
-					
-				
-					parentID= call RoutingAMPacket.source(&radioRoutingRecPkt);//mpkt->senderID;
-					curdepth = mpkt->depth + 1;
-				
-#ifdef PRINTFDBG_MODE
-					printf("NodeID= %d : curdepth= %d , parentID= %d \n", TOS_NODE_ID ,curdepth , parentID);
-					printfflush();
-#endif					
-									
-					
-					dbg("SRTreeC" , "NotifyParentMsg sending to node= %d... \n", oldparentID);
-#ifdef PRINTFDBG_MODE
-					printf("NotifyParentMsg sending to node=%d... \n", oldparentID);
-					printfflush();
-#endif
-					if ( (oldparentID<65535) || (oldparentID>0) || (oldparentID==parentID))
-					{
-						m = (NotifyParentMsg *) (call NotifyPacket.getPayload(&tmp, sizeof(NotifyParentMsg)));
-						m->senderID=TOS_NODE_ID;
-						m->depth = curdepth;
-						m->parentID = parentID;
-						
-						call NotifyAMPacket.setDestination(&tmp,oldparentID);
-						//call NotifyAMPacket.setType(&tmp,AM_NOTIFYPARENTMSG);
-						call NotifyPacket.setPayloadLength(&tmp,sizeof(NotifyParentMsg));
-								
-						if (call NotifySendQueue.enqueue(tmp)==SUCCESS)
-						{
-							dbg("SRTreeC", "receiveRoutingTask(): NotifyParentMsg enqueued in SendingQueue successfully!!!\n");
-#ifdef PRINTFDBG_MODE
-							printf("receiveRoutingTask(): NotifyParentMsg enqueued successfully!!!");
-							printfflush();
-#endif
-							if (call NotifySendQueue.size() == 1)
-							{
-								post sendNotifyTask();
-							}
-						}
-					}
-					if (TOS_NODE_ID!=0)
-					{
-						call RoutingMsgTimer.startOneShot(TIMER_FAST_PERIOD);
-					}
-					// tha stelnei kai ena minima NotifyParentMsg 
-					// ston kainourio patera kai ston palio patera.
-					
-					if (oldparentID!=parentID)
-					{
-						m = (NotifyParentMsg *) (call NotifyPacket.getPayload(&tmp, sizeof(NotifyParentMsg)));
-						m->senderID=TOS_NODE_ID;
-						m->depth = curdepth;
-						m->parentID = parentID;
-						dbg("SRTreeC" , "receiveRoutingTask():NotifyParentMsg sending to node= %d... \n", parentID);
-#ifdef PRINTFDBG_MODE
-						printf("NotifyParentMsg NodeID= %d sent!!! \n", TOS_NODE_ID);
-						printfflush();
-#endif
-						call NotifyAMPacket.setDestination(&tmp, parentID);
-						call NotifyPacket.setPayloadLength(&tmp,sizeof(NotifyParentMsg));
-						
-						if (call NotifySendQueue.enqueue(tmp)==SUCCESS)
-						{
-							dbg("SRTreeC", "receiveRoutingTask(): NotifyParentMsg enqueued in SendingQueue successfully!!! \n");
-#ifdef PRINTFDBG_MODE					
-							printf("receiveRoutingTask(): NotifyParentMsg enqueued successfully!!!");
-							printfflush();
-#endif
-							if (call NotifySendQueue.size() == 1)
-							{
-								post sendNotifyTask();
-							}
-						}
-					}
-				}
-				
-				
+				dbg("SRTreeC" , "NodeID= %d : Already has a parent: curdepth= %d, parentID= %d \n", TOS_NODE_ID ,curdepth , parentID);
 			}
+							
 		}
 		else
 		{
