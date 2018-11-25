@@ -6,7 +6,8 @@ import random
 
 t=Tossim([])
 f=sys.stdout #open('./logfile.txt','w')
-SIM_END_TIME= 900 * t.ticksPerSecond()
+SIM_END_TIME= 911 * t.ticksPerSecond()
+nodes = 64
 
 print "TicksPerSecond : ", t.ticksPerSecond(),"\n"
 
@@ -17,8 +18,9 @@ t.addChannel("Radio",f)
 #t.addChannel("Serial",f)
 t.addChannel("SRTreeC",f)
 #t.addChannel("PacketQueueC",f)
+t.addChannel("EpochMsg", f)
 
-for i in range(0,64):
+for i in range(0,nodes):
 	m=t.getNode(i)
 	m.bootAtTime(10*t.ticksPerSecond() + i)
 
@@ -46,10 +48,10 @@ for line in  lines:
 	str1=line.strip()
 	if str1:
 		val=int(str1)
-		for i in range(0,64):
+		for i in range(0,nodes):
 			t.getNode(i).addNoiseTraceReading(val)
 noiseF.close()
-for i in range(0,64):
+for i in range(0,nodes):
 	t.getNode(i).createNoiseModel()
 	
 ok=False

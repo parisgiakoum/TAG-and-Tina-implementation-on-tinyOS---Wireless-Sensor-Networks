@@ -17,6 +17,8 @@ module SRTreeC
 	uses interface Packet as NotifyPacket;
 
 	uses interface Timer<TMilli> as RoutingMsgTimer;
+	uses interface Timer<TMilli> as EpochTimer;
+	uses interface Timer<TMilli> as SendMeasTimer;
 	
 	uses interface Receive as RoutingReceive;
 	uses interface Receive as NotifyReceive;
@@ -36,6 +38,7 @@ implementation
 	
 	bool RoutingSendBusy=FALSE;
 	bool NotifySendBusy=FALSE;
+	bool FinishedRouting = FALSE;
 	
 	uint8_t curdepth;
 	uint16_t parentID;
@@ -86,12 +89,17 @@ implementation
 			printf("Radio initialized successfully!!!\n");
 			printfflush();
 #endif
+
+			call EpochTimer.startPeriodic(TIMER_PERIOD_MILLI);
+			call SendMeasTimer.startOneShot(TIMER_ROUTING_DURATION);
+
 			
 			//call RoutingMsgTimer.startOneShot(TIMER_PERIOD_MILLI);
 			//call RoutingMsgTimer.startPeriodic(TIMER_PERIOD_MILLI);
 			if (TOS_NODE_ID==0)
 			{
 				call RoutingMsgTimer.startOneShot(TIMER_FAST_PERIOD);
+				//dbg("Radio", "GET NOW: %d", call RoutingMsgTimer.getNow());
 			}
 		}
 		else
@@ -122,21 +130,21 @@ implementation
 		error_t enqueueDone;
 		
 		RoutingMsg* mrpkt;
-		dbg("SRTreeC", "RoutingMsgTimer fired!");
+		dbg("SRTreeC", "RoutingMsgTimer fired!\n");
 #ifdef PRINTFDBG_MODE
 		printfflush();
 		printf("RoutingMsgTimer fired!  radioBusy");
 		printfflush();
 #endif
+		roundCounter+=1;
+
 		if (TOS_NODE_ID==0)
 		{
-			roundCounter+=1;
-			
-			dbg("SRTreeC", "\n ##################################### \n");
+			dbg("SRTreeC", "##################################### \n");
 			dbg("SRTreeC", "#######   ROUND   %u    ############## \n", roundCounter);
 			dbg("SRTreeC", "#####################################\n");
 			
-		//	call RoutingMsgTimer.startOneShot(TIMER_PERIOD_MILLI);
+			//call RoutingMsgTimer.startOneShot(TIMER_PERIOD_MILLI);
 		}
 		
 		if(call RoutingSendQueue.full())
@@ -323,7 +331,42 @@ implementation
 		dbg("SRTreeC", "### RoutingReceive.receive() end ##### \n");
 		return msg;
 	}
-	
+
+////////////////////////////////
+	event void EpochTimer.fired()
+	{
+		roundCounter+=1;
+		
+		if (TOS_NODE_ID!=0) {
+			call SendMeasTimer.startOneShot(TIMER_PERIOD_MILLI-((curdepth * TIMER_PERIOD_MILLI)/ MAX_DEPTH));
+		}
+		else
+		{
+			dbg("EpochMsg", "IAMZERO\n");
+			dbg("EpochMsg", "\n");
+			dbg("EpochMsg", "##################################### \n");
+			dbg("EpochMsg", "#######   ROUND   %u    ############## \n", roundCounter);
+			dbg("EpochMsg", "#####################################\n");
+		}
+	}
+
+	event void SendMeasTimer.fired()
+	{
+		if (!FinishedRouting)
+		{
+			dbg("EpochMsg", "FinishedRouting!\n");
+			FinishedRouting=TRUE;
+			if (TOS_NODE_ID!=0) 
+			{
+				call SendMeasTimer.startOneShot((TIMER_PERIOD_MILLI-TIMER_ROUTING_DURATION)-((curdepth * (TIMER_PERIOD_MILLI-TIMER_ROUTING_DURATION))/MAX_DEPTH));
+			}
+		}
+		else
+		{
+			dbg("EpochMsg", "NodeID = %d curdepth= %d\n", TOS_NODE_ID, curdepth);
+			dbg("EpochMsg", "Starting Data transmission to parent!\n");
+		}
+	}
 
 	////////////// Tasks implementations //////////////////////////////
 	

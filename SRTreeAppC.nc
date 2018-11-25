@@ -12,7 +12,11 @@ implementation{
 		components PrintfC;
 #endif
 	components MainC, LedsC, ActiveMessageC;
+
 	components new TimerMilliC() as RoutingMsgTimerC;
+	components new TimerMilliC() as EpochTimerC;
+	components new TimerMilliC() as SendMeasTimerC;
+
 	
 	components new AMSenderC(AM_ROUTINGMSG) as RoutingSenderC;
 	components new AMReceiverC(AM_ROUTINGMSG) as RoutingReceiverC;
@@ -29,6 +33,8 @@ implementation{
 	SRTreeC.RadioControl -> ActiveMessageC;
 	
 	SRTreeC.RoutingMsgTimer->RoutingMsgTimerC;
+	SRTreeC.EpochTimer->EpochTimerC;
+	SRTreeC.SendMeasTimer->SendMeasTimerC;
 
 	SRTreeC.RoutingPacket->RoutingSenderC.Packet;
 	SRTreeC.RoutingAMPacket->RoutingSenderC.AMPacket;
