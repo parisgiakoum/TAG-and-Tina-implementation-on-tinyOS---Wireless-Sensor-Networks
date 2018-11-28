@@ -11,42 +11,41 @@ module SRTreeC
 	uses interface Packet as RoutingPacket;
 	uses interface AMSend as RoutingAMSend;
 	uses interface AMPacket as RoutingAMPacket;
-	
-	uses interface AMSend as NotifyAMSend;
-	uses interface AMPacket as NotifyAMPacket;
-	uses interface Packet as NotifyPacket;
+
+	uses interface AMSend as MeasAMSend;
+	uses interface AMPacket as MeasAMPacket;
+	uses interface Packet as MeasPacket;
 
 	uses interface Timer<TMilli> as RoutingMsgTimer;
 	uses interface Timer<TMilli> as EpochTimer;
 	uses interface Timer<TMilli> as SendMeasTimer;
 	
 	uses interface Receive as RoutingReceive;
-	uses interface Receive as NotifyReceive;
-	
+	uses interface Receive as MeasReceive;
+
 	uses interface PacketQueue as RoutingSendQueue;
 	uses interface PacketQueue as RoutingReceiveQueue;
-	
-	uses interface PacketQueue as NotifySendQueue;
-	uses interface PacketQueue as NotifyReceiveQueue;
+
+	uses interface PacketQueue as MeasSendQueue;
+	uses interface PacketQueue as MeasReceiveQueue;
 }
 implementation
 {
 	uint16_t  roundCounter;
 	
 	message_t radioRoutingSendPkt;
-	message_t radioNotifySendPkt;
+	message_t radioMeasSendPkt;
 	
 	bool RoutingSendBusy=FALSE;
-	bool NotifySendBusy=FALSE;
 	bool FinishedRouting = FALSE;
 	
 	uint8_t curdepth;
 	uint16_t parentID;
 	
 	task void sendRoutingTask();
-	task void sendNotifyTask();
 	task void receiveRoutingTask();
-	task void receiveNotifyTask();
+	task void sendMeasTask();
+
 
 ////////////////////	
 	event void Boot.booted()
@@ -225,72 +224,6 @@ implementation
 		}		
 	}
 
-/////////////////////////////	
-	event void NotifyAMSend.sendDone(message_t *msendDonesg , error_t err)
-	{
-		dbg("SRTreeC", "A Notify package sent... %s \n",(err==SUCCESS)?"True":"False");
-#ifdef PRINTFDBG_MODE
-		printf("A Notify package sent... %s \n",(err==SUCCESS)?"True":"False");
-		printfflush();
-#endif
-		
-	
-		dbg("SRTreeC" , "Package sent %s \n", (err==SUCCESS)?"True":"False");
-#ifdef PRINTFDBG_MODE
-		printf("Package sent %s \n", (err==SUCCESS)?"True":"False");
-		printfflush();
-#endif
-		
-		if(!(call NotifySendQueue.empty()))
-		{
-			post sendNotifyTask();
-		}
-	}
-
-
-///////////////////////////	
-	event message_t* NotifyReceive.receive( message_t* msg , void* payload , uint8_t len)
-	{
-		error_t enqueueDone;
-		message_t tmp;
-		uint16_t msource;
-		
-		msource = call NotifyAMPacket.source(msg);
-		
-		dbg("SRTreeC", "### NotifyReceive.receive() start ##### \n");
-		dbg("SRTreeC", "Something received!!!  from %u   %u \n",((NotifyParentMsg*) payload)->senderID, msource);
-#ifdef PRINTFDBG_MODE		
-		printf("Something Received!!!, len = %u , npm=%u , rm=%u\n",len, sizeof(NotifyParentMsg), sizeof(RoutingMsg));
-		printfflush();
-#endif
-
-		atomic{
-		memcpy(&tmp,msg,sizeof(message_t));
-		//tmp=*(message_t*)msg;
-		}
-		enqueueDone=call NotifyReceiveQueue.enqueue(tmp);
-		
-		if( enqueueDone== SUCCESS)
-		{
-#ifdef PRINTFDBG_MODE
-			printf("posting receiveNotifyTask()!!!! \n");
-			printfflush();
-#endif
-			post receiveNotifyTask();
-		}
-		else
-		{
-			dbg("SRTreeC","NotifyMsg enqueue failed!!! \n");
-#ifdef PRINTFDBG_MODE
-			printf("NotifyMsg enqueue failed!!! \n");
-			printfflush();
-#endif			
-		}
-		
-		dbg("SRTreeC", "### NotifyReceive.receive() end ##### \n");
-		return msg;
-	}
-
 
 //////////////////////////////
 	event message_t* RoutingReceive.receive( message_t * msg , void * payload, uint8_t len)
@@ -303,10 +236,7 @@ implementation
 		
 		dbg("SRTreeC", "### RoutingReceive.receive() start ##### \n");
 		dbg("SRTreeC", "Something received!!!  from %u  %u \n",((RoutingMsg*) payload)->senderID ,  msource);
-#ifdef PRINTFDBG_MODE		
-		printf("Something Received!!!, len = %u , npm=%u , rm=%u\n",len, sizeof(NotifyParentMsg), sizeof(RoutingMsg));
-		printfflush();
-#endif		
+		
 		atomic{
 		memcpy(&tmp,msg,sizeof(message_t));
 		//tmp=*(message_t*)msg;
@@ -350,6 +280,7 @@ implementation
 		}
 	}
 
+/////////////////
 	event void SendMeasTimer.fired()
 	{
 		if (!FinishedRouting)
@@ -365,10 +296,130 @@ implementation
 		{
 			dbg("EpochMsg", "NodeID = %d curdepth= %d\n", TOS_NODE_ID, curdepth);
 			dbg("EpochMsg", "Starting Data transmission to parent!\n");
+
+			message_t tmp;
+			error_t enqueueDone;
+			MeasMsg *measpkt;
+			uint8_t count;
+			uint16_t sum, max;
+			float avg;
+		
+			dbg("SRTreeC", "SendMeasTimer fired!\n");
+
+			if(call MeasSendQueue.full())
+			{
+				dbg("SRTreeC", "MeasSendQueue full!\n");
+				return;
+			}
+		
+			measpkt = (MeasMsg*) (call MeasPacket.getPayload(&tmp, sizeof(MeasMsg)));
+			if(measpkt==NULL)
+			{
+				dbg("SRTreeC","SendMeasTimer.fired(): No valid payload... \n");
+				return;
+			}
+
+
+			atomic
+			{
+				//sum = // measurement;
+				count = 1;
+				// max = // measurement;
+
+				/* 
+				for all children: {
+					sum += //Child values
+					count += //Children count
+					max = //Child max to current selection
+				}				
+				*/ 
+			}
+
+			if (TOS_NODE_ID == 0)
+			{
+				avg = sum / count;
+				dbg("SRTreeC" , "RESULTS:\nAVG: %f \nMax: %d", avg, max);
+			}
+			else
+			{
+				atomic
+				{
+					measpkt->sum = sum;
+					measpkt->count = count;
+					measpkt->max = max;
+				}
+				
+				dbg("SRTreeC" , "Sending MeasMsg... \n");
+		
+				// Enqueue
+				enqueueDone=call MeasSendQueue.enqueue(tmp);
+		
+				if( enqueueDone==SUCCESS)
+				{
+					if (call MeasSendQueue.size()==1)
+					{
+						dbg("SRTreeC", "SendMeasTask() posted!!\n");
+						post sendMeasTask();
+					}
+					
+					dbg("SRTreeC","MeasMsg enqueued successfully in MeasSendQueue!!!\n");
+				}
+				else
+				{
+					dbg("SRTreeC","MeasMsg failed to be enqueued in MeasSendQueue!!!");
+				}		
+			}
 		}
 	}
 
+
+/////////////////////////////	
+	event void MeasAMSend.sendDone(message_t *msendDonesg , error_t err)
+	{
+		dbg("SRTreeC", "A Measure package sent... %s \n",(err==SUCCESS)?"True":"False");		
+		
+		if(!(call MeasSendQueue.empty()))
+		{
+			post sendMeasTask();
+		}
+	}
+
+/////////////////////////////	
+	event message_t* MeasReceive.receive( message_t* msg , void* payload , uint8_t len)
+	{
+		error_t enqueueDone;
+		message_t tmp;
+		uint16_t msource;
+		
+		msource = call MeasAMPacket.source(msg);
+		
+		dbg("SRTreeC", "### MeasReceive.receive() start ##### \n");
+		dbg("SRTreeC", "Some measurement received!!!  from %u \n", msource);
+
+		atomic
+		{
+			memcpy(&tmp,msg,sizeof(message_t));
+			//tmp=*(message_t*)msg;
+		}
+		
+		enqueueDone=call MeasReceiveQueue.enqueue(tmp);
+		
+		if( enqueueDone== SUCCESS)
+		{
+			post receiveMeasTask();
+		}
+		else
+		{
+			dbg("SRTreeC","MeasMsg enqueue failed!!! \n");			
+		}
+		
+		dbg("SRTreeC", "### MeasReceive.receive() end ##### \n");
+		return msg;
+	}
+
+	////////////////////////////////////////////////////////////////////
 	////////////// Tasks implementations //////////////////////////////
+	///////////////////////////////////////////////////////////////////
 	
 	
 /////////////
@@ -412,75 +463,6 @@ implementation
 		}
 	}
 
-///////////////////////////////////////
-	/**
-	 * dequeues a message and sends it
-	 */
-	task void sendNotifyTask()
-	{
-		uint8_t mlen;//, skip;
-		error_t sendDone;
-		uint16_t mdest;
-		NotifyParentMsg* mpayload;
-		
-		//message_t radioNotifySendPkt;
-		
-#ifdef PRINTFDBG_MODE
-		printf("SendNotifyTask(): going to send one more package.\n");
-		printfflush();
-#endif
-		if (call NotifySendQueue.empty())
-		{
-			dbg("SRTreeC","sendNotifyTask(): Q is empty!\n");
-#ifdef PRINTFDBG_MODE		
-			printf("sendNotifyTask():Q is empty!\n");
-			printfflush();
-#endif
-			return;
-		}
-		
-		radioNotifySendPkt = call NotifySendQueue.dequeue();
-		
-		mlen=call NotifyPacket.payloadLength(&radioNotifySendPkt);
-		
-		mpayload= call NotifyPacket.getPayload(&radioNotifySendPkt,mlen);
-		
-		if(mlen!= sizeof(NotifyParentMsg))
-		{
-			dbg("SRTreeC", "\t\t sendNotifyTask(): Unknown message!!\n");
-#ifdef PRINTFDBG_MODE
-			printf("\t\t sendNotifyTask(): Unknown message!!\n");
-			printfflush();
-#endif
-			return;
-		}
-		
-		dbg("SRTreeC" , " sendNotifyTask(): mlen = %u  senderID= %u \n",mlen,mpayload->senderID);
-#ifdef PRINTFDBG_MODE
-		printf("\t\t\t\t sendNotifyTask(): mlen=%u\n",mlen);
-		printfflush();
-#endif
-		mdest= call NotifyAMPacket.destination(&radioNotifySendPkt);
-		
-		
-		sendDone=call NotifyAMSend.send(mdest,&radioNotifySendPkt, mlen);
-		
-		if ( sendDone== SUCCESS)
-		{
-			dbg("SRTreeC","sendNotifyTask(): Send returned success!!!\n");
-#ifdef PRINTFDBG_MODE
-			printf("sendNotifyTask(): Send returned success!!!\n");
-			printfflush();
-#endif
-		}
-		else
-		{
-			dbg("SRTreeC","send failed!!!\n");
-#ifdef PRINTFDBG_MODE
-			printf("SendNotifyTask(): send failed!!!\n");
-#endif
-		}
-	}
 
 
 	////////////////////////////////////////////////////////////////////
@@ -564,41 +546,77 @@ implementation
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////	
-	
-	 
-	task void receiveNotifyTask()
+
+	task void sendMeasTask()
+	{
+		uint8_t mlen;//, skip;
+		error_t sendDone;
+		uint16_t mdest;
+		MeasMsg* mpayload;
+		
+		if (call MeasSendQueue.empty())
+		{
+			dbg("SRTreeC","sendMeasTask(): Q is empty!\n");
+			return;
+		}
+		
+		radioMeasSendPkt = call MeasSendQueue.dequeue();
+		
+		mlen=call MeasPacket.payloadLength(&radioMeasSendPkt);
+		
+		mpayload= call MeasPacket.getPayload(&radioMeasSendPkt,mlen);
+		
+		if(mlen!= sizeof(MeasMsg))
+		{
+			dbg("SRTreeC", "\t\t sendMeasTask(): Unknown message!!\n");
+			return;
+		}
+		
+		dbg("SRTreeC" , " sendMeasTask(): mlen = %u  sum= %d count= %d max=%d \n",mlen,mpayload->sum,mpayload->count,mpayload->max);
+		mdest= call MeasAMPacket.destination(&radioMeasSendPkt);
+		
+		
+		sendDone = call MeasAMSend.send(mdest,&radioMeasSendPkt, mlen);
+		
+		if ( sendDone == SUCCESS)
+		{
+			dbg("SRTreeC","sendMeasTask(): Send measure returned success!!!\n");
+		}
+		else
+		{
+			dbg("SRTreeC","send measure failed!!!\n");
+		}
+	}
+
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////	
+	task void receiveMeasTask()
 	{
 		message_t tmp;
 		uint8_t len;
-		message_t radioNotifyRecPkt;
+		message_t radioMeasRecPkt;
 		
-#ifdef PRINTFDBG_MODE
-		printf("ReceiveNotifyTask():received msg...\n");
-		printfflush();
-#endif
-		radioNotifyRecPkt= call NotifyReceiveQueue.dequeue();
+
+		radioMeasRecPkt= call MeasReceiveQueue.dequeue();
 		
-		len= call NotifyPacket.payloadLength(&radioNotifyRecPkt);
+		len= call MeasPacket.payloadLength(&radioMeasRecPkt);
+		msource = call MeasAMPacket.source(&radioMeasRecPkt);
 		
-		dbg("SRTreeC","ReceiveNotifyTask(): len=%u \n",len);
-#ifdef PRINTFDBG_MODE
-		printf("ReceiveNotifyTask(): len=%u!\n",len);
-		printfflush();
-#endif
-		if(len == sizeof(NotifyParentMsg))
+		dbg("SRTreeC","receiveMeasTask(): len=%u \n",len);
+
+		if(len == sizeof(MeasMsg))
 		{
 			// an to parentID== TOS_NODE_ID tote
 			// tha proothei to minima pros tin riza xoris broadcast
 			// kai tha ananeonei ton tyxon pinaka paidion..
 			// allios tha diagrafei to paidi apo ton pinaka paidion
 			
-			NotifyParentMsg* mr = (NotifyParentMsg*) (call NotifyPacket.getPayload(&radioNotifyRecPkt,len));
+			MeasMsg* mr = (MeasMsg*) (call MeasPacket.getPayload(&radioMeasRecPkt,len));
 			
-			dbg("SRTreeC" , "NotifyParentMsg received from %d !!! \n", mr->senderID);
-#ifdef PRINTFDBG_MODE
-			printf("NodeID= %d NotifyParentMsg from senderID = %d!!! \n",TOS_NODE_ID , mr->senderID);
-			printfflush();
-#endif
+			dbg("SRTreeC" , "MeasMsg received from %d !!! \n", msource);
+
 			if ( mr->parentID == TOS_NODE_ID)
 			{
 				// tote prosthiki stin lista ton paidion.
@@ -655,5 +673,6 @@ implementation
 		}
 		
 	}
-	
-}
+
+
+

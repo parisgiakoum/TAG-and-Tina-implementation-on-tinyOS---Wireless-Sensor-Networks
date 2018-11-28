@@ -22,11 +22,20 @@ typedef nx_struct RoutingMsg
 	nx_uint8_t depth;
 } RoutingMsg;
 
-typedef nx_struct NotifyParentMsg
+typedef struct ChildValues
 {
-	nx_uint16_t senderID;
-	nx_uint16_t parentID;
-	nx_uint8_t depth;
-} NotifyParentMsg;
+    nx_uint16_t senderID;
+    nx_uint16_t sum;
+    nx_uint8_t count;
+    nx_uint16_t max;
+} ChildValues;
+
+typedef nx_struct MeasMsg 
+{
+        nx_uint16_t sum;
+        nx_uint8_t count;
+        nx_uint16_t max;
+}
+MeasMsg;
 
 #endif

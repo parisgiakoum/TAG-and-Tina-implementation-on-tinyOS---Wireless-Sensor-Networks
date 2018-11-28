@@ -22,11 +22,16 @@ implementation{
 	components new AMReceiverC(AM_ROUTINGMSG) as RoutingReceiverC;
 	components new AMSenderC(AM_NOTIFYPARENTMSG) as NotifySenderC;
 	components new AMReceiverC(AM_NOTIFYPARENTMSG) as NotifyReceiverC;
+	components new AMSenderC(AM_MEASMSG) as MeasSenderC;
+	components new AMReceiverC(AM_MEASMSG) as MeasReceiverC;
+
 
 	components new PacketQueueC(SENDER_QUEUE_SIZE) as RoutingSendQueueC;
 	components new PacketQueueC(RECEIVER_QUEUE_SIZE) as RoutingReceiveQueueC;
 	components new PacketQueueC(SENDER_QUEUE_SIZE) as NotifySendQueueC;
+	components new PacketQueueC(SENDER_QUEUE_SIZE) as MeasSendQueueC;
 	components new PacketQueueC(RECEIVER_QUEUE_SIZE) as NotifyReceiveQueueC;
+	components new PacketQueueC(RECEIVER_QUEUE_SIZE) as MeasReceiveQueueC;
 	
 	SRTreeC.Boot->MainC.Boot;
 	
@@ -41,6 +46,11 @@ implementation{
 	SRTreeC.RoutingAMSend->RoutingSenderC.AMSend;
 	SRTreeC.RoutingReceive->RoutingReceiverC.Receive;
 	
+	SRTreeC.MeasPacket->MeasSenderC.Packet;
+	SRTreeC.MeasAMPacket->MeasSenderC.AMPacket;
+	SRTreeC.MeasAMSend->MeasSenderC.AMSend;
+	SRTreeC.MeasReceive->MeasReceiverC.Receive;
+
 	SRTreeC.NotifyPacket->NotifySenderC.Packet;
 	SRTreeC.NotifyAMPacket->NotifySenderC.AMPacket;
 	SRTreeC.NotifyAMSend->NotifySenderC.AMSend;
@@ -51,5 +61,8 @@ implementation{
 	SRTreeC.RoutingReceiveQueue->RoutingReceiveQueueC;
 	SRTreeC.NotifySendQueue->NotifySendQueueC;
 	SRTreeC.NotifyReceiveQueue->NotifyReceiveQueueC;
+	SRTreeC.MeasSendQueue->MeasSendQueueC;
+	SRTreeC.MeasReceiveQueue->MeasReceiveQueueC;
+
 	
 }
