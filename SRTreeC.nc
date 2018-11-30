@@ -3,6 +3,9 @@
 	#include "printf.h"
 #endif
 
+// FIX NODE 0 RESULT
+// FIX RANDOMNESS
+
 module SRTreeC
 {
 	uses interface Boot;
@@ -41,10 +44,15 @@ implementation
 	
 	uint8_t curdepth;
 	uint16_t parentID;
+
+	uint8_t measurement;
+
+	ChildMsg children[MAX_CHILDREN];
 	
 	task void sendRoutingTask();
 	task void receiveRoutingTask();
 	task void sendMeasTask();
+	task void receiveMeasTask();
 
 
 ////////////////////	
@@ -52,7 +60,6 @@ implementation
 	{
 		/////// arxikopoiisi radio
 		call RadioControl.start();
-		
 
 		roundCounter =0;
 		
@@ -81,6 +88,8 @@ implementation
 ///////////////////
 	event void RadioControl.startDone(error_t err)
 	{
+		uint8_t i;
+
 		if (err == SUCCESS)
 		{
 			dbg("Radio" , "Radio initialized successfully!!!\n");
@@ -88,6 +97,16 @@ implementation
 			printf("Radio initialized successfully!!!\n");
 			printfflush();
 #endif
+
+		for (i=0; i < MAX_CHILDREN; i++)
+		{
+			children[i].senderID = 0;
+			children[i].sum = 0;
+			children[i].count = 0;
+			children[i].max = 0;
+
+			dbg("Tests", "Init child: %d, senderID: %d, sum: %d, count: %d, max: %d\n", i, children[i].senderID, children[i].sum, children[i].count, children[i].max);
+		}
 
 			call EpochTimer.startPeriodic(TIMER_PERIOD_MILLI);
 			call SendMeasTimer.startOneShot(TIMER_ROUTING_DURATION);
@@ -283,6 +302,13 @@ implementation
 /////////////////
 	event void SendMeasTimer.fired()
 	{
+		message_t tmp;
+		error_t enqueueDone;
+		MeasMsg *measpkt;
+		uint8_t count, i, max;
+		uint16_t sum;
+		float avg;
+
 		if (!FinishedRouting)
 		{
 			dbg("EpochMsg", "FinishedRouting!\n");
@@ -294,17 +320,14 @@ implementation
 		}
 		else
 		{
+
 			dbg("EpochMsg", "NodeID = %d curdepth= %d\n", TOS_NODE_ID, curdepth);
 			dbg("EpochMsg", "Starting Data transmission to parent!\n");
-
-			message_t tmp;
-			error_t enqueueDone;
-			MeasMsg *measpkt;
-			uint8_t count;
-			uint16_t sum, max;
-			float avg;
-		
+			
 			dbg("SRTreeC", "SendMeasTimer fired!\n");
+
+			measurement = TOS_NODE_ID;
+			dbg("Measurements", "measurement is: %d\n", measurement);
 
 			if(call MeasSendQueue.full())
 			{
@@ -322,23 +345,25 @@ implementation
 
 			atomic
 			{
-				//sum = // measurement;
+				sum = measurement;
 				count = 1;
-				// max = // measurement;
+				max = measurement;
 
-				/* 
-				for all children: {
-					sum += //Child values
-					count += //Children count
-					max = //Child max to current selection
-				}				
-				*/ 
+				for (i=0; i < MAX_CHILDREN && children[i].senderID != 0; i++)
+				{
+					dbg("Measurements" , "Child %d has sum: %d, count: %d and max: %d\n", children[i].senderID, children[i].sum, children[i].count, children[i].max);
+
+					sum += children[i].sum;
+					count += children[i].count;
+					max = (max > children[i].max) ? max : children[i].max;
+				}
+				dbg("Measurements" , "Node has sum: %d, count: %d, max: %d\n", sum, count, max);
 			}
 
 			if (TOS_NODE_ID == 0)
 			{
 				avg = sum / count;
-				dbg("SRTreeC" , "RESULTS:\nAVG: %f \nMax: %d", avg, max);
+				dbg("Measurements" , "FINAL RESULTS: AVG: %f , Max: %d", avg, max);
 			}
 			else
 			{
@@ -350,7 +375,10 @@ implementation
 				}
 				
 				dbg("SRTreeC" , "Sending MeasMsg... \n");
-		
+				
+				call MeasAMPacket.setDestination(&tmp, parentID);
+				call MeasPacket.setPayloadLength(&tmp,sizeof(MeasMsg));
+
 				// Enqueue
 				enqueueDone=call MeasSendQueue.enqueue(tmp);
 		
@@ -595,8 +623,9 @@ implementation
 	task void receiveMeasTask()
 	{
 		message_t tmp;
-		uint8_t len;
+		uint8_t len, i;
 		message_t radioMeasRecPkt;
+		uint16_t msource;
 		
 
 		radioMeasRecPkt= call MeasReceiveQueue.dequeue();
@@ -608,71 +637,34 @@ implementation
 
 		if(len == sizeof(MeasMsg))
 		{
-			// an to parentID== TOS_NODE_ID tote
-			// tha proothei to minima pros tin riza xoris broadcast
-			// kai tha ananeonei ton tyxon pinaka paidion..
-			// allios tha diagrafei to paidi apo ton pinaka paidion
 			
 			MeasMsg* mr = (MeasMsg*) (call MeasPacket.getPayload(&radioMeasRecPkt,len));
 			
 			dbg("SRTreeC" , "MeasMsg received from %d !!! \n", msource);
 
-			if ( mr->parentID == TOS_NODE_ID)
-			{
-				// tote prosthiki stin lista ton paidion.
-				
-			}
-			else
-			{
-				// apla diagrafei ton komvo apo paidi tou..
-				
-			}
-			if ( TOS_NODE_ID==0)
-			{
 
-			}
-			else
+			for (i=0; i < MAX_CHILDREN; i++)
 			{
-				NotifyParentMsg* m;
-				memcpy(&tmp,&radioNotifyRecPkt,sizeof(message_t));
-				
-				m = (NotifyParentMsg *) (call NotifyPacket.getPayload(&tmp, sizeof(NotifyParentMsg)));
-				//m->senderID=mr->senderID;
-				//m->depth = mr->depth;
-				//m->parentID = mr->parentID;
-				
-				dbg("SRTreeC" , "Forwarding NotifyParentMsg from senderID= %d  to parentID=%d \n" , m->senderID, parentID);
-#ifdef PRINTFDBG_MODE
-				printf("NotifyParentMsg NodeID= %d sent!\n", TOS_NODE_ID);
-				printfflush();
-#endif
-				call NotifyAMPacket.setDestination(&tmp, parentID);
-				call NotifyPacket.setPayloadLength(&tmp,sizeof(NotifyParentMsg));
-				
-				if (call NotifySendQueue.enqueue(tmp)==SUCCESS)
+				if (children[i].senderID == msource || children[i].senderID == 0)
 				{
-					dbg("SRTreeC", "receiveNotifyTask(): NotifyParentMsg enqueued in SendingQueue successfully!!!\n");
-					if (call NotifySendQueue.size() == 1)
+					if (children[i].senderID==0)
 					{
-						post sendNotifyTask();
+						children[i].senderID = msource;
 					}
-				}
+					children[i].sum = mr->sum;
+					children[i].count = mr->count;
+					children[i].max = mr->max;
 
-				
+					dbg("Measurements" , "Receive from child: %d values - sum:%d, count: %d, max: %d\n", children[i].senderID, children[i].sum, children[i].count, children[i].max);
+					break;
+				}
 			}
-			
 		}
 		else
 		{
-			dbg("SRTreeC","receiveNotifyTask():Empty message!!! \n");
-#ifdef PRINTFDBG_MODE
-			printf("receiveNotifyTask():Empty message!!! \n");
-			printfflush();
-#endif
+			dbg("SRTreeC","receiveMeasTask():Empty message!!! \n");
 			return;
 		}
-		
 	}
-
-
+}
 

@@ -1,0 +1,2515 @@
+TicksPerSecond :  10000000000 
+
+  0   1   -50.0
+  0   3   -50.0
+  1   0   -50.0
+  1   2   -50.0
+  1   4   -50.0
+  2   1   -50.0
+  2   5   -50.0
+  3   0   -50.0
+  3   4   -50.0
+  3   6   -50.0
+  4   1   -50.0
+  4   3   -50.0
+  4   5   -50.0
+  4   7   -50.0
+  5   2   -50.0
+  5   4   -50.0
+  5   8   -50.0
+  6   3   -50.0
+  6   7   -50.0
+  7   4   -50.0
+  7   6   -50.0
+  7   8   -50.0
+  8   5   -50.0
+  8   7   -50.0
+0:0:10.000000000 DEBUG (0): curdepth = 0  ,  parentID= 0 
+0:0:10.000000000 DEBUG (1): curdepth = 255  ,  parentID= 65535 
+0:0:10.000000000 DEBUG (2): curdepth = 255  ,  parentID= 65535 
+0:0:10.000000000 DEBUG (3): curdepth = 255  ,  parentID= 65535 
+0:0:10.000000000 DEBUG (4): curdepth = 255  ,  parentID= 65535 
+0:0:10.000000000 DEBUG (5): curdepth = 255  ,  parentID= 65535 
+0:0:10.000000000 DEBUG (6): curdepth = 255  ,  parentID= 65535 
+0:0:10.000000000 DEBUG (7): curdepth = 255  ,  parentID= 65535 
+0:0:10.000000000 DEBUG (8): curdepth = 255  ,  parentID= 65535 
+0:0:10.000000010 DEBUG (0): Radio initialized successfully!!!
+0:0:10.000000010 DEBUG (0): Init child: 0, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (0): Init child: 1, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (0): Init child: 2, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (0): Init child: 3, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (0): Init child: 4, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (0): Init child: 5, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (0): Init child: 6, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (0): Init child: 7, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (0): Init child: 8, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (0): Init child: 9, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (0): Init child: 10, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (0): Init child: 11, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (0): Init child: 12, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (0): Init child: 13, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (0): Init child: 14, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (0): Init child: 15, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (0): Init child: 16, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (0): Init child: 17, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (0): Init child: 18, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (0): Init child: 19, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (0): Init child: 20, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (0): Init child: 21, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (0): Init child: 22, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (0): Init child: 23, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (0): Init child: 24, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (0): Init child: 25, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (0): Init child: 26, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (0): Init child: 27, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (0): Init child: 28, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (0): Init child: 29, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (0): Init child: 30, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (0): Init child: 31, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (1): Radio initialized successfully!!!
+0:0:10.000000010 DEBUG (1): Init child: 0, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (1): Init child: 1, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (1): Init child: 2, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (1): Init child: 3, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (1): Init child: 4, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (1): Init child: 5, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (1): Init child: 6, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (1): Init child: 7, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (1): Init child: 8, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (1): Init child: 9, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (1): Init child: 10, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (1): Init child: 11, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (1): Init child: 12, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (1): Init child: 13, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (1): Init child: 14, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (1): Init child: 15, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (1): Init child: 16, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (1): Init child: 17, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (1): Init child: 18, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (1): Init child: 19, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (1): Init child: 20, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (1): Init child: 21, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (1): Init child: 22, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (1): Init child: 23, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (1): Init child: 24, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (1): Init child: 25, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (1): Init child: 26, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (1): Init child: 27, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (1): Init child: 28, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (1): Init child: 29, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (1): Init child: 30, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (1): Init child: 31, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (2): Radio initialized successfully!!!
+0:0:10.000000010 DEBUG (2): Init child: 0, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (2): Init child: 1, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (2): Init child: 2, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (2): Init child: 3, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (2): Init child: 4, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (2): Init child: 5, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (2): Init child: 6, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (2): Init child: 7, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (2): Init child: 8, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (2): Init child: 9, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (2): Init child: 10, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (2): Init child: 11, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (2): Init child: 12, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (2): Init child: 13, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (2): Init child: 14, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (2): Init child: 15, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (2): Init child: 16, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (2): Init child: 17, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (2): Init child: 18, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (2): Init child: 19, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (2): Init child: 20, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (2): Init child: 21, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (2): Init child: 22, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (2): Init child: 23, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (2): Init child: 24, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (2): Init child: 25, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (2): Init child: 26, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (2): Init child: 27, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (2): Init child: 28, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (2): Init child: 29, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (2): Init child: 30, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (2): Init child: 31, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (3): Radio initialized successfully!!!
+0:0:10.000000010 DEBUG (3): Init child: 0, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (3): Init child: 1, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (3): Init child: 2, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (3): Init child: 3, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (3): Init child: 4, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (3): Init child: 5, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (3): Init child: 6, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (3): Init child: 7, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (3): Init child: 8, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (3): Init child: 9, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (3): Init child: 10, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (3): Init child: 11, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (3): Init child: 12, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (3): Init child: 13, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (3): Init child: 14, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (3): Init child: 15, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (3): Init child: 16, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (3): Init child: 17, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (3): Init child: 18, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (3): Init child: 19, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (3): Init child: 20, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (3): Init child: 21, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (3): Init child: 22, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (3): Init child: 23, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (3): Init child: 24, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (3): Init child: 25, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (3): Init child: 26, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (3): Init child: 27, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (3): Init child: 28, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (3): Init child: 29, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (3): Init child: 30, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (3): Init child: 31, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (4): Radio initialized successfully!!!
+0:0:10.000000010 DEBUG (4): Init child: 0, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (4): Init child: 1, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (4): Init child: 2, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (4): Init child: 3, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (4): Init child: 4, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (4): Init child: 5, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (4): Init child: 6, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (4): Init child: 7, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (4): Init child: 8, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (4): Init child: 9, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (4): Init child: 10, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (4): Init child: 11, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (4): Init child: 12, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (4): Init child: 13, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (4): Init child: 14, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (4): Init child: 15, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (4): Init child: 16, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (4): Init child: 17, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (4): Init child: 18, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (4): Init child: 19, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (4): Init child: 20, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (4): Init child: 21, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (4): Init child: 22, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (4): Init child: 23, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (4): Init child: 24, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (4): Init child: 25, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (4): Init child: 26, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (4): Init child: 27, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (4): Init child: 28, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (4): Init child: 29, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (4): Init child: 30, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (4): Init child: 31, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (5): Radio initialized successfully!!!
+0:0:10.000000010 DEBUG (5): Init child: 0, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (5): Init child: 1, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (5): Init child: 2, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (5): Init child: 3, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (5): Init child: 4, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (5): Init child: 5, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (5): Init child: 6, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (5): Init child: 7, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (5): Init child: 8, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (5): Init child: 9, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (5): Init child: 10, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (5): Init child: 11, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (5): Init child: 12, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (5): Init child: 13, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (5): Init child: 14, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (5): Init child: 15, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (5): Init child: 16, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (5): Init child: 17, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (5): Init child: 18, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (5): Init child: 19, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (5): Init child: 20, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (5): Init child: 21, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (5): Init child: 22, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (5): Init child: 23, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (5): Init child: 24, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (5): Init child: 25, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (5): Init child: 26, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (5): Init child: 27, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (5): Init child: 28, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (5): Init child: 29, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (5): Init child: 30, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (5): Init child: 31, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (6): Radio initialized successfully!!!
+0:0:10.000000010 DEBUG (6): Init child: 0, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (6): Init child: 1, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (6): Init child: 2, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (6): Init child: 3, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (6): Init child: 4, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (6): Init child: 5, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (6): Init child: 6, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (6): Init child: 7, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (6): Init child: 8, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (6): Init child: 9, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (6): Init child: 10, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (6): Init child: 11, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (6): Init child: 12, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (6): Init child: 13, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (6): Init child: 14, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (6): Init child: 15, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (6): Init child: 16, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (6): Init child: 17, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (6): Init child: 18, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (6): Init child: 19, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (6): Init child: 20, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (6): Init child: 21, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (6): Init child: 22, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (6): Init child: 23, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (6): Init child: 24, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (6): Init child: 25, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (6): Init child: 26, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (6): Init child: 27, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (6): Init child: 28, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (6): Init child: 29, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (6): Init child: 30, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (6): Init child: 31, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (7): Radio initialized successfully!!!
+0:0:10.000000010 DEBUG (7): Init child: 0, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (7): Init child: 1, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (7): Init child: 2, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (7): Init child: 3, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (7): Init child: 4, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (7): Init child: 5, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (7): Init child: 6, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (7): Init child: 7, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (7): Init child: 8, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (7): Init child: 9, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (7): Init child: 10, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (7): Init child: 11, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (7): Init child: 12, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (7): Init child: 13, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (7): Init child: 14, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (7): Init child: 15, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (7): Init child: 16, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (7): Init child: 17, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (7): Init child: 18, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (7): Init child: 19, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (7): Init child: 20, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (7): Init child: 21, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (7): Init child: 22, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (7): Init child: 23, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (7): Init child: 24, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (7): Init child: 25, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (7): Init child: 26, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (7): Init child: 27, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (7): Init child: 28, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (7): Init child: 29, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (7): Init child: 30, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (7): Init child: 31, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (8): Radio initialized successfully!!!
+0:0:10.000000010 DEBUG (8): Init child: 0, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (8): Init child: 1, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (8): Init child: 2, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (8): Init child: 3, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (8): Init child: 4, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (8): Init child: 5, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (8): Init child: 6, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (8): Init child: 7, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (8): Init child: 8, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (8): Init child: 9, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (8): Init child: 10, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (8): Init child: 11, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (8): Init child: 12, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (8): Init child: 13, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (8): Init child: 14, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (8): Init child: 15, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (8): Init child: 16, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (8): Init child: 17, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (8): Init child: 18, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (8): Init child: 19, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (8): Init child: 20, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (8): Init child: 21, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (8): Init child: 22, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (8): Init child: 23, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (8): Init child: 24, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (8): Init child: 25, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (8): Init child: 26, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (8): Init child: 27, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (8): Init child: 28, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (8): Init child: 29, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (8): Init child: 30, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.000000010 DEBUG (8): Init child: 31, senderID: 0, sum: 0, count: 0, max: 0
+0:0:10.195312510 DEBUG (0): RoutingMsgTimer fired!
+0:0:10.195312510 DEBUG (0): ##################################### 
+0:0:10.195312510 DEBUG (0): #######   ROUND   1    ############## 
+0:0:10.195312510 DEBUG (0): #####################################
+0:0:10.195312510 DEBUG (0): Sending RoutingMsg... 
+0:0:10.195312510 DEBUG (0): SendTask() posted!!
+0:0:10.195312510 DEBUG (0): RoutingMsg enqueued successfully in SendingQueue!!!
+0:0:10.195312520 DEBUG (0): sendRoutingTask(): Send returned success!!!
+0:0:10.206039386 DEBUG (3): ### RoutingReceive.receive() start ##### 
+0:0:10.206039386 DEBUG (3): Something received!!!  from 0  0 
+0:0:10.206039386 DEBUG (3): ### RoutingReceive.receive() end ##### 
+0:0:10.206039386 DEBUG (1): ### RoutingReceive.receive() start ##### 
+0:0:10.206039386 DEBUG (1): Something received!!!  from 0  0 
+0:0:10.206039386 DEBUG (1): ### RoutingReceive.receive() end ##### 
+0:0:10.206039396 DEBUG (3): ReceiveRoutingTask(): len=3 
+0:0:10.206039396 DEBUG (3): receiveRoutingTask():senderID= 0 , depth= 0 
+0:0:10.206039396 DEBUG (3): NodeID= 3 : curdepth= 1 , parentID= 0 
+0:0:10.206039396 DEBUG (1): ReceiveRoutingTask(): len=3 
+0:0:10.206039396 DEBUG (1): receiveRoutingTask():senderID= 0 , depth= 0 
+0:0:10.206039396 DEBUG (1): NodeID= 1 : curdepth= 1 , parentID= 0 
+0:0:10.206207231 DEBUG (0): Package sent True 
+0:0:10.400390635 DEBUG (1): RoutingMsgTimer fired!
+0:0:10.400390635 DEBUG (1): Sending RoutingMsg... 
+0:0:10.400390635 DEBUG (1): SendTask() posted!!
+0:0:10.400390635 DEBUG (1): RoutingMsg enqueued successfully in SendingQueue!!!
+0:0:10.400390635 DEBUG (3): RoutingMsgTimer fired!
+0:0:10.400390635 DEBUG (3): Sending RoutingMsg... 
+0:0:10.400390635 DEBUG (3): SendTask() posted!!
+0:0:10.400390635 DEBUG (3): RoutingMsg enqueued successfully in SendingQueue!!!
+0:0:10.400390645 DEBUG (1): sendRoutingTask(): Send returned success!!!
+0:0:10.400390645 DEBUG (3): sendRoutingTask(): Send returned success!!!
+0:0:10.408859223 DEBUG (6): ### RoutingReceive.receive() start ##### 
+0:0:10.408859223 DEBUG (6): Something received!!!  from 3  3 
+0:0:10.408859223 DEBUG (6): ### RoutingReceive.receive() end ##### 
+0:0:10.408859223 DEBUG (0): ### RoutingReceive.receive() start ##### 
+0:0:10.408859223 DEBUG (0): Something received!!!  from 3  3 
+0:0:10.408859223 DEBUG (0): ### RoutingReceive.receive() end ##### 
+0:0:10.408859223 DEBUG (4): ### RoutingReceive.receive() start ##### 
+0:0:10.408859223 DEBUG (4): Something received!!!  from 3  3 
+0:0:10.408859223 DEBUG (4): ### RoutingReceive.receive() end ##### 
+0:0:10.408859233 DEBUG (6): ReceiveRoutingTask(): len=3 
+0:0:10.408859233 DEBUG (6): receiveRoutingTask():senderID= 3 , depth= 1 
+0:0:10.408859233 DEBUG (6): NodeID= 6 : curdepth= 2 , parentID= 3 
+0:0:10.408859233 DEBUG (0): ReceiveRoutingTask(): len=3 
+0:0:10.408859233 DEBUG (0): receiveRoutingTask():senderID= 3 , depth= 1 
+0:0:10.408859233 DEBUG (0): NodeID= 0 : Already has a parent: curdepth= 0, parentID= 0 
+0:0:10.408859233 DEBUG (4): ReceiveRoutingTask(): len=3 
+0:0:10.408859233 DEBUG (4): receiveRoutingTask():senderID= 3 , depth= 1 
+0:0:10.408859233 DEBUG (4): NodeID= 4 : curdepth= 2 , parentID= 3 
+0:0:10.409027069 DEBUG (3): Package sent True 
+0:0:10.410110437 DEBUG (4): ### RoutingReceive.receive() start ##### 
+0:0:10.410110437 DEBUG (4): Something received!!!  from 1  1 
+0:0:10.410110437 DEBUG (4): ### RoutingReceive.receive() end ##### 
+0:0:10.410110437 DEBUG (0): ### RoutingReceive.receive() start ##### 
+0:0:10.410110437 DEBUG (0): Something received!!!  from 1  1 
+0:0:10.410110437 DEBUG (0): ### RoutingReceive.receive() end ##### 
+0:0:10.410110447 DEBUG (4): ReceiveRoutingTask(): len=3 
+0:0:10.410110447 DEBUG (4): receiveRoutingTask():senderID= 1 , depth= 1 
+0:0:10.410110447 DEBUG (4): NodeID= 4 : Already has a parent: curdepth= 2, parentID= 3 
+0:0:10.410110447 DEBUG (0): ReceiveRoutingTask(): len=3 
+0:0:10.410110447 DEBUG (0): receiveRoutingTask():senderID= 1 , depth= 1 
+0:0:10.410110447 DEBUG (0): NodeID= 0 : Already has a parent: curdepth= 0, parentID= 0 
+0:0:10.410278282 DEBUG (1): Package sent True 
+0:0:10.603515635 DEBUG (4): RoutingMsgTimer fired!
+0:0:10.603515635 DEBUG (4): Sending RoutingMsg... 
+0:0:10.603515635 DEBUG (4): SendTask() posted!!
+0:0:10.603515635 DEBUG (4): RoutingMsg enqueued successfully in SendingQueue!!!
+0:0:10.603515635 DEBUG (6): RoutingMsgTimer fired!
+0:0:10.603515635 DEBUG (6): Sending RoutingMsg... 
+0:0:10.603515635 DEBUG (6): SendTask() posted!!
+0:0:10.603515635 DEBUG (6): RoutingMsg enqueued successfully in SendingQueue!!!
+0:0:10.603515645 DEBUG (4): sendRoutingTask(): Send returned success!!!
+0:0:10.603515645 DEBUG (6): sendRoutingTask(): Send returned success!!!
+0:0:10.605255137 DEBUG (7): ### RoutingReceive.receive() start ##### 
+0:0:10.605255137 DEBUG (7): Something received!!!  from 6  6 
+0:0:10.605255137 DEBUG (7): ### RoutingReceive.receive() end ##### 
+0:0:10.605255137 DEBUG (3): ### RoutingReceive.receive() start ##### 
+0:0:10.605255137 DEBUG (3): Something received!!!  from 6  6 
+0:0:10.605255137 DEBUG (3): ### RoutingReceive.receive() end ##### 
+0:0:10.605255147 DEBUG (7): ReceiveRoutingTask(): len=3 
+0:0:10.605255147 DEBUG (7): receiveRoutingTask():senderID= 6 , depth= 2 
+0:0:10.605255147 DEBUG (7): NodeID= 7 : curdepth= 3 , parentID= 6 
+0:0:10.605255147 DEBUG (3): ReceiveRoutingTask(): len=3 
+0:0:10.605255147 DEBUG (3): receiveRoutingTask():senderID= 6 , depth= 2 
+0:0:10.605255147 DEBUG (3): NodeID= 3 : Already has a parent: curdepth= 1, parentID= 0 
+0:0:10.605422983 DEBUG (6): Package sent True 
+0:0:10.608810414 DEBUG (7): ### RoutingReceive.receive() start ##### 
+0:0:10.608810414 DEBUG (7): Something received!!!  from 4  4 
+0:0:10.608810414 DEBUG (7): ### RoutingReceive.receive() end ##### 
+0:0:10.608810414 DEBUG (5): ### RoutingReceive.receive() start ##### 
+0:0:10.608810414 DEBUG (5): Something received!!!  from 4  4 
+0:0:10.608810414 DEBUG (5): ### RoutingReceive.receive() end ##### 
+0:0:10.608810414 DEBUG (1): ### RoutingReceive.receive() start ##### 
+0:0:10.608810414 DEBUG (1): Something received!!!  from 4  4 
+0:0:10.608810414 DEBUG (1): ### RoutingReceive.receive() end ##### 
+0:0:10.608810414 DEBUG (3): ### RoutingReceive.receive() start ##### 
+0:0:10.608810414 DEBUG (3): Something received!!!  from 4  4 
+0:0:10.608810414 DEBUG (3): ### RoutingReceive.receive() end ##### 
+0:0:10.608810424 DEBUG (7): ReceiveRoutingTask(): len=3 
+0:0:10.608810424 DEBUG (7): receiveRoutingTask():senderID= 4 , depth= 2 
+0:0:10.608810424 DEBUG (7): NodeID= 7 : Already has a parent: curdepth= 3, parentID= 6 
+0:0:10.608810424 DEBUG (5): ReceiveRoutingTask(): len=3 
+0:0:10.608810424 DEBUG (5): receiveRoutingTask():senderID= 4 , depth= 2 
+0:0:10.608810424 DEBUG (5): NodeID= 5 : curdepth= 3 , parentID= 4 
+0:0:10.608810424 DEBUG (1): ReceiveRoutingTask(): len=3 
+0:0:10.608810424 DEBUG (1): receiveRoutingTask():senderID= 4 , depth= 2 
+0:0:10.608810424 DEBUG (1): NodeID= 1 : Already has a parent: curdepth= 1, parentID= 0 
+0:0:10.608810424 DEBUG (3): ReceiveRoutingTask(): len=3 
+0:0:10.608810424 DEBUG (3): receiveRoutingTask():senderID= 4 , depth= 2 
+0:0:10.608810424 DEBUG (3): NodeID= 3 : Already has a parent: curdepth= 1, parentID= 0 
+0:0:10.608978260 DEBUG (4): Package sent True 
+0:0:10.799804698 DEBUG (7): RoutingMsgTimer fired!
+0:0:10.799804698 DEBUG (7): Sending RoutingMsg... 
+0:0:10.799804698 DEBUG (7): SendTask() posted!!
+0:0:10.799804698 DEBUG (7): RoutingMsg enqueued successfully in SendingQueue!!!
+0:0:10.799804708 DEBUG (7): sendRoutingTask(): Send returned success!!!
+0:0:10.803710948 DEBUG (5): RoutingMsgTimer fired!
+0:0:10.803710948 DEBUG (5): Sending RoutingMsg... 
+0:0:10.803710948 DEBUG (5): SendTask() posted!!
+0:0:10.803710948 DEBUG (5): RoutingMsg enqueued successfully in SendingQueue!!!
+0:0:10.803710958 DEBUG (5): sendRoutingTask(): Send returned success!!!
+0:0:10.805038442 DEBUG (8): ### RoutingReceive.receive() start ##### 
+0:0:10.805038442 DEBUG (8): Something received!!!  from 7  7 
+0:0:10.805038442 DEBUG (8): ### RoutingReceive.receive() end ##### 
+0:0:10.805038442 DEBUG (6): ### RoutingReceive.receive() start ##### 
+0:0:10.805038442 DEBUG (6): Something received!!!  from 7  7 
+0:0:10.805038442 DEBUG (6): ### RoutingReceive.receive() end ##### 
+0:0:10.805038442 DEBUG (4): ### RoutingReceive.receive() start ##### 
+0:0:10.805038442 DEBUG (4): Something received!!!  from 7  7 
+0:0:10.805038442 DEBUG (4): ### RoutingReceive.receive() end ##### 
+0:0:10.805038452 DEBUG (8): ReceiveRoutingTask(): len=3 
+0:0:10.805038452 DEBUG (8): receiveRoutingTask():senderID= 7 , depth= 3 
+0:0:10.805038452 DEBUG (8): NodeID= 8 : curdepth= 4 , parentID= 7 
+0:0:10.805038452 DEBUG (6): ReceiveRoutingTask(): len=3 
+0:0:10.805038452 DEBUG (6): receiveRoutingTask():senderID= 7 , depth= 3 
+0:0:10.805038452 DEBUG (6): NodeID= 6 : Already has a parent: curdepth= 2, parentID= 3 
+0:0:10.805038452 DEBUG (4): ReceiveRoutingTask(): len=3 
+0:0:10.805038452 DEBUG (4): receiveRoutingTask():senderID= 7 , depth= 3 
+0:0:10.805038452 DEBUG (4): NodeID= 4 : Already has a parent: curdepth= 2, parentID= 3 
+0:0:10.805206288 DEBUG (7): Package sent True 
+0:0:10.814468341 DEBUG (8): ### RoutingReceive.receive() start ##### 
+0:0:10.814468341 DEBUG (8): Something received!!!  from 5  5 
+0:0:10.814468341 DEBUG (8): ### RoutingReceive.receive() end ##### 
+0:0:10.814468341 DEBUG (4): ### RoutingReceive.receive() start ##### 
+0:0:10.814468341 DEBUG (4): Something received!!!  from 5  5 
+0:0:10.814468341 DEBUG (4): ### RoutingReceive.receive() end ##### 
+0:0:10.814468341 DEBUG (2): ### RoutingReceive.receive() start ##### 
+0:0:10.814468341 DEBUG (2): Something received!!!  from 5  5 
+0:0:10.814468341 DEBUG (2): ### RoutingReceive.receive() end ##### 
+0:0:10.814468351 DEBUG (8): ReceiveRoutingTask(): len=3 
+0:0:10.814468351 DEBUG (8): receiveRoutingTask():senderID= 5 , depth= 3 
+0:0:10.814468351 DEBUG (8): NodeID= 8 : Already has a parent: curdepth= 4, parentID= 7 
+0:0:10.814468351 DEBUG (4): ReceiveRoutingTask(): len=3 
+0:0:10.814468351 DEBUG (4): receiveRoutingTask():senderID= 5 , depth= 3 
+0:0:10.814468351 DEBUG (4): NodeID= 4 : Already has a parent: curdepth= 2, parentID= 3 
+0:0:10.814468351 DEBUG (2): ReceiveRoutingTask(): len=3 
+0:0:10.814468351 DEBUG (2): receiveRoutingTask():senderID= 5 , depth= 3 
+0:0:10.814468351 DEBUG (2): NodeID= 2 : curdepth= 4 , parentID= 5 
+0:0:10.814636187 DEBUG (5): Package sent True 
+0:0:11.000000010 DEBUG (8): RoutingMsgTimer fired!
+0:0:11.000000010 DEBUG (8): Sending RoutingMsg... 
+0:0:11.000000010 DEBUG (8): SendTask() posted!!
+0:0:11.000000010 DEBUG (8): RoutingMsg enqueued successfully in SendingQueue!!!
+0:0:11.000000020 DEBUG (8): sendRoutingTask(): Send returned success!!!
+0:0:11.005249013 DEBUG (7): ### RoutingReceive.receive() start ##### 
+0:0:11.005249013 DEBUG (7): Something received!!!  from 8  8 
+0:0:11.005249013 DEBUG (7): ### RoutingReceive.receive() end ##### 
+0:0:11.005249013 DEBUG (5): ### RoutingReceive.receive() start ##### 
+0:0:11.005249013 DEBUG (5): Something received!!!  from 8  8 
+0:0:11.005249013 DEBUG (5): ### RoutingReceive.receive() end ##### 
+0:0:11.005249023 DEBUG (7): ReceiveRoutingTask(): len=3 
+0:0:11.005249023 DEBUG (7): receiveRoutingTask():senderID= 8 , depth= 4 
+0:0:11.005249023 DEBUG (7): NodeID= 7 : Already has a parent: curdepth= 3, parentID= 6 
+0:0:11.005249023 DEBUG (5): ReceiveRoutingTask(): len=3 
+0:0:11.005249023 DEBUG (5): receiveRoutingTask():senderID= 8 , depth= 4 
+0:0:11.005249023 DEBUG (5): NodeID= 5 : Already has a parent: curdepth= 3, parentID= 4 
+0:0:11.005416859 DEBUG (8): Package sent True 
+0:0:11.009765635 DEBUG (2): RoutingMsgTimer fired!
+0:0:11.009765635 DEBUG (2): Sending RoutingMsg... 
+0:0:11.009765635 DEBUG (2): SendTask() posted!!
+0:0:11.009765635 DEBUG (2): RoutingMsg enqueued successfully in SendingQueue!!!
+0:0:11.009765645 DEBUG (2): sendRoutingTask(): Send returned success!!!
+0:0:11.020767167 DEBUG (5): ### RoutingReceive.receive() start ##### 
+0:0:11.020767167 DEBUG (5): Something received!!!  from 2  2 
+0:0:11.020767167 DEBUG (5): ### RoutingReceive.receive() end ##### 
+0:0:11.020767167 DEBUG (1): ### RoutingReceive.receive() start ##### 
+0:0:11.020767167 DEBUG (1): Something received!!!  from 2  2 
+0:0:11.020767167 DEBUG (1): ### RoutingReceive.receive() end ##### 
+0:0:11.020767177 DEBUG (5): ReceiveRoutingTask(): len=3 
+0:0:11.020767177 DEBUG (5): receiveRoutingTask():senderID= 2 , depth= 4 
+0:0:11.020767177 DEBUG (5): NodeID= 5 : Already has a parent: curdepth= 3, parentID= 4 
+0:0:11.020767177 DEBUG (1): ReceiveRoutingTask(): len=3 
+0:0:11.020767177 DEBUG (1): receiveRoutingTask():senderID= 2 , depth= 4 
+0:0:11.020767177 DEBUG (1): NodeID= 1 : Already has a parent: curdepth= 1, parentID= 0 
+0:0:11.020935013 DEBUG (2): Package sent True 
+0:0:13.000000010 DEBUG (0): FinishedRouting!
+0:0:13.000000010 DEBUG (1): FinishedRouting!
+0:0:13.000000010 DEBUG (2): FinishedRouting!
+0:0:13.000000010 DEBUG (3): FinishedRouting!
+0:0:13.000000010 DEBUG (4): FinishedRouting!
+0:0:13.000000010 DEBUG (5): FinishedRouting!
+0:0:13.000000010 DEBUG (6): FinishedRouting!
+0:0:13.000000010 DEBUG (7): FinishedRouting!
+0:0:13.000000010 DEBUG (8): FinishedRouting!
+0:0:54.800781260 DEBUG (2): NodeID = 2 curdepth= 4
+0:0:54.800781260 DEBUG (2): Starting Data transmission to parent!
+0:0:54.800781260 DEBUG (2): SendMeasTimer fired!
+0:0:54.800781260 DEBUG (2): measurement is: 2
+0:0:54.800781260 DEBUG (2): Node has sum: 2, count: 1, max: 2
+0:0:54.800781260 DEBUG (2): Sending MeasMsg... 
+0:0:54.800781260 DEBUG (2): SendMeasTask() posted!!
+0:0:54.800781260 DEBUG (2): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:0:54.800781260 DEBUG (8): NodeID = 8 curdepth= 4
+0:0:54.800781260 DEBUG (8): Starting Data transmission to parent!
+0:0:54.800781260 DEBUG (8): SendMeasTimer fired!
+0:0:54.800781260 DEBUG (8): measurement is: 8
+0:0:54.800781260 DEBUG (8): Node has sum: 8, count: 1, max: 8
+0:0:54.800781260 DEBUG (8): Sending MeasMsg... 
+0:0:54.800781260 DEBUG (8): SendMeasTask() posted!!
+0:0:54.800781260 DEBUG (8): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:0:54.800781270 DEBUG (2):  sendMeasTask(): mlen = 4  sum= 2 count= 1 max=2 
+0:0:54.800781270 DEBUG (2): sendMeasTask(): Send measure returned success!!!
+0:0:54.800781270 DEBUG (8):  sendMeasTask(): mlen = 4  sum= 8 count= 1 max=8 
+0:0:54.800781270 DEBUG (8): sendMeasTask(): Send measure returned success!!!
+0:0:54.810852012 DEBUG (2): A Measure package sent... True 
+0:0:54.811111410 DEBUG (7): ### MeasReceive.receive() start ##### 
+0:0:54.811111410 DEBUG (7): Some measurement received!!!  from 8 
+0:0:54.811111410 DEBUG (7): ### MeasReceive.receive() end ##### 
+0:0:54.811111420 DEBUG (7): receiveMeasTask(): len=4 
+0:0:54.811111420 DEBUG (7): MeasMsg received from 8 !!! 
+0:0:54.811111420 DEBUG (7): Receive from child: 8 values - sum:8, count: 1, max: 8
+0:0:54.811279256 DEBUG (8): A Measure package sent... True 
+0:0:58.600585948 DEBUG (5): NodeID = 5 curdepth= 3
+0:0:58.600585948 DEBUG (5): Starting Data transmission to parent!
+0:0:58.600585948 DEBUG (5): SendMeasTimer fired!
+0:0:58.600585948 DEBUG (5): measurement is: 5
+0:0:58.600585948 DEBUG (5): Node has sum: 5, count: 1, max: 5
+0:0:58.600585948 DEBUG (5): Sending MeasMsg... 
+0:0:58.600585948 DEBUG (5): SendMeasTask() posted!!
+0:0:58.600585948 DEBUG (5): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:0:58.600585948 DEBUG (7): NodeID = 7 curdepth= 3
+0:0:58.600585948 DEBUG (7): Starting Data transmission to parent!
+0:0:58.600585948 DEBUG (7): SendMeasTimer fired!
+0:0:58.600585948 DEBUG (7): measurement is: 7
+0:0:58.600585948 DEBUG (7): Child 8 has sum: 8, count: 1 and max: 8
+0:0:58.600585948 DEBUG (7): Node has sum: 15, count: 2, max: 8
+0:0:58.600585948 DEBUG (7): Sending MeasMsg... 
+0:0:58.600585948 DEBUG (7): SendMeasTask() posted!!
+0:0:58.600585948 DEBUG (7): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:0:58.600585958 DEBUG (5):  sendMeasTask(): mlen = 4  sum= 5 count= 1 max=5 
+0:0:58.600585958 DEBUG (5): sendMeasTask(): Send measure returned success!!!
+0:0:58.600585958 DEBUG (7):  sendMeasTask(): mlen = 4  sum= 15 count= 2 max=8 
+0:0:58.600585958 DEBUG (7): sendMeasTask(): Send measure returned success!!!
+0:0:58.604385374 DEBUG (6): ### MeasReceive.receive() start ##### 
+0:0:58.604385374 DEBUG (6): Some measurement received!!!  from 7 
+0:0:58.604385374 DEBUG (6): ### MeasReceive.receive() end ##### 
+0:0:58.604385384 DEBUG (6): receiveMeasTask(): len=4 
+0:0:58.604385384 DEBUG (6): MeasMsg received from 7 !!! 
+0:0:58.604385384 DEBUG (6): Receive from child: 7 values - sum:15, count: 2, max: 8
+0:0:58.604553220 DEBUG (7): A Measure package sent... True 
+0:0:58.605606070 DEBUG (5): A Measure package sent... True 
+0:1:2.400390635 DEBUG (4): NodeID = 4 curdepth= 2
+0:1:2.400390635 DEBUG (4): Starting Data transmission to parent!
+0:1:2.400390635 DEBUG (4): SendMeasTimer fired!
+0:1:2.400390635 DEBUG (4): measurement is: 4
+0:1:2.400390635 DEBUG (4): Node has sum: 4, count: 1, max: 4
+0:1:2.400390635 DEBUG (4): Sending MeasMsg... 
+0:1:2.400390635 DEBUG (4): SendMeasTask() posted!!
+0:1:2.400390635 DEBUG (4): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:1:2.400390635 DEBUG (6): NodeID = 6 curdepth= 2
+0:1:2.400390635 DEBUG (6): Starting Data transmission to parent!
+0:1:2.400390635 DEBUG (6): SendMeasTimer fired!
+0:1:2.400390635 DEBUG (6): measurement is: 6
+0:1:2.400390635 DEBUG (6): Child 7 has sum: 15, count: 2 and max: 8
+0:1:2.400390635 DEBUG (6): Node has sum: 21, count: 3, max: 8
+0:1:2.400390635 DEBUG (6): Sending MeasMsg... 
+0:1:2.400390635 DEBUG (6): SendMeasTask() posted!!
+0:1:2.400390635 DEBUG (6): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:1:2.400390645 DEBUG (4):  sendMeasTask(): mlen = 4  sum= 4 count= 1 max=4 
+0:1:2.400390645 DEBUG (4): sendMeasTask(): Send measure returned success!!!
+0:1:2.400390645 DEBUG (6):  sendMeasTask(): mlen = 4  sum= 21 count= 3 max=8 
+0:1:2.400390645 DEBUG (6): sendMeasTask(): Send measure returned success!!!
+0:1:2.410964924 DEBUG (4): A Measure package sent... True 
+0:1:2.411086994 DEBUG (6): A Measure package sent... True 
+0:1:6.200195322 DEBUG (1): NodeID = 1 curdepth= 1
+0:1:6.200195322 DEBUG (1): Starting Data transmission to parent!
+0:1:6.200195322 DEBUG (1): SendMeasTimer fired!
+0:1:6.200195322 DEBUG (1): measurement is: 1
+0:1:6.200195322 DEBUG (1): Node has sum: 1, count: 1, max: 1
+0:1:6.200195322 DEBUG (1): Sending MeasMsg... 
+0:1:6.200195322 DEBUG (1): SendMeasTask() posted!!
+0:1:6.200195322 DEBUG (1): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:1:6.200195322 DEBUG (3): NodeID = 3 curdepth= 1
+0:1:6.200195322 DEBUG (3): Starting Data transmission to parent!
+0:1:6.200195322 DEBUG (3): SendMeasTimer fired!
+0:1:6.200195322 DEBUG (3): measurement is: 3
+0:1:6.200195322 DEBUG (3): Node has sum: 3, count: 1, max: 3
+0:1:6.200195322 DEBUG (3): Sending MeasMsg... 
+0:1:6.200195322 DEBUG (3): SendMeasTask() posted!!
+0:1:6.200195322 DEBUG (3): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:1:6.200195332 DEBUG (1):  sendMeasTask(): mlen = 4  sum= 1 count= 1 max=1 
+0:1:6.200195332 DEBUG (1): sendMeasTask(): Send measure returned success!!!
+0:1:6.200195332 DEBUG (3):  sendMeasTask(): mlen = 4  sum= 3 count= 1 max=3 
+0:1:6.200195332 DEBUG (3): sendMeasTask(): Send measure returned success!!!
+0:1:6.202468879 DEBUG (0): ### MeasReceive.receive() start ##### 
+0:1:6.202468879 DEBUG (0): Some measurement received!!!  from 3 
+0:1:6.202468879 DEBUG (0): ### MeasReceive.receive() end ##### 
+0:1:6.202468889 DEBUG (0): receiveMeasTask(): len=4 
+0:1:6.202468889 DEBUG (0): MeasMsg received from 3 !!! 
+0:1:6.202468889 DEBUG (0): Receive from child: 3 values - sum:3, count: 1, max: 3
+0:1:6.202636724 DEBUG (3): A Measure package sent... True 
+0:1:6.211074785 DEBUG (0): ### MeasReceive.receive() start ##### 
+0:1:6.211074785 DEBUG (0): Some measurement received!!!  from 1 
+0:1:6.211074785 DEBUG (0): ### MeasReceive.receive() end ##### 
+0:1:6.211074795 DEBUG (0): receiveMeasTask(): len=4 
+0:1:6.211074795 DEBUG (0): MeasMsg received from 1 !!! 
+0:1:6.211074795 DEBUG (0): Receive from child: 1 values - sum:1, count: 1, max: 1
+0:1:6.211242631 DEBUG (1): A Measure package sent... True 
+0:1:10.000000010 DEBUG (0): IAMZERO
+0:1:10.000000010 DEBUG (0): 
+0:1:10.000000010 DEBUG (0): ##################################### 
+0:1:10.000000010 DEBUG (0): #######   ROUND   2    ############## 
+0:1:10.000000010 DEBUG (0): #####################################
+0:1:54.000000010 DEBUG (2): NodeID = 2 curdepth= 4
+0:1:54.000000010 DEBUG (2): Starting Data transmission to parent!
+0:1:54.000000010 DEBUG (2): SendMeasTimer fired!
+0:1:54.000000010 DEBUG (2): measurement is: 2
+0:1:54.000000010 DEBUG (2): Node has sum: 2, count: 1, max: 2
+0:1:54.000000010 DEBUG (2): Sending MeasMsg... 
+0:1:54.000000010 DEBUG (2): SendMeasTask() posted!!
+0:1:54.000000010 DEBUG (2): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:1:54.000000010 DEBUG (8): NodeID = 8 curdepth= 4
+0:1:54.000000010 DEBUG (8): Starting Data transmission to parent!
+0:1:54.000000010 DEBUG (8): SendMeasTimer fired!
+0:1:54.000000010 DEBUG (8): measurement is: 8
+0:1:54.000000010 DEBUG (8): Node has sum: 8, count: 1, max: 8
+0:1:54.000000010 DEBUG (8): Sending MeasMsg... 
+0:1:54.000000010 DEBUG (8): SendMeasTask() posted!!
+0:1:54.000000010 DEBUG (8): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:1:54.000000020 DEBUG (2):  sendMeasTask(): mlen = 4  sum= 2 count= 1 max=2 
+0:1:54.000000020 DEBUG (2): sendMeasTask(): Send measure returned success!!!
+0:1:54.000000020 DEBUG (8):  sendMeasTask(): mlen = 4  sum= 8 count= 1 max=8 
+0:1:54.000000020 DEBUG (8): sendMeasTask(): Send measure returned success!!!
+0:1:54.003387452 DEBUG (7): ### MeasReceive.receive() start ##### 
+0:1:54.003387452 DEBUG (7): Some measurement received!!!  from 8 
+0:1:54.003387452 DEBUG (7): ### MeasReceive.receive() end ##### 
+0:1:54.003387462 DEBUG (7): receiveMeasTask(): len=4 
+0:1:54.003387462 DEBUG (7): MeasMsg received from 8 !!! 
+0:1:54.003387462 DEBUG (7): Receive from child: 8 values - sum:8, count: 1, max: 8
+0:1:54.003555297 DEBUG (8): A Measure package sent... True 
+0:1:54.010498005 DEBUG (5): ### MeasReceive.receive() start ##### 
+0:1:54.010498005 DEBUG (5): Some measurement received!!!  from 2 
+0:1:54.010498005 DEBUG (5): ### MeasReceive.receive() end ##### 
+0:1:54.010498015 DEBUG (5): receiveMeasTask(): len=4 
+0:1:54.010498015 DEBUG (5): MeasMsg received from 2 !!! 
+0:1:54.010498015 DEBUG (5): Receive from child: 2 values - sum:2, count: 1, max: 2
+0:1:54.010665851 DEBUG (2): A Measure package sent... True 
+0:1:58.000000010 DEBUG (5): NodeID = 5 curdepth= 3
+0:1:58.000000010 DEBUG (5): Starting Data transmission to parent!
+0:1:58.000000010 DEBUG (5): SendMeasTimer fired!
+0:1:58.000000010 DEBUG (5): measurement is: 5
+0:1:58.000000010 DEBUG (5): Child 2 has sum: 2, count: 1 and max: 2
+0:1:58.000000010 DEBUG (5): Node has sum: 7, count: 2, max: 5
+0:1:58.000000010 DEBUG (5): Sending MeasMsg... 
+0:1:58.000000010 DEBUG (5): SendMeasTask() posted!!
+0:1:58.000000010 DEBUG (5): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:1:58.000000010 DEBUG (7): NodeID = 7 curdepth= 3
+0:1:58.000000010 DEBUG (7): Starting Data transmission to parent!
+0:1:58.000000010 DEBUG (7): SendMeasTimer fired!
+0:1:58.000000010 DEBUG (7): measurement is: 7
+0:1:58.000000010 DEBUG (7): Child 8 has sum: 8, count: 1 and max: 8
+0:1:58.000000010 DEBUG (7): Node has sum: 15, count: 2, max: 8
+0:1:58.000000010 DEBUG (7): Sending MeasMsg... 
+0:1:58.000000010 DEBUG (7): SendMeasTask() posted!!
+0:1:58.000000010 DEBUG (7): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:1:58.000000020 DEBUG (5):  sendMeasTask(): mlen = 4  sum= 7 count= 2 max=5 
+0:1:58.000000020 DEBUG (5): sendMeasTask(): Send measure returned success!!!
+0:1:58.000000020 DEBUG (7):  sendMeasTask(): mlen = 4  sum= 15 count= 2 max=8 
+0:1:58.000000020 DEBUG (7): sendMeasTask(): Send measure returned success!!!
+0:1:58.002777103 DEBUG (4): ### MeasReceive.receive() start ##### 
+0:1:58.002777103 DEBUG (4): Some measurement received!!!  from 5 
+0:1:58.002777103 DEBUG (4): ### MeasReceive.receive() end ##### 
+0:1:58.002777113 DEBUG (4): receiveMeasTask(): len=4 
+0:1:58.002777113 DEBUG (4): MeasMsg received from 5 !!! 
+0:1:58.002777113 DEBUG (4): Receive from child: 5 values - sum:7, count: 2, max: 5
+0:1:58.002944949 DEBUG (5): A Measure package sent... True 
+0:1:58.006271346 DEBUG (6): ### MeasReceive.receive() start ##### 
+0:1:58.006271346 DEBUG (6): Some measurement received!!!  from 7 
+0:1:58.006271346 DEBUG (6): ### MeasReceive.receive() end ##### 
+0:1:58.006271356 DEBUG (6): receiveMeasTask(): len=4 
+0:1:58.006271356 DEBUG (6): MeasMsg received from 7 !!! 
+0:1:58.006271356 DEBUG (6): Receive from child: 7 values - sum:15, count: 2, max: 8
+0:1:58.006439192 DEBUG (7): A Measure package sent... True 
+0:2:2.000000010 DEBUG (4): NodeID = 4 curdepth= 2
+0:2:2.000000010 DEBUG (4): Starting Data transmission to parent!
+0:2:2.000000010 DEBUG (4): SendMeasTimer fired!
+0:2:2.000000010 DEBUG (4): measurement is: 4
+0:2:2.000000010 DEBUG (4): Child 5 has sum: 7, count: 2 and max: 5
+0:2:2.000000010 DEBUG (4): Node has sum: 11, count: 3, max: 5
+0:2:2.000000010 DEBUG (4): Sending MeasMsg... 
+0:2:2.000000010 DEBUG (4): SendMeasTask() posted!!
+0:2:2.000000010 DEBUG (4): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:2:2.000000010 DEBUG (6): NodeID = 6 curdepth= 2
+0:2:2.000000010 DEBUG (6): Starting Data transmission to parent!
+0:2:2.000000010 DEBUG (6): SendMeasTimer fired!
+0:2:2.000000010 DEBUG (6): measurement is: 6
+0:2:2.000000010 DEBUG (6): Child 7 has sum: 15, count: 2 and max: 8
+0:2:2.000000010 DEBUG (6): Node has sum: 21, count: 3, max: 8
+0:2:2.000000010 DEBUG (6): Sending MeasMsg... 
+0:2:2.000000010 DEBUG (6): SendMeasTask() posted!!
+0:2:2.000000010 DEBUG (6): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:2:2.000000020 DEBUG (4):  sendMeasTask(): mlen = 4  sum= 11 count= 3 max=5 
+0:2:2.000000020 DEBUG (4): sendMeasTask(): Send measure returned success!!!
+0:2:2.000000020 DEBUG (6):  sendMeasTask(): mlen = 4  sum= 21 count= 3 max=8 
+0:2:2.000000020 DEBUG (6): sendMeasTask(): Send measure returned success!!!
+0:2:2.005126943 DEBUG (3): ### MeasReceive.receive() start ##### 
+0:2:2.005126943 DEBUG (3): Some measurement received!!!  from 6 
+0:2:2.005126943 DEBUG (3): ### MeasReceive.receive() end ##### 
+0:2:2.005126953 DEBUG (3): receiveMeasTask(): len=4 
+0:2:2.005126953 DEBUG (3): MeasMsg received from 6 !!! 
+0:2:2.005126953 DEBUG (3): Receive from child: 6 values - sum:21, count: 3, max: 8
+0:2:2.005294789 DEBUG (6): A Measure package sent... True 
+0:2:2.010421712 DEBUG (3): ### MeasReceive.receive() start ##### 
+0:2:2.010421712 DEBUG (3): Some measurement received!!!  from 4 
+0:2:2.010421712 DEBUG (3): ### MeasReceive.receive() end ##### 
+0:2:2.010421722 DEBUG (3): receiveMeasTask(): len=4 
+0:2:2.010421722 DEBUG (3): MeasMsg received from 4 !!! 
+0:2:2.010421722 DEBUG (3): Receive from child: 4 values - sum:11, count: 3, max: 5
+0:2:2.010589558 DEBUG (4): A Measure package sent... True 
+0:2:6.000000010 DEBUG (1): NodeID = 1 curdepth= 1
+0:2:6.000000010 DEBUG (1): Starting Data transmission to parent!
+0:2:6.000000010 DEBUG (1): SendMeasTimer fired!
+0:2:6.000000010 DEBUG (1): measurement is: 1
+0:2:6.000000010 DEBUG (1): Node has sum: 1, count: 1, max: 1
+0:2:6.000000010 DEBUG (1): Sending MeasMsg... 
+0:2:6.000000010 DEBUG (1): SendMeasTask() posted!!
+0:2:6.000000010 DEBUG (1): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:2:6.000000010 DEBUG (3): NodeID = 3 curdepth= 1
+0:2:6.000000010 DEBUG (3): Starting Data transmission to parent!
+0:2:6.000000010 DEBUG (3): SendMeasTimer fired!
+0:2:6.000000010 DEBUG (3): measurement is: 3
+0:2:6.000000010 DEBUG (3): Child 6 has sum: 21, count: 3 and max: 8
+0:2:6.000000010 DEBUG (3): Child 4 has sum: 11, count: 3 and max: 5
+0:2:6.000000010 DEBUG (3): Node has sum: 35, count: 7, max: 8
+0:2:6.000000010 DEBUG (3): Sending MeasMsg... 
+0:2:6.000000010 DEBUG (3): SendMeasTask() posted!!
+0:2:6.000000010 DEBUG (3): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:2:6.000000020 DEBUG (1):  sendMeasTask(): mlen = 4  sum= 1 count= 1 max=1 
+0:2:6.000000020 DEBUG (1): sendMeasTask(): Send measure returned success!!!
+0:2:6.000000020 DEBUG (3):  sendMeasTask(): mlen = 4  sum= 35 count= 7 max=8 
+0:2:6.000000020 DEBUG (3): sendMeasTask(): Send measure returned success!!!
+0:2:6.008514374 DEBUG (0): ### MeasReceive.receive() start ##### 
+0:2:6.008514374 DEBUG (0): Some measurement received!!!  from 3 
+0:2:6.008514374 DEBUG (0): ### MeasReceive.receive() end ##### 
+0:2:6.008514384 DEBUG (0): receiveMeasTask(): len=4 
+0:2:6.008514384 DEBUG (0): MeasMsg received from 3 !!! 
+0:2:6.008514384 DEBUG (0): Receive from child: 3 values - sum:35, count: 7, max: 8
+0:2:6.008682220 DEBUG (3): A Measure package sent... True 
+0:2:6.010345418 DEBUG (0): ### MeasReceive.receive() start ##### 
+0:2:6.010345418 DEBUG (0): Some measurement received!!!  from 1 
+0:2:6.010345418 DEBUG (0): ### MeasReceive.receive() end ##### 
+0:2:6.010345428 DEBUG (0): receiveMeasTask(): len=4 
+0:2:6.010345428 DEBUG (0): MeasMsg received from 1 !!! 
+0:2:6.010345428 DEBUG (0): Receive from child: 1 values - sum:1, count: 1, max: 1
+0:2:6.010513264 DEBUG (1): A Measure package sent... True 
+0:2:10.000000010 DEBUG (0): IAMZERO
+0:2:10.000000010 DEBUG (0): 
+0:2:10.000000010 DEBUG (0): ##################################### 
+0:2:10.000000010 DEBUG (0): #######   ROUND   3    ############## 
+0:2:10.000000010 DEBUG (0): #####################################
+0:2:54.000000010 DEBUG (2): NodeID = 2 curdepth= 4
+0:2:54.000000010 DEBUG (2): Starting Data transmission to parent!
+0:2:54.000000010 DEBUG (2): SendMeasTimer fired!
+0:2:54.000000010 DEBUG (2): measurement is: 2
+0:2:54.000000010 DEBUG (2): Node has sum: 2, count: 1, max: 2
+0:2:54.000000010 DEBUG (2): Sending MeasMsg... 
+0:2:54.000000010 DEBUG (2): SendMeasTask() posted!!
+0:2:54.000000010 DEBUG (2): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:2:54.000000010 DEBUG (8): NodeID = 8 curdepth= 4
+0:2:54.000000010 DEBUG (8): Starting Data transmission to parent!
+0:2:54.000000010 DEBUG (8): SendMeasTimer fired!
+0:2:54.000000010 DEBUG (8): measurement is: 8
+0:2:54.000000010 DEBUG (8): Node has sum: 8, count: 1, max: 8
+0:2:54.000000010 DEBUG (8): Sending MeasMsg... 
+0:2:54.000000010 DEBUG (8): SendMeasTask() posted!!
+0:2:54.000000010 DEBUG (8): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:2:54.000000020 DEBUG (2):  sendMeasTask(): mlen = 4  sum= 2 count= 1 max=2 
+0:2:54.000000020 DEBUG (2): sendMeasTask(): Send measure returned success!!!
+0:2:54.000000020 DEBUG (8):  sendMeasTask(): mlen = 4  sum= 8 count= 1 max=8 
+0:2:54.000000020 DEBUG (8): sendMeasTask(): Send measure returned success!!!
+0:2:54.004241938 DEBUG (5): ### MeasReceive.receive() start ##### 
+0:2:54.004241938 DEBUG (5): Some measurement received!!!  from 2 
+0:2:54.004241938 DEBUG (5): ### MeasReceive.receive() end ##### 
+0:2:54.004241948 DEBUG (5): receiveMeasTask(): len=4 
+0:2:54.004241948 DEBUG (5): MeasMsg received from 2 !!! 
+0:2:54.004241948 DEBUG (5): Receive from child: 2 values - sum:2, count: 1, max: 2
+0:2:54.004409784 DEBUG (2): A Measure package sent... True 
+0:2:54.007507301 DEBUG (7): ### MeasReceive.receive() start ##### 
+0:2:54.007507301 DEBUG (7): Some measurement received!!!  from 8 
+0:2:54.007507301 DEBUG (7): ### MeasReceive.receive() end ##### 
+0:2:54.007507311 DEBUG (7): receiveMeasTask(): len=4 
+0:2:54.007507311 DEBUG (7): MeasMsg received from 8 !!! 
+0:2:54.007507311 DEBUG (7): Receive from child: 8 values - sum:8, count: 1, max: 8
+0:2:54.007675146 DEBUG (8): A Measure package sent... True 
+0:2:58.000000010 DEBUG (5): NodeID = 5 curdepth= 3
+0:2:58.000000010 DEBUG (5): Starting Data transmission to parent!
+0:2:58.000000010 DEBUG (5): SendMeasTimer fired!
+0:2:58.000000010 DEBUG (5): measurement is: 5
+0:2:58.000000010 DEBUG (5): Child 2 has sum: 2, count: 1 and max: 2
+0:2:58.000000010 DEBUG (5): Node has sum: 7, count: 2, max: 5
+0:2:58.000000010 DEBUG (5): Sending MeasMsg... 
+0:2:58.000000010 DEBUG (5): SendMeasTask() posted!!
+0:2:58.000000010 DEBUG (5): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:2:58.000000010 DEBUG (7): NodeID = 7 curdepth= 3
+0:2:58.000000010 DEBUG (7): Starting Data transmission to parent!
+0:2:58.000000010 DEBUG (7): SendMeasTimer fired!
+0:2:58.000000010 DEBUG (7): measurement is: 7
+0:2:58.000000010 DEBUG (7): Child 8 has sum: 8, count: 1 and max: 8
+0:2:58.000000010 DEBUG (7): Node has sum: 15, count: 2, max: 8
+0:2:58.000000010 DEBUG (7): Sending MeasMsg... 
+0:2:58.000000010 DEBUG (7): SendMeasTask() posted!!
+0:2:58.000000010 DEBUG (7): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:2:58.000000020 DEBUG (5):  sendMeasTask(): mlen = 4  sum= 7 count= 2 max=5 
+0:2:58.000000020 DEBUG (5): sendMeasTask(): Send measure returned success!!!
+0:2:58.000000020 DEBUG (7):  sendMeasTask(): mlen = 4  sum= 15 count= 2 max=8 
+0:2:58.000000020 DEBUG (7): sendMeasTask(): Send measure returned success!!!
+0:2:58.003234865 DEBUG (6): ### MeasReceive.receive() start ##### 
+0:2:58.003234865 DEBUG (6): Some measurement received!!!  from 7 
+0:2:58.003234865 DEBUG (6): ### MeasReceive.receive() end ##### 
+0:2:58.003234875 DEBUG (6): receiveMeasTask(): len=4 
+0:2:58.003234875 DEBUG (6): MeasMsg received from 7 !!! 
+0:2:58.003234875 DEBUG (6): Receive from child: 7 values - sum:15, count: 2, max: 8
+0:2:58.003402710 DEBUG (7): A Measure package sent... True 
+0:2:58.003601073 DEBUG (5): A Measure package sent... True 
+0:3:2.000000010 DEBUG (4): NodeID = 4 curdepth= 2
+0:3:2.000000010 DEBUG (4): Starting Data transmission to parent!
+0:3:2.000000010 DEBUG (4): SendMeasTimer fired!
+0:3:2.000000010 DEBUG (4): measurement is: 4
+0:3:2.000000010 DEBUG (4): Child 5 has sum: 7, count: 2 and max: 5
+0:3:2.000000010 DEBUG (4): Node has sum: 11, count: 3, max: 5
+0:3:2.000000010 DEBUG (4): Sending MeasMsg... 
+0:3:2.000000010 DEBUG (4): SendMeasTask() posted!!
+0:3:2.000000010 DEBUG (4): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:3:2.000000010 DEBUG (6): NodeID = 6 curdepth= 2
+0:3:2.000000010 DEBUG (6): Starting Data transmission to parent!
+0:3:2.000000010 DEBUG (6): SendMeasTimer fired!
+0:3:2.000000010 DEBUG (6): measurement is: 6
+0:3:2.000000010 DEBUG (6): Child 7 has sum: 15, count: 2 and max: 8
+0:3:2.000000010 DEBUG (6): Node has sum: 21, count: 3, max: 8
+0:3:2.000000010 DEBUG (6): Sending MeasMsg... 
+0:3:2.000000010 DEBUG (6): SendMeasTask() posted!!
+0:3:2.000000010 DEBUG (6): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:3:2.000000020 DEBUG (4):  sendMeasTask(): mlen = 4  sum= 11 count= 3 max=5 
+0:3:2.000000020 DEBUG (4): sendMeasTask(): Send measure returned success!!!
+0:3:2.000000020 DEBUG (6):  sendMeasTask(): mlen = 4  sum= 21 count= 3 max=8 
+0:3:2.000000020 DEBUG (6): sendMeasTask(): Send measure returned success!!!
+0:3:2.003997800 DEBUG (6): A Measure package sent... True 
+0:3:2.004425043 DEBUG (4): A Measure package sent... True 
+0:3:6.000000010 DEBUG (1): NodeID = 1 curdepth= 1
+0:3:6.000000010 DEBUG (1): Starting Data transmission to parent!
+0:3:6.000000010 DEBUG (1): SendMeasTimer fired!
+0:3:6.000000010 DEBUG (1): measurement is: 1
+0:3:6.000000010 DEBUG (1): Node has sum: 1, count: 1, max: 1
+0:3:6.000000010 DEBUG (1): Sending MeasMsg... 
+0:3:6.000000010 DEBUG (1): SendMeasTask() posted!!
+0:3:6.000000010 DEBUG (1): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:3:6.000000010 DEBUG (3): NodeID = 3 curdepth= 1
+0:3:6.000000010 DEBUG (3): Starting Data transmission to parent!
+0:3:6.000000010 DEBUG (3): SendMeasTimer fired!
+0:3:6.000000010 DEBUG (3): measurement is: 3
+0:3:6.000000010 DEBUG (3): Child 6 has sum: 21, count: 3 and max: 8
+0:3:6.000000010 DEBUG (3): Child 4 has sum: 11, count: 3 and max: 5
+0:3:6.000000010 DEBUG (3): Node has sum: 35, count: 7, max: 8
+0:3:6.000000010 DEBUG (3): Sending MeasMsg... 
+0:3:6.000000010 DEBUG (3): SendMeasTask() posted!!
+0:3:6.000000010 DEBUG (3): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:3:6.000000020 DEBUG (1):  sendMeasTask(): mlen = 4  sum= 1 count= 1 max=1 
+0:3:6.000000020 DEBUG (1): sendMeasTask(): Send measure returned success!!!
+0:3:6.000000020 DEBUG (3):  sendMeasTask(): mlen = 4  sum= 35 count= 7 max=8 
+0:3:6.000000020 DEBUG (3): sendMeasTask(): Send measure returned success!!!
+0:3:6.002944949 DEBUG (0): ### MeasReceive.receive() start ##### 
+0:3:6.002944949 DEBUG (0): Some measurement received!!!  from 3 
+0:3:6.002944949 DEBUG (0): ### MeasReceive.receive() end ##### 
+0:3:6.002944959 DEBUG (0): receiveMeasTask(): len=4 
+0:3:6.002944959 DEBUG (0): MeasMsg received from 3 !!! 
+0:3:6.002944959 DEBUG (0): Receive from child: 3 values - sum:35, count: 7, max: 8
+0:3:6.003112795 DEBUG (3): A Measure package sent... True 
+0:3:6.005752550 DEBUG (0): ### MeasReceive.receive() start ##### 
+0:3:6.005752550 DEBUG (0): Some measurement received!!!  from 1 
+0:3:6.005752550 DEBUG (0): ### MeasReceive.receive() end ##### 
+0:3:6.005752560 DEBUG (0): receiveMeasTask(): len=4 
+0:3:6.005752560 DEBUG (0): MeasMsg received from 1 !!! 
+0:3:6.005752560 DEBUG (0): Receive from child: 1 values - sum:1, count: 1, max: 1
+0:3:6.005920395 DEBUG (1): A Measure package sent... True 
+0:3:10.000000010 DEBUG (0): IAMZERO
+0:3:10.000000010 DEBUG (0): 
+0:3:10.000000010 DEBUG (0): ##################################### 
+0:3:10.000000010 DEBUG (0): #######   ROUND   4    ############## 
+0:3:10.000000010 DEBUG (0): #####################################
+0:3:54.000000010 DEBUG (2): NodeID = 2 curdepth= 4
+0:3:54.000000010 DEBUG (2): Starting Data transmission to parent!
+0:3:54.000000010 DEBUG (2): SendMeasTimer fired!
+0:3:54.000000010 DEBUG (2): measurement is: 2
+0:3:54.000000010 DEBUG (2): Node has sum: 2, count: 1, max: 2
+0:3:54.000000010 DEBUG (2): Sending MeasMsg... 
+0:3:54.000000010 DEBUG (2): SendMeasTask() posted!!
+0:3:54.000000010 DEBUG (2): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:3:54.000000010 DEBUG (8): NodeID = 8 curdepth= 4
+0:3:54.000000010 DEBUG (8): Starting Data transmission to parent!
+0:3:54.000000010 DEBUG (8): SendMeasTimer fired!
+0:3:54.000000010 DEBUG (8): measurement is: 8
+0:3:54.000000010 DEBUG (8): Node has sum: 8, count: 1, max: 8
+0:3:54.000000010 DEBUG (8): Sending MeasMsg... 
+0:3:54.000000010 DEBUG (8): SendMeasTask() posted!!
+0:3:54.000000010 DEBUG (8): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:3:54.000000020 DEBUG (2):  sendMeasTask(): mlen = 4  sum= 2 count= 1 max=2 
+0:3:54.000000020 DEBUG (2): sendMeasTask(): Send measure returned success!!!
+0:3:54.000000020 DEBUG (8):  sendMeasTask(): mlen = 4  sum= 8 count= 1 max=8 
+0:3:54.000000020 DEBUG (8): sendMeasTask(): Send measure returned success!!!
+0:3:54.003753661 DEBUG (7): ### MeasReceive.receive() start ##### 
+0:3:54.003753661 DEBUG (7): Some measurement received!!!  from 8 
+0:3:54.003753661 DEBUG (7): ### MeasReceive.receive() end ##### 
+0:3:54.003753671 DEBUG (7): receiveMeasTask(): len=4 
+0:3:54.003753671 DEBUG (7): MeasMsg received from 8 !!! 
+0:3:54.003753671 DEBUG (7): Receive from child: 8 values - sum:8, count: 1, max: 8
+0:3:54.003921506 DEBUG (8): A Measure package sent... True 
+0:3:54.005508410 DEBUG (5): ### MeasReceive.receive() start ##### 
+0:3:54.005508410 DEBUG (5): Some measurement received!!!  from 2 
+0:3:54.005508410 DEBUG (5): ### MeasReceive.receive() end ##### 
+0:3:54.005508420 DEBUG (5): receiveMeasTask(): len=4 
+0:3:54.005508420 DEBUG (5): MeasMsg received from 2 !!! 
+0:3:54.005508420 DEBUG (5): Receive from child: 2 values - sum:2, count: 1, max: 2
+0:3:54.005676256 DEBUG (2): A Measure package sent... True 
+0:3:58.000000010 DEBUG (5): NodeID = 5 curdepth= 3
+0:3:58.000000010 DEBUG (5): Starting Data transmission to parent!
+0:3:58.000000010 DEBUG (5): SendMeasTimer fired!
+0:3:58.000000010 DEBUG (5): measurement is: 5
+0:3:58.000000010 DEBUG (5): Child 2 has sum: 2, count: 1 and max: 2
+0:3:58.000000010 DEBUG (5): Node has sum: 7, count: 2, max: 5
+0:3:58.000000010 DEBUG (5): Sending MeasMsg... 
+0:3:58.000000010 DEBUG (5): SendMeasTask() posted!!
+0:3:58.000000010 DEBUG (5): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:3:58.000000010 DEBUG (7): NodeID = 7 curdepth= 3
+0:3:58.000000010 DEBUG (7): Starting Data transmission to parent!
+0:3:58.000000010 DEBUG (7): SendMeasTimer fired!
+0:3:58.000000010 DEBUG (7): measurement is: 7
+0:3:58.000000010 DEBUG (7): Child 8 has sum: 8, count: 1 and max: 8
+0:3:58.000000010 DEBUG (7): Node has sum: 15, count: 2, max: 8
+0:3:58.000000010 DEBUG (7): Sending MeasMsg... 
+0:3:58.000000010 DEBUG (7): SendMeasTask() posted!!
+0:3:58.000000010 DEBUG (7): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:3:58.000000020 DEBUG (5):  sendMeasTask(): mlen = 4  sum= 7 count= 2 max=5 
+0:3:58.000000020 DEBUG (5): sendMeasTask(): Send measure returned success!!!
+0:3:58.000000020 DEBUG (7):  sendMeasTask(): mlen = 4  sum= 15 count= 2 max=8 
+0:3:58.000000020 DEBUG (7): sendMeasTask(): Send measure returned success!!!
+0:3:58.002471929 DEBUG (5): A Measure package sent... True 
+0:3:58.002716069 DEBUG (6): ### MeasReceive.receive() start ##### 
+0:3:58.002716069 DEBUG (6): Some measurement received!!!  from 7 
+0:3:58.002716069 DEBUG (6): ### MeasReceive.receive() end ##### 
+0:3:58.002716079 DEBUG (6): receiveMeasTask(): len=4 
+0:3:58.002716079 DEBUG (6): MeasMsg received from 7 !!! 
+0:3:58.002716079 DEBUG (6): Receive from child: 7 values - sum:15, count: 2, max: 8
+0:3:58.002883915 DEBUG (7): A Measure package sent... True 
+0:4:2.000000010 DEBUG (4): NodeID = 4 curdepth= 2
+0:4:2.000000010 DEBUG (4): Starting Data transmission to parent!
+0:4:2.000000010 DEBUG (4): SendMeasTimer fired!
+0:4:2.000000010 DEBUG (4): measurement is: 4
+0:4:2.000000010 DEBUG (4): Child 5 has sum: 7, count: 2 and max: 5
+0:4:2.000000010 DEBUG (4): Node has sum: 11, count: 3, max: 5
+0:4:2.000000010 DEBUG (4): Sending MeasMsg... 
+0:4:2.000000010 DEBUG (4): SendMeasTask() posted!!
+0:4:2.000000010 DEBUG (4): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:4:2.000000010 DEBUG (6): NodeID = 6 curdepth= 2
+0:4:2.000000010 DEBUG (6): Starting Data transmission to parent!
+0:4:2.000000010 DEBUG (6): SendMeasTimer fired!
+0:4:2.000000010 DEBUG (6): measurement is: 6
+0:4:2.000000010 DEBUG (6): Child 7 has sum: 15, count: 2 and max: 8
+0:4:2.000000010 DEBUG (6): Node has sum: 21, count: 3, max: 8
+0:4:2.000000010 DEBUG (6): Sending MeasMsg... 
+0:4:2.000000010 DEBUG (6): SendMeasTask() posted!!
+0:4:2.000000010 DEBUG (6): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:4:2.000000020 DEBUG (4):  sendMeasTask(): mlen = 4  sum= 11 count= 3 max=5 
+0:4:2.000000020 DEBUG (4): sendMeasTask(): Send measure returned success!!!
+0:4:2.000000020 DEBUG (6):  sendMeasTask(): mlen = 4  sum= 21 count= 3 max=8 
+0:4:2.000000020 DEBUG (6): sendMeasTask(): Send measure returned success!!!
+0:4:2.007064798 DEBUG (3): ### MeasReceive.receive() start ##### 
+0:4:2.007064798 DEBUG (3): Some measurement received!!!  from 6 
+0:4:2.007064798 DEBUG (3): ### MeasReceive.receive() end ##### 
+0:4:2.007064808 DEBUG (3): receiveMeasTask(): len=4 
+0:4:2.007064808 DEBUG (3): MeasMsg received from 6 !!! 
+0:4:2.007064808 DEBUG (3): Receive from child: 6 values - sum:21, count: 3, max: 8
+0:4:2.007232644 DEBUG (6): A Measure package sent... True 
+0:4:2.009475673 DEBUG (3): ### MeasReceive.receive() start ##### 
+0:4:2.009475673 DEBUG (3): Some measurement received!!!  from 4 
+0:4:2.009475673 DEBUG (3): ### MeasReceive.receive() end ##### 
+0:4:2.009475683 DEBUG (3): receiveMeasTask(): len=4 
+0:4:2.009475683 DEBUG (3): MeasMsg received from 4 !!! 
+0:4:2.009475683 DEBUG (3): Receive from child: 4 values - sum:11, count: 3, max: 5
+0:4:2.009643518 DEBUG (4): A Measure package sent... True 
+0:4:6.000000010 DEBUG (1): NodeID = 1 curdepth= 1
+0:4:6.000000010 DEBUG (1): Starting Data transmission to parent!
+0:4:6.000000010 DEBUG (1): SendMeasTimer fired!
+0:4:6.000000010 DEBUG (1): measurement is: 1
+0:4:6.000000010 DEBUG (1): Node has sum: 1, count: 1, max: 1
+0:4:6.000000010 DEBUG (1): Sending MeasMsg... 
+0:4:6.000000010 DEBUG (1): SendMeasTask() posted!!
+0:4:6.000000010 DEBUG (1): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:4:6.000000010 DEBUG (3): NodeID = 3 curdepth= 1
+0:4:6.000000010 DEBUG (3): Starting Data transmission to parent!
+0:4:6.000000010 DEBUG (3): SendMeasTimer fired!
+0:4:6.000000010 DEBUG (3): measurement is: 3
+0:4:6.000000010 DEBUG (3): Child 6 has sum: 21, count: 3 and max: 8
+0:4:6.000000010 DEBUG (3): Child 4 has sum: 11, count: 3 and max: 5
+0:4:6.000000010 DEBUG (3): Node has sum: 35, count: 7, max: 8
+0:4:6.000000010 DEBUG (3): Sending MeasMsg... 
+0:4:6.000000010 DEBUG (3): SendMeasTask() posted!!
+0:4:6.000000010 DEBUG (3): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:4:6.000000020 DEBUG (1):  sendMeasTask(): mlen = 4  sum= 1 count= 1 max=1 
+0:4:6.000000020 DEBUG (1): sendMeasTask(): Send measure returned success!!!
+0:4:6.000000020 DEBUG (3):  sendMeasTask(): mlen = 4  sum= 35 count= 7 max=8 
+0:4:6.000000020 DEBUG (3): sendMeasTask(): Send measure returned success!!!
+0:4:6.010040244 DEBUG (0): ### MeasReceive.receive() start ##### 
+0:4:6.010040244 DEBUG (0): Some measurement received!!!  from 3 
+0:4:6.010040244 DEBUG (0): ### MeasReceive.receive() end ##### 
+0:4:6.010040254 DEBUG (0): receiveMeasTask(): len=4 
+0:4:6.010040254 DEBUG (0): MeasMsg received from 3 !!! 
+0:4:6.010040254 DEBUG (0): Receive from child: 3 values - sum:35, count: 7, max: 8
+0:4:6.010208090 DEBUG (3): A Measure package sent... True 
+0:4:6.011978099 DEBUG (0): ### MeasReceive.receive() start ##### 
+0:4:6.011978099 DEBUG (0): Some measurement received!!!  from 1 
+0:4:6.011978099 DEBUG (0): ### MeasReceive.receive() end ##### 
+0:4:6.011978109 DEBUG (0): receiveMeasTask(): len=4 
+0:4:6.011978109 DEBUG (0): MeasMsg received from 1 !!! 
+0:4:6.011978109 DEBUG (0): Receive from child: 1 values - sum:1, count: 1, max: 1
+0:4:6.012145945 DEBUG (1): A Measure package sent... True 
+0:4:10.000000010 DEBUG (0): IAMZERO
+0:4:10.000000010 DEBUG (0): 
+0:4:10.000000010 DEBUG (0): ##################################### 
+0:4:10.000000010 DEBUG (0): #######   ROUND   5    ############## 
+0:4:10.000000010 DEBUG (0): #####################################
+0:4:54.000000010 DEBUG (2): NodeID = 2 curdepth= 4
+0:4:54.000000010 DEBUG (2): Starting Data transmission to parent!
+0:4:54.000000010 DEBUG (2): SendMeasTimer fired!
+0:4:54.000000010 DEBUG (2): measurement is: 2
+0:4:54.000000010 DEBUG (2): Node has sum: 2, count: 1, max: 2
+0:4:54.000000010 DEBUG (2): Sending MeasMsg... 
+0:4:54.000000010 DEBUG (2): SendMeasTask() posted!!
+0:4:54.000000010 DEBUG (2): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:4:54.000000010 DEBUG (8): NodeID = 8 curdepth= 4
+0:4:54.000000010 DEBUG (8): Starting Data transmission to parent!
+0:4:54.000000010 DEBUG (8): SendMeasTimer fired!
+0:4:54.000000010 DEBUG (8): measurement is: 8
+0:4:54.000000010 DEBUG (8): Node has sum: 8, count: 1, max: 8
+0:4:54.000000010 DEBUG (8): Sending MeasMsg... 
+0:4:54.000000010 DEBUG (8): SendMeasTask() posted!!
+0:4:54.000000010 DEBUG (8): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:4:54.000000020 DEBUG (2):  sendMeasTask(): mlen = 4  sum= 2 count= 1 max=2 
+0:4:54.000000020 DEBUG (2): sendMeasTask(): Send measure returned success!!!
+0:4:54.000000020 DEBUG (8):  sendMeasTask(): mlen = 4  sum= 8 count= 1 max=8 
+0:4:54.000000020 DEBUG (8): sendMeasTask(): Send measure returned success!!!
+0:4:54.002792362 DEBUG (7): ### MeasReceive.receive() start ##### 
+0:4:54.002792362 DEBUG (7): Some measurement received!!!  from 8 
+0:4:54.002792362 DEBUG (7): ### MeasReceive.receive() end ##### 
+0:4:54.002792372 DEBUG (7): receiveMeasTask(): len=4 
+0:4:54.002792372 DEBUG (7): MeasMsg received from 8 !!! 
+0:4:54.002792372 DEBUG (7): Receive from child: 8 values - sum:8, count: 1, max: 8
+0:4:54.002960208 DEBUG (8): A Measure package sent... True 
+0:4:54.007659887 DEBUG (5): ### MeasReceive.receive() start ##### 
+0:4:54.007659887 DEBUG (5): Some measurement received!!!  from 2 
+0:4:54.007659887 DEBUG (5): ### MeasReceive.receive() end ##### 
+0:4:54.007659897 DEBUG (5): receiveMeasTask(): len=4 
+0:4:54.007659897 DEBUG (5): MeasMsg received from 2 !!! 
+0:4:54.007659897 DEBUG (5): Receive from child: 2 values - sum:2, count: 1, max: 2
+0:4:54.007827733 DEBUG (2): A Measure package sent... True 
+0:4:58.000000010 DEBUG (5): NodeID = 5 curdepth= 3
+0:4:58.000000010 DEBUG (5): Starting Data transmission to parent!
+0:4:58.000000010 DEBUG (5): SendMeasTimer fired!
+0:4:58.000000010 DEBUG (5): measurement is: 5
+0:4:58.000000010 DEBUG (5): Child 2 has sum: 2, count: 1 and max: 2
+0:4:58.000000010 DEBUG (5): Node has sum: 7, count: 2, max: 5
+0:4:58.000000010 DEBUG (5): Sending MeasMsg... 
+0:4:58.000000010 DEBUG (5): SendMeasTask() posted!!
+0:4:58.000000010 DEBUG (5): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:4:58.000000010 DEBUG (7): NodeID = 7 curdepth= 3
+0:4:58.000000010 DEBUG (7): Starting Data transmission to parent!
+0:4:58.000000010 DEBUG (7): SendMeasTimer fired!
+0:4:58.000000010 DEBUG (7): measurement is: 7
+0:4:58.000000010 DEBUG (7): Child 8 has sum: 8, count: 1 and max: 8
+0:4:58.000000010 DEBUG (7): Node has sum: 15, count: 2, max: 8
+0:4:58.000000010 DEBUG (7): Sending MeasMsg... 
+0:4:58.000000010 DEBUG (7): SendMeasTask() posted!!
+0:4:58.000000010 DEBUG (7): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:4:58.000000020 DEBUG (5):  sendMeasTask(): mlen = 4  sum= 7 count= 2 max=5 
+0:4:58.000000020 DEBUG (5): sendMeasTask(): Send measure returned success!!!
+0:4:58.000000020 DEBUG (7):  sendMeasTask(): mlen = 4  sum= 15 count= 2 max=8 
+0:4:58.000000020 DEBUG (7): sendMeasTask(): Send measure returned success!!!
+0:4:58.002670293 DEBUG (4): ### MeasReceive.receive() start ##### 
+0:4:58.002670293 DEBUG (4): Some measurement received!!!  from 5 
+0:4:58.002670293 DEBUG (4): ### MeasReceive.receive() end ##### 
+0:4:58.002670303 DEBUG (4): receiveMeasTask(): len=4 
+0:4:58.002670303 DEBUG (4): MeasMsg received from 5 !!! 
+0:4:58.002670303 DEBUG (4): Receive from child: 5 values - sum:7, count: 2, max: 5
+0:4:58.002838138 DEBUG (5): A Measure package sent... True 
+0:4:58.006484968 DEBUG (6): ### MeasReceive.receive() start ##### 
+0:4:58.006484968 DEBUG (6): Some measurement received!!!  from 7 
+0:4:58.006484968 DEBUG (6): ### MeasReceive.receive() end ##### 
+0:4:58.006484978 DEBUG (6): receiveMeasTask(): len=4 
+0:4:58.006484978 DEBUG (6): MeasMsg received from 7 !!! 
+0:4:58.006484978 DEBUG (6): Receive from child: 7 values - sum:15, count: 2, max: 8
+0:4:58.006652813 DEBUG (7): A Measure package sent... True 
+0:5:2.000000010 DEBUG (4): NodeID = 4 curdepth= 2
+0:5:2.000000010 DEBUG (4): Starting Data transmission to parent!
+0:5:2.000000010 DEBUG (4): SendMeasTimer fired!
+0:5:2.000000010 DEBUG (4): measurement is: 4
+0:5:2.000000010 DEBUG (4): Child 5 has sum: 7, count: 2 and max: 5
+0:5:2.000000010 DEBUG (4): Node has sum: 11, count: 3, max: 5
+0:5:2.000000010 DEBUG (4): Sending MeasMsg... 
+0:5:2.000000010 DEBUG (4): SendMeasTask() posted!!
+0:5:2.000000010 DEBUG (4): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:5:2.000000010 DEBUG (6): NodeID = 6 curdepth= 2
+0:5:2.000000010 DEBUG (6): Starting Data transmission to parent!
+0:5:2.000000010 DEBUG (6): SendMeasTimer fired!
+0:5:2.000000010 DEBUG (6): measurement is: 6
+0:5:2.000000010 DEBUG (6): Child 7 has sum: 15, count: 2 and max: 8
+0:5:2.000000010 DEBUG (6): Node has sum: 21, count: 3, max: 8
+0:5:2.000000010 DEBUG (6): Sending MeasMsg... 
+0:5:2.000000010 DEBUG (6): SendMeasTask() posted!!
+0:5:2.000000010 DEBUG (6): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:5:2.000000020 DEBUG (4):  sendMeasTask(): mlen = 4  sum= 11 count= 3 max=5 
+0:5:2.000000020 DEBUG (4): sendMeasTask(): Send measure returned success!!!
+0:5:2.000000020 DEBUG (6):  sendMeasTask(): mlen = 4  sum= 21 count= 3 max=8 
+0:5:2.000000020 DEBUG (6): sendMeasTask(): Send measure returned success!!!
+0:5:2.006942728 DEBUG (3): ### MeasReceive.receive() start ##### 
+0:5:2.006942728 DEBUG (3): Some measurement received!!!  from 4 
+0:5:2.006942728 DEBUG (3): ### MeasReceive.receive() end ##### 
+0:5:2.006942738 DEBUG (3): receiveMeasTask(): len=4 
+0:5:2.006942738 DEBUG (3): MeasMsg received from 4 !!! 
+0:5:2.006942738 DEBUG (3): Receive from child: 4 values - sum:11, count: 3, max: 5
+0:5:2.007110574 DEBUG (4): A Measure package sent... True 
+0:5:2.009002653 DEBUG (3): ### MeasReceive.receive() start ##### 
+0:5:2.009002653 DEBUG (3): Some measurement received!!!  from 6 
+0:5:2.009002653 DEBUG (3): ### MeasReceive.receive() end ##### 
+0:5:2.009002663 DEBUG (3): receiveMeasTask(): len=4 
+0:5:2.009002663 DEBUG (3): MeasMsg received from 6 !!! 
+0:5:2.009002663 DEBUG (3): Receive from child: 6 values - sum:21, count: 3, max: 8
+0:5:2.009170499 DEBUG (6): A Measure package sent... True 
+0:5:6.000000010 DEBUG (1): NodeID = 1 curdepth= 1
+0:5:6.000000010 DEBUG (1): Starting Data transmission to parent!
+0:5:6.000000010 DEBUG (1): SendMeasTimer fired!
+0:5:6.000000010 DEBUG (1): measurement is: 1
+0:5:6.000000010 DEBUG (1): Node has sum: 1, count: 1, max: 1
+0:5:6.000000010 DEBUG (1): Sending MeasMsg... 
+0:5:6.000000010 DEBUG (1): SendMeasTask() posted!!
+0:5:6.000000010 DEBUG (1): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:5:6.000000010 DEBUG (3): NodeID = 3 curdepth= 1
+0:5:6.000000010 DEBUG (3): Starting Data transmission to parent!
+0:5:6.000000010 DEBUG (3): SendMeasTimer fired!
+0:5:6.000000010 DEBUG (3): measurement is: 3
+0:5:6.000000010 DEBUG (3): Child 6 has sum: 21, count: 3 and max: 8
+0:5:6.000000010 DEBUG (3): Child 4 has sum: 11, count: 3 and max: 5
+0:5:6.000000010 DEBUG (3): Node has sum: 35, count: 7, max: 8
+0:5:6.000000010 DEBUG (3): Sending MeasMsg... 
+0:5:6.000000010 DEBUG (3): SendMeasTask() posted!!
+0:5:6.000000010 DEBUG (3): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:5:6.000000020 DEBUG (1):  sendMeasTask(): mlen = 4  sum= 1 count= 1 max=1 
+0:5:6.000000020 DEBUG (1): sendMeasTask(): Send measure returned success!!!
+0:5:6.000000020 DEBUG (3):  sendMeasTask(): mlen = 4  sum= 35 count= 7 max=8 
+0:5:6.000000020 DEBUG (3): sendMeasTask(): Send measure returned success!!!
+0:5:6.001968392 DEBUG (0): ### MeasReceive.receive() start ##### 
+0:5:6.001968392 DEBUG (0): Some measurement received!!!  from 3 
+0:5:6.001968392 DEBUG (0): ### MeasReceive.receive() end ##### 
+0:5:6.001968402 DEBUG (0): receiveMeasTask(): len=4 
+0:5:6.001968402 DEBUG (0): MeasMsg received from 3 !!! 
+0:5:6.001968402 DEBUG (0): Receive from child: 3 values - sum:35, count: 7, max: 8
+0:5:6.002136238 DEBUG (3): A Measure package sent... True 
+0:5:6.009002653 DEBUG (0): ### MeasReceive.receive() start ##### 
+0:5:6.009002653 DEBUG (0): Some measurement received!!!  from 1 
+0:5:6.009002653 DEBUG (0): ### MeasReceive.receive() end ##### 
+0:5:6.009002663 DEBUG (0): receiveMeasTask(): len=4 
+0:5:6.009002663 DEBUG (0): MeasMsg received from 1 !!! 
+0:5:6.009002663 DEBUG (0): Receive from child: 1 values - sum:1, count: 1, max: 1
+0:5:6.009170498 DEBUG (1): A Measure package sent... True 
+0:5:10.000000010 DEBUG (0): IAMZERO
+0:5:10.000000010 DEBUG (0): 
+0:5:10.000000010 DEBUG (0): ##################################### 
+0:5:10.000000010 DEBUG (0): #######   ROUND   6    ############## 
+0:5:10.000000010 DEBUG (0): #####################################
+0:5:54.000000010 DEBUG (2): NodeID = 2 curdepth= 4
+0:5:54.000000010 DEBUG (2): Starting Data transmission to parent!
+0:5:54.000000010 DEBUG (2): SendMeasTimer fired!
+0:5:54.000000010 DEBUG (2): measurement is: 2
+0:5:54.000000010 DEBUG (2): Node has sum: 2, count: 1, max: 2
+0:5:54.000000010 DEBUG (2): Sending MeasMsg... 
+0:5:54.000000010 DEBUG (2): SendMeasTask() posted!!
+0:5:54.000000010 DEBUG (2): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:5:54.000000010 DEBUG (8): NodeID = 8 curdepth= 4
+0:5:54.000000010 DEBUG (8): Starting Data transmission to parent!
+0:5:54.000000010 DEBUG (8): SendMeasTimer fired!
+0:5:54.000000010 DEBUG (8): measurement is: 8
+0:5:54.000000010 DEBUG (8): Node has sum: 8, count: 1, max: 8
+0:5:54.000000010 DEBUG (8): Sending MeasMsg... 
+0:5:54.000000010 DEBUG (8): SendMeasTask() posted!!
+0:5:54.000000010 DEBUG (8): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:5:54.000000020 DEBUG (2):  sendMeasTask(): mlen = 4  sum= 2 count= 1 max=2 
+0:5:54.000000020 DEBUG (2): sendMeasTask(): Send measure returned success!!!
+0:5:54.000000020 DEBUG (8):  sendMeasTask(): mlen = 4  sum= 8 count= 1 max=8 
+0:5:54.000000020 DEBUG (8): sendMeasTask(): Send measure returned success!!!
+0:5:54.002990726 DEBUG (8): A Measure package sent... True 
+0:5:54.003341675 DEBUG (2): A Measure package sent... True 
+0:5:58.000000010 DEBUG (5): NodeID = 5 curdepth= 3
+0:5:58.000000010 DEBUG (5): Starting Data transmission to parent!
+0:5:58.000000010 DEBUG (5): SendMeasTimer fired!
+0:5:58.000000010 DEBUG (5): measurement is: 5
+0:5:58.000000010 DEBUG (5): Child 2 has sum: 2, count: 1 and max: 2
+0:5:58.000000010 DEBUG (5): Node has sum: 7, count: 2, max: 5
+0:5:58.000000010 DEBUG (5): Sending MeasMsg... 
+0:5:58.000000010 DEBUG (5): SendMeasTask() posted!!
+0:5:58.000000010 DEBUG (5): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:5:58.000000010 DEBUG (7): NodeID = 7 curdepth= 3
+0:5:58.000000010 DEBUG (7): Starting Data transmission to parent!
+0:5:58.000000010 DEBUG (7): SendMeasTimer fired!
+0:5:58.000000010 DEBUG (7): measurement is: 7
+0:5:58.000000010 DEBUG (7): Child 8 has sum: 8, count: 1 and max: 8
+0:5:58.000000010 DEBUG (7): Node has sum: 15, count: 2, max: 8
+0:5:58.000000010 DEBUG (7): Sending MeasMsg... 
+0:5:58.000000010 DEBUG (7): SendMeasTask() posted!!
+0:5:58.000000010 DEBUG (7): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:5:58.000000020 DEBUG (5):  sendMeasTask(): mlen = 4  sum= 7 count= 2 max=5 
+0:5:58.000000020 DEBUG (5): sendMeasTask(): Send measure returned success!!!
+0:5:58.000000020 DEBUG (7):  sendMeasTask(): mlen = 4  sum= 15 count= 2 max=8 
+0:5:58.000000020 DEBUG (7): sendMeasTask(): Send measure returned success!!!
+0:5:58.003143312 DEBUG (5): A Measure package sent... True 
+0:5:58.003555297 DEBUG (6): ### MeasReceive.receive() start ##### 
+0:5:58.003555297 DEBUG (6): Some measurement received!!!  from 7 
+0:5:58.003555297 DEBUG (6): ### MeasReceive.receive() end ##### 
+0:5:58.003555307 DEBUG (6): receiveMeasTask(): len=4 
+0:5:58.003555307 DEBUG (6): MeasMsg received from 7 !!! 
+0:5:58.003555307 DEBUG (6): Receive from child: 7 values - sum:15, count: 2, max: 8
+0:5:58.003723143 DEBUG (7): A Measure package sent... True 
+0:6:2.000000010 DEBUG (4): NodeID = 4 curdepth= 2
+0:6:2.000000010 DEBUG (4): Starting Data transmission to parent!
+0:6:2.000000010 DEBUG (4): SendMeasTimer fired!
+0:6:2.000000010 DEBUG (4): measurement is: 4
+0:6:2.000000010 DEBUG (4): Child 5 has sum: 7, count: 2 and max: 5
+0:6:2.000000010 DEBUG (4): Node has sum: 11, count: 3, max: 5
+0:6:2.000000010 DEBUG (4): Sending MeasMsg... 
+0:6:2.000000010 DEBUG (4): SendMeasTask() posted!!
+0:6:2.000000010 DEBUG (4): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:6:2.000000010 DEBUG (6): NodeID = 6 curdepth= 2
+0:6:2.000000010 DEBUG (6): Starting Data transmission to parent!
+0:6:2.000000010 DEBUG (6): SendMeasTimer fired!
+0:6:2.000000010 DEBUG (6): measurement is: 6
+0:6:2.000000010 DEBUG (6): Child 7 has sum: 15, count: 2 and max: 8
+0:6:2.000000010 DEBUG (6): Node has sum: 21, count: 3, max: 8
+0:6:2.000000010 DEBUG (6): Sending MeasMsg... 
+0:6:2.000000010 DEBUG (6): SendMeasTask() posted!!
+0:6:2.000000010 DEBUG (6): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:6:2.000000020 DEBUG (4):  sendMeasTask(): mlen = 4  sum= 11 count= 3 max=5 
+0:6:2.000000020 DEBUG (4): sendMeasTask(): Send measure returned success!!!
+0:6:2.000000020 DEBUG (6):  sendMeasTask(): mlen = 4  sum= 21 count= 3 max=8 
+0:6:2.000000020 DEBUG (6): sendMeasTask(): Send measure returned success!!!
+0:6:2.002883914 DEBUG (3): ### MeasReceive.receive() start ##### 
+0:6:2.002883914 DEBUG (3): Some measurement received!!!  from 4 
+0:6:2.002883914 DEBUG (3): ### MeasReceive.receive() end ##### 
+0:6:2.002883924 DEBUG (3): receiveMeasTask(): len=4 
+0:6:2.002883924 DEBUG (3): MeasMsg received from 4 !!! 
+0:6:2.002883924 DEBUG (3): Receive from child: 4 values - sum:11, count: 3, max: 5
+0:6:2.003051760 DEBUG (4): A Measure package sent... True 
+0:6:2.005599963 DEBUG (3): ### MeasReceive.receive() start ##### 
+0:6:2.005599963 DEBUG (3): Some measurement received!!!  from 6 
+0:6:2.005599963 DEBUG (3): ### MeasReceive.receive() end ##### 
+0:6:2.005599973 DEBUG (3): receiveMeasTask(): len=4 
+0:6:2.005599973 DEBUG (3): MeasMsg received from 6 !!! 
+0:6:2.005599973 DEBUG (3): Receive from child: 6 values - sum:21, count: 3, max: 8
+0:6:2.005767809 DEBUG (6): A Measure package sent... True 
+0:6:6.000000010 DEBUG (1): NodeID = 1 curdepth= 1
+0:6:6.000000010 DEBUG (1): Starting Data transmission to parent!
+0:6:6.000000010 DEBUG (1): SendMeasTimer fired!
+0:6:6.000000010 DEBUG (1): measurement is: 1
+0:6:6.000000010 DEBUG (1): Node has sum: 1, count: 1, max: 1
+0:6:6.000000010 DEBUG (1): Sending MeasMsg... 
+0:6:6.000000010 DEBUG (1): SendMeasTask() posted!!
+0:6:6.000000010 DEBUG (1): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:6:6.000000010 DEBUG (3): NodeID = 3 curdepth= 1
+0:6:6.000000010 DEBUG (3): Starting Data transmission to parent!
+0:6:6.000000010 DEBUG (3): SendMeasTimer fired!
+0:6:6.000000010 DEBUG (3): measurement is: 3
+0:6:6.000000010 DEBUG (3): Child 6 has sum: 21, count: 3 and max: 8
+0:6:6.000000010 DEBUG (3): Child 4 has sum: 11, count: 3 and max: 5
+0:6:6.000000010 DEBUG (3): Node has sum: 35, count: 7, max: 8
+0:6:6.000000010 DEBUG (3): Sending MeasMsg... 
+0:6:6.000000010 DEBUG (3): SendMeasTask() posted!!
+0:6:6.000000010 DEBUG (3): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:6:6.000000020 DEBUG (1):  sendMeasTask(): mlen = 4  sum= 1 count= 1 max=1 
+0:6:6.000000020 DEBUG (1): sendMeasTask(): Send measure returned success!!!
+0:6:6.000000020 DEBUG (3):  sendMeasTask(): mlen = 4  sum= 35 count= 7 max=8 
+0:6:6.000000020 DEBUG (3): sendMeasTask(): Send measure returned success!!!
+0:6:6.001922616 DEBUG (0): ### MeasReceive.receive() start ##### 
+0:6:6.001922616 DEBUG (0): Some measurement received!!!  from 3 
+0:6:6.001922616 DEBUG (0): ### MeasReceive.receive() end ##### 
+0:6:6.001922626 DEBUG (0): receiveMeasTask(): len=4 
+0:6:6.001922626 DEBUG (0): MeasMsg received from 3 !!! 
+0:6:6.001922626 DEBUG (0): Receive from child: 3 values - sum:35, count: 7, max: 8
+0:6:6.002090462 DEBUG (3): A Measure package sent... True 
+0:6:6.010528523 DEBUG (0): ### MeasReceive.receive() start ##### 
+0:6:6.010528523 DEBUG (0): Some measurement received!!!  from 1 
+0:6:6.010528523 DEBUG (0): ### MeasReceive.receive() end ##### 
+0:6:6.010528533 DEBUG (0): receiveMeasTask(): len=4 
+0:6:6.010528533 DEBUG (0): MeasMsg received from 1 !!! 
+0:6:6.010528533 DEBUG (0): Receive from child: 1 values - sum:1, count: 1, max: 1
+0:6:6.010696368 DEBUG (1): A Measure package sent... True 
+0:6:10.000000010 DEBUG (0): IAMZERO
+0:6:10.000000010 DEBUG (0): 
+0:6:10.000000010 DEBUG (0): ##################################### 
+0:6:10.000000010 DEBUG (0): #######   ROUND   7    ############## 
+0:6:10.000000010 DEBUG (0): #####################################
+0:6:54.000000010 DEBUG (2): NodeID = 2 curdepth= 4
+0:6:54.000000010 DEBUG (2): Starting Data transmission to parent!
+0:6:54.000000010 DEBUG (2): SendMeasTimer fired!
+0:6:54.000000010 DEBUG (2): measurement is: 2
+0:6:54.000000010 DEBUG (2): Node has sum: 2, count: 1, max: 2
+0:6:54.000000010 DEBUG (2): Sending MeasMsg... 
+0:6:54.000000010 DEBUG (2): SendMeasTask() posted!!
+0:6:54.000000010 DEBUG (2): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:6:54.000000010 DEBUG (8): NodeID = 8 curdepth= 4
+0:6:54.000000010 DEBUG (8): Starting Data transmission to parent!
+0:6:54.000000010 DEBUG (8): SendMeasTimer fired!
+0:6:54.000000010 DEBUG (8): measurement is: 8
+0:6:54.000000010 DEBUG (8): Node has sum: 8, count: 1, max: 8
+0:6:54.000000010 DEBUG (8): Sending MeasMsg... 
+0:6:54.000000010 DEBUG (8): SendMeasTask() posted!!
+0:6:54.000000010 DEBUG (8): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:6:54.000000020 DEBUG (2):  sendMeasTask(): mlen = 4  sum= 2 count= 1 max=2 
+0:6:54.000000020 DEBUG (2): sendMeasTask(): Send measure returned success!!!
+0:6:54.000000020 DEBUG (8):  sendMeasTask(): mlen = 4  sum= 8 count= 1 max=8 
+0:6:54.000000020 DEBUG (8): sendMeasTask(): Send measure returned success!!!
+0:6:54.003128054 DEBUG (7): ### MeasReceive.receive() start ##### 
+0:6:54.003128054 DEBUG (7): Some measurement received!!!  from 8 
+0:6:54.003128054 DEBUG (7): ### MeasReceive.receive() end ##### 
+0:6:54.003128064 DEBUG (7): receiveMeasTask(): len=4 
+0:6:54.003128064 DEBUG (7): MeasMsg received from 8 !!! 
+0:6:54.003128064 DEBUG (7): Receive from child: 8 values - sum:8, count: 1, max: 8
+0:6:54.003295900 DEBUG (8): A Measure package sent... True 
+0:6:54.004226680 DEBUG (2): A Measure package sent... True 
+0:6:58.000000010 DEBUG (5): NodeID = 5 curdepth= 3
+0:6:58.000000010 DEBUG (5): Starting Data transmission to parent!
+0:6:58.000000010 DEBUG (5): SendMeasTimer fired!
+0:6:58.000000010 DEBUG (5): measurement is: 5
+0:6:58.000000010 DEBUG (5): Child 2 has sum: 2, count: 1 and max: 2
+0:6:58.000000010 DEBUG (5): Node has sum: 7, count: 2, max: 5
+0:6:58.000000010 DEBUG (5): Sending MeasMsg... 
+0:6:58.000000010 DEBUG (5): SendMeasTask() posted!!
+0:6:58.000000010 DEBUG (5): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:6:58.000000010 DEBUG (7): NodeID = 7 curdepth= 3
+0:6:58.000000010 DEBUG (7): Starting Data transmission to parent!
+0:6:58.000000010 DEBUG (7): SendMeasTimer fired!
+0:6:58.000000010 DEBUG (7): measurement is: 7
+0:6:58.000000010 DEBUG (7): Child 8 has sum: 8, count: 1 and max: 8
+0:6:58.000000010 DEBUG (7): Node has sum: 15, count: 2, max: 8
+0:6:58.000000010 DEBUG (7): Sending MeasMsg... 
+0:6:58.000000010 DEBUG (7): SendMeasTask() posted!!
+0:6:58.000000010 DEBUG (7): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:6:58.000000020 DEBUG (5):  sendMeasTask(): mlen = 4  sum= 7 count= 2 max=5 
+0:6:58.000000020 DEBUG (5): sendMeasTask(): Send measure returned success!!!
+0:6:58.000000020 DEBUG (7):  sendMeasTask(): mlen = 4  sum= 15 count= 2 max=8 
+0:6:58.000000020 DEBUG (7): sendMeasTask(): Send measure returned success!!!
+0:6:58.007751440 DEBUG (5): A Measure package sent... True 
+0:6:58.008300753 DEBUG (6): ### MeasReceive.receive() start ##### 
+0:6:58.008300753 DEBUG (6): Some measurement received!!!  from 7 
+0:6:58.008300753 DEBUG (6): ### MeasReceive.receive() end ##### 
+0:6:58.008300763 DEBUG (6): receiveMeasTask(): len=4 
+0:6:58.008300763 DEBUG (6): MeasMsg received from 7 !!! 
+0:6:58.008300763 DEBUG (6): Receive from child: 7 values - sum:15, count: 2, max: 8
+0:6:58.008468599 DEBUG (7): A Measure package sent... True 
+0:7:2.000000010 DEBUG (4): NodeID = 4 curdepth= 2
+0:7:2.000000010 DEBUG (4): Starting Data transmission to parent!
+0:7:2.000000010 DEBUG (4): SendMeasTimer fired!
+0:7:2.000000010 DEBUG (4): measurement is: 4
+0:7:2.000000010 DEBUG (4): Child 5 has sum: 7, count: 2 and max: 5
+0:7:2.000000010 DEBUG (4): Node has sum: 11, count: 3, max: 5
+0:7:2.000000010 DEBUG (4): Sending MeasMsg... 
+0:7:2.000000010 DEBUG (4): SendMeasTask() posted!!
+0:7:2.000000010 DEBUG (4): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:7:2.000000010 DEBUG (6): NodeID = 6 curdepth= 2
+0:7:2.000000010 DEBUG (6): Starting Data transmission to parent!
+0:7:2.000000010 DEBUG (6): SendMeasTimer fired!
+0:7:2.000000010 DEBUG (6): measurement is: 6
+0:7:2.000000010 DEBUG (6): Child 7 has sum: 15, count: 2 and max: 8
+0:7:2.000000010 DEBUG (6): Node has sum: 21, count: 3, max: 8
+0:7:2.000000010 DEBUG (6): Sending MeasMsg... 
+0:7:2.000000010 DEBUG (6): SendMeasTask() posted!!
+0:7:2.000000010 DEBUG (6): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:7:2.000000020 DEBUG (4):  sendMeasTask(): mlen = 4  sum= 11 count= 3 max=5 
+0:7:2.000000020 DEBUG (4): sendMeasTask(): Send measure returned success!!!
+0:7:2.000000020 DEBUG (6):  sendMeasTask(): mlen = 4  sum= 21 count= 3 max=8 
+0:7:2.000000020 DEBUG (6): sendMeasTask(): Send measure returned success!!!
+0:7:2.002349860 DEBUG (4): A Measure package sent... True 
+0:7:2.003158571 DEBUG (6): A Measure package sent... True 
+0:7:6.000000010 DEBUG (1): NodeID = 1 curdepth= 1
+0:7:6.000000010 DEBUG (1): Starting Data transmission to parent!
+0:7:6.000000010 DEBUG (1): SendMeasTimer fired!
+0:7:6.000000010 DEBUG (1): measurement is: 1
+0:7:6.000000010 DEBUG (1): Node has sum: 1, count: 1, max: 1
+0:7:6.000000010 DEBUG (1): Sending MeasMsg... 
+0:7:6.000000010 DEBUG (1): SendMeasTask() posted!!
+0:7:6.000000010 DEBUG (1): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:7:6.000000010 DEBUG (3): NodeID = 3 curdepth= 1
+0:7:6.000000010 DEBUG (3): Starting Data transmission to parent!
+0:7:6.000000010 DEBUG (3): SendMeasTimer fired!
+0:7:6.000000010 DEBUG (3): measurement is: 3
+0:7:6.000000010 DEBUG (3): Child 6 has sum: 21, count: 3 and max: 8
+0:7:6.000000010 DEBUG (3): Child 4 has sum: 11, count: 3 and max: 5
+0:7:6.000000010 DEBUG (3): Node has sum: 35, count: 7, max: 8
+0:7:6.000000010 DEBUG (3): Sending MeasMsg... 
+0:7:6.000000010 DEBUG (3): SendMeasTask() posted!!
+0:7:6.000000010 DEBUG (3): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:7:6.000000020 DEBUG (1):  sendMeasTask(): mlen = 4  sum= 1 count= 1 max=1 
+0:7:6.000000020 DEBUG (1): sendMeasTask(): Send measure returned success!!!
+0:7:6.000000020 DEBUG (3):  sendMeasTask(): mlen = 4  sum= 35 count= 7 max=8 
+0:7:6.000000020 DEBUG (3): sendMeasTask(): Send measure returned success!!!
+0:7:6.011062577 DEBUG (1): A Measure package sent... True 
+0:7:6.011291458 DEBUG (3): A Measure package sent... True 
+0:7:10.000000010 DEBUG (0): IAMZERO
+0:7:10.000000010 DEBUG (0): 
+0:7:10.000000010 DEBUG (0): ##################################### 
+0:7:10.000000010 DEBUG (0): #######   ROUND   8    ############## 
+0:7:10.000000010 DEBUG (0): #####################################
+0:7:54.000000010 DEBUG (2): NodeID = 2 curdepth= 4
+0:7:54.000000010 DEBUG (2): Starting Data transmission to parent!
+0:7:54.000000010 DEBUG (2): SendMeasTimer fired!
+0:7:54.000000010 DEBUG (2): measurement is: 2
+0:7:54.000000010 DEBUG (2): Node has sum: 2, count: 1, max: 2
+0:7:54.000000010 DEBUG (2): Sending MeasMsg... 
+0:7:54.000000010 DEBUG (2): SendMeasTask() posted!!
+0:7:54.000000010 DEBUG (2): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:7:54.000000010 DEBUG (8): NodeID = 8 curdepth= 4
+0:7:54.000000010 DEBUG (8): Starting Data transmission to parent!
+0:7:54.000000010 DEBUG (8): SendMeasTimer fired!
+0:7:54.000000010 DEBUG (8): measurement is: 8
+0:7:54.000000010 DEBUG (8): Node has sum: 8, count: 1, max: 8
+0:7:54.000000010 DEBUG (8): Sending MeasMsg... 
+0:7:54.000000010 DEBUG (8): SendMeasTask() posted!!
+0:7:54.000000010 DEBUG (8): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:7:54.000000020 DEBUG (2):  sendMeasTask(): mlen = 4  sum= 2 count= 1 max=2 
+0:7:54.000000020 DEBUG (2): sendMeasTask(): Send measure returned success!!!
+0:7:54.000000020 DEBUG (8):  sendMeasTask(): mlen = 4  sum= 8 count= 1 max=8 
+0:7:54.000000020 DEBUG (8): sendMeasTask(): Send measure returned success!!!
+0:7:54.003189089 DEBUG (7): ### MeasReceive.receive() start ##### 
+0:7:54.003189089 DEBUG (7): Some measurement received!!!  from 8 
+0:7:54.003189089 DEBUG (7): ### MeasReceive.receive() end ##### 
+0:7:54.003189099 DEBUG (7): receiveMeasTask(): len=4 
+0:7:54.003189099 DEBUG (7): MeasMsg received from 8 !!! 
+0:7:54.003189099 DEBUG (7): Receive from child: 8 values - sum:8, count: 1, max: 8
+0:7:54.003356934 DEBUG (8): A Measure package sent... True 
+0:7:54.011886547 DEBUG (5): ### MeasReceive.receive() start ##### 
+0:7:54.011886547 DEBUG (5): Some measurement received!!!  from 2 
+0:7:54.011886547 DEBUG (5): ### MeasReceive.receive() end ##### 
+0:7:54.011886557 DEBUG (5): receiveMeasTask(): len=4 
+0:7:54.011886557 DEBUG (5): MeasMsg received from 2 !!! 
+0:7:54.011886557 DEBUG (5): Receive from child: 2 values - sum:2, count: 1, max: 2
+0:7:54.012054393 DEBUG (2): A Measure package sent... True 
+0:7:58.000000010 DEBUG (5): NodeID = 5 curdepth= 3
+0:7:58.000000010 DEBUG (5): Starting Data transmission to parent!
+0:7:58.000000010 DEBUG (5): SendMeasTimer fired!
+0:7:58.000000010 DEBUG (5): measurement is: 5
+0:7:58.000000010 DEBUG (5): Child 2 has sum: 2, count: 1 and max: 2
+0:7:58.000000010 DEBUG (5): Node has sum: 7, count: 2, max: 5
+0:7:58.000000010 DEBUG (5): Sending MeasMsg... 
+0:7:58.000000010 DEBUG (5): SendMeasTask() posted!!
+0:7:58.000000010 DEBUG (5): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:7:58.000000010 DEBUG (7): NodeID = 7 curdepth= 3
+0:7:58.000000010 DEBUG (7): Starting Data transmission to parent!
+0:7:58.000000010 DEBUG (7): SendMeasTimer fired!
+0:7:58.000000010 DEBUG (7): measurement is: 7
+0:7:58.000000010 DEBUG (7): Child 8 has sum: 8, count: 1 and max: 8
+0:7:58.000000010 DEBUG (7): Node has sum: 15, count: 2, max: 8
+0:7:58.000000010 DEBUG (7): Sending MeasMsg... 
+0:7:58.000000010 DEBUG (7): SendMeasTask() posted!!
+0:7:58.000000010 DEBUG (7): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:7:58.000000020 DEBUG (5):  sendMeasTask(): mlen = 4  sum= 7 count= 2 max=5 
+0:7:58.000000020 DEBUG (5): sendMeasTask(): Send measure returned success!!!
+0:7:58.000000020 DEBUG (7):  sendMeasTask(): mlen = 4  sum= 15 count= 2 max=8 
+0:7:58.000000020 DEBUG (7): sendMeasTask(): Send measure returned success!!!
+0:7:58.003417969 DEBUG (6): ### MeasReceive.receive() start ##### 
+0:7:58.003417969 DEBUG (6): Some measurement received!!!  from 7 
+0:7:58.003417969 DEBUG (6): ### MeasReceive.receive() end ##### 
+0:7:58.003417979 DEBUG (6): receiveMeasTask(): len=4 
+0:7:58.003417979 DEBUG (6): MeasMsg received from 7 !!! 
+0:7:58.003417979 DEBUG (6): Receive from child: 7 values - sum:15, count: 2, max: 8
+0:7:58.003585815 DEBUG (7): A Measure package sent... True 
+0:7:58.005386341 DEBUG (4): ### MeasReceive.receive() start ##### 
+0:7:58.005386341 DEBUG (4): Some measurement received!!!  from 5 
+0:7:58.005386341 DEBUG (4): ### MeasReceive.receive() end ##### 
+0:7:58.005386351 DEBUG (4): receiveMeasTask(): len=4 
+0:7:58.005386351 DEBUG (4): MeasMsg received from 5 !!! 
+0:7:58.005386351 DEBUG (4): Receive from child: 5 values - sum:7, count: 2, max: 5
+0:7:58.005554187 DEBUG (5): A Measure package sent... True 
+0:8:2.000000010 DEBUG (4): NodeID = 4 curdepth= 2
+0:8:2.000000010 DEBUG (4): Starting Data transmission to parent!
+0:8:2.000000010 DEBUG (4): SendMeasTimer fired!
+0:8:2.000000010 DEBUG (4): measurement is: 4
+0:8:2.000000010 DEBUG (4): Child 5 has sum: 7, count: 2 and max: 5
+0:8:2.000000010 DEBUG (4): Node has sum: 11, count: 3, max: 5
+0:8:2.000000010 DEBUG (4): Sending MeasMsg... 
+0:8:2.000000010 DEBUG (4): SendMeasTask() posted!!
+0:8:2.000000010 DEBUG (4): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:8:2.000000010 DEBUG (6): NodeID = 6 curdepth= 2
+0:8:2.000000010 DEBUG (6): Starting Data transmission to parent!
+0:8:2.000000010 DEBUG (6): SendMeasTimer fired!
+0:8:2.000000010 DEBUG (6): measurement is: 6
+0:8:2.000000010 DEBUG (6): Child 7 has sum: 15, count: 2 and max: 8
+0:8:2.000000010 DEBUG (6): Node has sum: 21, count: 3, max: 8
+0:8:2.000000010 DEBUG (6): Sending MeasMsg... 
+0:8:2.000000010 DEBUG (6): SendMeasTask() posted!!
+0:8:2.000000010 DEBUG (6): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:8:2.000000020 DEBUG (4):  sendMeasTask(): mlen = 4  sum= 11 count= 3 max=5 
+0:8:2.000000020 DEBUG (4): sendMeasTask(): Send measure returned success!!!
+0:8:2.000000020 DEBUG (6):  sendMeasTask(): mlen = 4  sum= 21 count= 3 max=8 
+0:8:2.000000020 DEBUG (6): sendMeasTask(): Send measure returned success!!!
+0:8:2.004364008 DEBUG (3): ### MeasReceive.receive() start ##### 
+0:8:2.004364008 DEBUG (3): Some measurement received!!!  from 6 
+0:8:2.004364008 DEBUG (3): ### MeasReceive.receive() end ##### 
+0:8:2.004364018 DEBUG (3): receiveMeasTask(): len=4 
+0:8:2.004364018 DEBUG (3): MeasMsg received from 6 !!! 
+0:8:2.004364018 DEBUG (3): Receive from child: 6 values - sum:21, count: 3, max: 8
+0:8:2.004531854 DEBUG (6): A Measure package sent... True 
+0:8:2.005783067 DEBUG (3): ### MeasReceive.receive() start ##### 
+0:8:2.005783067 DEBUG (3): Some measurement received!!!  from 4 
+0:8:2.005783067 DEBUG (3): ### MeasReceive.receive() end ##### 
+0:8:2.005783077 DEBUG (3): receiveMeasTask(): len=4 
+0:8:2.005783077 DEBUG (3): MeasMsg received from 4 !!! 
+0:8:2.005783077 DEBUG (3): Receive from child: 4 values - sum:11, count: 3, max: 5
+0:8:2.005950913 DEBUG (4): A Measure package sent... True 
+0:8:6.000000010 DEBUG (1): NodeID = 1 curdepth= 1
+0:8:6.000000010 DEBUG (1): Starting Data transmission to parent!
+0:8:6.000000010 DEBUG (1): SendMeasTimer fired!
+0:8:6.000000010 DEBUG (1): measurement is: 1
+0:8:6.000000010 DEBUG (1): Node has sum: 1, count: 1, max: 1
+0:8:6.000000010 DEBUG (1): Sending MeasMsg... 
+0:8:6.000000010 DEBUG (1): SendMeasTask() posted!!
+0:8:6.000000010 DEBUG (1): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:8:6.000000010 DEBUG (3): NodeID = 3 curdepth= 1
+0:8:6.000000010 DEBUG (3): Starting Data transmission to parent!
+0:8:6.000000010 DEBUG (3): SendMeasTimer fired!
+0:8:6.000000010 DEBUG (3): measurement is: 3
+0:8:6.000000010 DEBUG (3): Child 6 has sum: 21, count: 3 and max: 8
+0:8:6.000000010 DEBUG (3): Child 4 has sum: 11, count: 3 and max: 5
+0:8:6.000000010 DEBUG (3): Node has sum: 35, count: 7, max: 8
+0:8:6.000000010 DEBUG (3): Sending MeasMsg... 
+0:8:6.000000010 DEBUG (3): SendMeasTask() posted!!
+0:8:6.000000010 DEBUG (3): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:8:6.000000020 DEBUG (1):  sendMeasTask(): mlen = 4  sum= 1 count= 1 max=1 
+0:8:6.000000020 DEBUG (1): sendMeasTask(): Send measure returned success!!!
+0:8:6.000000020 DEBUG (3):  sendMeasTask(): mlen = 4  sum= 35 count= 7 max=8 
+0:8:6.000000020 DEBUG (3): sendMeasTask(): Send measure returned success!!!
+0:8:6.004302973 DEBUG (0): ### MeasReceive.receive() start ##### 
+0:8:6.004302973 DEBUG (0): Some measurement received!!!  from 1 
+0:8:6.004302973 DEBUG (0): ### MeasReceive.receive() end ##### 
+0:8:6.004302983 DEBUG (0): receiveMeasTask(): len=4 
+0:8:6.004302983 DEBUG (0): MeasMsg received from 1 !!! 
+0:8:6.004302983 DEBUG (0): Receive from child: 1 values - sum:1, count: 1, max: 1
+0:8:6.004470819 DEBUG (1): A Measure package sent... True 
+0:8:6.010833697 DEBUG (0): ### MeasReceive.receive() start ##### 
+0:8:6.010833697 DEBUG (0): Some measurement received!!!  from 3 
+0:8:6.010833697 DEBUG (0): ### MeasReceive.receive() end ##### 
+0:8:6.010833707 DEBUG (0): receiveMeasTask(): len=4 
+0:8:6.010833707 DEBUG (0): MeasMsg received from 3 !!! 
+0:8:6.010833707 DEBUG (0): Receive from child: 3 values - sum:35, count: 7, max: 8
+0:8:6.011001543 DEBUG (3): A Measure package sent... True 
+0:8:10.000000010 DEBUG (0): IAMZERO
+0:8:10.000000010 DEBUG (0): 
+0:8:10.000000010 DEBUG (0): ##################################### 
+0:8:10.000000010 DEBUG (0): #######   ROUND   9    ############## 
+0:8:10.000000010 DEBUG (0): #####################################
+0:8:54.000000010 DEBUG (2): NodeID = 2 curdepth= 4
+0:8:54.000000010 DEBUG (2): Starting Data transmission to parent!
+0:8:54.000000010 DEBUG (2): SendMeasTimer fired!
+0:8:54.000000010 DEBUG (2): measurement is: 2
+0:8:54.000000010 DEBUG (2): Node has sum: 2, count: 1, max: 2
+0:8:54.000000010 DEBUG (2): Sending MeasMsg... 
+0:8:54.000000010 DEBUG (2): SendMeasTask() posted!!
+0:8:54.000000010 DEBUG (2): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:8:54.000000010 DEBUG (8): NodeID = 8 curdepth= 4
+0:8:54.000000010 DEBUG (8): Starting Data transmission to parent!
+0:8:54.000000010 DEBUG (8): SendMeasTimer fired!
+0:8:54.000000010 DEBUG (8): measurement is: 8
+0:8:54.000000010 DEBUG (8): Node has sum: 8, count: 1, max: 8
+0:8:54.000000010 DEBUG (8): Sending MeasMsg... 
+0:8:54.000000010 DEBUG (8): SendMeasTask() posted!!
+0:8:54.000000010 DEBUG (8): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:8:54.000000020 DEBUG (2):  sendMeasTask(): mlen = 4  sum= 2 count= 1 max=2 
+0:8:54.000000020 DEBUG (2): sendMeasTask(): Send measure returned success!!!
+0:8:54.000000020 DEBUG (8):  sendMeasTask(): mlen = 4  sum= 8 count= 1 max=8 
+0:8:54.000000020 DEBUG (8): sendMeasTask(): Send measure returned success!!!
+0:8:54.003829953 DEBUG (5): ### MeasReceive.receive() start ##### 
+0:8:54.003829953 DEBUG (5): Some measurement received!!!  from 2 
+0:8:54.003829953 DEBUG (5): ### MeasReceive.receive() end ##### 
+0:8:54.003829963 DEBUG (5): receiveMeasTask(): len=4 
+0:8:54.003829963 DEBUG (5): MeasMsg received from 2 !!! 
+0:8:54.003829963 DEBUG (5): Receive from child: 2 values - sum:2, count: 1, max: 2
+0:8:54.003997799 DEBUG (2): A Measure package sent... True 
+0:8:54.006439192 DEBUG (7): ### MeasReceive.receive() start ##### 
+0:8:54.006439192 DEBUG (7): Some measurement received!!!  from 8 
+0:8:54.006439192 DEBUG (7): ### MeasReceive.receive() end ##### 
+0:8:54.006439202 DEBUG (7): receiveMeasTask(): len=4 
+0:8:54.006439202 DEBUG (7): MeasMsg received from 8 !!! 
+0:8:54.006439202 DEBUG (7): Receive from child: 8 values - sum:8, count: 1, max: 8
+0:8:54.006607037 DEBUG (8): A Measure package sent... True 
+0:8:58.000000010 DEBUG (5): NodeID = 5 curdepth= 3
+0:8:58.000000010 DEBUG (5): Starting Data transmission to parent!
+0:8:58.000000010 DEBUG (5): SendMeasTimer fired!
+0:8:58.000000010 DEBUG (5): measurement is: 5
+0:8:58.000000010 DEBUG (5): Child 2 has sum: 2, count: 1 and max: 2
+0:8:58.000000010 DEBUG (5): Node has sum: 7, count: 2, max: 5
+0:8:58.000000010 DEBUG (5): Sending MeasMsg... 
+0:8:58.000000010 DEBUG (5): SendMeasTask() posted!!
+0:8:58.000000010 DEBUG (5): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:8:58.000000010 DEBUG (7): NodeID = 7 curdepth= 3
+0:8:58.000000010 DEBUG (7): Starting Data transmission to parent!
+0:8:58.000000010 DEBUG (7): SendMeasTimer fired!
+0:8:58.000000010 DEBUG (7): measurement is: 7
+0:8:58.000000010 DEBUG (7): Child 8 has sum: 8, count: 1 and max: 8
+0:8:58.000000010 DEBUG (7): Node has sum: 15, count: 2, max: 8
+0:8:58.000000010 DEBUG (7): Sending MeasMsg... 
+0:8:58.000000010 DEBUG (7): SendMeasTask() posted!!
+0:8:58.000000010 DEBUG (7): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:8:58.000000020 DEBUG (5):  sendMeasTask(): mlen = 4  sum= 7 count= 2 max=5 
+0:8:58.000000020 DEBUG (5): sendMeasTask(): Send measure returned success!!!
+0:8:58.000000020 DEBUG (7):  sendMeasTask(): mlen = 4  sum= 15 count= 2 max=8 
+0:8:58.000000020 DEBUG (7): sendMeasTask(): Send measure returned success!!!
+0:8:58.005813585 DEBUG (4): ### MeasReceive.receive() start ##### 
+0:8:58.005813585 DEBUG (4): Some measurement received!!!  from 5 
+0:8:58.005813585 DEBUG (4): ### MeasReceive.receive() end ##### 
+0:8:58.005813595 DEBUG (4): receiveMeasTask(): len=4 
+0:8:58.005813595 DEBUG (4): MeasMsg received from 5 !!! 
+0:8:58.005813595 DEBUG (4): Receive from child: 5 values - sum:7, count: 2, max: 5
+0:8:58.005981430 DEBUG (5): A Measure package sent... True 
+0:8:58.010925249 DEBUG (6): ### MeasReceive.receive() start ##### 
+0:8:58.010925249 DEBUG (6): Some measurement received!!!  from 7 
+0:8:58.010925249 DEBUG (6): ### MeasReceive.receive() end ##### 
+0:8:58.010925259 DEBUG (6): receiveMeasTask(): len=4 
+0:8:58.010925259 DEBUG (6): MeasMsg received from 7 !!! 
+0:8:58.010925259 DEBUG (6): Receive from child: 7 values - sum:15, count: 2, max: 8
+0:8:58.011093095 DEBUG (7): A Measure package sent... True 
+0:9:2.000000010 DEBUG (4): NodeID = 4 curdepth= 2
+0:9:2.000000010 DEBUG (4): Starting Data transmission to parent!
+0:9:2.000000010 DEBUG (4): SendMeasTimer fired!
+0:9:2.000000010 DEBUG (4): measurement is: 4
+0:9:2.000000010 DEBUG (4): Child 5 has sum: 7, count: 2 and max: 5
+0:9:2.000000010 DEBUG (4): Node has sum: 11, count: 3, max: 5
+0:9:2.000000010 DEBUG (4): Sending MeasMsg... 
+0:9:2.000000010 DEBUG (4): SendMeasTask() posted!!
+0:9:2.000000010 DEBUG (4): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:9:2.000000010 DEBUG (6): NodeID = 6 curdepth= 2
+0:9:2.000000010 DEBUG (6): Starting Data transmission to parent!
+0:9:2.000000010 DEBUG (6): SendMeasTimer fired!
+0:9:2.000000010 DEBUG (6): measurement is: 6
+0:9:2.000000010 DEBUG (6): Child 7 has sum: 15, count: 2 and max: 8
+0:9:2.000000010 DEBUG (6): Node has sum: 21, count: 3, max: 8
+0:9:2.000000010 DEBUG (6): Sending MeasMsg... 
+0:9:2.000000010 DEBUG (6): SendMeasTask() posted!!
+0:9:2.000000010 DEBUG (6): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:9:2.000000020 DEBUG (4):  sendMeasTask(): mlen = 4  sum= 11 count= 3 max=5 
+0:9:2.000000020 DEBUG (4): sendMeasTask(): Send measure returned success!!!
+0:9:2.000000020 DEBUG (6):  sendMeasTask(): mlen = 4  sum= 21 count= 3 max=8 
+0:9:2.000000020 DEBUG (6): sendMeasTask(): Send measure returned success!!!
+0:9:2.006515485 DEBUG (3): ### MeasReceive.receive() start ##### 
+0:9:2.006515485 DEBUG (3): Some measurement received!!!  from 4 
+0:9:2.006515485 DEBUG (3): ### MeasReceive.receive() end ##### 
+0:9:2.006515495 DEBUG (3): receiveMeasTask(): len=4 
+0:9:2.006515495 DEBUG (3): MeasMsg received from 4 !!! 
+0:9:2.006515495 DEBUG (3): Receive from child: 4 values - sum:11, count: 3, max: 5
+0:9:2.006683331 DEBUG (4): A Measure package sent... True 
+0:9:2.008026096 DEBUG (3): ### MeasReceive.receive() start ##### 
+0:9:2.008026096 DEBUG (3): Some measurement received!!!  from 6 
+0:9:2.008026096 DEBUG (3): ### MeasReceive.receive() end ##### 
+0:9:2.008026106 DEBUG (3): receiveMeasTask(): len=4 
+0:9:2.008026106 DEBUG (3): MeasMsg received from 6 !!! 
+0:9:2.008026106 DEBUG (3): Receive from child: 6 values - sum:21, count: 3, max: 8
+0:9:2.008193942 DEBUG (6): A Measure package sent... True 
+0:9:6.000000010 DEBUG (1): NodeID = 1 curdepth= 1
+0:9:6.000000010 DEBUG (1): Starting Data transmission to parent!
+0:9:6.000000010 DEBUG (1): SendMeasTimer fired!
+0:9:6.000000010 DEBUG (1): measurement is: 1
+0:9:6.000000010 DEBUG (1): Node has sum: 1, count: 1, max: 1
+0:9:6.000000010 DEBUG (1): Sending MeasMsg... 
+0:9:6.000000010 DEBUG (1): SendMeasTask() posted!!
+0:9:6.000000010 DEBUG (1): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:9:6.000000010 DEBUG (3): NodeID = 3 curdepth= 1
+0:9:6.000000010 DEBUG (3): Starting Data transmission to parent!
+0:9:6.000000010 DEBUG (3): SendMeasTimer fired!
+0:9:6.000000010 DEBUG (3): measurement is: 3
+0:9:6.000000010 DEBUG (3): Child 6 has sum: 21, count: 3 and max: 8
+0:9:6.000000010 DEBUG (3): Child 4 has sum: 11, count: 3 and max: 5
+0:9:6.000000010 DEBUG (3): Node has sum: 35, count: 7, max: 8
+0:9:6.000000010 DEBUG (3): Sending MeasMsg... 
+0:9:6.000000010 DEBUG (3): SendMeasTask() posted!!
+0:9:6.000000010 DEBUG (3): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:9:6.000000020 DEBUG (1):  sendMeasTask(): mlen = 4  sum= 1 count= 1 max=1 
+0:9:6.000000020 DEBUG (1): sendMeasTask(): Send measure returned success!!!
+0:9:6.000000020 DEBUG (3):  sendMeasTask(): mlen = 4  sum= 35 count= 7 max=8 
+0:9:6.000000020 DEBUG (3): sendMeasTask(): Send measure returned success!!!
+0:9:6.003509521 DEBUG (0): ### MeasReceive.receive() start ##### 
+0:9:6.003509521 DEBUG (0): Some measurement received!!!  from 3 
+0:9:6.003509521 DEBUG (0): ### MeasReceive.receive() end ##### 
+0:9:6.003509531 DEBUG (0): receiveMeasTask(): len=4 
+0:9:6.003509531 DEBUG (0): MeasMsg received from 3 !!! 
+0:9:6.003509531 DEBUG (0): Receive from child: 3 values - sum:35, count: 7, max: 8
+0:9:6.003677367 DEBUG (3): A Measure package sent... True 
+0:9:6.005660997 DEBUG (0): ### MeasReceive.receive() start ##### 
+0:9:6.005660997 DEBUG (0): Some measurement received!!!  from 1 
+0:9:6.005660997 DEBUG (0): ### MeasReceive.receive() end ##### 
+0:9:6.005661007 DEBUG (0): receiveMeasTask(): len=4 
+0:9:6.005661007 DEBUG (0): MeasMsg received from 1 !!! 
+0:9:6.005661007 DEBUG (0): Receive from child: 1 values - sum:1, count: 1, max: 1
+0:9:6.005828843 DEBUG (1): A Measure package sent... True 
+0:9:10.000000010 DEBUG (0): IAMZERO
+0:9:10.000000010 DEBUG (0): 
+0:9:10.000000010 DEBUG (0): ##################################### 
+0:9:10.000000010 DEBUG (0): #######   ROUND   10    ############## 
+0:9:10.000000010 DEBUG (0): #####################################
+0:9:54.000000010 DEBUG (2): NodeID = 2 curdepth= 4
+0:9:54.000000010 DEBUG (2): Starting Data transmission to parent!
+0:9:54.000000010 DEBUG (2): SendMeasTimer fired!
+0:9:54.000000010 DEBUG (2): measurement is: 2
+0:9:54.000000010 DEBUG (2): Node has sum: 2, count: 1, max: 2
+0:9:54.000000010 DEBUG (2): Sending MeasMsg... 
+0:9:54.000000010 DEBUG (2): SendMeasTask() posted!!
+0:9:54.000000010 DEBUG (2): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:9:54.000000010 DEBUG (8): NodeID = 8 curdepth= 4
+0:9:54.000000010 DEBUG (8): Starting Data transmission to parent!
+0:9:54.000000010 DEBUG (8): SendMeasTimer fired!
+0:9:54.000000010 DEBUG (8): measurement is: 8
+0:9:54.000000010 DEBUG (8): Node has sum: 8, count: 1, max: 8
+0:9:54.000000010 DEBUG (8): Sending MeasMsg... 
+0:9:54.000000010 DEBUG (8): SendMeasTask() posted!!
+0:9:54.000000010 DEBUG (8): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:9:54.000000020 DEBUG (2):  sendMeasTask(): mlen = 4  sum= 2 count= 1 max=2 
+0:9:54.000000020 DEBUG (2): sendMeasTask(): Send measure returned success!!!
+0:9:54.000000020 DEBUG (8):  sendMeasTask(): mlen = 4  sum= 8 count= 1 max=8 
+0:9:54.000000020 DEBUG (8): sendMeasTask(): Send measure returned success!!!
+0:9:54.008621186 DEBUG (7): ### MeasReceive.receive() start ##### 
+0:9:54.008621186 DEBUG (7): Some measurement received!!!  from 8 
+0:9:54.008621186 DEBUG (7): ### MeasReceive.receive() end ##### 
+0:9:54.008621196 DEBUG (7): receiveMeasTask(): len=4 
+0:9:54.008621196 DEBUG (7): MeasMsg received from 8 !!! 
+0:9:54.008621196 DEBUG (7): Receive from child: 8 values - sum:8, count: 1, max: 8
+0:9:54.008789032 DEBUG (8): A Measure package sent... True 
+0:9:54.009521449 DEBUG (2): A Measure package sent... True 
+0:9:58.000000010 DEBUG (5): NodeID = 5 curdepth= 3
+0:9:58.000000010 DEBUG (5): Starting Data transmission to parent!
+0:9:58.000000010 DEBUG (5): SendMeasTimer fired!
+0:9:58.000000010 DEBUG (5): measurement is: 5
+0:9:58.000000010 DEBUG (5): Child 2 has sum: 2, count: 1 and max: 2
+0:9:58.000000010 DEBUG (5): Node has sum: 7, count: 2, max: 5
+0:9:58.000000010 DEBUG (5): Sending MeasMsg... 
+0:9:58.000000010 DEBUG (5): SendMeasTask() posted!!
+0:9:58.000000010 DEBUG (5): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:9:58.000000010 DEBUG (7): NodeID = 7 curdepth= 3
+0:9:58.000000010 DEBUG (7): Starting Data transmission to parent!
+0:9:58.000000010 DEBUG (7): SendMeasTimer fired!
+0:9:58.000000010 DEBUG (7): measurement is: 7
+0:9:58.000000010 DEBUG (7): Child 8 has sum: 8, count: 1 and max: 8
+0:9:58.000000010 DEBUG (7): Node has sum: 15, count: 2, max: 8
+0:9:58.000000010 DEBUG (7): Sending MeasMsg... 
+0:9:58.000000010 DEBUG (7): SendMeasTask() posted!!
+0:9:58.000000010 DEBUG (7): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:9:58.000000020 DEBUG (5):  sendMeasTask(): mlen = 4  sum= 7 count= 2 max=5 
+0:9:58.000000020 DEBUG (5): sendMeasTask(): Send measure returned success!!!
+0:9:58.000000020 DEBUG (7):  sendMeasTask(): mlen = 4  sum= 15 count= 2 max=8 
+0:9:58.000000020 DEBUG (7): sendMeasTask(): Send measure returned success!!!
+0:9:58.006469709 DEBUG (4): ### MeasReceive.receive() start ##### 
+0:9:58.006469709 DEBUG (4): Some measurement received!!!  from 5 
+0:9:58.006469709 DEBUG (4): ### MeasReceive.receive() end ##### 
+0:9:58.006469719 DEBUG (4): receiveMeasTask(): len=4 
+0:9:58.006469719 DEBUG (4): MeasMsg received from 5 !!! 
+0:9:58.006469719 DEBUG (4): Receive from child: 5 values - sum:7, count: 2, max: 5
+0:9:58.006637555 DEBUG (5): A Measure package sent... True 
+0:9:58.007781957 DEBUG (6): ### MeasReceive.receive() start ##### 
+0:9:58.007781957 DEBUG (6): Some measurement received!!!  from 7 
+0:9:58.007781957 DEBUG (6): ### MeasReceive.receive() end ##### 
+0:9:58.007781967 DEBUG (6): receiveMeasTask(): len=4 
+0:9:58.007781967 DEBUG (6): MeasMsg received from 7 !!! 
+0:9:58.007781967 DEBUG (6): Receive from child: 7 values - sum:15, count: 2, max: 8
+0:9:58.007949803 DEBUG (7): A Measure package sent... True 
+0:10:2.000000010 DEBUG (4): NodeID = 4 curdepth= 2
+0:10:2.000000010 DEBUG (4): Starting Data transmission to parent!
+0:10:2.000000010 DEBUG (4): SendMeasTimer fired!
+0:10:2.000000010 DEBUG (4): measurement is: 4
+0:10:2.000000010 DEBUG (4): Child 5 has sum: 7, count: 2 and max: 5
+0:10:2.000000010 DEBUG (4): Node has sum: 11, count: 3, max: 5
+0:10:2.000000010 DEBUG (4): Sending MeasMsg... 
+0:10:2.000000010 DEBUG (4): SendMeasTask() posted!!
+0:10:2.000000010 DEBUG (4): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:10:2.000000010 DEBUG (6): NodeID = 6 curdepth= 2
+0:10:2.000000010 DEBUG (6): Starting Data transmission to parent!
+0:10:2.000000010 DEBUG (6): SendMeasTimer fired!
+0:10:2.000000010 DEBUG (6): measurement is: 6
+0:10:2.000000010 DEBUG (6): Child 7 has sum: 15, count: 2 and max: 8
+0:10:2.000000010 DEBUG (6): Node has sum: 21, count: 3, max: 8
+0:10:2.000000010 DEBUG (6): Sending MeasMsg... 
+0:10:2.000000010 DEBUG (6): SendMeasTask() posted!!
+0:10:2.000000010 DEBUG (6): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:10:2.000000020 DEBUG (4):  sendMeasTask(): mlen = 4  sum= 11 count= 3 max=5 
+0:10:2.000000020 DEBUG (4): sendMeasTask(): Send measure returned success!!!
+0:10:2.000000020 DEBUG (6):  sendMeasTask(): mlen = 4  sum= 21 count= 3 max=8 
+0:10:2.000000020 DEBUG (6): sendMeasTask(): Send measure returned success!!!
+0:10:2.003616332 DEBUG (3): ### MeasReceive.receive() start ##### 
+0:10:2.003616332 DEBUG (3): Some measurement received!!!  from 6 
+0:10:2.003616332 DEBUG (3): ### MeasReceive.receive() end ##### 
+0:10:2.003616342 DEBUG (3): receiveMeasTask(): len=4 
+0:10:2.003616342 DEBUG (3): MeasMsg received from 6 !!! 
+0:10:2.003616342 DEBUG (3): Receive from child: 6 values - sum:21, count: 3, max: 8
+0:10:2.003784178 DEBUG (6): A Measure package sent... True 
+0:10:2.009567225 DEBUG (3): ### MeasReceive.receive() start ##### 
+0:10:2.009567225 DEBUG (3): Some measurement received!!!  from 4 
+0:10:2.009567225 DEBUG (3): ### MeasReceive.receive() end ##### 
+0:10:2.009567235 DEBUG (3): receiveMeasTask(): len=4 
+0:10:2.009567235 DEBUG (3): MeasMsg received from 4 !!! 
+0:10:2.009567235 DEBUG (3): Receive from child: 4 values - sum:11, count: 3, max: 5
+0:10:2.009735071 DEBUG (4): A Measure package sent... True 
+0:10:6.000000010 DEBUG (1): NodeID = 1 curdepth= 1
+0:10:6.000000010 DEBUG (1): Starting Data transmission to parent!
+0:10:6.000000010 DEBUG (1): SendMeasTimer fired!
+0:10:6.000000010 DEBUG (1): measurement is: 1
+0:10:6.000000010 DEBUG (1): Node has sum: 1, count: 1, max: 1
+0:10:6.000000010 DEBUG (1): Sending MeasMsg... 
+0:10:6.000000010 DEBUG (1): SendMeasTask() posted!!
+0:10:6.000000010 DEBUG (1): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:10:6.000000010 DEBUG (3): NodeID = 3 curdepth= 1
+0:10:6.000000010 DEBUG (3): Starting Data transmission to parent!
+0:10:6.000000010 DEBUG (3): SendMeasTimer fired!
+0:10:6.000000010 DEBUG (3): measurement is: 3
+0:10:6.000000010 DEBUG (3): Child 6 has sum: 21, count: 3 and max: 8
+0:10:6.000000010 DEBUG (3): Child 4 has sum: 11, count: 3 and max: 5
+0:10:6.000000010 DEBUG (3): Node has sum: 35, count: 7, max: 8
+0:10:6.000000010 DEBUG (3): Sending MeasMsg... 
+0:10:6.000000010 DEBUG (3): SendMeasTask() posted!!
+0:10:6.000000010 DEBUG (3): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:10:6.000000020 DEBUG (1):  sendMeasTask(): mlen = 4  sum= 1 count= 1 max=1 
+0:10:6.000000020 DEBUG (1): sendMeasTask(): Send measure returned success!!!
+0:10:6.000000020 DEBUG (3):  sendMeasTask(): mlen = 4  sum= 35 count= 7 max=8 
+0:10:6.000000020 DEBUG (3): sendMeasTask(): Send measure returned success!!!
+0:10:6.006774882 DEBUG (1): A Measure package sent... True 
+0:10:6.006973246 DEBUG (3): A Measure package sent... True 
+0:10:10.000000010 DEBUG (0): IAMZERO
+0:10:10.000000010 DEBUG (0): 
+0:10:10.000000010 DEBUG (0): ##################################### 
+0:10:10.000000010 DEBUG (0): #######   ROUND   11    ############## 
+0:10:10.000000010 DEBUG (0): #####################################
+0:10:54.000000010 DEBUG (2): NodeID = 2 curdepth= 4
+0:10:54.000000010 DEBUG (2): Starting Data transmission to parent!
+0:10:54.000000010 DEBUG (2): SendMeasTimer fired!
+0:10:54.000000010 DEBUG (2): measurement is: 2
+0:10:54.000000010 DEBUG (2): Node has sum: 2, count: 1, max: 2
+0:10:54.000000010 DEBUG (2): Sending MeasMsg... 
+0:10:54.000000010 DEBUG (2): SendMeasTask() posted!!
+0:10:54.000000010 DEBUG (2): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:10:54.000000010 DEBUG (8): NodeID = 8 curdepth= 4
+0:10:54.000000010 DEBUG (8): Starting Data transmission to parent!
+0:10:54.000000010 DEBUG (8): SendMeasTimer fired!
+0:10:54.000000010 DEBUG (8): measurement is: 8
+0:10:54.000000010 DEBUG (8): Node has sum: 8, count: 1, max: 8
+0:10:54.000000010 DEBUG (8): Sending MeasMsg... 
+0:10:54.000000010 DEBUG (8): SendMeasTask() posted!!
+0:10:54.000000010 DEBUG (8): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:10:54.000000020 DEBUG (2):  sendMeasTask(): mlen = 4  sum= 2 count= 1 max=2 
+0:10:54.000000020 DEBUG (2): sendMeasTask(): Send measure returned success!!!
+0:10:54.000000020 DEBUG (8):  sendMeasTask(): mlen = 4  sum= 8 count= 1 max=8 
+0:10:54.000000020 DEBUG (8): sendMeasTask(): Send measure returned success!!!
+0:10:54.002685552 DEBUG (7): ### MeasReceive.receive() start ##### 
+0:10:54.002685552 DEBUG (7): Some measurement received!!!  from 8 
+0:10:54.002685552 DEBUG (7): ### MeasReceive.receive() end ##### 
+0:10:54.002685562 DEBUG (7): receiveMeasTask(): len=4 
+0:10:54.002685562 DEBUG (7): MeasMsg received from 8 !!! 
+0:10:54.002685562 DEBUG (7): Receive from child: 8 values - sum:8, count: 1, max: 8
+0:10:54.002853397 DEBUG (8): A Measure package sent... True 
+0:10:54.009979210 DEBUG (5): ### MeasReceive.receive() start ##### 
+0:10:54.009979210 DEBUG (5): Some measurement received!!!  from 2 
+0:10:54.009979210 DEBUG (5): ### MeasReceive.receive() end ##### 
+0:10:54.009979220 DEBUG (5): receiveMeasTask(): len=4 
+0:10:54.009979220 DEBUG (5): MeasMsg received from 2 !!! 
+0:10:54.009979220 DEBUG (5): Receive from child: 2 values - sum:2, count: 1, max: 2
+0:10:54.010147055 DEBUG (2): A Measure package sent... True 
+0:10:58.000000010 DEBUG (5): NodeID = 5 curdepth= 3
+0:10:58.000000010 DEBUG (5): Starting Data transmission to parent!
+0:10:58.000000010 DEBUG (5): SendMeasTimer fired!
+0:10:58.000000010 DEBUG (5): measurement is: 5
+0:10:58.000000010 DEBUG (5): Child 2 has sum: 2, count: 1 and max: 2
+0:10:58.000000010 DEBUG (5): Node has sum: 7, count: 2, max: 5
+0:10:58.000000010 DEBUG (5): Sending MeasMsg... 
+0:10:58.000000010 DEBUG (5): SendMeasTask() posted!!
+0:10:58.000000010 DEBUG (5): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:10:58.000000010 DEBUG (7): NodeID = 7 curdepth= 3
+0:10:58.000000010 DEBUG (7): Starting Data transmission to parent!
+0:10:58.000000010 DEBUG (7): SendMeasTimer fired!
+0:10:58.000000010 DEBUG (7): measurement is: 7
+0:10:58.000000010 DEBUG (7): Child 8 has sum: 8, count: 1 and max: 8
+0:10:58.000000010 DEBUG (7): Node has sum: 15, count: 2, max: 8
+0:10:58.000000010 DEBUG (7): Sending MeasMsg... 
+0:10:58.000000010 DEBUG (7): SendMeasTask() posted!!
+0:10:58.000000010 DEBUG (7): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:10:58.000000020 DEBUG (5):  sendMeasTask(): mlen = 4  sum= 7 count= 2 max=5 
+0:10:58.000000020 DEBUG (5): sendMeasTask(): Send measure returned success!!!
+0:10:58.000000020 DEBUG (7):  sendMeasTask(): mlen = 4  sum= 15 count= 2 max=8 
+0:10:58.000000020 DEBUG (7): sendMeasTask(): Send measure returned success!!!
+0:10:58.004821769 DEBUG (6): ### MeasReceive.receive() start ##### 
+0:10:58.004821769 DEBUG (6): Some measurement received!!!  from 7 
+0:10:58.004821769 DEBUG (6): ### MeasReceive.receive() end ##### 
+0:10:58.004821779 DEBUG (6): receiveMeasTask(): len=4 
+0:10:58.004821779 DEBUG (6): MeasMsg received from 7 !!! 
+0:10:58.004821779 DEBUG (6): Receive from child: 7 values - sum:15, count: 2, max: 8
+0:10:58.004989615 DEBUG (7): A Measure package sent... True 
+0:10:58.008224459 DEBUG (4): ### MeasReceive.receive() start ##### 
+0:10:58.008224459 DEBUG (4): Some measurement received!!!  from 5 
+0:10:58.008224459 DEBUG (4): ### MeasReceive.receive() end ##### 
+0:10:58.008224469 DEBUG (4): receiveMeasTask(): len=4 
+0:10:58.008224469 DEBUG (4): MeasMsg received from 5 !!! 
+0:10:58.008224469 DEBUG (4): Receive from child: 5 values - sum:7, count: 2, max: 5
+0:10:58.008392305 DEBUG (5): A Measure package sent... True 
+0:11:2.000000010 DEBUG (4): NodeID = 4 curdepth= 2
+0:11:2.000000010 DEBUG (4): Starting Data transmission to parent!
+0:11:2.000000010 DEBUG (4): SendMeasTimer fired!
+0:11:2.000000010 DEBUG (4): measurement is: 4
+0:11:2.000000010 DEBUG (4): Child 5 has sum: 7, count: 2 and max: 5
+0:11:2.000000010 DEBUG (4): Node has sum: 11, count: 3, max: 5
+0:11:2.000000010 DEBUG (4): Sending MeasMsg... 
+0:11:2.000000010 DEBUG (4): SendMeasTask() posted!!
+0:11:2.000000010 DEBUG (4): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:11:2.000000010 DEBUG (6): NodeID = 6 curdepth= 2
+0:11:2.000000010 DEBUG (6): Starting Data transmission to parent!
+0:11:2.000000010 DEBUG (6): SendMeasTimer fired!
+0:11:2.000000010 DEBUG (6): measurement is: 6
+0:11:2.000000010 DEBUG (6): Child 7 has sum: 15, count: 2 and max: 8
+0:11:2.000000010 DEBUG (6): Node has sum: 21, count: 3, max: 8
+0:11:2.000000010 DEBUG (6): Sending MeasMsg... 
+0:11:2.000000010 DEBUG (6): SendMeasTask() posted!!
+0:11:2.000000010 DEBUG (6): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:11:2.000000020 DEBUG (4):  sendMeasTask(): mlen = 4  sum= 11 count= 3 max=5 
+0:11:2.000000020 DEBUG (4): sendMeasTask(): Send measure returned success!!!
+0:11:2.000000020 DEBUG (6):  sendMeasTask(): mlen = 4  sum= 21 count= 3 max=8 
+0:11:2.000000020 DEBUG (6): sendMeasTask(): Send measure returned success!!!
+0:11:2.005203237 DEBUG (3): ### MeasReceive.receive() start ##### 
+0:11:2.005203237 DEBUG (3): Some measurement received!!!  from 4 
+0:11:2.005203237 DEBUG (3): ### MeasReceive.receive() end ##### 
+0:11:2.005203247 DEBUG (3): receiveMeasTask(): len=4 
+0:11:2.005203247 DEBUG (3): MeasMsg received from 4 !!! 
+0:11:2.005203247 DEBUG (3): Receive from child: 4 values - sum:11, count: 3, max: 5
+0:11:2.005371082 DEBUG (4): A Measure package sent... True 
+0:11:2.007171609 DEBUG (3): ### MeasReceive.receive() start ##### 
+0:11:2.007171609 DEBUG (3): Some measurement received!!!  from 6 
+0:11:2.007171609 DEBUG (3): ### MeasReceive.receive() end ##### 
+0:11:2.007171619 DEBUG (3): receiveMeasTask(): len=4 
+0:11:2.007171619 DEBUG (3): MeasMsg received from 6 !!! 
+0:11:2.007171619 DEBUG (3): Receive from child: 6 values - sum:21, count: 3, max: 8
+0:11:2.007339455 DEBUG (6): A Measure package sent... True 
+0:11:6.000000010 DEBUG (1): NodeID = 1 curdepth= 1
+0:11:6.000000010 DEBUG (1): Starting Data transmission to parent!
+0:11:6.000000010 DEBUG (1): SendMeasTimer fired!
+0:11:6.000000010 DEBUG (1): measurement is: 1
+0:11:6.000000010 DEBUG (1): Node has sum: 1, count: 1, max: 1
+0:11:6.000000010 DEBUG (1): Sending MeasMsg... 
+0:11:6.000000010 DEBUG (1): SendMeasTask() posted!!
+0:11:6.000000010 DEBUG (1): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:11:6.000000010 DEBUG (3): NodeID = 3 curdepth= 1
+0:11:6.000000010 DEBUG (3): Starting Data transmission to parent!
+0:11:6.000000010 DEBUG (3): SendMeasTimer fired!
+0:11:6.000000010 DEBUG (3): measurement is: 3
+0:11:6.000000010 DEBUG (3): Child 6 has sum: 21, count: 3 and max: 8
+0:11:6.000000010 DEBUG (3): Child 4 has sum: 11, count: 3 and max: 5
+0:11:6.000000010 DEBUG (3): Node has sum: 35, count: 7, max: 8
+0:11:6.000000010 DEBUG (3): Sending MeasMsg... 
+0:11:6.000000010 DEBUG (3): SendMeasTask() posted!!
+0:11:6.000000010 DEBUG (3): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:11:6.000000020 DEBUG (1):  sendMeasTask(): mlen = 4  sum= 1 count= 1 max=1 
+0:11:6.000000020 DEBUG (1): sendMeasTask(): Send measure returned success!!!
+0:11:6.000000020 DEBUG (3):  sendMeasTask(): mlen = 4  sum= 35 count= 7 max=8 
+0:11:6.000000020 DEBUG (3): sendMeasTask(): Send measure returned success!!!
+0:11:6.005798326 DEBUG (0): ### MeasReceive.receive() start ##### 
+0:11:6.005798326 DEBUG (0): Some measurement received!!!  from 3 
+0:11:6.005798326 DEBUG (0): ### MeasReceive.receive() end ##### 
+0:11:6.005798336 DEBUG (0): receiveMeasTask(): len=4 
+0:11:6.005798336 DEBUG (0): MeasMsg received from 3 !!! 
+0:11:6.005798336 DEBUG (0): Receive from child: 3 values - sum:35, count: 7, max: 8
+0:11:6.005966172 DEBUG (3): A Measure package sent... True 
+0:11:6.010360677 DEBUG (0): ### MeasReceive.receive() start ##### 
+0:11:6.010360677 DEBUG (0): Some measurement received!!!  from 1 
+0:11:6.010360677 DEBUG (0): ### MeasReceive.receive() end ##### 
+0:11:6.010360687 DEBUG (0): receiveMeasTask(): len=4 
+0:11:6.010360687 DEBUG (0): MeasMsg received from 1 !!! 
+0:11:6.010360687 DEBUG (0): Receive from child: 1 values - sum:1, count: 1, max: 1
+0:11:6.010528523 DEBUG (1): A Measure package sent... True 
+0:11:10.000000010 DEBUG (0): IAMZERO
+0:11:10.000000010 DEBUG (0): 
+0:11:10.000000010 DEBUG (0): ##################################### 
+0:11:10.000000010 DEBUG (0): #######   ROUND   12    ############## 
+0:11:10.000000010 DEBUG (0): #####################################
+0:11:54.000000010 DEBUG (2): NodeID = 2 curdepth= 4
+0:11:54.000000010 DEBUG (2): Starting Data transmission to parent!
+0:11:54.000000010 DEBUG (2): SendMeasTimer fired!
+0:11:54.000000010 DEBUG (2): measurement is: 2
+0:11:54.000000010 DEBUG (2): Node has sum: 2, count: 1, max: 2
+0:11:54.000000010 DEBUG (2): Sending MeasMsg... 
+0:11:54.000000010 DEBUG (2): SendMeasTask() posted!!
+0:11:54.000000010 DEBUG (2): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:11:54.000000010 DEBUG (8): NodeID = 8 curdepth= 4
+0:11:54.000000010 DEBUG (8): Starting Data transmission to parent!
+0:11:54.000000010 DEBUG (8): SendMeasTimer fired!
+0:11:54.000000010 DEBUG (8): measurement is: 8
+0:11:54.000000010 DEBUG (8): Node has sum: 8, count: 1, max: 8
+0:11:54.000000010 DEBUG (8): Sending MeasMsg... 
+0:11:54.000000010 DEBUG (8): SendMeasTask() posted!!
+0:11:54.000000010 DEBUG (8): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:11:54.000000020 DEBUG (2):  sendMeasTask(): mlen = 4  sum= 2 count= 1 max=2 
+0:11:54.000000020 DEBUG (2): sendMeasTask(): Send measure returned success!!!
+0:11:54.000000020 DEBUG (8):  sendMeasTask(): mlen = 4  sum= 8 count= 1 max=8 
+0:11:54.000000020 DEBUG (8): sendMeasTask(): Send measure returned success!!!
+0:11:54.001693736 DEBUG (7): ### MeasReceive.receive() start ##### 
+0:11:54.001693736 DEBUG (7): Some measurement received!!!  from 8 
+0:11:54.001693736 DEBUG (7): ### MeasReceive.receive() end ##### 
+0:11:54.001693746 DEBUG (7): receiveMeasTask(): len=4 
+0:11:54.001693746 DEBUG (7): MeasMsg received from 8 !!! 
+0:11:54.001693746 DEBUG (7): Receive from child: 8 values - sum:8, count: 1, max: 8
+0:11:54.001861582 DEBUG (8): A Measure package sent... True 
+0:11:54.009750329 DEBUG (5): ### MeasReceive.receive() start ##### 
+0:11:54.009750329 DEBUG (5): Some measurement received!!!  from 2 
+0:11:54.009750329 DEBUG (5): ### MeasReceive.receive() end ##### 
+0:11:54.009750339 DEBUG (5): receiveMeasTask(): len=4 
+0:11:54.009750339 DEBUG (5): MeasMsg received from 2 !!! 
+0:11:54.009750339 DEBUG (5): Receive from child: 2 values - sum:2, count: 1, max: 2
+0:11:54.009918175 DEBUG (2): A Measure package sent... True 
+0:11:58.000000010 DEBUG (5): NodeID = 5 curdepth= 3
+0:11:58.000000010 DEBUG (5): Starting Data transmission to parent!
+0:11:58.000000010 DEBUG (5): SendMeasTimer fired!
+0:11:58.000000010 DEBUG (5): measurement is: 5
+0:11:58.000000010 DEBUG (5): Child 2 has sum: 2, count: 1 and max: 2
+0:11:58.000000010 DEBUG (5): Node has sum: 7, count: 2, max: 5
+0:11:58.000000010 DEBUG (5): Sending MeasMsg... 
+0:11:58.000000010 DEBUG (5): SendMeasTask() posted!!
+0:11:58.000000010 DEBUG (5): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:11:58.000000010 DEBUG (7): NodeID = 7 curdepth= 3
+0:11:58.000000010 DEBUG (7): Starting Data transmission to parent!
+0:11:58.000000010 DEBUG (7): SendMeasTimer fired!
+0:11:58.000000010 DEBUG (7): measurement is: 7
+0:11:58.000000010 DEBUG (7): Child 8 has sum: 8, count: 1 and max: 8
+0:11:58.000000010 DEBUG (7): Node has sum: 15, count: 2, max: 8
+0:11:58.000000010 DEBUG (7): Sending MeasMsg... 
+0:11:58.000000010 DEBUG (7): SendMeasTask() posted!!
+0:11:58.000000010 DEBUG (7): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:11:58.000000020 DEBUG (5):  sendMeasTask(): mlen = 4  sum= 7 count= 2 max=5 
+0:11:58.000000020 DEBUG (5): sendMeasTask(): Send measure returned success!!!
+0:11:58.000000020 DEBUG (7):  sendMeasTask(): mlen = 4  sum= 15 count= 2 max=8 
+0:11:58.000000020 DEBUG (7): sendMeasTask(): Send measure returned success!!!
+0:11:58.008575409 DEBUG (5): A Measure package sent... True 
+0:11:58.008804290 DEBUG (6): ### MeasReceive.receive() start ##### 
+0:11:58.008804290 DEBUG (6): Some measurement received!!!  from 7 
+0:11:58.008804290 DEBUG (6): ### MeasReceive.receive() end ##### 
+0:11:58.008804300 DEBUG (6): receiveMeasTask(): len=4 
+0:11:58.008804300 DEBUG (6): MeasMsg received from 7 !!! 
+0:11:58.008804300 DEBUG (6): Receive from child: 7 values - sum:15, count: 2, max: 8
+0:11:58.008972136 DEBUG (7): A Measure package sent... True 
+0:12:2.000000010 DEBUG (4): NodeID = 4 curdepth= 2
+0:12:2.000000010 DEBUG (4): Starting Data transmission to parent!
+0:12:2.000000010 DEBUG (4): SendMeasTimer fired!
+0:12:2.000000010 DEBUG (4): measurement is: 4
+0:12:2.000000010 DEBUG (4): Child 5 has sum: 7, count: 2 and max: 5
+0:12:2.000000010 DEBUG (4): Node has sum: 11, count: 3, max: 5
+0:12:2.000000010 DEBUG (4): Sending MeasMsg... 
+0:12:2.000000010 DEBUG (4): SendMeasTask() posted!!
+0:12:2.000000010 DEBUG (4): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:12:2.000000010 DEBUG (6): NodeID = 6 curdepth= 2
+0:12:2.000000010 DEBUG (6): Starting Data transmission to parent!
+0:12:2.000000010 DEBUG (6): SendMeasTimer fired!
+0:12:2.000000010 DEBUG (6): measurement is: 6
+0:12:2.000000010 DEBUG (6): Child 7 has sum: 15, count: 2 and max: 8
+0:12:2.000000010 DEBUG (6): Node has sum: 21, count: 3, max: 8
+0:12:2.000000010 DEBUG (6): Sending MeasMsg... 
+0:12:2.000000010 DEBUG (6): SendMeasTask() posted!!
+0:12:2.000000010 DEBUG (6): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:12:2.000000020 DEBUG (4):  sendMeasTask(): mlen = 4  sum= 11 count= 3 max=5 
+0:12:2.000000020 DEBUG (4): sendMeasTask(): Send measure returned success!!!
+0:12:2.000000020 DEBUG (6):  sendMeasTask(): mlen = 4  sum= 21 count= 3 max=8 
+0:12:2.000000020 DEBUG (6): sendMeasTask(): Send measure returned success!!!
+0:12:2.009551966 DEBUG (4): A Measure package sent... True 
+0:12:2.010650593 DEBUG (6): A Measure package sent... True 
+0:12:6.000000010 DEBUG (1): NodeID = 1 curdepth= 1
+0:12:6.000000010 DEBUG (1): Starting Data transmission to parent!
+0:12:6.000000010 DEBUG (1): SendMeasTimer fired!
+0:12:6.000000010 DEBUG (1): measurement is: 1
+0:12:6.000000010 DEBUG (1): Node has sum: 1, count: 1, max: 1
+0:12:6.000000010 DEBUG (1): Sending MeasMsg... 
+0:12:6.000000010 DEBUG (1): SendMeasTask() posted!!
+0:12:6.000000010 DEBUG (1): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:12:6.000000010 DEBUG (3): NodeID = 3 curdepth= 1
+0:12:6.000000010 DEBUG (3): Starting Data transmission to parent!
+0:12:6.000000010 DEBUG (3): SendMeasTimer fired!
+0:12:6.000000010 DEBUG (3): measurement is: 3
+0:12:6.000000010 DEBUG (3): Child 6 has sum: 21, count: 3 and max: 8
+0:12:6.000000010 DEBUG (3): Child 4 has sum: 11, count: 3 and max: 5
+0:12:6.000000010 DEBUG (3): Node has sum: 35, count: 7, max: 8
+0:12:6.000000010 DEBUG (3): Sending MeasMsg... 
+0:12:6.000000010 DEBUG (3): SendMeasTask() posted!!
+0:12:6.000000010 DEBUG (3): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:12:6.000000020 DEBUG (1):  sendMeasTask(): mlen = 4  sum= 1 count= 1 max=1 
+0:12:6.000000020 DEBUG (1): sendMeasTask(): Send measure returned success!!!
+0:12:6.000000020 DEBUG (3):  sendMeasTask(): mlen = 4  sum= 35 count= 7 max=8 
+0:12:6.000000020 DEBUG (3): sendMeasTask(): Send measure returned success!!!
+0:12:6.003677367 DEBUG (0): ### MeasReceive.receive() start ##### 
+0:12:6.003677367 DEBUG (0): Some measurement received!!!  from 3 
+0:12:6.003677367 DEBUG (0): ### MeasReceive.receive() end ##### 
+0:12:6.003677377 DEBUG (0): receiveMeasTask(): len=4 
+0:12:6.003677377 DEBUG (0): MeasMsg received from 3 !!! 
+0:12:6.003677377 DEBUG (0): Receive from child: 3 values - sum:35, count: 7, max: 8
+0:12:6.003845212 DEBUG (3): A Measure package sent... True 
+0:12:6.008682220 DEBUG (0): ### MeasReceive.receive() start ##### 
+0:12:6.008682220 DEBUG (0): Some measurement received!!!  from 1 
+0:12:6.008682220 DEBUG (0): ### MeasReceive.receive() end ##### 
+0:12:6.008682230 DEBUG (0): receiveMeasTask(): len=4 
+0:12:6.008682230 DEBUG (0): MeasMsg received from 1 !!! 
+0:12:6.008682230 DEBUG (0): Receive from child: 1 values - sum:1, count: 1, max: 1
+0:12:6.008850066 DEBUG (1): A Measure package sent... True 
+0:12:10.000000010 DEBUG (0): IAMZERO
+0:12:10.000000010 DEBUG (0): 
+0:12:10.000000010 DEBUG (0): ##################################### 
+0:12:10.000000010 DEBUG (0): #######   ROUND   13    ############## 
+0:12:10.000000010 DEBUG (0): #####################################
+0:12:54.000000010 DEBUG (2): NodeID = 2 curdepth= 4
+0:12:54.000000010 DEBUG (2): Starting Data transmission to parent!
+0:12:54.000000010 DEBUG (2): SendMeasTimer fired!
+0:12:54.000000010 DEBUG (2): measurement is: 2
+0:12:54.000000010 DEBUG (2): Node has sum: 2, count: 1, max: 2
+0:12:54.000000010 DEBUG (2): Sending MeasMsg... 
+0:12:54.000000010 DEBUG (2): SendMeasTask() posted!!
+0:12:54.000000010 DEBUG (2): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:12:54.000000010 DEBUG (8): NodeID = 8 curdepth= 4
+0:12:54.000000010 DEBUG (8): Starting Data transmission to parent!
+0:12:54.000000010 DEBUG (8): SendMeasTimer fired!
+0:12:54.000000010 DEBUG (8): measurement is: 8
+0:12:54.000000010 DEBUG (8): Node has sum: 8, count: 1, max: 8
+0:12:54.000000010 DEBUG (8): Sending MeasMsg... 
+0:12:54.000000010 DEBUG (8): SendMeasTask() posted!!
+0:12:54.000000010 DEBUG (8): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:12:54.000000020 DEBUG (2):  sendMeasTask(): mlen = 4  sum= 2 count= 1 max=2 
+0:12:54.000000020 DEBUG (2): sendMeasTask(): Send measure returned success!!!
+0:12:54.000000020 DEBUG (8):  sendMeasTask(): mlen = 4  sum= 8 count= 1 max=8 
+0:12:54.000000020 DEBUG (8): sendMeasTask(): Send measure returned success!!!
+0:12:54.006103500 DEBUG (2): A Measure package sent... True 
+0:12:54.006271346 DEBUG (7): ### MeasReceive.receive() start ##### 
+0:12:54.006271346 DEBUG (7): Some measurement received!!!  from 8 
+0:12:54.006271346 DEBUG (7): ### MeasReceive.receive() end ##### 
+0:12:54.006271356 DEBUG (7): receiveMeasTask(): len=4 
+0:12:54.006271356 DEBUG (7): MeasMsg received from 8 !!! 
+0:12:54.006271356 DEBUG (7): Receive from child: 8 values - sum:8, count: 1, max: 8
+0:12:54.006439192 DEBUG (8): A Measure package sent... True 
+0:12:58.000000010 DEBUG (5): NodeID = 5 curdepth= 3
+0:12:58.000000010 DEBUG (5): Starting Data transmission to parent!
+0:12:58.000000010 DEBUG (5): SendMeasTimer fired!
+0:12:58.000000010 DEBUG (5): measurement is: 5
+0:12:58.000000010 DEBUG (5): Child 2 has sum: 2, count: 1 and max: 2
+0:12:58.000000010 DEBUG (5): Node has sum: 7, count: 2, max: 5
+0:12:58.000000010 DEBUG (5): Sending MeasMsg... 
+0:12:58.000000010 DEBUG (5): SendMeasTask() posted!!
+0:12:58.000000010 DEBUG (5): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:12:58.000000010 DEBUG (7): NodeID = 7 curdepth= 3
+0:12:58.000000010 DEBUG (7): Starting Data transmission to parent!
+0:12:58.000000010 DEBUG (7): SendMeasTimer fired!
+0:12:58.000000010 DEBUG (7): measurement is: 7
+0:12:58.000000010 DEBUG (7): Child 8 has sum: 8, count: 1 and max: 8
+0:12:58.000000010 DEBUG (7): Node has sum: 15, count: 2, max: 8
+0:12:58.000000010 DEBUG (7): Sending MeasMsg... 
+0:12:58.000000010 DEBUG (7): SendMeasTask() posted!!
+0:12:58.000000010 DEBUG (7): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:12:58.000000020 DEBUG (5):  sendMeasTask(): mlen = 4  sum= 7 count= 2 max=5 
+0:12:58.000000020 DEBUG (5): sendMeasTask(): Send measure returned success!!!
+0:12:58.000000020 DEBUG (7):  sendMeasTask(): mlen = 4  sum= 15 count= 2 max=8 
+0:12:58.000000020 DEBUG (7): sendMeasTask(): Send measure returned success!!!
+0:12:58.004577630 DEBUG (4): ### MeasReceive.receive() start ##### 
+0:12:58.004577630 DEBUG (4): Some measurement received!!!  from 5 
+0:12:58.004577630 DEBUG (4): ### MeasReceive.receive() end ##### 
+0:12:58.004577640 DEBUG (4): receiveMeasTask(): len=4 
+0:12:58.004577640 DEBUG (4): MeasMsg received from 5 !!! 
+0:12:58.004577640 DEBUG (4): Receive from child: 5 values - sum:7, count: 2, max: 5
+0:12:58.004745476 DEBUG (5): A Measure package sent... True 
+0:12:58.008316012 DEBUG (6): ### MeasReceive.receive() start ##### 
+0:12:58.008316012 DEBUG (6): Some measurement received!!!  from 7 
+0:12:58.008316012 DEBUG (6): ### MeasReceive.receive() end ##### 
+0:12:58.008316022 DEBUG (6): receiveMeasTask(): len=4 
+0:12:58.008316022 DEBUG (6): MeasMsg received from 7 !!! 
+0:12:58.008316022 DEBUG (6): Receive from child: 7 values - sum:15, count: 2, max: 8
+0:12:58.008483857 DEBUG (7): A Measure package sent... True 
+0:13:2.000000010 DEBUG (4): NodeID = 4 curdepth= 2
+0:13:2.000000010 DEBUG (4): Starting Data transmission to parent!
+0:13:2.000000010 DEBUG (4): SendMeasTimer fired!
+0:13:2.000000010 DEBUG (4): measurement is: 4
+0:13:2.000000010 DEBUG (4): Child 5 has sum: 7, count: 2 and max: 5
+0:13:2.000000010 DEBUG (4): Node has sum: 11, count: 3, max: 5
+0:13:2.000000010 DEBUG (4): Sending MeasMsg... 
+0:13:2.000000010 DEBUG (4): SendMeasTask() posted!!
+0:13:2.000000010 DEBUG (4): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:13:2.000000010 DEBUG (6): NodeID = 6 curdepth= 2
+0:13:2.000000010 DEBUG (6): Starting Data transmission to parent!
+0:13:2.000000010 DEBUG (6): SendMeasTimer fired!
+0:13:2.000000010 DEBUG (6): measurement is: 6
+0:13:2.000000010 DEBUG (6): Child 7 has sum: 15, count: 2 and max: 8
+0:13:2.000000010 DEBUG (6): Node has sum: 21, count: 3, max: 8
+0:13:2.000000010 DEBUG (6): Sending MeasMsg... 
+0:13:2.000000010 DEBUG (6): SendMeasTask() posted!!
+0:13:2.000000010 DEBUG (6): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:13:2.000000020 DEBUG (4):  sendMeasTask(): mlen = 4  sum= 11 count= 3 max=5 
+0:13:2.000000020 DEBUG (4): sendMeasTask(): Send measure returned success!!!
+0:13:2.000000020 DEBUG (6):  sendMeasTask(): mlen = 4  sum= 21 count= 3 max=8 
+0:13:2.000000020 DEBUG (6): sendMeasTask(): Send measure returned success!!!
+0:13:2.001876840 DEBUG (3): ### MeasReceive.receive() start ##### 
+0:13:2.001876840 DEBUG (3): Some measurement received!!!  from 4 
+0:13:2.001876840 DEBUG (3): ### MeasReceive.receive() end ##### 
+0:13:2.001876850 DEBUG (3): receiveMeasTask(): len=4 
+0:13:2.001876850 DEBUG (3): MeasMsg received from 4 !!! 
+0:13:2.001876850 DEBUG (3): Receive from child: 4 values - sum:11, count: 3, max: 5
+0:13:2.002044686 DEBUG (4): A Measure package sent... True 
+0:13:2.004623406 DEBUG (3): ### MeasReceive.receive() start ##### 
+0:13:2.004623406 DEBUG (3): Some measurement received!!!  from 6 
+0:13:2.004623406 DEBUG (3): ### MeasReceive.receive() end ##### 
+0:13:2.004623416 DEBUG (3): receiveMeasTask(): len=4 
+0:13:2.004623416 DEBUG (3): MeasMsg received from 6 !!! 
+0:13:2.004623416 DEBUG (3): Receive from child: 6 values - sum:21, count: 3, max: 8
+0:13:2.004791252 DEBUG (6): A Measure package sent... True 
+0:13:6.000000010 DEBUG (1): NodeID = 1 curdepth= 1
+0:13:6.000000010 DEBUG (1): Starting Data transmission to parent!
+0:13:6.000000010 DEBUG (1): SendMeasTimer fired!
+0:13:6.000000010 DEBUG (1): measurement is: 1
+0:13:6.000000010 DEBUG (1): Node has sum: 1, count: 1, max: 1
+0:13:6.000000010 DEBUG (1): Sending MeasMsg... 
+0:13:6.000000010 DEBUG (1): SendMeasTask() posted!!
+0:13:6.000000010 DEBUG (1): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:13:6.000000010 DEBUG (3): NodeID = 3 curdepth= 1
+0:13:6.000000010 DEBUG (3): Starting Data transmission to parent!
+0:13:6.000000010 DEBUG (3): SendMeasTimer fired!
+0:13:6.000000010 DEBUG (3): measurement is: 3
+0:13:6.000000010 DEBUG (3): Child 6 has sum: 21, count: 3 and max: 8
+0:13:6.000000010 DEBUG (3): Child 4 has sum: 11, count: 3 and max: 5
+0:13:6.000000010 DEBUG (3): Node has sum: 35, count: 7, max: 8
+0:13:6.000000010 DEBUG (3): Sending MeasMsg... 
+0:13:6.000000010 DEBUG (3): SendMeasTask() posted!!
+0:13:6.000000010 DEBUG (3): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:13:6.000000020 DEBUG (1):  sendMeasTask(): mlen = 4  sum= 1 count= 1 max=1 
+0:13:6.000000020 DEBUG (1): sendMeasTask(): Send measure returned success!!!
+0:13:6.000000020 DEBUG (3):  sendMeasTask(): mlen = 4  sum= 35 count= 7 max=8 
+0:13:6.000000020 DEBUG (3): sendMeasTask(): Send measure returned success!!!
+0:13:6.001693735 DEBUG (0): ### MeasReceive.receive() start ##### 
+0:13:6.001693735 DEBUG (0): Some measurement received!!!  from 1 
+0:13:6.001693735 DEBUG (0): ### MeasReceive.receive() end ##### 
+0:13:6.001693745 DEBUG (0): receiveMeasTask(): len=4 
+0:13:6.001693745 DEBUG (0): MeasMsg received from 1 !!! 
+0:13:6.001693745 DEBUG (0): Receive from child: 1 values - sum:1, count: 1, max: 1
+0:13:6.001861581 DEBUG (1): A Measure package sent... True 
+0:13:6.005371082 DEBUG (0): ### MeasReceive.receive() start ##### 
+0:13:6.005371082 DEBUG (0): Some measurement received!!!  from 3 
+0:13:6.005371082 DEBUG (0): ### MeasReceive.receive() end ##### 
+0:13:6.005371092 DEBUG (0): receiveMeasTask(): len=4 
+0:13:6.005371092 DEBUG (0): MeasMsg received from 3 !!! 
+0:13:6.005371092 DEBUG (0): Receive from child: 3 values - sum:35, count: 7, max: 8
+0:13:6.005538928 DEBUG (3): A Measure package sent... True 
+0:13:10.000000010 DEBUG (0): IAMZERO
+0:13:10.000000010 DEBUG (0): 
+0:13:10.000000010 DEBUG (0): ##################################### 
+0:13:10.000000010 DEBUG (0): #######   ROUND   14    ############## 
+0:13:10.000000010 DEBUG (0): #####################################
+0:13:54.000000010 DEBUG (2): NodeID = 2 curdepth= 4
+0:13:54.000000010 DEBUG (2): Starting Data transmission to parent!
+0:13:54.000000010 DEBUG (2): SendMeasTimer fired!
+0:13:54.000000010 DEBUG (2): measurement is: 2
+0:13:54.000000010 DEBUG (2): Node has sum: 2, count: 1, max: 2
+0:13:54.000000010 DEBUG (2): Sending MeasMsg... 
+0:13:54.000000010 DEBUG (2): SendMeasTask() posted!!
+0:13:54.000000010 DEBUG (2): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:13:54.000000010 DEBUG (8): NodeID = 8 curdepth= 4
+0:13:54.000000010 DEBUG (8): Starting Data transmission to parent!
+0:13:54.000000010 DEBUG (8): SendMeasTimer fired!
+0:13:54.000000010 DEBUG (8): measurement is: 8
+0:13:54.000000010 DEBUG (8): Node has sum: 8, count: 1, max: 8
+0:13:54.000000010 DEBUG (8): Sending MeasMsg... 
+0:13:54.000000010 DEBUG (8): SendMeasTask() posted!!
+0:13:54.000000010 DEBUG (8): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:13:54.000000020 DEBUG (2):  sendMeasTask(): mlen = 4  sum= 2 count= 1 max=2 
+0:13:54.000000020 DEBUG (2): sendMeasTask(): Send measure returned success!!!
+0:13:54.000000020 DEBUG (8):  sendMeasTask(): mlen = 4  sum= 8 count= 1 max=8 
+0:13:54.000000020 DEBUG (8): sendMeasTask(): Send measure returned success!!!
+0:13:54.006530744 DEBUG (7): ### MeasReceive.receive() start ##### 
+0:13:54.006530744 DEBUG (7): Some measurement received!!!  from 8 
+0:13:54.006530744 DEBUG (7): ### MeasReceive.receive() end ##### 
+0:13:54.006530754 DEBUG (7): receiveMeasTask(): len=4 
+0:13:54.006530754 DEBUG (7): MeasMsg received from 8 !!! 
+0:13:54.006530754 DEBUG (7): Receive from child: 8 values - sum:8, count: 1, max: 8
+0:13:54.006698590 DEBUG (8): A Measure package sent... True 
+0:13:54.009613001 DEBUG (5): ### MeasReceive.receive() start ##### 
+0:13:54.009613001 DEBUG (5): Some measurement received!!!  from 2 
+0:13:54.009613001 DEBUG (5): ### MeasReceive.receive() end ##### 
+0:13:54.009613011 DEBUG (5): receiveMeasTask(): len=4 
+0:13:54.009613011 DEBUG (5): MeasMsg received from 2 !!! 
+0:13:54.009613011 DEBUG (5): Receive from child: 2 values - sum:2, count: 1, max: 2
+0:13:54.009780846 DEBUG (2): A Measure package sent... True 
+0:13:58.000000010 DEBUG (5): NodeID = 5 curdepth= 3
+0:13:58.000000010 DEBUG (5): Starting Data transmission to parent!
+0:13:58.000000010 DEBUG (5): SendMeasTimer fired!
+0:13:58.000000010 DEBUG (5): measurement is: 5
+0:13:58.000000010 DEBUG (5): Child 2 has sum: 2, count: 1 and max: 2
+0:13:58.000000010 DEBUG (5): Node has sum: 7, count: 2, max: 5
+0:13:58.000000010 DEBUG (5): Sending MeasMsg... 
+0:13:58.000000010 DEBUG (5): SendMeasTask() posted!!
+0:13:58.000000010 DEBUG (5): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:13:58.000000010 DEBUG (7): NodeID = 7 curdepth= 3
+0:13:58.000000010 DEBUG (7): Starting Data transmission to parent!
+0:13:58.000000010 DEBUG (7): SendMeasTimer fired!
+0:13:58.000000010 DEBUG (7): measurement is: 7
+0:13:58.000000010 DEBUG (7): Child 8 has sum: 8, count: 1 and max: 8
+0:13:58.000000010 DEBUG (7): Node has sum: 15, count: 2, max: 8
+0:13:58.000000010 DEBUG (7): Sending MeasMsg... 
+0:13:58.000000010 DEBUG (7): SendMeasTask() posted!!
+0:13:58.000000010 DEBUG (7): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:13:58.000000020 DEBUG (5):  sendMeasTask(): mlen = 4  sum= 7 count= 2 max=5 
+0:13:58.000000020 DEBUG (5): sendMeasTask(): Send measure returned success!!!
+0:13:58.000000020 DEBUG (7):  sendMeasTask(): mlen = 4  sum= 15 count= 2 max=8 
+0:13:58.000000020 DEBUG (7): sendMeasTask(): Send measure returned success!!!
+0:13:58.003997799 DEBUG (4): ### MeasReceive.receive() start ##### 
+0:13:58.003997799 DEBUG (4): Some measurement received!!!  from 5 
+0:13:58.003997799 DEBUG (4): ### MeasReceive.receive() end ##### 
+0:13:58.003997809 DEBUG (4): receiveMeasTask(): len=4 
+0:13:58.003997809 DEBUG (4): MeasMsg received from 5 !!! 
+0:13:58.003997809 DEBUG (4): Receive from child: 5 values - sum:7, count: 2, max: 5
+0:13:58.004165645 DEBUG (5): A Measure package sent... True 
+0:13:58.005996689 DEBUG (6): ### MeasReceive.receive() start ##### 
+0:13:58.005996689 DEBUG (6): Some measurement received!!!  from 7 
+0:13:58.005996689 DEBUG (6): ### MeasReceive.receive() end ##### 
+0:13:58.005996699 DEBUG (6): receiveMeasTask(): len=4 
+0:13:58.005996699 DEBUG (6): MeasMsg received from 7 !!! 
+0:13:58.005996699 DEBUG (6): Receive from child: 7 values - sum:15, count: 2, max: 8
+0:13:58.006164535 DEBUG (7): A Measure package sent... True 
+0:14:2.000000010 DEBUG (4): NodeID = 4 curdepth= 2
+0:14:2.000000010 DEBUG (4): Starting Data transmission to parent!
+0:14:2.000000010 DEBUG (4): SendMeasTimer fired!
+0:14:2.000000010 DEBUG (4): measurement is: 4
+0:14:2.000000010 DEBUG (4): Child 5 has sum: 7, count: 2 and max: 5
+0:14:2.000000010 DEBUG (4): Node has sum: 11, count: 3, max: 5
+0:14:2.000000010 DEBUG (4): Sending MeasMsg... 
+0:14:2.000000010 DEBUG (4): SendMeasTask() posted!!
+0:14:2.000000010 DEBUG (4): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:14:2.000000010 DEBUG (6): NodeID = 6 curdepth= 2
+0:14:2.000000010 DEBUG (6): Starting Data transmission to parent!
+0:14:2.000000010 DEBUG (6): SendMeasTimer fired!
+0:14:2.000000010 DEBUG (6): measurement is: 6
+0:14:2.000000010 DEBUG (6): Child 7 has sum: 15, count: 2 and max: 8
+0:14:2.000000010 DEBUG (6): Node has sum: 21, count: 3, max: 8
+0:14:2.000000010 DEBUG (6): Sending MeasMsg... 
+0:14:2.000000010 DEBUG (6): SendMeasTask() posted!!
+0:14:2.000000010 DEBUG (6): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:14:2.000000020 DEBUG (4):  sendMeasTask(): mlen = 4  sum= 11 count= 3 max=5 
+0:14:2.000000020 DEBUG (4): sendMeasTask(): Send measure returned success!!!
+0:14:2.000000020 DEBUG (6):  sendMeasTask(): mlen = 4  sum= 21 count= 3 max=8 
+0:14:2.000000020 DEBUG (6): sendMeasTask(): Send measure returned success!!!
+0:14:2.001480114 DEBUG (3): ### MeasReceive.receive() start ##### 
+0:14:2.001480114 DEBUG (3): Some measurement received!!!  from 4 
+0:14:2.001480114 DEBUG (3): ### MeasReceive.receive() end ##### 
+0:14:2.001480124 DEBUG (3): receiveMeasTask(): len=4 
+0:14:2.001480124 DEBUG (3): MeasMsg received from 4 !!! 
+0:14:2.001480124 DEBUG (3): Receive from child: 4 values - sum:11, count: 3, max: 5
+0:14:2.001647960 DEBUG (4): A Measure package sent... True 
+0:14:2.004608148 DEBUG (3): ### MeasReceive.receive() start ##### 
+0:14:2.004608148 DEBUG (3): Some measurement received!!!  from 6 
+0:14:2.004608148 DEBUG (3): ### MeasReceive.receive() end ##### 
+0:14:2.004608158 DEBUG (3): receiveMeasTask(): len=4 
+0:14:2.004608158 DEBUG (3): MeasMsg received from 6 !!! 
+0:14:2.004608158 DEBUG (3): Receive from child: 6 values - sum:21, count: 3, max: 8
+0:14:2.004775993 DEBUG (6): A Measure package sent... True 
+0:14:6.000000010 DEBUG (1): NodeID = 1 curdepth= 1
+0:14:6.000000010 DEBUG (1): Starting Data transmission to parent!
+0:14:6.000000010 DEBUG (1): SendMeasTimer fired!
+0:14:6.000000010 DEBUG (1): measurement is: 1
+0:14:6.000000010 DEBUG (1): Node has sum: 1, count: 1, max: 1
+0:14:6.000000010 DEBUG (1): Sending MeasMsg... 
+0:14:6.000000010 DEBUG (1): SendMeasTask() posted!!
+0:14:6.000000010 DEBUG (1): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:14:6.000000010 DEBUG (3): NodeID = 3 curdepth= 1
+0:14:6.000000010 DEBUG (3): Starting Data transmission to parent!
+0:14:6.000000010 DEBUG (3): SendMeasTimer fired!
+0:14:6.000000010 DEBUG (3): measurement is: 3
+0:14:6.000000010 DEBUG (3): Child 6 has sum: 21, count: 3 and max: 8
+0:14:6.000000010 DEBUG (3): Child 4 has sum: 11, count: 3 and max: 5
+0:14:6.000000010 DEBUG (3): Node has sum: 35, count: 7, max: 8
+0:14:6.000000010 DEBUG (3): Sending MeasMsg... 
+0:14:6.000000010 DEBUG (3): SendMeasTask() posted!!
+0:14:6.000000010 DEBUG (3): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:14:6.000000020 DEBUG (1):  sendMeasTask(): mlen = 4  sum= 1 count= 1 max=1 
+0:14:6.000000020 DEBUG (1): sendMeasTask(): Send measure returned success!!!
+0:14:6.000000020 DEBUG (3):  sendMeasTask(): mlen = 4  sum= 35 count= 7 max=8 
+0:14:6.000000020 DEBUG (3): sendMeasTask(): Send measure returned success!!!
+0:14:6.005386341 DEBUG (0): ### MeasReceive.receive() start ##### 
+0:14:6.005386341 DEBUG (0): Some measurement received!!!  from 3 
+0:14:6.005386341 DEBUG (0): ### MeasReceive.receive() end ##### 
+0:14:6.005386351 DEBUG (0): receiveMeasTask(): len=4 
+0:14:6.005386351 DEBUG (0): MeasMsg received from 3 !!! 
+0:14:6.005386351 DEBUG (0): Receive from child: 3 values - sum:35, count: 7, max: 8
+0:14:6.005554187 DEBUG (3): A Measure package sent... True 
+0:14:6.007110574 DEBUG (0): ### MeasReceive.receive() start ##### 
+0:14:6.007110574 DEBUG (0): Some measurement received!!!  from 1 
+0:14:6.007110574 DEBUG (0): ### MeasReceive.receive() end ##### 
+0:14:6.007110584 DEBUG (0): receiveMeasTask(): len=4 
+0:14:6.007110584 DEBUG (0): MeasMsg received from 1 !!! 
+0:14:6.007110584 DEBUG (0): Receive from child: 1 values - sum:1, count: 1, max: 1
+0:14:6.007278420 DEBUG (1): A Measure package sent... True 
+0:14:10.000000010 DEBUG (0): IAMZERO
+0:14:10.000000010 DEBUG (0): 
+0:14:10.000000010 DEBUG (0): ##################################### 
+0:14:10.000000010 DEBUG (0): #######   ROUND   15    ############## 
+0:14:10.000000010 DEBUG (0): #####################################
+0:14:54.000000010 DEBUG (2): NodeID = 2 curdepth= 4
+0:14:54.000000010 DEBUG (2): Starting Data transmission to parent!
+0:14:54.000000010 DEBUG (2): SendMeasTimer fired!
+0:14:54.000000010 DEBUG (2): measurement is: 2
+0:14:54.000000010 DEBUG (2): Node has sum: 2, count: 1, max: 2
+0:14:54.000000010 DEBUG (2): Sending MeasMsg... 
+0:14:54.000000010 DEBUG (2): SendMeasTask() posted!!
+0:14:54.000000010 DEBUG (2): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:14:54.000000010 DEBUG (8): NodeID = 8 curdepth= 4
+0:14:54.000000010 DEBUG (8): Starting Data transmission to parent!
+0:14:54.000000010 DEBUG (8): SendMeasTimer fired!
+0:14:54.000000010 DEBUG (8): measurement is: 8
+0:14:54.000000010 DEBUG (8): Node has sum: 8, count: 1, max: 8
+0:14:54.000000010 DEBUG (8): Sending MeasMsg... 
+0:14:54.000000010 DEBUG (8): SendMeasTask() posted!!
+0:14:54.000000010 DEBUG (8): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:14:54.000000020 DEBUG (2):  sendMeasTask(): mlen = 4  sum= 2 count= 1 max=2 
+0:14:54.000000020 DEBUG (2): sendMeasTask(): Send measure returned success!!!
+0:14:54.000000020 DEBUG (8):  sendMeasTask(): mlen = 4  sum= 8 count= 1 max=8 
+0:14:54.000000020 DEBUG (8): sendMeasTask(): Send measure returned success!!!
+0:14:54.006561261 DEBUG (5): ### MeasReceive.receive() start ##### 
+0:14:54.006561261 DEBUG (5): Some measurement received!!!  from 2 
+0:14:54.006561261 DEBUG (5): ### MeasReceive.receive() end ##### 
+0:14:54.006561271 DEBUG (5): receiveMeasTask(): len=4 
+0:14:54.006561271 DEBUG (5): MeasMsg received from 2 !!! 
+0:14:54.006561271 DEBUG (5): Receive from child: 2 values - sum:2, count: 1, max: 2
+0:14:54.006729106 DEBUG (2): A Measure package sent... True 
+0:14:54.008636445 DEBUG (7): ### MeasReceive.receive() start ##### 
+0:14:54.008636445 DEBUG (7): Some measurement received!!!  from 8 
+0:14:54.008636445 DEBUG (7): ### MeasReceive.receive() end ##### 
+0:14:54.008636455 DEBUG (7): receiveMeasTask(): len=4 
+0:14:54.008636455 DEBUG (7): MeasMsg received from 8 !!! 
+0:14:54.008636455 DEBUG (7): Receive from child: 8 values - sum:8, count: 1, max: 8
+0:14:54.008804290 DEBUG (8): A Measure package sent... True 
+0:14:58.000000010 DEBUG (5): NodeID = 5 curdepth= 3
+0:14:58.000000010 DEBUG (5): Starting Data transmission to parent!
+0:14:58.000000010 DEBUG (5): SendMeasTimer fired!
+0:14:58.000000010 DEBUG (5): measurement is: 5
+0:14:58.000000010 DEBUG (5): Child 2 has sum: 2, count: 1 and max: 2
+0:14:58.000000010 DEBUG (5): Node has sum: 7, count: 2, max: 5
+0:14:58.000000010 DEBUG (5): Sending MeasMsg... 
+0:14:58.000000010 DEBUG (5): SendMeasTask() posted!!
+0:14:58.000000010 DEBUG (5): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:14:58.000000010 DEBUG (7): NodeID = 7 curdepth= 3
+0:14:58.000000010 DEBUG (7): Starting Data transmission to parent!
+0:14:58.000000010 DEBUG (7): SendMeasTimer fired!
+0:14:58.000000010 DEBUG (7): measurement is: 7
+0:14:58.000000010 DEBUG (7): Child 8 has sum: 8, count: 1 and max: 8
+0:14:58.000000010 DEBUG (7): Node has sum: 15, count: 2, max: 8
+0:14:58.000000010 DEBUG (7): Sending MeasMsg... 
+0:14:58.000000010 DEBUG (7): SendMeasTask() posted!!
+0:14:58.000000010 DEBUG (7): MeasMsg enqueued successfully in MeasSendQueue!!!
+0:14:58.000000020 DEBUG (5):  sendMeasTask(): mlen = 4  sum= 7 count= 2 max=5 
+0:14:58.000000020 DEBUG (5): sendMeasTask(): Send measure returned success!!!
+0:14:58.000000020 DEBUG (7):  sendMeasTask(): mlen = 4  sum= 15 count= 2 max=8 
+0:14:58.000000020 DEBUG (7): sendMeasTask(): Send measure returned success!!!
+0:14:58.004913321 DEBUG (5): A Measure package sent... True 
+0:14:58.005416859 DEBUG (6): ### MeasReceive.receive() start ##### 
+0:14:58.005416859 DEBUG (6): Some measurement received!!!  from 7 
+0:14:58.005416859 DEBUG (6): ### MeasReceive.receive() end ##### 
+0:14:58.005416869 DEBUG (6): receiveMeasTask(): len=4 
+0:14:58.005416869 DEBUG (6): MeasMsg received from 7 !!! 
+0:14:58.005416869 DEBUG (6): Receive from child: 7 values - sum:15, count: 2, max: 8
+0:14:58.005584704 DEBUG (7): A Measure package sent... True 
+Node 0 connected with node 1 True True
+Node 0 connected with node 2 False False
+Node 1 connected with node 7 False False
+Node 2 connected with node 3 False False
+Node 4 connected with node 8 False False
