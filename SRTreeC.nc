@@ -3,13 +3,12 @@
 	#include "printf.h"
 #endif
 
-// FIX NODE 0 RESULT
-// FIX RANDOMNESS
-
 module SRTreeC
 {
 	uses interface Boot;
 	uses interface SplitControl as RadioControl;
+
+	uses interface Random;
 
 	uses interface Packet as RoutingPacket;
 	uses interface AMSend as RoutingAMSend;
@@ -20,7 +19,7 @@ module SRTreeC
 	uses interface Packet as MeasPacket;
 
 	uses interface Timer<TMilli> as RoutingMsgTimer;
-	uses interface Timer<TMilli> as EpochTimer;
+	uses interface Timer<TMilli> as RoundTimer;
 	uses interface Timer<TMilli> as SendMeasTimer;
 	
 	uses interface Receive as RoutingReceive;
@@ -45,7 +44,7 @@ implementation
 	uint8_t curdepth;
 	uint16_t parentID;
 
-	uint8_t measurement;
+	uint16_t measurement;
 
 	ChildMsg children[MAX_CHILDREN];
 	
@@ -84,7 +83,7 @@ implementation
 #endif
 		}
 	}
-	
+
 ///////////////////
 	event void RadioControl.startDone(error_t err)
 	{
@@ -108,10 +107,9 @@ implementation
 			dbg("Tests", "Init child: %d, senderID: %d, sum: %d, count: %d, max: %d\n", i, children[i].senderID, children[i].sum, children[i].count, children[i].max);
 		}
 
-			call EpochTimer.startPeriodic(TIMER_PERIOD_MILLI);
 			call SendMeasTimer.startOneShot(TIMER_ROUTING_DURATION);
+			call RoundTimer.startPeriodicAt(-(BOOT_TIME), TIMER_PERIOD_MILLI);
 
-			
 			//call RoutingMsgTimer.startOneShot(TIMER_PERIOD_MILLI);
 			//call RoutingMsgTimer.startPeriodic(TIMER_PERIOD_MILLI);
 			if (TOS_NODE_ID==0)
@@ -158,9 +156,9 @@ implementation
 
 		if (TOS_NODE_ID==0)
 		{
-			dbg("SRTreeC", "##################################### \n");
-			dbg("SRTreeC", "#######   ROUND   %u    ############## \n", roundCounter);
-			dbg("SRTreeC", "#####################################\n");
+			dbg("RoutingMsg", "##################################### \n");
+			dbg("RoutingMsg", "#######   ROUND   %u    ############## \n", roundCounter);
+			dbg("RoutingMsg", "#####################################\n");
 			
 			//call RoutingMsgTimer.startOneShot(TIMER_PERIOD_MILLI);
 		}
@@ -281,21 +279,15 @@ implementation
 		return msg;
 	}
 
-////////////////////////////////
-	event void EpochTimer.fired()
+/////////////////
+	event void RoundTimer.fired()
 	{
-		roundCounter+=1;
-		
-		if (TOS_NODE_ID!=0) {
-			call SendMeasTimer.startOneShot(TIMER_PERIOD_MILLI-((curdepth * TIMER_PERIOD_MILLI)/ MAX_DEPTH));
-		}
-		else
+		if (TOS_NODE_ID == 0)
 		{
-			dbg("EpochMsg", "IAMZERO\n");
-			dbg("EpochMsg", "\n");
-			dbg("EpochMsg", "##################################### \n");
-			dbg("EpochMsg", "#######   ROUND   %u    ############## \n", roundCounter);
-			dbg("EpochMsg", "#####################################\n");
+			roundCounter++;
+			dbg("Measurements", "##################################### \n");
+			dbg("Measurements", "#######   ROUND   %u    ############## \n", roundCounter);
+			dbg("Measurements", "#####################################\n");
 		}
 	}
 
@@ -311,22 +303,18 @@ implementation
 
 		if (!FinishedRouting)
 		{
-			dbg("EpochMsg", "FinishedRouting!\n");
-			FinishedRouting=TRUE;
-			if (TOS_NODE_ID!=0) 
-			{
-				call SendMeasTimer.startOneShot((TIMER_PERIOD_MILLI-TIMER_ROUTING_DURATION)-((curdepth * (TIMER_PERIOD_MILLI-TIMER_ROUTING_DURATION))/MAX_DEPTH));
-			}
+			dbg("RoutingMsg", "FinishedRouting!\n");
+			FinishedRouting = TRUE;
+			call SendMeasTimer.startPeriodicAt(((-(BOOT_TIME)-((curdepth+1)*TIMER_FAST_PERIOD))+(TOS_NODE_ID*3)), TIMER_PERIOD_MILLI);
 		}
 		else
 		{
-
-			dbg("EpochMsg", "NodeID = %d curdepth= %d\n", TOS_NODE_ID, curdepth);
-			dbg("EpochMsg", "Starting Data transmission to parent!\n");
+			dbg("Measurements", "NodeID = %d curdepth= %d\n", TOS_NODE_ID, curdepth);
+			dbg("Measurements", "Starting Data transmission to parent!\n");
 			
 			dbg("SRTreeC", "SendMeasTimer fired!\n");
 
-			measurement = TOS_NODE_ID;
+			measurement = (call Random.rand16())%50;
 			dbg("Measurements", "measurement is: %d\n", measurement);
 
 			if(call MeasSendQueue.full())
@@ -362,8 +350,10 @@ implementation
 
 			if (TOS_NODE_ID == 0)
 			{
-				avg = sum / count;
-				dbg("Measurements" , "FINAL RESULTS: AVG: %f , Max: %d", avg, max);
+				avg = (float) sum / count;
+				dbg("Measurements", "\n");
+				dbg("Measurements" , "FINAL RESULTS: AVG: %.2f , Max: %d\n", avg, max);
+				dbg("Measurements", "\n");
 			}
 			else
 			{
@@ -514,10 +504,7 @@ implementation
 		len= call RoutingPacket.payloadLength(&radioRoutingRecPkt);
 		
 		dbg("SRTreeC","ReceiveRoutingTask(): len=%u \n",len);
-#ifdef PRINTFDBG_MODE
-		printf("ReceiveRoutingTask(): len=%u!\n",len);
-		printfflush();
-#endif
+
 		// processing of radioRecPkt
 		
 		// pos tha xexorizo ta 2 diaforetika minimata???
@@ -533,21 +520,13 @@ implementation
 			//
 			
 			dbg("SRTreeC" , "receiveRoutingTask():senderID= %d , depth= %d \n", mpkt->senderID , mpkt->depth);
-#ifdef PRINTFDBG_MODE
-			printf("NodeID= %d , RoutingMsg received! \n",TOS_NODE_ID);
-			printf("receiveRoutingTask():senderID= %d , depth= %d \n", mpkt->senderID , mpkt->depth);
-			printfflush();
-#endif
+
 			if ( (parentID<0)||(parentID>=65535))
 			{
 				// tote den exei akoma patera
 				parentID= call RoutingAMPacket.source(&radioRoutingRecPkt);//mpkt->senderID;q
 				curdepth= mpkt->depth + 1;
-				dbg("SRTreeC" , "NodeID= %d : curdepth= %d , parentID= %d \n", TOS_NODE_ID ,curdepth , parentID);
-#ifdef PRINTFDBG_MODE
-				printf("NodeID= %d : curdepth= %d , parentID= %d \n", TOS_NODE_ID ,curdepth , parentID);
-				printfflush();
-#endif
+				dbg("RoutingMsg" , "New parent for NodeID= %d : curdepth= %d , parentID= %d \n", TOS_NODE_ID ,curdepth , parentID);
 	
 
 				call RoutingMsgTimer.startOneShot(TIMER_FAST_PERIOD);
@@ -561,10 +540,6 @@ implementation
 		else
 		{
 			dbg("SRTreeC","receiveRoutingTask():Empty message!!! \n");
-#ifdef PRINTFDBG_MODE
-			printf("receiveRoutingTask():Empty message!!! \n");
-			printfflush();
-#endif
 			return;
 		}
 		

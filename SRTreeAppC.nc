@@ -11,18 +11,16 @@ implementation{
 #ifdef PRINTFDBG_MODE
 		components PrintfC;
 #endif
-	components MainC, LedsC, ActiveMessageC;
+	components MainC, LedsC, ActiveMessageC, RandomC;
 
 	components new TimerMilliC() as RoutingMsgTimerC;
-	components new TimerMilliC() as EpochTimerC;
+	components new TimerMilliC() as RoundTimerC;
 	components new TimerMilliC() as SendMeasTimerC;
-
 	
 	components new AMSenderC(AM_ROUTINGMSG) as RoutingSenderC;
 	components new AMReceiverC(AM_ROUTINGMSG) as RoutingReceiverC;
 	components new AMSenderC(AM_MEASMSG) as MeasSenderC;
 	components new AMReceiverC(AM_MEASMSG) as MeasReceiverC;
-
 
 	components new PacketQueueC(SENDER_QUEUE_SIZE) as RoutingSendQueueC;
 	components new PacketQueueC(RECEIVER_QUEUE_SIZE) as RoutingReceiveQueueC;
@@ -32,9 +30,11 @@ implementation{
 	SRTreeC.Boot->MainC.Boot;
 	
 	SRTreeC.RadioControl -> ActiveMessageC;
+
+	SRTreeC.Random->RandomC;
 	
 	SRTreeC.RoutingMsgTimer->RoutingMsgTimerC;
-	SRTreeC.EpochTimer->EpochTimerC;
+	SRTreeC.RoundTimer->RoundTimerC;
 	SRTreeC.SendMeasTimer->SendMeasTimerC;
 
 	SRTreeC.RoutingPacket->RoutingSenderC.Packet;
