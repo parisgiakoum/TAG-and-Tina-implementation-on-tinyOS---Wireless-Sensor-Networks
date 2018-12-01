@@ -11,29 +11,30 @@ implementation{
 #ifdef PRINTFDBG_MODE
 		components PrintfC;
 #endif
-	components MainC, LedsC, ActiveMessageC;
+	components MainC, LedsC, ActiveMessageC, RandomC;
 
 	components new TimerMilliC() as RoutingMsgTimerC;
-	components new TimerMilliC() as EpochTimerC;
+	components new TimerMilliC() as RoundTimerC;
 	components new TimerMilliC() as SendMeasTimerC;
-
 	
 	components new AMSenderC(AM_ROUTINGMSG) as RoutingSenderC;
 	components new AMReceiverC(AM_ROUTINGMSG) as RoutingReceiverC;
-	components new AMSenderC(AM_NOTIFYPARENTMSG) as NotifySenderC;
-	components new AMReceiverC(AM_NOTIFYPARENTMSG) as NotifyReceiverC;
+	components new AMSenderC(AM_MEASMSG) as MeasSenderC;
+	components new AMReceiverC(AM_MEASMSG) as MeasReceiverC;
 
 	components new PacketQueueC(SENDER_QUEUE_SIZE) as RoutingSendQueueC;
 	components new PacketQueueC(RECEIVER_QUEUE_SIZE) as RoutingReceiveQueueC;
-	components new PacketQueueC(SENDER_QUEUE_SIZE) as NotifySendQueueC;
-	components new PacketQueueC(RECEIVER_QUEUE_SIZE) as NotifyReceiveQueueC;
+	components new PacketQueueC(SENDER_QUEUE_SIZE) as MeasSendQueueC;
+	components new PacketQueueC(RECEIVER_QUEUE_SIZE) as MeasReceiveQueueC;
 	
 	SRTreeC.Boot->MainC.Boot;
 	
 	SRTreeC.RadioControl -> ActiveMessageC;
+
+	SRTreeC.Random->RandomC;
 	
 	SRTreeC.RoutingMsgTimer->RoutingMsgTimerC;
-	SRTreeC.EpochTimer->EpochTimerC;
+	SRTreeC.RoundTimer->RoundTimerC;
 	SRTreeC.SendMeasTimer->SendMeasTimerC;
 
 	SRTreeC.RoutingPacket->RoutingSenderC.Packet;
@@ -41,15 +42,15 @@ implementation{
 	SRTreeC.RoutingAMSend->RoutingSenderC.AMSend;
 	SRTreeC.RoutingReceive->RoutingReceiverC.Receive;
 	
-	SRTreeC.NotifyPacket->NotifySenderC.Packet;
-	SRTreeC.NotifyAMPacket->NotifySenderC.AMPacket;
-	SRTreeC.NotifyAMSend->NotifySenderC.AMSend;
-	SRTreeC.NotifyReceive->NotifyReceiverC.Receive;
-	
+	SRTreeC.MeasPacket->MeasSenderC.Packet;
+	SRTreeC.MeasAMPacket->MeasSenderC.AMPacket;
+	SRTreeC.MeasAMSend->MeasSenderC.AMSend;
+	SRTreeC.MeasReceive->MeasReceiverC.Receive;	
 
 	SRTreeC.RoutingSendQueue->RoutingSendQueueC;
 	SRTreeC.RoutingReceiveQueue->RoutingReceiveQueueC;
-	SRTreeC.NotifySendQueue->NotifySendQueueC;
-	SRTreeC.NotifyReceiveQueue->NotifyReceiveQueueC;
+	SRTreeC.MeasSendQueue->MeasSendQueueC;
+	SRTreeC.MeasReceiveQueue->MeasReceiveQueueC;
+
 	
 }
