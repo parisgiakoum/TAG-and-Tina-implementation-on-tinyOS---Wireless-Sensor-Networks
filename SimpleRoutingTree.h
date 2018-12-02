@@ -7,31 +7,31 @@ enum{
 	RECEIVER_QUEUE_SIZE=3,
 	AM_SIMPLEROUTINGTREEMSG=22,
 	AM_ROUTINGMSG=22,
-	AM_MEASMSG=12,
-	TIMER_PERIOD_MILLI=60 * 1024,
-	TIMER_FAST_PERIOD=256,
-	BOOT_TIME = 10 * 1024,
-	TIMER_ROUTING_DURATION=3 * 1024,
-	MAX_DEPTH = 15,
-	MAX_CHILDREN = 32,
+	AM_MEASMSG=12,						// AM for MeasMsg
+	TIMER_PERIOD_MILLI=60 * 1024,		// Epoch time
+	TIMER_FAST_PERIOD=256,				// Send time
+	BOOT_TIME = 10 * 1024,				// Time given in simulation to boot
+	TIMER_ROUTING_DURATION=3 * 1024,	// Routing Time
+	MAX_CHILDREN = 32,					// Maximum number of node's children
 };
-/*uint16_t AM_ROUTINGMSG=AM_SIMPLEROUTINGTREEMSG;
-uint16_t AM_NOTIFYPARENTMSG=AM_SIMPLEROUTINGTREEMSG;
-*/
+
+// Struct for RoutingMsg
 typedef nx_struct RoutingMsg
 {
 	nx_uint16_t senderID;
 	nx_uint8_t depth;
 } RoutingMsg;
 
-typedef struct ChildMsg
+// Struct for ChildInfo
+typedef struct ChildInfo
 {
-    nx_uint16_t senderID;
+    nx_uint16_t childID;
     nx_uint16_t sum;
     nx_uint8_t count;
     nx_uint8_t max;
-} ChildMsg;
+} ChildInfo;
 
+// Struct for MeasMsg
 typedef nx_struct MeasMsg 
 {
         nx_uint16_t sum;
