@@ -6,6 +6,7 @@
 module SRTreeC
 {
 	// Interfaces used
+
 	uses interface Boot;
 	uses interface SplitControl as RadioControl;
 
@@ -167,7 +168,6 @@ implementation
 		// Prepare message
 		atomic
 		{
-			mrpkt->senderID=TOS_NODE_ID;
 			mrpkt->depth = curdepth;
 		}
 
@@ -218,7 +218,7 @@ implementation
 		msource = call RoutingAMPacket.source(msg);
 		
 		dbg("SRTreeC", "### RoutingReceive.receive() start ##### \n");
-		dbg("SRTreeC", "Something received!!!  from %u  %u \n",((RoutingMsg*) payload)->senderID ,  msource);
+		dbg("SRTreeC", "Something received!!!  from %u \n", msource);
 		
 		// save message on temp var
 		atomic
@@ -282,7 +282,12 @@ implementation
 		else
 		{
 			dbg("Measurements", "NodeID = %d curdepth= %d\n", TOS_NODE_ID, curdepth);
-			dbg("Measurements", "Starting Data transmission to parent!\n");
+
+			// if node is 0, we just search for the final result
+			if (TOS_NODE_ID != 0)
+			{
+				dbg("Measurements", "Starting Data transmission to parent!\n");
+			}
 			
 			dbg("SRTreeC", "SendMeasTimer fired!\n");
 
@@ -469,12 +474,16 @@ implementation
 	{
 		uint8_t len;
 		message_t radioRoutingRecPkt;
+		uint16_t msource;
 		
 		// dequeue message
 		radioRoutingRecPkt= call RoutingReceiveQueue.dequeue();
 		
 		// find payload length
 		len = call RoutingPacket.payloadLength(&radioRoutingRecPkt);
+
+		// Find message source
+		msource = call RoutingAMPacket.source(&radioRoutingRecPkt);
 		
 		dbg("SRTreeC","ReceiveRoutingTask(): len=%u \n",len);
 		
@@ -484,13 +493,13 @@ implementation
 			// Get message
 			RoutingMsg * mpkt = (RoutingMsg*) (call RoutingPacket.getPayload(&radioRoutingRecPkt,len));
 			
-			dbg("SRTreeC" , "receiveRoutingTask():senderID= %d , depth= %d \n", mpkt->senderID , mpkt->depth);
+			dbg("SRTreeC" , "receiveRoutingTask(): source= %d , depth= %d \n", msource , mpkt->depth);
 
 			// Node doesn't have a parent
 			if ( (parentID<0)||(parentID>=65535))
 			{
-				// Assign parent
-				parentID = call RoutingAMPacket.source(&radioRoutingRecPkt);
+				// Assign source as parent
+				parentID = msource;
 				curdepth = mpkt->depth + 1;
 				dbg("RoutingMsg" , "New parent for NodeID= %d : curdepth= %d , parentID= %d \n", TOS_NODE_ID ,curdepth , parentID);
 	
@@ -611,7 +620,7 @@ implementation
 					children[i].count = mr->count;
 					children[i].max = mr->max;
 
-					dbg("Measurements" , "Receive from childID: %d values - sum:%d, count: %d, max: %d\n", children[i].childID, children[i].sum, children[i].count, children[i].max);
+					dbg("Measurements" , "Received from childID: %d values - sum:%d, count: %d, max: %d\n", children[i].childID, children[i].sum, children[i].count, children[i].max);
 					// Child is assigned on the table - stop itteration
 					break;
 				}

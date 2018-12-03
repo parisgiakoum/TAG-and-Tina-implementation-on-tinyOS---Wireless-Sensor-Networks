@@ -53,7 +53,7 @@ if __name__ == '__main__':
     # Wait for input on grid size and range
     D = 9
     try:
-        while not D <= 8 : D = int(input("Give me grid size (max 8): "))
+        while not (D <= 8 and D > 0) : D = int(input("Give me grid size (max 8): "))
         rng = float(input("Give me grid range: "))
     # error
     except:

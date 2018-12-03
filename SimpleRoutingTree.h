@@ -18,7 +18,6 @@ enum{
 // Struct for RoutingMsg
 typedef nx_struct RoutingMsg
 {
-	nx_uint16_t senderID;
 	nx_uint8_t depth;
 } RoutingMsg;
 
