@@ -12,7 +12,7 @@ implementation{
 		components PrintfC;
 #endif
 	// Standard Component Declaration
-	components MainC, LedsC, ActiveMessageC, RandomC;
+	components MainC, ActiveMessageC, RandomC, RandomMlcgC;
 
 	// Timer Declarations
 	components new TimerMilliC() as RoutingMsgTimerC;
@@ -40,6 +40,7 @@ implementation{
 
 	// Random
 	SRTreeC.Random->RandomC;
+	SRTreeC.Seed->RandomMlcgC.SeedInit;
 	
 	// Timers
 	SRTreeC.RoutingMsgTimer->RoutingMsgTimerC;

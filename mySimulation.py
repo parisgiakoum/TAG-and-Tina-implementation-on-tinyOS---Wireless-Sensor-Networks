@@ -10,7 +10,7 @@ f=sys.stdout #open('./logfile.txt','w')
 SIM_END_TIME= 900 * t.ticksPerSecond()
 
 # define grid size
-D = 5
+D = 3
 
 print "TicksPerSecond : ", t.ticksPerSecond(),"\n"
 
@@ -21,6 +21,7 @@ t.addChannel("Radio",f)
 #t.addChannel("PacketQueueC",f)
 t.addChannel("Measurements", f)
 #t.addChannel("Tests", f)
+t.addChannel("Tina",f)
 
 # boot nodes
 for i in range(0,D**2):
