@@ -68,6 +68,9 @@ implementation
 	task void sendMeasTask();
 	task void receiveMeasTask();
 
+	// Functions
+	uint32_t calculateQuery(uint8_t op);
+
 
 ////////////////////	
 	event void Boot.booted()
@@ -356,11 +359,7 @@ implementation
 		error_t enqueueDone;
 		void* measpkt;
 		uint8_t i;
-		uint16_t query;
-		float avg;
 		bool TinaPass = FALSE;
-
-
 
 		// SendMeasTimer fires on round 1
 		if (!FinishedRouting)
@@ -398,154 +397,528 @@ implementation
 				return;
 			}
 
-
-			if (mode == 1 || (mode == 0 && select[1] == 0))
+			// Tina mode || Extended mod, NUM = 1
+			if (mode == 1 || (mode == 0 && select[1] == 0))	
 			{
+				// SUM
 				if (select[0] == SUM)
 				{
+					uint16_t query;
+
 					measpkt = (OneMeas16bit*) (call MeasPacket.getPayload(&tmp, sizeof(OneMeas16bit)));
-				}
-				else if (select[0] == AVG)
-				{
-					measpkt = (TwoMeasMixedbit*) (call MeasPacket.getPayload(&tmp, sizeof(TwoMeasMixedbit)));
-				}
-				else if (select[0] == VAR)
-				{
-					measpkt = (VarMeasSimple*) (call MeasPacket.getPayload(&tmp, sizeof(VarMeasSimple)));
-				}
-				else
-				{
-					measpkt = (OneMeas8bit*) (call MeasPacket.getPayload(&tmp, sizeof(OneMeas8bit)));
-				}
-			}
-			else 	// mode==0 and select[1]!=0
-			{
-				if ((select[0] == MAX || select[0] == MIN || select[0] == COUNT) && (select[1] == MAX || select[1] == MIN || select[1] == COUNT))
-				{
-					measpkt = (TwoMeas8bit*) (call MeasPacket.getPayload(&tmp, sizeof(TwoMeas8bit)));
-				}
-				else if ((select[0] == SUM && select[1] != VAR)  || (select[1] == SUM && select[0] != VAR) || (select[0] == AVG && select[1] == COUNT)  || (select[1] == AVG && select[0] == COUNT))
-				{
-					measpkt = (TwoMeasMixedbit*) (call MeasPacket.getPayload(&tmp, sizeof(TwoMeasMixedbit)));
-				}
-				else if ((select[0] == AVG && (select[1] == MIN || select[1] == MAX)) || (select[1] == AVG && (select[0] == MIN || select[0] == MAX)))
-				{
-					measpkt = (ThreeMeasMixedbit*) (call MeasPacket.getPayload(&tmp, sizeof(ThreeMeasMixedbit)));
-				}
-				else if ((select[0] == VAR && (select[1] != MIN && select[1] != MAX)) || (select[1] == VAR && (select[0] != MIN && select[0] != MAX)))
-				{
-					measpkt = (VarMeasSimple*) (call MeasPacket.getPayload(&tmp, sizeof(VarMeasSimple)));
-				}
-				else
-				{
-					measpkt = (VarMeasDouble*) (call MeasPacket.getPayload(&tmp, sizeof(VarMeasDouble)));
-				}
-			}
-		
-			// error
-			if(measpkt==NULL)
-			{
-				dbg("SRTreeC","SendMeasTimer.fired(): No valid payload... \n");
-				return;
-			}
 
-			// Count node's values to send to parent
-			atomic
-			{
-				query = measurement;
-
-				if (tinaSelect == SUM)
-				{
-					
-					for (i=0; i < MAX_CHILDREN && children[i].childID != 0; i++)
+					// error
+					if(measpkt==NULL)
 					{
-						dbg("Measurements" , "ChildID: %d has sum: %d\n", children[i].childID, children[i].sum);
-
-						query += children[i].sum;
-					}
-					
-					dbg("Measurements" , "Node's query is: %d\n", query);
-				}
-				else if (tinaSelect == MAX)
-				{
-					for (i=0; i < MAX_CHILDREN && children[i].childID != 0; i++)
-					{
-						dbg("Measurements" , "ChildID: %d has max: %d\n", children[i].childID, children[i].max);
-
-						query = (query > children[i].max) ? query : children[i].max;
+						dbg("SRTreeC","SendMeasTimer.fired(): No valid payload... \n");
+						return;
 					}
 
-					dbg("Measurements" , "Node's query is: %d\n", query);
-				}
-				else if (tinaSelect == MIN)
-				{
-					for (i=0; i < MAX_CHILDREN && children[i].childID != 0; i++)
-					{
-						dbg("Measurements" , "ChildID: %d has min: %d\n", children[i].childID, children[i].min);
+					query = calculateQuery(SUM);
 
-						query = (query < children[i].min) ? query : children[i].min;
+					if (TOS_NODE_ID == 0)
+					{
+						dbg("Measurements", "\n");
+						dbg("Measurements" , "FINAL RESULTS: sum: %d\n", query);
+						dbg("Measurements", "\n");
 					}
-
-					dbg("Measurements" , "Node's query is: %d\n", query);
-				}
-				else
-				{
-					query = 1;
-					for (i=0; i < MAX_CHILDREN && children[i].childID != 0; i++)
+					else if (mode == 1)
 					{
-						dbg("Measurements" , "ChildID: %d has count: %d\n", children[i].childID, children[i].count);
+						if (roundCounter == 1 || query > previousQuery + ((float) tct / 100) * previousQuery || query < previousQuery - ((float) tct / 100) * previousQuery)
+						{
+							TinaPass = TRUE;
+							dbg("Tina", "Measurement passes tct! Previous query: %d, Now sent: %d\n", previousQuery, query);
+						}
+						else
+						{
+							dbg("Tina", "Measurement doesn't pass tct! Previous query: %d, Now measured: %d\n", previousQuery, query);
+						}
 
-						query += children[i].count;
-					}
+						if (TinaPass)
+						{
+							// Prepare message
+							atomic
+							{
+								previousQuery = query;
+								call MeasAMPacket.setDestination(&tmp, parentID);
 
-					dbg("Measurements" , "Node's query is: %d\n", query);
-				}
-			}
-
-
-			if (roundCounter == 1 || query > previousQuery + ((float) tct / 100) * previousQuery || query < previousQuery - ((float) tct / 100) * previousQuery)
-			{
-				TinaPass = TRUE;
-				dbg("Tina", "Measurement passes tct! Previous query: %d, Now sent: %d\n", previousQuery, query);
-			}
-			else
-			{
-				dbg("Tina", "Measurement doesn't pass tct! Previous query: %d, Now measured: %d\n", previousQuery, query);
-			}
-
-
-			// root node - Print final results
-			if (TOS_NODE_ID == 0)
-			{
-				dbg("Measurements", "\n");
-				dbg("Measurements" , "FINAL RESULTS: %d\n", query);
-				dbg("Measurements", "\n");
-			}
-			else if (TinaPass)
-			{
-				// Prepare message
-				atomic
-				{
-					previousQuery = query;
-					call MeasAMPacket.setDestination(&tmp, parentID);
-
-					if (tinaSelect == SUM)
-					{
-						((OneMeas16bit*) measpkt)->measurement = query;
-						call MeasPacket.setPayloadLength(&tmp,sizeof(OneMeas16bit));
+								((OneMeas16bit*) measpkt)->measurement = query;
+								call MeasPacket.setPayloadLength(&tmp,sizeof(OneMeas16bit));
+							}
+						}
 					}
 					else
 					{
-						((OneMeas8bit*) measpkt)->measurement = query;
-						call MeasPacket.setPayloadLength(&tmp,sizeof(OneMeas8bit));
+						atomic
+						{
+							call MeasAMPacket.setDestination(&tmp, parentID);
+
+							((OneMeas16bit*) measpkt)->measurement = query;
+							call MeasPacket.setPayloadLength(&tmp,sizeof(OneMeas16bit));
+						}
 					}
 				}
-				
+				// AVG (Extended mode)
+				else if (select[0] == AVG)
+				{
+					uint16_t sum;
+					uint8_t count;
+
+					measpkt = (TwoMeasMixedbit*) (call MeasPacket.getPayload(&tmp, sizeof(TwoMeasMixedbit)));
+
+					// error
+					if(measpkt==NULL)
+					{
+						dbg("SRTreeC","SendMeasTimer.fired(): No valid payload... \n");
+						return;
+					}
+
+					sum = calculateQuery(SUM);
+					count = calculateQuery(COUNT);
+
+					if (TOS_NODE_ID == 0)
+					{
+						dbg("Measurements", "\n");
+						dbg("Measurements" , "FINAL RESULTS: Average: %.2f\n", (sum / (float) count));
+						dbg("Measurements", "\n");
+					}
+					else
+					{
+						// Prepare message
+						atomic
+						{
+							call MeasAMPacket.setDestination(&tmp, parentID);
+
+							((TwoMeasMixedbit*) measpkt)->measurement16bit = sum;
+							((TwoMeasMixedbit*) measpkt)->measurement8bit = count;
+							call MeasPacket.setPayloadLength(&tmp,sizeof(TwoMeasMixedbit));
+						}
+					}
+				}
+				// VAR (Extended mode)
+				else if (select[0] == VAR)
+				{
+					uint32_t sumsq;
+					uint16_t sum;
+					uint8_t count;
+
+					measpkt = (VarMeasSimple*) (call MeasPacket.getPayload(&tmp, sizeof(VarMeasSimple)));
+
+					// error
+					if(measpkt==NULL)
+					{
+						dbg("SRTreeC","SendMeasTimer.fired(): No valid payload... \n");
+						return;
+					}
+
+					sumsq = calculateQuery(SUMSQ);
+					sum = calculateQuery(SUM);
+					count = calculateQuery(COUNT);
+
+					if (TOS_NODE_ID == 0)
+					{
+						dbg("Measurements", "\n");
+						dbg("Measurements" , "FINAL RESULTS: Variance: %.2f\n", ((sumsq / (float) count) - ((sum / (float) count) * (sum / (float) count))));
+						dbg("Measurements", "\n");
+					}
+					else
+					{
+						// Prepare message
+						atomic
+						{
+							call MeasAMPacket.setDestination(&tmp, parentID);
+
+							((VarMeasSimple*) measpkt)->measurement32bit = sumsq;
+							((VarMeasSimple*) measpkt)->measurement16bit = sum;
+							((VarMeasSimple*) measpkt)->measurement8bit = count;
+							call MeasPacket.setPayloadLength(&tmp,sizeof(VarMeasSimple));
+						}
+					}
+				}
+				// MAX || MIN || COUNT
+				else
+				{
+					uint8_t query;
+
+					measpkt = (OneMeas8bit*) (call MeasPacket.getPayload(&tmp, sizeof(OneMeas8bit)));
+
+					// error
+					if(measpkt==NULL)
+					{
+						dbg("SRTreeC","SendMeasTimer.fired(): No valid payload... \n");
+						return;
+					}
+
+					if (select[0] == MAX)
+					{
+						query = calculateQuery(MAX);
+					}
+					else if (select[0] == MIN)
+					{
+						query = calculateQuery(MIN);
+					}
+					else
+					{
+						query = calculateQuery(COUNT);
+					}
+
+					if (TOS_NODE_ID == 0)
+					{
+						dbg("Measurements", "\n");
+						dbg("Measurements" , "FINAL RESULT: %d\n", query);
+						dbg("Measurements", "\n");
+					}
+					else if (mode == 1)
+					{
+						if (roundCounter == 1 || query > previousQuery + ((float) tct / 100) * previousQuery || query < previousQuery - ((float) tct / 100) * previousQuery)
+						{
+							TinaPass = TRUE;
+							dbg("Tina", "Measurement passes tct! Previous query: %d, Now sent: %d\n", previousQuery, query);
+						}
+						else
+						{
+							dbg("Tina", "Measurement doesn't pass tct! Previous query: %d, Now measured: %d\n", previousQuery, query);
+						}
+
+						if (TinaPass)
+						{
+							// Prepare message
+							atomic
+							{
+								previousQuery = query;
+								call MeasAMPacket.setDestination(&tmp, parentID);
+
+								((OneMeas8bit*) measpkt)->measurement = query;
+								call MeasPacket.setPayloadLength(&tmp,sizeof(OneMeas8bit));
+							}
+						}
+					}
+					else
+					{
+						atomic
+						{
+							call MeasAMPacket.setDestination(&tmp, parentID);
+
+							((OneMeas8bit*) measpkt)->measurement = query;
+							call MeasPacket.setPayloadLength(&tmp,sizeof(OneMeas8bit));
+						}
+					}
+				}
+			}
+			else 	// Extended mode, NUM = 2
+			{
+				// MAX-MIN || MAX-COUNT || MIN-COUNT
+				if ((select[0] == MAX || select[0] == MIN || select[0] == COUNT) && (select[1] == MAX || select[1] == MIN || select[1] == COUNT))
+				{
+					uint8_t query[2], curQuery;
+
+					curQuery = 0;
+					measpkt = (TwoMeas8bit*) (call MeasPacket.getPayload(&tmp, sizeof(TwoMeas8bit)));
+
+					// error
+					if(measpkt==NULL)
+					{
+						dbg("SRTreeC","SendMeasTimer.fired(): No valid payload... \n");
+						return;
+					}
+
+					if (select[0] == MAX || select[1] == MAX)
+					{
+						query[curQuery] = calculateQuery(MAX);
+						curQuery++;
+					}
+
+					if (select[0] == MIN || select[1] == MIN)
+					{
+						query[curQuery] = calculateQuery(MIN);
+						curQuery++;
+					}
+
+					if (select[0] == COUNT || select[1] == COUNT)
+					{
+						query[curQuery] = calculateQuery(COUNT);
+						curQuery++;
+					}
+
+					if (TOS_NODE_ID == 0)
+					{
+						dbg("Measurements", "\n");
+						dbg("Measurements" , "FINAL RESULTS: %d, %d\n", query[0], query[1]);
+						dbg("Measurements", "\n");
+					}
+					else
+					{
+						// Prepare message
+						atomic
+						{
+							call MeasAMPacket.setDestination(&tmp, parentID);
+
+							((TwoMeas8bit*) measpkt)->measurement1 = query[0];
+							((TwoMeas8bit*) measpkt)->measurement2 = query[1];
+							call MeasPacket.setPayloadLength(&tmp,sizeof(TwoMeas8bit));
+						}
+					}
+				}
+				// SUM-MAX || SUM-MIN || SUM-COUNT || SUM-AVG || AVG-COUNT
+				else if ((select[0] == SUM && select[1] != VAR)  || (select[1] == SUM && select[0] != VAR) || (select[0] == AVG && select[1] == COUNT)  || (select[1] == AVG && select[0] == COUNT))
+				{
+					uint16_t query16;
+					uint8_t query8;
+
+					measpkt = (TwoMeasMixedbit*) (call MeasPacket.getPayload(&tmp, sizeof(TwoMeasMixedbit)));
+
+					// error
+					if(measpkt==NULL)
+					{
+						dbg("SRTreeC","SendMeasTimer.fired(): No valid payload... \n");
+						return;
+					}
+
+					query16 = calculateQuery(SUM);
+
+					if (select[0] == AVG || select[1] == AVG)
+					{
+						query8 = calculateQuery(COUNT);
+
+						if (TOS_NODE_ID == 0)
+						{
+							dbg("Measurements", "\n");
+							if (select[0] == SUM || select[1] == SUM)
+							{
+								dbg("Measurements" , "FINAL RESULTS: AVG: %.2f, SUM: %d\n", (query16 / (float) query8), query16);
+							}
+							else
+							{
+								dbg("Measurements" , "FINAL RESULTS: AVG: %.2f, COUNT: %d\n", (query16 / (float) query8), query8);
+							}
+							dbg("Measurements", "\n");
+						}
+					}
+					else
+					{
+						if (select[0] == MAX || select[1] == MAX)
+						{
+							query8 = calculateQuery(MAX);
+							
+							if (TOS_NODE_ID == 0)
+							{
+								dbg("Measurements", "\n");
+								dbg("Measurements" , "FINAL RESULTS: SUM: %d, MAX: %d\n", query16, query8);
+								dbg("Measurements", "\n");
+							}
+						}
+						else if (select[0] == MIN || select[1] == MIN)
+						{
+							query8 = calculateQuery(MIN);
+							
+							if (TOS_NODE_ID == 0)
+							{
+								dbg("Measurements", "\n");
+								dbg("Measurements" , "FINAL RESULTS: SUM: %d, MIN: %d\n", query16, query8);
+								dbg("Measurements", "\n");
+							}
+						}
+						else
+						{
+							query8 = calculateQuery(COUNT);
+							
+							if (TOS_NODE_ID == 0)
+							{
+								dbg("Measurements", "\n");
+								dbg("Measurements" , "FINAL RESULTS: SUM: %d, COUNT: %d\n", query16, query8);
+								dbg("Measurements", "\n");
+							}
+						}
+					}
+
+					if (TOS_NODE_ID != 0)
+					{
+						// Prepare message
+						atomic
+						{
+							call MeasAMPacket.setDestination(&tmp, parentID);
+
+							((TwoMeasMixedbit*) measpkt)->measurement16bit = query16;
+							((TwoMeasMixedbit*) measpkt)->measurement8bit = query8;
+							call MeasPacket.setPayloadLength(&tmp,sizeof(TwoMeasMixedbit));
+						}
+					}
+				}
+				// AVG-MIN || AVG-MAX
+				else if ((select[0] == AVG && (select[1] == MIN || select[1] == MAX)) || (select[1] == AVG && (select[0] == MIN || select[0] == MAX)))
+				{
+					uint16_t sum;
+					uint8_t count, minmax;
+
+					measpkt = (ThreeMeasMixedbit*) (call MeasPacket.getPayload(&tmp, sizeof(ThreeMeasMixedbit)));
+
+					// error
+					if(measpkt==NULL)
+					{
+						dbg("SRTreeC","SendMeasTimer.fired(): No valid payload... \n");
+						return;
+					}
+
+					sum = calculateQuery(SUM);
+					count = calculateQuery(COUNT);
+
+					if (select[0] == MAX || select[1] == MAX)
+					{
+						minmax = calculateQuery(MAX);
+
+						if (TOS_NODE_ID == 0)
+						{
+							dbg("Measurements", "\n");
+							dbg("Measurements" , "FINAL RESULTS: AVG: %.2f, MAX: %d\n", (sum / (float) count), minmax);
+							dbg("Measurements", "\n");
+						}
+					}
+					else
+					{
+						minmax = calculateQuery(MIN);
+
+						if (TOS_NODE_ID == 0)
+						{
+							dbg("Measurements", "\n");
+							dbg("Measurements" , "FINAL RESULTS: AVG: %.2f, MIN: %d\n", (sum / (float) count), minmax);
+							dbg("Measurements", "\n");
+						}
+					}
+
+					if (TOS_NODE_ID != 0)
+					{
+						// Prepare message
+						atomic
+						{
+							call MeasAMPacket.setDestination(&tmp, parentID);
+
+							((ThreeMeasMixedbit*) measpkt)->measurement16bit = sum;
+							((ThreeMeasMixedbit*) measpkt)->measurement8bit1 = count;
+							((ThreeMeasMixedbit*) measpkt)->measurement8bit2 = minmax;
+							call MeasPacket.setPayloadLength(&tmp,sizeof(ThreeMeasMixedbit));
+						}
+					}
+				}
+				// SUM-VAR || COUNT-VAR || AVG-VAR
+				else if ((select[0] == VAR && (select[1] != MIN && select[1] != MAX)) || (select[1] == VAR && (select[0] != MIN && select[0] != MAX)))
+				{
+					uint32_t sumsq;
+					uint16_t sum;
+					uint8_t count;
+
+					measpkt = (VarMeasSimple*) (call MeasPacket.getPayload(&tmp, sizeof(VarMeasSimple)));
+
+					// error
+					if(measpkt==NULL)
+					{
+						dbg("SRTreeC","SendMeasTimer.fired(): No valid payload... \n");
+						return;
+					}
+
+					sumsq = calculateQuery(SUMSQ);
+					sum = calculateQuery(SUM);
+					count = calculateQuery(COUNT);
+
+					if ((select[0] == SUM || select[1] == SUM) && TOS_NODE_ID == 0)
+					{
+						dbg("Measurements", "\n");
+						dbg("Measurements" , "FINAL RESULTS: VAR: %.2f, SUM: %d\n", ((sumsq / (float) count) - ((sum / (float) count) * (sum / (float) count))), sum);
+						dbg("Measurements", "\n");
+					}
+					else if ((select[0] == COUNT || select[1] == COUNT) && TOS_NODE_ID == 0)
+					{
+						dbg("Measurements", "\n");
+						dbg("Measurements" , "FINAL RESULTS: VAR: %.2f, COUNT: %d\n", ((sumsq / (float) count) - ((sum / (float) count) * (sum / (float) count))), count);
+						dbg("Measurements", "\n");
+					}
+					else if (TOS_NODE_ID == 0) // VAR - AVG
+					{
+						dbg("Measurements", "\n");
+						dbg("Measurements" , "FINAL RESULTS: VAR: %.2f, AVG: %.2f\n", ((sumsq / (float) count) - ((sum / (float) count) * (sum / (float) count))), (sum / (float) count));
+						dbg("Measurements", "\n");
+					}
+
+					if (TOS_NODE_ID != 0)
+					{
+						// Prepare message
+						atomic
+						{
+							call MeasAMPacket.setDestination(&tmp, parentID);
+
+							((VarMeasSimple*) measpkt)->measurement32bit = sumsq;
+							((VarMeasSimple*) measpkt)->measurement16bit = sum;
+							((VarMeasSimple*) measpkt)->measurement8bit = count;
+							call MeasPacket.setPayloadLength(&tmp,sizeof(VarMeasSimple));
+						}
+					}
+				}
+				// MAX-VAR || MIN-VAR
+				else
+				{
+					uint32_t sumsq;
+					uint16_t sum;
+					uint8_t count, minmax;
+
+					measpkt = (VarMeasDouble*) (call MeasPacket.getPayload(&tmp, sizeof(VarMeasDouble)));
+
+					// error
+					if(measpkt==NULL)
+					{
+						dbg("SRTreeC","SendMeasTimer.fired(): No valid payload... \n");
+						return;
+					}
+
+					sumsq = calculateQuery(SUMSQ);
+					sum = calculateQuery(SUM);
+					count = calculateQuery(COUNT);
+
+					if (select[0] == MAX || select[1] == MAX)
+					{
+						minmax = calculateQuery(MAX);
+
+						if (TOS_NODE_ID == 0)
+						{
+							dbg("Measurements", "\n");
+							dbg("Measurements" , "FINAL RESULTS: VAR: %.2f, MAX: %d\n", ((sumsq / (float) count) - ((sum / (float) count) * (sum / (float) count))), minmax);
+							dbg("Measurements", "\n");
+						}
+					}
+					else
+					{
+						minmax = calculateQuery(MIN);
+
+						if (TOS_NODE_ID == 0)
+						{
+							dbg("Measurements", "\n");
+							dbg("Measurements" , "FINAL RESULTS: VAR: %.2f, MIN: %d\n", ((sumsq / (float) count) - ((sum / (float) count) * (sum / (float) count))), minmax);
+							dbg("Measurements", "\n");
+						}
+					}
+
+					if (TOS_NODE_ID != 0)
+					{
+						// Prepare message
+						atomic
+						{
+							call MeasAMPacket.setDestination(&tmp, parentID);
+
+							((VarMeasDouble*) measpkt)->measurement32bit = sumsq;
+							((VarMeasDouble*) measpkt)->measurement16bit = sum;
+							((VarMeasDouble*) measpkt)->measurement8bit1 = count;
+							((VarMeasDouble*) measpkt)->measurement8bit2 = minmax;
+							call MeasPacket.setPayloadLength(&tmp,sizeof(VarMeasDouble));
+						}
+					}
+				}
+			}
+
+			if (TOS_NODE_ID != 0 && ((mode == 1 && TinaPass) || mode == 0))
+			{
 				dbg("SRTreeC" , "Sending MeasMsg... \n");
 				
 				// Enqueue
 				enqueueDone=call MeasSendQueue.enqueue(tmp);
-		
+
 				if (enqueueDone == SUCCESS)
 				{
 					if (call MeasSendQueue.size() == 1)
@@ -560,15 +933,16 @@ implementation
 				else
 				{
 					// error
-					dbg("SRTreeC","MeasMsg failed to be enqueued in MeasSendQueue!!!");
+					dbg("SRTreeC","MeasMsg failed to be enqueued in MeasSendQueue!!!\n");
 				}		
 			}
-			else
+			else if (mode == 1)
 			{
-				dbg("Tina", "Doesn't send\n");
+				dbg("Tina", "Doesn't send because of tct\n");
 			}
 		}
 	}
+
 
 
 /////////////////////////////	
@@ -859,4 +1233,81 @@ implementation
 			}
 		}
 	}
+
+
+/////////////////////////////////////////////////////////////////////////
+///////////////////			FUNCTIONS			////////////////////////
+///////////////////////////////////////////////////////////////////////	
+	uint32_t calculateQuery(uint8_t op)
+	{
+		uint32_t result;
+		uint8_t i;
+
+		if (op == SUM)
+		{
+			result = measurement;
+
+			for (i=0; i < MAX_CHILDREN && children[i].childID != 0; i++)
+			{
+				dbg("Calc" , "ChildID: %d has sum: %d\n", children[i].childID, children[i].sum);
+		
+				result += children[i].sum;
+			}
+			
+			dbg("Calc" , "Node's sum is: %d\n", result);
+		}
+		else if (op == MAX)
+		{
+			result = measurement;
+
+			for (i=0; i < MAX_CHILDREN && children[i].childID != 0; i++)
+			{
+				dbg("Calc" , "ChildID: %d has max: %d\n", children[i].childID, children[i].max);
+
+				result = (result > children[i].max) ? result : children[i].max;
+			}
+
+			dbg("Calc" , "Node's MAX is: %d\n", result);
+		}
+		else if (op == MIN)
+		{
+			result = measurement;
+
+			for (i=0; i < MAX_CHILDREN && children[i].childID != 0; i++)
+			{
+				dbg("Calc" , "ChildID: %d has min: %d\n", children[i].childID, children[i].min);
+
+				result = (result < children[i].min) ? result : children[i].min;
+			}
+
+			dbg("Calc" , "Node's MIN is: %d\n", result);
+		}
+		else if (op == COUNT)
+		{
+			result = 1;
+
+			for (i=0; i < MAX_CHILDREN && children[i].childID != 0; i++)
+			{
+				dbg("Calc" , "ChildID: %d has count: %d\n", children[i].childID, children[i].count);
+
+				result += children[i].count;
+			}
+
+			dbg("Calc" , "Node's count is: %d\n", result);
+		}
+		else if (op == SUMSQ)
+		{
+			result = measurement * measurement;
+
+			for (i=0; i < MAX_CHILDREN && children[i].childID != 0; i++)
+			{
+				dbg("Calc" , "ChildID: %d has sumsq: %d\n", children[i].childID, children[i].sumsq);
+		
+				result += children[i].sumsq;
+			}
+		}
+
+		return result;
+	}
+
 }

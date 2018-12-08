@@ -22,9 +22,11 @@ enum{
 	AVG = 5,
 	VAR = 6,
 //////////////////////////////////////
+	SUMSQ = 7,
+//////////////////////////////////////
 };
 
-// Struct for RoutingMsg
+// Tina mode
 typedef nx_struct TinaRoutingMsg
 {
 	nx_uint8_t mode;
@@ -33,6 +35,7 @@ typedef nx_struct TinaRoutingMsg
 	nx_uint8_t depth;
 } TinaRoutingMsg;
 
+// Extended mode - 1 query
 typedef nx_struct extendRoutingMsg1Q
 {
 	nx_uint8_t mode;
@@ -40,6 +43,7 @@ typedef nx_struct extendRoutingMsg1Q
 	nx_uint8_t depth;
 } extendRoutingMsg1Q;
 
+// Extended mode - 2 queries
 typedef nx_struct extendRoutingMsg2Q
 {
 	nx_uint8_t mode;
@@ -58,29 +62,33 @@ typedef struct ChildInfo
     nx_uint32_t sumsq;
 } ChildInfo;
 
-// Struct for MeasMsg
+// MIN || MAX || COUNT
 typedef nx_struct OneMeas8bit 
 {
         nx_uint8_t measurement;
 } OneMeas8bit;
 
+// SUM
 typedef nx_struct OneMeas16bit 
 {
         nx_uint16_t measurement;
 } OneMeas16bit;
 
+// MIN-MAX-COUNT (PAIR)
 typedef nx_struct TwoMeas8bit
 {
         nx_uint8_t measurement1;
         nx_uint8_t measurement2;
 } TwoMeas8bit;
 
+// AVG || SUM - (MIN || MAX || COUNT || AVG) || AVG - COUNT
 typedef nx_struct TwoMeasMixedbit
 {
         nx_uint16_t measurement16bit;
         nx_uint8_t measurement8bit;
 } TwoMeasMixedbit;
 
+// AVG - MAX || AVG - MIN
 typedef nx_struct ThreeMeasMixedbit
 {
         nx_uint16_t measurement16bit;
@@ -88,6 +96,7 @@ typedef nx_struct ThreeMeasMixedbit
         nx_uint8_t measurement8bit2;
 } ThreeMeasMixedbit;
 
+// VAR || VAR - AVG || VAR - SUM || VAR - COUNT
 typedef nx_struct VarMeasSimple
 {
         nx_uint32_t measurement32bit;
@@ -95,6 +104,7 @@ typedef nx_struct VarMeasSimple
         nx_uint8_t measurement8bit;
 } VarMeasSimple;
 
+// VAR - MIN || VAR - MAX
 typedef nx_struct VarMeasDouble
 {
         nx_uint32_t measurement32bit;

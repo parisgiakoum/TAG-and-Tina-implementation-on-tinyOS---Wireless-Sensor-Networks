@@ -22,6 +22,8 @@ t.addChannel("Radio",f)
 t.addChannel("Measurements", f)
 #t.addChannel("Tests", f)
 t.addChannel("Tina",f)
+t.addChannel("Extend",f)
+t.addChannel("Calc", f)
 
 # boot nodes
 for i in range(0,D**2):
