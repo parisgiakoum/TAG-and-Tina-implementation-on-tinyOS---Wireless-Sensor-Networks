@@ -27,29 +27,21 @@ enum{
 };
 
 // Tina mode
-typedef nx_struct TinaRoutingMsg
+typedef nx_struct Routing4field
 {
 	nx_uint8_t mode;
 	nx_uint8_t select;
-	nx_uint8_t tct;
+	nx_uint8_t select2ortct;
 	nx_uint8_t depth;
-} TinaRoutingMsg;
+} Routing4field;
 
 // Extended mode - 1 query
-typedef nx_struct extendRoutingMsg1Q
+typedef nx_struct Routing3field
 {
 	nx_uint8_t mode;
 	nx_uint8_t select;
 	nx_uint8_t depth;
-} extendRoutingMsg1Q;
-
-// Extended mode - 2 queries
-typedef nx_struct extendRoutingMsg2Q
-{
-	nx_uint8_t mode;
-	nx_uint8_t select[MAX_QUERIES];
-	nx_uint8_t depth;
-} extendRoutingMsg2Q;
+} Routing3field;
 
 // Struct for ChildInfo
 typedef struct ChildInfo
@@ -79,6 +71,8 @@ typedef nx_struct TwoMeas8bit
 {
         nx_uint8_t measurement1;
         nx_uint8_t measurement2;
+        // flag
+        nx_uint8_t measurementQueries[MAX_QUERIES];
 } TwoMeas8bit;
 
 // AVG || SUM - (MIN || MAX || COUNT || AVG) || AVG - COUNT

@@ -57,7 +57,6 @@ implementation
 	uint8_t select[MAX_QUERIES];
 	uint8_t tct;
 	uint8_t mode;			// Extend is 0, Tina is 1
-	uint8_t num;
 
 	// Array holding children received
 	ChildInfo children[MAX_CHILDREN];
@@ -103,7 +102,7 @@ implementation
 			dbg("Boot", "curdepth = %d  ,  parentID= %d \n", curdepth , parentID);
 
 			mode = (call Random.rand16())%2;
-			dbg("Boot", "MODE(0=extended - 1=Tina): %d\n", mode);
+			dbg("Boot", "\n\nMODE(extended -> 0, Tina -> 1	): %d\n\n", mode);
 		}
 		else
 		{
@@ -175,6 +174,8 @@ implementation
 
 		if (TOS_NODE_ID==0)
 		{
+			uint8_t num;
+
 			if (mode == 1) 
 			{
 				select[0] = ((call Random.rand16())%4) + 1;
@@ -193,7 +194,7 @@ implementation
 						select[1] = ((call Random.rand16())%6) + 1;
 					}
 				
-					dbg("Extend", "query %d is: %d\n", (i+1), select[i]);
+					dbg("Extend", "Query %d is: %d\n", (i+1), select[i]);
 				}
 			}
 
@@ -211,9 +212,11 @@ implementation
 		}
 		
 		// get payload for rpkt
-		if (mode == 1)
+		if (mode == 1 || (mode == 0 && select[1] != 0))
 		{
-			rpkt = (TinaRoutingMsg*) (call RoutingPacket.getPayload(&tmp, sizeof(TinaRoutingMsg)));
+			rpkt = (Routing4field*) (call RoutingPacket.getPayload(&tmp, sizeof(Routing4field)));
+
+			dbg("SRTreeC","Creating Routing4field...\n");
 
 			if(rpkt==NULL)
 			{
@@ -223,32 +226,25 @@ implementation
 
 			atomic
 			{
-				((TinaRoutingMsg*)rpkt)->mode = mode;
-				((TinaRoutingMsg*)rpkt)->select = select[0];
-				((TinaRoutingMsg*)rpkt)->tct = tct;
-				((TinaRoutingMsg*)rpkt)->depth = curdepth;
-			}
-		}
-		else if (num == 1)
-		{
-			rpkt = (extendRoutingMsg1Q*) (call RoutingPacket.getPayload(&tmp, sizeof(extendRoutingMsg1Q)));
+				((Routing4field*)rpkt)->mode = mode;
+				((Routing4field*)rpkt)->select = select[0];
+				((Routing4field*)rpkt)->depth = curdepth;
 
-			if(rpkt==NULL)
-			{
-				dbg("SRTreeC","RoutingMsgTimer.fired(): No valid payload... \n");
-				return;
-			}
-
-			atomic
-			{
-				((extendRoutingMsg1Q*)rpkt)->mode = mode;
-				((extendRoutingMsg1Q*)rpkt)->select = select[0];
-				((extendRoutingMsg1Q*)rpkt)->depth = curdepth;
+				if (mode == 1)
+				{
+					((Routing4field*)rpkt)->select2ortct = tct;
+				}
+				else
+				{
+					((Routing4field*)rpkt)->select2ortct = select[1];
+				}
 			}
 		}
 		else
 		{
-			rpkt = (extendRoutingMsg2Q*) (call RoutingPacket.getPayload(&tmp, sizeof(extendRoutingMsg2Q)));
+			rpkt = (Routing3field*) (call RoutingPacket.getPayload(&tmp, sizeof(Routing3field)));
+			
+			dbg("SRTreeC","Creating Routing3field...\n");
 
 			if(rpkt==NULL)
 			{
@@ -258,14 +254,12 @@ implementation
 
 			atomic
 			{
-				((extendRoutingMsg2Q*)rpkt)->mode = mode;
-				((extendRoutingMsg2Q*)rpkt)->select[0] = select[0];
-				((extendRoutingMsg2Q*)rpkt)->select[1] = select[1];
-				((extendRoutingMsg2Q*)rpkt)->depth = curdepth;
+				((Routing3field*)rpkt)->mode = mode;
+				((Routing3field*)rpkt)->select = select[0];
+				((Routing3field*)rpkt)->depth = curdepth;
 			}
 		}
 		
-
 		dbg("SRTreeC" , "Sending RoutingMsg... \n");
 
 		// Enqueue
@@ -419,7 +413,7 @@ implementation
 					if (TOS_NODE_ID == 0)
 					{
 						dbg("Measurements", "\n");
-						dbg("Measurements" , "FINAL RESULTS: sum: %d\n", query);
+						dbg("Measurements" , "FINAL RESULTS: SUM: %d\n", query);
 						dbg("Measurements", "\n");
 					}
 					else if (mode == 1)
@@ -452,9 +446,8 @@ implementation
 						atomic
 						{
 							call MeasAMPacket.setDestination(&tmp, parentID);
-
 							((OneMeas16bit*) measpkt)->measurement = query;
-							call MeasPacket.setPayloadLength(&tmp,sizeof(OneMeas16bit));
+							call MeasPacket.setPayloadLength(&tmp,sizeof(OneMeas16bit));							
 						}
 					}
 				}
@@ -479,7 +472,7 @@ implementation
 					if (TOS_NODE_ID == 0)
 					{
 						dbg("Measurements", "\n");
-						dbg("Measurements" , "FINAL RESULTS: Average: %.2f\n", (sum / (float) count));
+						dbg("Measurements" , "FINAL RESULTS: AVG: %.2f\n", (sum / (float) count));
 						dbg("Measurements", "\n");
 					}
 					else
@@ -518,7 +511,7 @@ implementation
 					if (TOS_NODE_ID == 0)
 					{
 						dbg("Measurements", "\n");
-						dbg("Measurements" , "FINAL RESULTS: Variance: %.2f\n", ((sumsq / (float) count) - ((sum / (float) count) * (sum / (float) count))));
+						dbg("Measurements" , "FINAL RESULTS: VAR: %.2f\n", ((sumsq / (float) count) - ((sum / (float) count) * (sum / (float) count))));
 						dbg("Measurements", "\n");
 					}
 					else
@@ -552,23 +545,39 @@ implementation
 					if (select[0] == MAX)
 					{
 						query = calculateQuery(MAX);
+
+						if (TOS_NODE_ID == 0)
+						{
+							dbg("Measurements", "\n");
+							dbg("Measurements" , "FINAL RESULT: MAX: %d\n", query);
+							dbg("Measurements", "\n");
+						}
 					}
 					else if (select[0] == MIN)
 					{
 						query = calculateQuery(MIN);
+
+						if (TOS_NODE_ID == 0)
+						{
+							dbg("Measurements", "\n");
+							dbg("Measurements" , "FINAL RESULT: MIN: %d\n", query);
+							dbg("Measurements", "\n");
+						}
 					}
 					else
 					{
 						query = calculateQuery(COUNT);
+
+						if (TOS_NODE_ID == 0)
+						{
+							dbg("Measurements", "\n");
+							dbg("Measurements" , "FINAL RESULT: COUNT: %d\n", query);
+							dbg("Measurements", "\n");
+						}
 					}
 
-					if (TOS_NODE_ID == 0)
-					{
-						dbg("Measurements", "\n");
-						dbg("Measurements" , "FINAL RESULT: %d\n", query);
-						dbg("Measurements", "\n");
-					}
-					else if (mode == 1)
+					
+					if (mode == 1 && TOS_NODE_ID != 0)
 					{
 						if (roundCounter == 1 || query > previousQuery + ((float) tct / 100) * previousQuery || query < previousQuery - ((float) tct / 100) * previousQuery)
 						{
@@ -593,7 +602,7 @@ implementation
 							}
 						}
 					}
-					else
+					else if (TOS_NODE_ID != 0)
 					{
 						atomic
 						{
@@ -610,7 +619,7 @@ implementation
 				// MAX-MIN || MAX-COUNT || MIN-COUNT
 				if ((select[0] == MAX || select[0] == MIN || select[0] == COUNT) && (select[1] == MAX || select[1] == MIN || select[1] == COUNT))
 				{
-					uint8_t query[2], curQuery;
+					uint8_t query[MAX_QUERIES], measurementQueries[MAX_QUERIES], curQuery;
 
 					curQuery = 0;
 					measpkt = (TwoMeas8bit*) (call MeasPacket.getPayload(&tmp, sizeof(TwoMeas8bit)));
@@ -625,28 +634,41 @@ implementation
 					if (select[0] == MAX || select[1] == MAX)
 					{
 						query[curQuery] = calculateQuery(MAX);
+						measurementQueries[curQuery] = MAX;
+						
+						if (TOS_NODE_ID == 0)
+						{
+							dbg("Measurements" , "FINAL RESULTS: MAX: %d\n", query[curQuery]);
+						}
+
 						curQuery++;
 					}
 
 					if (select[0] == MIN || select[1] == MIN)
 					{
 						query[curQuery] = calculateQuery(MIN);
+						measurementQueries[curQuery] = MIN;
+						if (TOS_NODE_ID == 0)
+						{
+							dbg("Measurements" , "FINAL RESULTS: MIN: %d\n", query[curQuery]);
+						}
+
 						curQuery++;
 					}
 
 					if (select[0] == COUNT || select[1] == COUNT)
 					{
 						query[curQuery] = calculateQuery(COUNT);
+						measurementQueries[curQuery] = COUNT;
+						if (TOS_NODE_ID == 0)
+						{
+							dbg("Measurements" , "FINAL RESULTS: COUNT: %d\n", query[curQuery]);
+						}
+
 						curQuery++;
 					}
 
-					if (TOS_NODE_ID == 0)
-					{
-						dbg("Measurements", "\n");
-						dbg("Measurements" , "FINAL RESULTS: %d, %d\n", query[0], query[1]);
-						dbg("Measurements", "\n");
-					}
-					else
+					if (TOS_NODE_ID != 0)
 					{
 						// Prepare message
 						atomic
@@ -655,6 +677,8 @@ implementation
 
 							((TwoMeas8bit*) measpkt)->measurement1 = query[0];
 							((TwoMeas8bit*) measpkt)->measurement2 = query[1];
+							((TwoMeas8bit*) measpkt)->measurementQueries[0] = measurementQueries[0];
+							((TwoMeas8bit*) measpkt)->measurementQueries[1] = measurementQueries[1];
 							call MeasPacket.setPayloadLength(&tmp,sizeof(TwoMeas8bit));
 						}
 					}
@@ -936,7 +960,7 @@ implementation
 					dbg("SRTreeC","MeasMsg failed to be enqueued in MeasSendQueue!!!\n");
 				}		
 			}
-			else if (mode == 1)
+			else if (mode == 1 && TOS_NODE_ID != 0)
 			{
 				dbg("Tina", "Doesn't send because of tct\n");
 			}
@@ -1015,7 +1039,14 @@ implementation
 		radioRoutingSendPkt = call RoutingSendQueue.dequeue();
 
 		// send RoutingMsg
-		sendDone=call RoutingAMSend.send(AM_BROADCAST_ADDR,&radioRoutingSendPkt,sizeof(TinaRoutingMsg));
+		if (mode == 1 || (mode == 0 && select[1] != 0))
+		{
+			sendDone=call RoutingAMSend.send(AM_BROADCAST_ADDR,&radioRoutingSendPkt,sizeof(Routing4field));
+		}
+		else
+		{
+			sendDone=call RoutingAMSend.send(AM_BROADCAST_ADDR,&radioRoutingSendPkt,sizeof(Routing3field));
+		}
 		
 		if ( sendDone== SUCCESS)
 		{
@@ -1049,62 +1080,59 @@ implementation
 		// find payload length
 		len = call RoutingPacket.payloadLength(&radioRoutingRecPkt);
 
+		dbg("Tests", "len: %d, sizeof(Routing4field): %d, sizeof(Routing3field): %d\n", len, sizeof(Routing4field), sizeof(Routing3field));
 		// Find message source
 		msource = call RoutingAMPacket.source(&radioRoutingRecPkt);
 		
 		dbg("SRTreeC","ReceiveRoutingTask(): len=%u \n",len);
 
 		// Correct message
-		if(len == sizeof(TinaRoutingMsg) || len == sizeof(extendRoutingMsg1Q) || len == sizeof(extendRoutingMsg2Q))
+		if(len == sizeof(Routing4field) || len == sizeof(Routing3field))
 		{			
 			// Node doesn't have a parent
 			if ( (parentID<0)||(parentID>=65535))
 			{
-				if (len == sizeof(TinaRoutingMsg))
+				if (len == sizeof(Routing4field))
 				{
-					TinaRoutingMsg * trpkt = (TinaRoutingMsg*) (call RoutingPacket.getPayload(&radioRoutingRecPkt,len));
-					dbg("SRTreeC" , "receiveRoutingTask(): source= %d , depth= %d \n", msource , trpkt->depth);
+					Routing4field * rpkt = (Routing4field*) (call RoutingPacket.getPayload(&radioRoutingRecPkt,len));
+					dbg("SRTreeC" , "receiveRoutingTask(): source= %d , depth= %d \n", msource , rpkt->depth);
+
 
 					// Assign source as parent
 					parentID = msource;
-					mode = trpkt->mode;
-					curdepth = trpkt->depth + 1;
-					select[0] = trpkt->select;
-					tct = trpkt->tct;
-
+					mode = rpkt->mode;
+					curdepth = rpkt->depth + 1;
+					select[0] = rpkt->select;
+					
 					dbg("RoutingMsg" , "New parent for NodeID= %d : curdepth= %d , parentID= %d \n", TOS_NODE_ID ,curdepth , parentID);
-					dbg("Tina", "tinaSelect= %d , tct=%d\n", select[0], tct);
+
+					if (mode == 1)
+					{
+						tct = rpkt->select2ortct;
+						dbg("Tina", "tinaSelect= %d , tct=%d\n", select[0], tct);
+					}
+					else
+					{
+						select[1] = rpkt->select2ortct;
+						dbg("Extend", "ExtendSelect1= %d, ExtendSelect2= %d\n", select[0], select[1]);
+					}
+
 				}
-				else if (len == sizeof(extendRoutingMsg1Q))
+				else
 				{
-					extendRoutingMsg1Q* e1rpkt = (extendRoutingMsg1Q*) (call RoutingPacket.getPayload(&radioRoutingRecPkt,len));
-					dbg("SRTreeC" , "receiveRoutingTask(): source= %d , depth= %d \n", msource , e1rpkt->depth);
+					Routing3field* rpkt = (Routing3field*) (call RoutingPacket.getPayload(&radioRoutingRecPkt,len));
+					dbg("SRTreeC" , "receiveRoutingTask(): source= %d , depth= %d \n", msource , rpkt->depth);
 
 					// Assign source as parent
 					parentID = msource;
-					mode = e1rpkt->mode;
-					curdepth = e1rpkt->depth + 1;
-					select[0] = e1rpkt->select;
+					mode = rpkt->mode;
+					curdepth = rpkt->depth + 1;
+					select[0] = rpkt->select;
 
 					dbg("RoutingMsg" , "New parent for NodeID= %d : curdepth= %d , parentID= %d \n", TOS_NODE_ID ,curdepth , parentID);
 					dbg("Extend", "ExtendSelect= %d\n", select[0]);
 				}
-				else
-				{
-					extendRoutingMsg2Q* e2rpkt = (extendRoutingMsg2Q*) (call RoutingPacket.getPayload(&radioRoutingRecPkt,len));
-					dbg("SRTreeC" , "receiveRoutingTask(): source= %d , depth= %d \n", msource , e2rpkt->depth);
-
-					// Assign source as parent
-					parentID = msource;
-					mode = e2rpkt->mode;
-					curdepth = e2rpkt->depth + 1;
-					select[0] = e2rpkt->select[0];
-					select[1] = e2rpkt->select[1];
-
-					dbg("RoutingMsg" , "New parent for NodeID= %d : curdepth= %d , parentID= %d \n", TOS_NODE_ID ,curdepth , parentID);
-					dbg("Extend", "ExtendSelect1= %d, ExtendSelect2= %d\n", select[0], select[1]);
-				}
-	
+			
 				// Forward routing message to find new children 
 				call RoutingMsgTimer.startOneShot(TIMER_FAST_PERIOD);
 			}
@@ -1188,50 +1216,340 @@ implementation
 		dbg("SRTreeC","receiveMeasTask(): len=%u \n",len);
 
 
-		if (tinaSelect == SUM)
+		// Tina mode || Extended mod, NUM = 1
+		if (mode == 1 || (mode == 0 && select[1] == 0))	
 		{
-			mr = (OneMeas16bit*) (call MeasPacket.getPayload(&radioMeasRecPkt,len));
-		}
-		else
-		{
-			mr = (OneMeas8bit*) (call MeasPacket.getPayload(&radioMeasRecPkt,len));
-		}
-		
-		dbg("SRTreeC" , "MeasMsg received from %d !!! \n", msource);
-
-		// Update children table with received values
-		for (i=0; i < MAX_CHILDREN; i++)
-		{
-			// Child already on table or new child
-			if (children[i].childID == msource || children[i].childID == 0)
+			// SUM
+			if (select[0] == SUM)
 			{
-				// new child - assign it on table
-				if (children[i].childID==0)
-				{
-					children[i].childID = msource;
-				}
-				if (tinaSelect == SUM)
-				{
-					children[i].sum = ((OneMeas16bit*) mr)->measurement;
-				}
-				else if (tinaSelect == MAX)
-				{
-					children[i].max = ((OneMeas8bit*) mr)->measurement;
-				}
-				else if (tinaSelect == MIN)
-				{
-					children[i].min = ((OneMeas8bit*) mr)->measurement;
-				}
-				else
-				{
-					children[i].count = ((OneMeas8bit*) mr)->measurement;
-				}
+				mr = (OneMeas16bit*) (call MeasPacket.getPayload(&radioMeasRecPkt,len));
 
-				dbg("Measurements" , "Received from childID: %d values - sum:%d, count: %d, max: %d, min: %d\n", children[i].childID, children[i].sum, children[i].count, children[i].max, children[i].min);
-				// Child is assigned on the table - stop itteration
-				break;
+				for (i=0; i < MAX_CHILDREN; i++)
+				{
+					// Child already on table or new child
+					if (children[i].childID == msource || children[i].childID == 0)
+					{
+						// new child - assign it on table
+						if (children[i].childID==0)
+						{
+							children[i].childID = msource;
+						}
+						
+						children[i].sum = ((OneMeas16bit*) mr)->measurement;
+
+						dbg("Measurements" , "Received from childID: %d - sum:%d\n", children[i].childID, children[i].sum);
+						// Child is assigned on the table - stop itteration
+						break;
+					}
+				}
+			}
+			// AVG (Extended mode)
+			else if (select[0] == AVG)
+			{
+				mr = (TwoMeasMixedbit*) (call MeasPacket.getPayload(&radioMeasRecPkt,len));
+
+				for (i=0; i < MAX_CHILDREN; i++)
+				{
+					// Child already on table or new child
+					if (children[i].childID == msource || children[i].childID == 0)
+					{
+						// new child - assign it on table
+						if (children[i].childID==0)
+						{
+							children[i].childID = msource;
+						}
+						
+						children[i].sum = ((TwoMeasMixedbit*) mr)->measurement16bit;
+						children[i].count = ((TwoMeasMixedbit*) mr)->measurement8bit;
+
+						dbg("Measurements" , "Received from childID: %d - sum:%d, count: %d\n", children[i].childID, children[i].sum, children[i].count);
+						// Child is assigned on the table - stop itteration
+						break;
+					}
+				}
+			}
+			// VAR (Extended mode)
+			else if (select[0] == VAR)
+			{
+				mr = (VarMeasSimple*) (call MeasPacket.getPayload(&radioMeasRecPkt,len));
+
+				for (i=0; i < MAX_CHILDREN; i++)
+				{
+					// Child already on table or new child
+					if (children[i].childID == msource || children[i].childID == 0)
+					{
+						// new child - assign it on table
+						if (children[i].childID==0)
+						{
+							children[i].childID = msource;
+						}
+						
+						children[i].sumsq = ((VarMeasSimple*) mr)->measurement32bit;
+						children[i].sum = ((VarMeasSimple*) mr)->measurement16bit;
+						children[i].count = ((VarMeasSimple*) mr)->measurement8bit;
+
+						dbg("Measurements" , "Received from childID: %d - sumsq: %d, sum:%d, count: %d\n", children[i].childID, children[i].sumsq, children[i].sum, children[i].count);
+						// Child is assigned on the table - stop itteration
+						break;
+					}
+				}
+			}
+			// MAX || MIN || COUNT
+			else
+			{
+				mr = (OneMeas8bit*) (call MeasPacket.getPayload(&radioMeasRecPkt,len));
+
+				for (i=0; i < MAX_CHILDREN; i++)
+				{
+					// Child already on table or new child
+					if (children[i].childID == msource || children[i].childID == 0)
+					{
+						// new child - assign it on table
+						if (children[i].childID==0)
+						{
+							children[i].childID = msource;
+						}
+						
+						if (select[0] == MAX)
+						{
+							children[i].max = ((OneMeas8bit*) mr)->measurement;
+
+							dbg("Measurements" , "Received from childID: %d - max: %d\n", children[i].childID, children[i].max);
+						}
+						else if (select[0] == MIN)
+						{
+							children[i].min = ((OneMeas8bit*) mr)->measurement;
+
+							dbg("Measurements" , "Received from childID: %d - min: %d\n", children[i].childID, children[i].min);
+						}
+						else
+						{
+							children[i].count = ((OneMeas8bit*) mr)->measurement;
+
+							dbg("Measurements" , "Received from childID: %d - count: %d\n", children[i].childID, children[i].count);
+						}
+
+						// Child is assigned on the table - stop itteration
+						break;
+					}
+				}
 			}
 		}
+		else 	// Extended mode, NUM = 2
+		{
+			// MAX-MIN || MAX-COUNT || MIN-COUNT
+			if ((select[0] == MAX || select[0] == MIN || select[0] == COUNT) && (select[1] == MAX || select[1] == MIN || select[1] == COUNT))
+			{
+				uint8_t measurementQueries[MAX_QUERIES];
+
+				mr = (TwoMeas8bit*) (call MeasPacket.getPayload(&radioMeasRecPkt,len));
+
+				measurementQueries[0] = ((TwoMeas8bit*) mr)->measurementQueries[0];
+				measurementQueries[1] = ((TwoMeas8bit*) mr)->measurementQueries[1];
+
+				dbg("Tests", "q0: %d, q1: %d\n", measurementQueries[0], measurementQueries[1]);
+
+				for (i=0; i < MAX_CHILDREN; i++)
+				{
+					// Child already on table or new child
+					if (children[i].childID == msource || children[i].childID == 0)
+					{
+						// new child - assign it on table
+						if (children[i].childID==0)
+						{
+							children[i].childID = msource;
+						}
+
+						if (measurementQueries[0] == MAX)
+						{
+							children[i].max = ((TwoMeas8bit*) mr)->measurement1;
+
+							dbg("Measurements" , "Received from childID: %d - MAX: %d\n", children[i].childID, children[i].max);
+						}
+						else if (measurementQueries[0] == MIN)
+						{
+							children[i].min = ((TwoMeas8bit*) mr)->measurement1;
+
+							dbg("Measurements" , "Received from childID: %d - MIN: %d\n", children[i].childID, children[i].min);
+						}
+						else
+						{
+							children[i].count = ((TwoMeas8bit*) mr)->measurement1;
+
+							dbg("Measurements" , "Received from childID: %d - COUNT: %d\n", children[i].childID, children[i].count);
+						}
+
+						if (measurementQueries[1] == MAX)
+						{
+							children[i].max = ((TwoMeas8bit*) mr)->measurement2;
+
+							dbg("Measurements" , "Received from childID: %d - MAX: %d\n", children[i].childID, children[i].max);
+						}
+						else if (measurementQueries[1] == MIN)
+						{
+							children[i].min = ((TwoMeas8bit*) mr)->measurement2;
+
+							dbg("Measurements" , "Received from childID: %d - MIN: %d\n", children[i].childID, children[i].min);
+						}
+						else
+						{
+							children[i].count = ((TwoMeas8bit*) mr)->measurement2;
+
+							dbg("Measurements" , "Received from childID: %d - COUNT: %d\n", children[i].childID, children[i].count);
+						}
+
+						// Child is assigned on the table - stop itteration
+						break;
+					}
+				}
+			}
+			// SUM-MAX || SUM-MIN || SUM-COUNT || SUM-AVG || AVG-COUNT
+			else if ((select[0] == SUM && select[1] != VAR)  || (select[1] == SUM && select[0] != VAR) || (select[0] == AVG && select[1] == COUNT)  || (select[1] == AVG && select[0] == COUNT))
+			{
+				mr = (TwoMeasMixedbit*) (call MeasPacket.getPayload(&radioMeasRecPkt,len));
+
+				for (i=0; i < MAX_CHILDREN; i++)
+				{
+					// Child already on table or new child
+					if (children[i].childID == msource || children[i].childID == 0)
+					{
+						// new child - assign it on table
+						if (children[i].childID==0)
+						{
+							children[i].childID = msource;
+						}
+
+						children[i].sum = ((TwoMeasMixedbit*) mr)->measurement16bit;
+
+						if (select[0] == AVG || select[1] == AVG || select[0] == COUNT || select[1] == COUNT)
+						{
+							children[i].count = ((TwoMeasMixedbit*) mr)->measurement8bit;
+
+							dbg("Measurements" , "Received from childID: %d - SUM: %d, COUNT: %d\n", children[i].childID, children[i].sum, children[i].count);
+						}
+						else if (select[0] == MAX || select[1] == MAX)
+						{
+							children[i].max = ((TwoMeasMixedbit*) mr)->measurement8bit;
+
+							dbg("Measurements" , "Received from childID: %d - SUM: %d, MAX: %d\n", children[i].childID, children[i].sum, children[i].max);
+						}
+						else if (select[0] == MIN || select[1] == MIN)
+						{
+							children[i].min = ((TwoMeasMixedbit*) mr)->measurement8bit;
+
+							dbg("Measurements" , "Received from childID: %d - SUM: %d, MIN: %d\n", children[i].childID, children[i].sum, children[i].min);
+						}
+
+						// Child is assigned on the table - stop itteration
+						break;
+					}
+				}
+			}
+			// AVG-MIN || AVG-MAX
+			else if ((select[0] == AVG && (select[1] == MIN || select[1] == MAX)) || (select[1] == AVG && (select[0] == MIN || select[0] == MAX)))
+			{
+				mr = (ThreeMeasMixedbit*) (call MeasPacket.getPayload(&radioMeasRecPkt,len));
+
+				for (i=0; i < MAX_CHILDREN; i++)
+				{
+					// Child already on table or new child
+					if (children[i].childID == msource || children[i].childID == 0)
+					{
+						// new child - assign it on table
+						if (children[i].childID==0)
+						{
+							children[i].childID = msource;
+						}
+
+						children[i].sum = ((ThreeMeasMixedbit*) mr)->measurement16bit;
+						children[i].count = ((ThreeMeasMixedbit*) mr)->measurement8bit1;
+
+						if (select[0] == MAX || select[1] == MAX)
+						{
+							children[i].max = ((ThreeMeasMixedbit*) mr)->measurement8bit2;
+
+							dbg("Measurements" , "Received from childID: %d - SUM: %d, COUNT: %d, MAX: %d\n", children[i].childID, children[i].sum, children[i].count, children[i].max);
+						}
+						else
+						{
+							children[i].min = ((ThreeMeasMixedbit*) mr)->measurement8bit2;
+
+							dbg("Measurements" , "Received from childID: %d - SUM: %d, COUNT: %d, MIN: %d\n", children[i].childID, children[i].sum, children[i].count, children[i].min);
+						}
+
+						// Child is assigned on the table - stop itteration
+						break;
+					}
+				}
+			}	
+			// SUM-VAR || COUNT-VAR || AVG-VAR
+			else if ((select[0] == VAR && (select[1] != MIN && select[1] != MAX)) || (select[1] == VAR && (select[0] != MIN && select[0] != MAX)))
+			{			
+				mr = (VarMeasSimple*) (call MeasPacket.getPayload(&radioMeasRecPkt,len));
+
+				for (i=0; i < MAX_CHILDREN; i++)
+				{
+					// Child already on table or new child
+					if (children[i].childID == msource || children[i].childID == 0)
+					{
+						// new child - assign it on table
+						if (children[i].childID==0)
+						{
+							children[i].childID = msource;
+						}
+
+						children[i].sumsq = ((VarMeasSimple*) mr)->measurement32bit;
+						children[i].sum = ((VarMeasSimple*) mr)->measurement16bit;
+						children[i].count = ((VarMeasSimple*) mr)->measurement8bit;
+
+						dbg("Measurements" , "Received from childID: %d - SUMSQ: %d, SUM: %d, COUNT: %d\n", children[i].childID, children[i].sumsq, children[i].sum, children[i].count);
+						
+
+						// Child is assigned on the table - stop itteration
+						break;
+					}
+				}
+			}
+			// MAX-VAR || MIN-VAR
+			else
+			{
+				mr = (VarMeasDouble*) (call MeasPacket.getPayload(&radioMeasRecPkt,len));
+
+				for (i=0; i < MAX_CHILDREN; i++)
+				{
+					// Child already on table or new child
+					if (children[i].childID == msource || children[i].childID == 0)
+					{
+						// new child - assign it on table
+						if (children[i].childID==0)
+						{
+							children[i].childID = msource;
+						}
+
+						children[i].sumsq = ((VarMeasDouble*) mr)->measurement32bit;
+						children[i].sum = ((VarMeasDouble*) mr)->measurement16bit;
+						children[i].count = ((VarMeasDouble*) mr)->measurement8bit1;
+
+						if (select[0] == MAX || select[1] == MAX)
+						{
+							children[i].max = ((VarMeasDouble*) mr)->measurement8bit2;
+
+							dbg("Measurements" , "Received from childID: %d - SUMSQ: %d, SUM: %d, COUNT: %d, MAX: %d\n", children[i].childID, children[i].sumsq, children[i].sum, children[i].count, children[i].max);
+						}
+						else
+						{
+							children[i].min = ((VarMeasDouble*) mr)->measurement8bit2;
+
+							dbg("Measurements" , "Received from childID: %d - SUMSQ: %d, SUM: %d, COUNT: %d, MIN: %d\n", children[i].childID, children[i].sumsq, children[i].sum, children[i].count, children[i].min);
+						}						
+
+						// Child is assigned on the table - stop itteration
+						break;
+					}
+				}
+			}
+		}
+		dbg("SRTreeC" , "MeasMsg received from %d !!! \n", msource);
 	}
 
 
@@ -1254,7 +1572,7 @@ implementation
 				result += children[i].sum;
 			}
 			
-			dbg("Calc" , "Node's sum is: %d\n", result);
+			dbg("Calc" , "Node's SUM is: %d\n", result);
 		}
 		else if (op == MAX)
 		{
@@ -1293,7 +1611,7 @@ implementation
 				result += children[i].count;
 			}
 
-			dbg("Calc" , "Node's count is: %d\n", result);
+			dbg("Calc" , "Node's COUNT is: %d\n", result);
 		}
 		else if (op == SUMSQ)
 		{
@@ -1305,8 +1623,8 @@ implementation
 		
 				result += children[i].sumsq;
 			}
+			dbg("Calc" , "Node's SUMSQ is: %d\n", result);
 		}
-
 		return result;
 	}
 
