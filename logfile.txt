@@ -1,33 +1,93 @@
 TicksPerSecond :  10000000000 
 
   0   1   -50.0
-  0   3   -50.0
+  0   4   -50.0
+  0   5   -50.0
   1   0   -50.0
   1   2   -50.0
   1   4   -50.0
+  1   5   -50.0
+  1   6   -50.0
   2   1   -50.0
+  2   3   -50.0
   2   5   -50.0
-  3   0   -50.0
-  3   4   -50.0
+  2   6   -50.0
+  2   7   -50.0
+  3   2   -50.0
   3   6   -50.0
+  3   7   -50.0
+  4   0   -50.0
   4   1   -50.0
-  4   3   -50.0
   4   5   -50.0
-  4   7   -50.0
+  4   8   -50.0
+  4   9   -50.0
+  5   0   -50.0
+  5   1   -50.0
   5   2   -50.0
   5   4   -50.0
+  5   6   -50.0
   5   8   -50.0
+  5   9   -50.0
+  5   10   -50.0
+  6   1   -50.0
+  6   2   -50.0
   6   3   -50.0
+  6   5   -50.0
   6   7   -50.0
-  7   4   -50.0
+  6   9   -50.0
+  6   10   -50.0
+  6   11   -50.0
+  7   2   -50.0
+  7   3   -50.0
   7   6   -50.0
-  7   8   -50.0
+  7   10   -50.0
+  7   11   -50.0
+  8   4   -50.0
   8   5   -50.0
-  8   7   -50.0
+  8   9   -50.0
+  8   12   -50.0
+  8   13   -50.0
+  9   4   -50.0
+  9   5   -50.0
+  9   6   -50.0
+  9   8   -50.0
+  9   10   -50.0
+  9   12   -50.0
+  9   13   -50.0
+  9   14   -50.0
+  10   5   -50.0
+  10   6   -50.0
+  10   7   -50.0
+  10   9   -50.0
+  10   11   -50.0
+  10   13   -50.0
+  10   14   -50.0
+  10   15   -50.0
+  11   6   -50.0
+  11   7   -50.0
+  11   10   -50.0
+  11   14   -50.0
+  11   15   -50.0
+  12   8   -50.0
+  12   9   -50.0
+  12   13   -50.0
+  13   8   -50.0
+  13   9   -50.0
+  13   10   -50.0
+  13   12   -50.0
+  13   14   -50.0
+  14   9   -50.0
+  14   10   -50.0
+  14   11   -50.0
+  14   13   -50.0
+  14   15   -50.0
+  15   10   -50.0
+  15   11   -50.0
+  15   14   -50.0
 0:0:10.000000000 DEBUG (0): curdepth = 0  ,  parentID= 0 
 0:0:10.000000000 DEBUG (0): 
 
-MODE(extended -> 0, Tina -> 1	): 1
+MODE(extended -> 0, Tina -> 1	): 0
 
 0:0:10.000000000 DEBUG (1): curdepth = 255  ,  parentID= 65535 
 0:0:10.000000000 DEBUG (2): curdepth = 255  ,  parentID= 65535 
@@ -37,6 +97,13 @@ MODE(extended -> 0, Tina -> 1	): 1
 0:0:10.000000000 DEBUG (6): curdepth = 255  ,  parentID= 65535 
 0:0:10.000000000 DEBUG (7): curdepth = 255  ,  parentID= 65535 
 0:0:10.000000000 DEBUG (8): curdepth = 255  ,  parentID= 65535 
+0:0:10.000000000 DEBUG (9): curdepth = 255  ,  parentID= 65535 
+0:0:10.000000001 DEBUG (10): curdepth = 255  ,  parentID= 65535 
+0:0:10.000000001 DEBUG (11): curdepth = 255  ,  parentID= 65535 
+0:0:10.000000001 DEBUG (12): curdepth = 255  ,  parentID= 65535 
+0:0:10.000000001 DEBUG (13): curdepth = 255  ,  parentID= 65535 
+0:0:10.000000001 DEBUG (14): curdepth = 255  ,  parentID= 65535 
+0:0:10.000000001 DEBUG (15): curdepth = 255  ,  parentID= 65535 
 0:0:10.000000010 DEBUG (0): Radio initialized successfully!!!
 0:0:10.000000010 DEBUG (1): Radio initialized successfully!!!
 0:0:10.000000010 DEBUG (2): Radio initialized successfully!!!
@@ -46,26 +113,48 @@ MODE(extended -> 0, Tina -> 1	): 1
 0:0:10.000000010 DEBUG (6): Radio initialized successfully!!!
 0:0:10.000000010 DEBUG (7): Radio initialized successfully!!!
 0:0:10.000000010 DEBUG (8): Radio initialized successfully!!!
-0:0:10.250000010 DEBUG (0): Query selected for TINA is: 3 with tct: 14
+0:0:10.000000010 DEBUG (9): Radio initialized successfully!!!
+0:0:10.000000011 DEBUG (10): Radio initialized successfully!!!
+0:0:10.000000011 DEBUG (11): Radio initialized successfully!!!
+0:0:10.000000011 DEBUG (12): Radio initialized successfully!!!
+0:0:10.000000011 DEBUG (13): Radio initialized successfully!!!
+0:0:10.000000011 DEBUG (14): Radio initialized successfully!!!
+0:0:10.000000011 DEBUG (15): Radio initialized successfully!!!
+0:0:10.250000010 DEBUG (0): We have 1 queries!
+0:0:10.250000010 DEBUG (0): Query 1 is: 2
 0:0:10.250000010 DEBUG (0): ##################################### 
 0:0:10.250000010 DEBUG (0): #######   ROUND   1    ############## 
 0:0:10.250000010 DEBUG (0): #####################################
-0:0:10.254516605 DEBUG (3): New parent for NodeID= 3 : curdepth= 1 , parentID= 0 
-0:0:10.254516605 DEBUG (3): tinaSelect= 3 , tct=14
-0:0:10.254516605 DEBUG (1): New parent for NodeID= 1 : curdepth= 1 , parentID= 0 
-0:0:10.254516605 DEBUG (1): tinaSelect= 3 , tct=14
-0:0:10.506546035 DEBUG (6): New parent for NodeID= 6 : curdepth= 2 , parentID= 3 
-0:0:10.506546035 DEBUG (6): tinaSelect= 3 , tct=14
-0:0:10.506546035 DEBUG (4): New parent for NodeID= 4 : curdepth= 2 , parentID= 3 
-0:0:10.506546035 DEBUG (4): tinaSelect= 3 , tct=14
-0:0:10.513900728 DEBUG (2): New parent for NodeID= 2 : curdepth= 2 , parentID= 1 
-0:0:10.513900728 DEBUG (2): tinaSelect= 3 , tct=14
-0:0:10.760452274 DEBUG (7): New parent for NodeID= 7 : curdepth= 3 , parentID= 4 
-0:0:10.760452274 DEBUG (7): tinaSelect= 3 , tct=14
-0:0:10.760452274 DEBUG (5): New parent for NodeID= 5 : curdepth= 3 , parentID= 4 
-0:0:10.760452274 DEBUG (5): tinaSelect= 3 , tct=14
-0:0:11.017486557 DEBUG (8): New parent for NodeID= 8 : curdepth= 4 , parentID= 7 
-0:0:11.017486557 DEBUG (8): tinaSelect= 3 , tct=14
+0:0:10.258285504 DEBUG (5): New parent for NodeID= 5 : curdepth= 1 , parentID= 0 
+0:0:10.258285504 DEBUG (5): ExtendSelect= 2
+0:0:10.258285504 DEBUG (4): New parent for NodeID= 4 : curdepth= 1 , parentID= 0 
+0:0:10.258285504 DEBUG (4): ExtendSelect= 2
+0:0:10.258285504 DEBUG (1): New parent for NodeID= 1 : curdepth= 1 , parentID= 0 
+0:0:10.258285504 DEBUG (1): ExtendSelect= 2
+0:0:10.510543837 DEBUG (6): New parent for NodeID= 6 : curdepth= 2 , parentID= 1 
+0:0:10.510543837 DEBUG (6): ExtendSelect= 2
+0:0:10.510543837 DEBUG (2): New parent for NodeID= 2 : curdepth= 2 , parentID= 1 
+0:0:10.510543837 DEBUG (2): ExtendSelect= 2
+0:0:10.516815163 DEBUG (9): New parent for NodeID= 9 : curdepth= 2 , parentID= 4 
+0:0:10.516815163 DEBUG (9): ExtendSelect= 2
+0:0:10.516815163 DEBUG (8): New parent for NodeID= 8 : curdepth= 2 , parentID= 4 
+0:0:10.516815163 DEBUG (8): ExtendSelect= 2
+0:0:10.518264740 DEBUG (10): New parent for NodeID= 10 : curdepth= 2 , parentID= 5 
+0:0:10.518264740 DEBUG (10): ExtendSelect= 2
+0:0:10.763092051 DEBUG (7): New parent for NodeID= 7 : curdepth= 3 , parentID= 2 
+0:0:10.763092051 DEBUG (7): ExtendSelect= 2
+0:0:10.763092051 DEBUG (3): New parent for NodeID= 3 : curdepth= 3 , parentID= 2 
+0:0:10.763092051 DEBUG (3): ExtendSelect= 2
+0:0:10.767562851 DEBUG (11): New parent for NodeID= 11 : curdepth= 3 , parentID= 6 
+0:0:10.767562851 DEBUG (11): ExtendSelect= 2
+0:0:10.773529049 DEBUG (15): New parent for NodeID= 15 : curdepth= 3 , parentID= 10 
+0:0:10.773529049 DEBUG (15): ExtendSelect= 2
+0:0:10.773529049 DEBUG (14): New parent for NodeID= 14 : curdepth= 3 , parentID= 10 
+0:0:10.773529049 DEBUG (14): ExtendSelect= 2
+0:0:10.773879993 DEBUG (12): New parent for NodeID= 12 : curdepth= 3 , parentID= 8 
+0:0:10.773879993 DEBUG (12): ExtendSelect= 2
+0:0:10.774734480 DEBUG (13): New parent for NodeID= 13 : curdepth= 3 , parentID= 9 
+0:0:10.774734480 DEBUG (13): ExtendSelect= 2
 0:0:13.000000010 DEBUG (0): FinishedRouting!
 0:0:13.000000010 DEBUG (1): FinishedRouting!
 0:0:13.000000010 DEBUG (2): FinishedRouting!
@@ -75,963 +164,1690 @@ MODE(extended -> 0, Tina -> 1	): 1
 0:0:13.000000010 DEBUG (6): FinishedRouting!
 0:0:13.000000010 DEBUG (7): FinishedRouting!
 0:0:13.000000010 DEBUG (8): FinishedRouting!
-0:0:58.773437510 DEBUG (8): NodeID = 8 curdepth= 4
-0:0:58.773437510 DEBUG (8): Starting Data transmission to parent!
-0:0:58.773437510 DEBUG (8): measurement is: 10
-0:0:58.773437510 DEBUG (8): Node's MIN is: 10
-0:0:58.773437510 DEBUG (8): Measurement passes tct! Previous query: 0, Now sent: 10
-0:0:58.781021104 DEBUG (7): Received from childID: 8 - min: 10
-0:0:59.014648448 DEBUG (5): NodeID = 5 curdepth= 3
-0:0:59.014648448 DEBUG (5): Starting Data transmission to parent!
-0:0:59.014648448 DEBUG (5): measurement is: 36
-0:0:59.014648448 DEBUG (5): Node's MIN is: 36
-0:0:59.014648448 DEBUG (5): Measurement passes tct! Previous query: 0, Now sent: 36
+0:0:13.000000010 DEBUG (9): FinishedRouting!
+0:0:13.000000011 DEBUG (10): FinishedRouting!
+0:0:13.000000011 DEBUG (11): FinishedRouting!
+0:0:13.000000011 DEBUG (12): FinishedRouting!
+0:0:13.000000011 DEBUG (13): FinishedRouting!
+0:0:13.000000011 DEBUG (14): FinishedRouting!
+0:0:13.000000011 DEBUG (15): FinishedRouting!
+0:0:59.008789072 DEBUG (3): NodeID = 3 curdepth= 3
+0:0:59.008789072 DEBUG (3): Starting Data transmission to parent!
+0:0:59.008789072 DEBUG (3): measurement is: 4
+0:0:59.008789082 DEBUG (3): Node's MAX is: 4
+0:0:59.013900747 DEBUG (2): Measurement received from: 3
+0:0:59.013900757 DEBUG (2): Received from childID: 3 - max: 4
 0:0:59.020507823 DEBUG (7): NodeID = 7 curdepth= 3
 0:0:59.020507823 DEBUG (7): Starting Data transmission to parent!
 0:0:59.020507823 DEBUG (7): measurement is: 0
-0:0:59.020507823 DEBUG (7): ChildID: 8 has min: 10
-0:0:59.020507823 DEBUG (7): Node's MIN is: 0
-0:0:59.020507823 DEBUG (7): Measurement passes tct! Previous query: 0, Now sent: 0
-0:0:59.021362296 DEBUG (4): Received from childID: 5 - min: 36
-0:0:59.029449441 DEBUG (4): Received from childID: 7 - min: 0
+0:0:59.020507833 DEBUG (7): Node's MAX is: 0
+0:0:59.030517540 DEBUG (2): Measurement received from: 7
+0:0:59.030517550 DEBUG (2): Received from childID: 7 - max: 0
+0:0:59.032226573 DEBUG (11): NodeID = 11 curdepth= 3
+0:0:59.032226573 DEBUG (11): Starting Data transmission to parent!
+0:0:59.032226573 DEBUG (11): measurement is: 49
+0:0:59.032226583 DEBUG (11): Node's MAX is: 49
+0:0:59.035156261 DEBUG (12): NodeID = 12 curdepth= 3
+0:0:59.035156261 DEBUG (12): Starting Data transmission to parent!
+0:0:59.035156261 DEBUG (12): measurement is: 37
+0:0:59.035156271 DEBUG (12): Node's MAX is: 37
+0:0:59.038085948 DEBUG (13): NodeID = 13 curdepth= 3
+0:0:59.038085948 DEBUG (13): Starting Data transmission to parent!
+0:0:59.038085948 DEBUG (13): measurement is: 10
+0:0:59.038085958 DEBUG (13): Node's MAX is: 10
+0:0:59.041015636 DEBUG (14): NodeID = 14 curdepth= 3
+0:0:59.041015636 DEBUG (14): Starting Data transmission to parent!
+0:0:59.041015636 DEBUG (14): measurement is: 36
+0:0:59.041015646 DEBUG (14): Node's MAX is: 36
+0:0:59.041763271 DEBUG (6): Measurement received from: 11
+0:0:59.041763281 DEBUG (6): Received from childID: 11 - max: 49
+0:0:59.042907690 DEBUG (8): Measurement received from: 12
+0:0:59.042907700 DEBUG (8): Received from childID: 12 - max: 37
+0:0:59.043838505 DEBUG (10): Measurement received from: 14
+0:0:59.043838515 DEBUG (10): Received from childID: 14 - max: 36
+0:0:59.043945324 DEBUG (15): NodeID = 15 curdepth= 3
+0:0:59.043945324 DEBUG (15): Starting Data transmission to parent!
+0:0:59.043945324 DEBUG (15): measurement is: 47
+0:0:59.043945334 DEBUG (15): Node's MAX is: 47
+0:0:59.045913671 DEBUG (9): Measurement received from: 13
+0:0:59.045913681 DEBUG (9): Received from childID: 13 - max: 10
+0:0:59.047393800 DEBUG (10): Measurement received from: 15
+0:0:59.047393810 DEBUG (10): Received from childID: 15 - max: 47
 0:0:59.255859385 DEBUG (2): NodeID = 2 curdepth= 2
 0:0:59.255859385 DEBUG (2): Starting Data transmission to parent!
-0:0:59.255859385 DEBUG (2): measurement is: 41
-0:0:59.255859385 DEBUG (2): Node's MIN is: 41
-0:0:59.255859385 DEBUG (2): Measurement passes tct! Previous query: 0, Now sent: 41
-0:0:59.261718760 DEBUG (4): NodeID = 4 curdepth= 2
-0:0:59.261718760 DEBUG (4): Starting Data transmission to parent!
-0:0:59.261718760 DEBUG (4): measurement is: 38
-0:0:59.261718760 DEBUG (4): ChildID: 5 has min: 36
-0:0:59.261718760 DEBUG (4): ChildID: 7 has min: 0
-0:0:59.261718760 DEBUG (4): Node's MIN is: 0
-0:0:59.261718760 DEBUG (4): Measurement passes tct! Previous query: 0, Now sent: 0
-0:0:59.265502938 DEBUG (3): Received from childID: 4 - min: 0
+0:0:59.255859385 DEBUG (2): measurement is: 18
+0:0:59.255859395 DEBUG (2): ChildID: 3 has max: 4
+0:0:59.255859395 DEBUG (2): ChildID: 7 has max: 0
+0:0:59.255859395 DEBUG (2): Node's MAX is: 18
+0:0:59.257553110 DEBUG (1): Measurement received from: 2
+0:0:59.257553120 DEBUG (1): Received from childID: 2 - max: 18
 0:0:59.267578135 DEBUG (6): NodeID = 6 curdepth= 2
 0:0:59.267578135 DEBUG (6): Starting Data transmission to parent!
-0:0:59.267578135 DEBUG (6): measurement is: 49
-0:0:59.267578135 DEBUG (6): Node's MIN is: 49
-0:0:59.267578135 DEBUG (6): Measurement passes tct! Previous query: 0, Now sent: 49
-0:0:59.269378682 DEBUG (3): Received from childID: 6 - min: 49
+0:0:59.267578135 DEBUG (6): measurement is: 22
+0:0:59.267578145 DEBUG (6): ChildID: 11 has max: 49
+0:0:59.267578145 DEBUG (6): Node's MAX is: 49
+0:0:59.269683846 DEBUG (1): Measurement received from: 6
+0:0:59.269683856 DEBUG (1): Received from childID: 6 - max: 49
+0:0:59.273437510 DEBUG (8): NodeID = 8 curdepth= 2
+0:0:59.273437510 DEBUG (8): Starting Data transmission to parent!
+0:0:59.273437510 DEBUG (8): measurement is: 20
+0:0:59.273437520 DEBUG (8): ChildID: 12 has max: 37
+0:0:59.273437520 DEBUG (8): Node's MAX is: 37
+0:0:59.276367198 DEBUG (9): NodeID = 9 curdepth= 2
+0:0:59.276367198 DEBUG (9): Starting Data transmission to parent!
+0:0:59.276367198 DEBUG (9): measurement is: 30
+0:0:59.276367208 DEBUG (9): ChildID: 13 has max: 10
+0:0:59.276367208 DEBUG (9): Node's MAX is: 30
+0:0:59.279296886 DEBUG (10): NodeID = 10 curdepth= 2
+0:0:59.279296886 DEBUG (10): Starting Data transmission to parent!
+0:0:59.279296886 DEBUG (10): measurement is: 13
+0:0:59.279296896 DEBUG (10): ChildID: 14 has max: 36
+0:0:59.279296896 DEBUG (10): ChildID: 15 has max: 47
+0:0:59.279296896 DEBUG (10): Node's MAX is: 47
+0:0:59.283508262 DEBUG (4): Measurement received from: 8
+0:0:59.283508272 DEBUG (4): Received from childID: 8 - max: 37
+0:0:59.286010706 DEBUG (4): Measurement received from: 9
+0:0:59.286010716 DEBUG (4): Received from childID: 9 - max: 30
 0:0:59.502929697 DEBUG (1): NodeID = 1 curdepth= 1
 0:0:59.502929697 DEBUG (1): Starting Data transmission to parent!
-0:0:59.502929697 DEBUG (1): measurement is: 4
-0:0:59.502929697 DEBUG (1): Node's MIN is: 4
-0:0:59.502929697 DEBUG (1): Measurement passes tct! Previous query: 0, Now sent: 4
-0:0:59.508438108 DEBUG (0): Received from childID: 1 - min: 4
-0:0:59.508789072 DEBUG (3): NodeID = 3 curdepth= 1
-0:0:59.508789072 DEBUG (3): Starting Data transmission to parent!
-0:0:59.508789072 DEBUG (3): measurement is: 25
-0:0:59.508789072 DEBUG (3): ChildID: 4 has min: 0
-0:0:59.508789072 DEBUG (3): ChildID: 6 has min: 49
-0:0:59.508789072 DEBUG (3): Node's MIN is: 0
-0:0:59.508789072 DEBUG (3): Measurement passes tct! Previous query: 0, Now sent: 0
-0:0:59.518051123 DEBUG (0): Received from childID: 3 - min: 0
+0:0:59.502929697 DEBUG (1): measurement is: 39
+0:0:59.502929707 DEBUG (1): ChildID: 2 has max: 18
+0:0:59.502929707 DEBUG (1): ChildID: 6 has max: 49
+0:0:59.502929707 DEBUG (1): Node's MAX is: 49
+0:0:59.507308954 DEBUG (0): Measurement received from: 1
+0:0:59.507308964 DEBUG (0): Received from childID: 1 - max: 49
+0:0:59.511718760 DEBUG (4): NodeID = 4 curdepth= 1
+0:0:59.511718760 DEBUG (4): Starting Data transmission to parent!
+0:0:59.511718760 DEBUG (4): measurement is: 5
+0:0:59.511718770 DEBUG (4): ChildID: 8 has max: 37
+0:0:59.511718770 DEBUG (4): ChildID: 9 has max: 30
+0:0:59.511718770 DEBUG (4): Node's MAX is: 37
+0:0:59.514648448 DEBUG (5): NodeID = 5 curdepth= 1
+0:0:59.514648448 DEBUG (5): Starting Data transmission to parent!
+0:0:59.514648448 DEBUG (5): measurement is: 21
+0:0:59.514648458 DEBUG (5): Node's MAX is: 21
+0:0:59.518417339 DEBUG (0): Measurement received from: 4
+0:0:59.518417349 DEBUG (0): Received from childID: 4 - max: 37
+0:0:59.523590056 DEBUG (0): Measurement received from: 5
+0:0:59.523590066 DEBUG (0): Received from childID: 5 - max: 21
 0:0:59.750000010 DEBUG (0): NodeID = 0 curdepth= 0
-0:0:59.750000010 DEBUG (0): measurement is: 17
-0:0:59.750000010 DEBUG (0): ChildID: 1 has min: 4
-0:0:59.750000010 DEBUG (0): ChildID: 3 has min: 0
-0:0:59.750000010 DEBUG (0): Node's MIN is: 0
-0:0:59.750000010 DEBUG (0): 
-0:0:59.750000010 DEBUG (0): FINAL RESULT: MIN: 0
-0:0:59.750000010 DEBUG (0): 
+0:0:59.750000010 DEBUG (0): measurement is: 5
+0:0:59.750000020 DEBUG (0): ChildID: 1 has max: 49
+0:0:59.750000020 DEBUG (0): ChildID: 4 has max: 37
+0:0:59.750000020 DEBUG (0): ChildID: 5 has max: 21
+0:0:59.750000020 DEBUG (0): Node's MAX is: 49
+0:0:59.750000020 DEBUG (0): 
+0:0:59.750000020 DEBUG (0): FINAL RESULT: MAX: 49
+0:0:59.750000020 DEBUG (0): 
 0:1:0.000000010 DEBUG (0): ##################################### 
 0:1:0.000000010 DEBUG (0): #######   ROUND   2    ############## 
 0:1:0.000000010 DEBUG (0): #####################################
-0:1:58.773437510 DEBUG (8): NodeID = 8 curdepth= 4
-0:1:58.773437510 DEBUG (8): Starting Data transmission to parent!
-0:1:58.773437510 DEBUG (8): measurement is: 18
-0:1:58.773437510 DEBUG (8): Node's MIN is: 18
-0:1:58.773437510 DEBUG (8): Measurement passes tct! Previous query: 10, Now sent: 18
-0:1:58.776779186 DEBUG (7): Received from childID: 8 - min: 18
-0:1:59.014648448 DEBUG (5): NodeID = 5 curdepth= 3
-0:1:59.014648448 DEBUG (5): Starting Data transmission to parent!
-0:1:59.014648448 DEBUG (5): measurement is: 42
-0:1:59.014648448 DEBUG (5): Node's MIN is: 42
-0:1:59.014648448 DEBUG (5): Measurement passes tct! Previous query: 36, Now sent: 42
-0:1:59.018020640 DEBUG (4): Received from childID: 5 - min: 42
+0:1:59.008789072 DEBUG (3): NodeID = 3 curdepth= 3
+0:1:59.008789072 DEBUG (3): Starting Data transmission to parent!
+0:1:59.008789072 DEBUG (3): measurement is: 0
+0:1:59.008789082 DEBUG (3): Node's MAX is: 0
+0:1:59.012023927 DEBUG (2): Measurement received from: 3
+0:1:59.012023937 DEBUG (2): Received from childID: 3 - max: 0
 0:1:59.020507823 DEBUG (7): NodeID = 7 curdepth= 3
 0:1:59.020507823 DEBUG (7): Starting Data transmission to parent!
-0:1:59.020507823 DEBUG (7): measurement is: 41
-0:1:59.020507823 DEBUG (7): ChildID: 8 has min: 18
-0:1:59.020507823 DEBUG (7): Node's MIN is: 18
-0:1:59.020507823 DEBUG (7): Measurement passes tct! Previous query: 0, Now sent: 18
-0:1:59.024902348 DEBUG (4): Received from childID: 7 - min: 18
+0:1:59.020507823 DEBUG (7): measurement is: 8
+0:1:59.020507833 DEBUG (7): Node's MAX is: 8
+0:1:59.027572611 DEBUG (2): Measurement received from: 7
+0:1:59.027572621 DEBUG (2): Received from childID: 7 - max: 8
+0:1:59.032226573 DEBUG (11): NodeID = 11 curdepth= 3
+0:1:59.032226573 DEBUG (11): Starting Data transmission to parent!
+0:1:59.032226573 DEBUG (11): measurement is: 45
+0:1:59.032226583 DEBUG (11): Node's MAX is: 45
+0:1:59.035156261 DEBUG (12): NodeID = 12 curdepth= 3
+0:1:59.035156261 DEBUG (12): Starting Data transmission to parent!
+0:1:59.035156261 DEBUG (12): measurement is: 43
+0:1:59.035156271 DEBUG (12): Node's MAX is: 43
+0:1:59.036621089 DEBUG (6): Measurement received from: 11
+0:1:59.036621099 DEBUG (6): Received from childID: 11 - max: 45
+0:1:59.038085948 DEBUG (13): NodeID = 13 curdepth= 3
+0:1:59.038085948 DEBUG (13): Starting Data transmission to parent!
+0:1:59.038085948 DEBUG (13): measurement is: 28
+0:1:59.038085958 DEBUG (13): Node's MAX is: 28
+0:1:59.041015636 DEBUG (14): NodeID = 14 curdepth= 3
+0:1:59.041015636 DEBUG (14): Starting Data transmission to parent!
+0:1:59.041015636 DEBUG (14): measurement is: 28
+0:1:59.041015646 DEBUG (14): Node's MAX is: 28
+0:1:59.043945324 DEBUG (15): NodeID = 15 curdepth= 3
+0:1:59.043945324 DEBUG (15): Starting Data transmission to parent!
+0:1:59.043945324 DEBUG (15): measurement is: 43
+0:1:59.043945334 DEBUG (15): Node's MAX is: 43
+0:1:59.044189421 DEBUG (8): Measurement received from: 12
+0:1:59.044189431 DEBUG (8): Received from childID: 12 - max: 43
+0:1:59.047866785 DEBUG (9): Measurement received from: 13
+0:1:59.047866795 DEBUG (9): Received from childID: 13 - max: 28
 0:1:59.255859385 DEBUG (2): NodeID = 2 curdepth= 2
 0:1:59.255859385 DEBUG (2): Starting Data transmission to parent!
-0:1:59.255859385 DEBUG (2): measurement is: 15
-0:1:59.255859385 DEBUG (2): Node's MIN is: 15
-0:1:59.255859385 DEBUG (2): Measurement passes tct! Previous query: 41, Now sent: 15
-0:1:59.261718760 DEBUG (4): NodeID = 4 curdepth= 2
-0:1:59.261718760 DEBUG (4): Starting Data transmission to parent!
-0:1:59.261718760 DEBUG (4): measurement is: 42
-0:1:59.261718760 DEBUG (4): ChildID: 5 has min: 42
-0:1:59.261718760 DEBUG (4): ChildID: 7 has min: 18
-0:1:59.261718760 DEBUG (4): Node's MIN is: 18
-0:1:59.261718760 DEBUG (4): Measurement passes tct! Previous query: 0, Now sent: 18
-0:1:59.262756337 DEBUG (1): Received from childID: 2 - min: 15
+0:1:59.255859385 DEBUG (2): measurement is: 28
+0:1:59.255859395 DEBUG (2): ChildID: 3 has max: 0
+0:1:59.255859395 DEBUG (2): ChildID: 7 has max: 8
+0:1:59.255859395 DEBUG (2): Node's MAX is: 28
+0:1:59.261093129 DEBUG (1): Measurement received from: 2
+0:1:59.261093139 DEBUG (1): Received from childID: 2 - max: 28
 0:1:59.267578135 DEBUG (6): NodeID = 6 curdepth= 2
 0:1:59.267578135 DEBUG (6): Starting Data transmission to parent!
-0:1:59.267578135 DEBUG (6): measurement is: 42
-0:1:59.267578135 DEBUG (6): Node's MIN is: 42
-0:1:59.267578135 DEBUG (6): Measurement passes tct! Previous query: 49, Now sent: 42
+0:1:59.267578135 DEBUG (6): measurement is: 40
+0:1:59.267578145 DEBUG (6): ChildID: 11 has max: 45
+0:1:59.267578145 DEBUG (6): Node's MAX is: 45
+0:1:59.270477298 DEBUG (1): Measurement received from: 6
+0:1:59.270477308 DEBUG (1): Received from childID: 6 - max: 45
+0:1:59.273437510 DEBUG (8): NodeID = 8 curdepth= 2
+0:1:59.273437510 DEBUG (8): Starting Data transmission to parent!
+0:1:59.273437510 DEBUG (8): measurement is: 36
+0:1:59.273437520 DEBUG (8): ChildID: 12 has max: 43
+0:1:59.273437520 DEBUG (8): Node's MAX is: 43
+0:1:59.276245121 DEBUG (4): Measurement received from: 8
+0:1:59.276245131 DEBUG (4): Received from childID: 8 - max: 43
+0:1:59.276367198 DEBUG (9): NodeID = 9 curdepth= 2
+0:1:59.276367198 DEBUG (9): Starting Data transmission to parent!
+0:1:59.276367198 DEBUG (9): measurement is: 9
+0:1:59.276367208 DEBUG (9): ChildID: 13 has max: 28
+0:1:59.276367208 DEBUG (9): Node's MAX is: 28
+0:1:59.279296886 DEBUG (10): NodeID = 10 curdepth= 2
+0:1:59.279296886 DEBUG (10): Starting Data transmission to parent!
+0:1:59.279296886 DEBUG (10): measurement is: 37
+0:1:59.279296896 DEBUG (10): ChildID: 14 has max: 36
+0:1:59.279296896 DEBUG (10): ChildID: 15 has max: 47
+0:1:59.279296896 DEBUG (10): Node's MAX is: 47
+0:1:59.288177442 DEBUG (4): Measurement received from: 9
+0:1:59.288177452 DEBUG (4): Received from childID: 9 - max: 28
+0:1:59.289535483 DEBUG (5): Measurement received from: 10
+0:1:59.289535493 DEBUG (5): Received from childID: 10 - max: 47
 0:1:59.502929697 DEBUG (1): NodeID = 1 curdepth= 1
 0:1:59.502929697 DEBUG (1): Starting Data transmission to parent!
-0:1:59.502929697 DEBUG (1): measurement is: 48
-0:1:59.502929697 DEBUG (1): ChildID: 2 has min: 15
-0:1:59.502929697 DEBUG (1): Node's MIN is: 15
-0:1:59.502929697 DEBUG (1): Measurement passes tct! Previous query: 4, Now sent: 15
-0:1:59.508728023 DEBUG (0): Received from childID: 1 - min: 15
-0:1:59.508789072 DEBUG (3): NodeID = 3 curdepth= 1
-0:1:59.508789072 DEBUG (3): Starting Data transmission to parent!
-0:1:59.508789072 DEBUG (3): measurement is: 49
-0:1:59.508789072 DEBUG (3): ChildID: 4 has min: 0
-0:1:59.508789072 DEBUG (3): ChildID: 6 has min: 49
-0:1:59.508789072 DEBUG (3): Node's MIN is: 0
-0:1:59.508789072 DEBUG (3): Measurement doesn't pass tct! Previous query: 0, Now measured: 0
-0:1:59.508789072 DEBUG (3): Doesn't send because of tct
+0:1:59.502929697 DEBUG (1): measurement is: 29
+0:1:59.502929707 DEBUG (1): ChildID: 2 has max: 28
+0:1:59.502929707 DEBUG (1): ChildID: 6 has max: 45
+0:1:59.502929707 DEBUG (1): Node's MAX is: 45
+0:1:59.504745492 DEBUG (0): Measurement received from: 1
+0:1:59.504745502 DEBUG (0): Received from childID: 1 - max: 45
+0:1:59.511718760 DEBUG (4): NodeID = 4 curdepth= 1
+0:1:59.511718760 DEBUG (4): Starting Data transmission to parent!
+0:1:59.511718760 DEBUG (4): measurement is: 41
+0:1:59.511718770 DEBUG (4): ChildID: 8 has max: 43
+0:1:59.511718770 DEBUG (4): ChildID: 9 has max: 28
+0:1:59.511718770 DEBUG (4): Node's MAX is: 43
+0:1:59.514648448 DEBUG (5): NodeID = 5 curdepth= 1
+0:1:59.514648448 DEBUG (5): Starting Data transmission to parent!
+0:1:59.514648448 DEBUG (5): measurement is: 34
+0:1:59.514648458 DEBUG (5): ChildID: 10 has max: 47
+0:1:59.514648458 DEBUG (5): Node's MAX is: 47
+0:1:59.517593369 DEBUG (0): Measurement received from: 4
+0:1:59.517593379 DEBUG (0): Received from childID: 4 - max: 43
+0:1:59.525024374 DEBUG (0): Measurement received from: 5
+0:1:59.525024384 DEBUG (0): Received from childID: 5 - max: 47
 0:1:59.750000010 DEBUG (0): NodeID = 0 curdepth= 0
-0:1:59.750000010 DEBUG (0): measurement is: 44
-0:1:59.750000010 DEBUG (0): ChildID: 1 has min: 15
-0:1:59.750000010 DEBUG (0): ChildID: 3 has min: 0
-0:1:59.750000010 DEBUG (0): Node's MIN is: 0
-0:1:59.750000010 DEBUG (0): 
-0:1:59.750000010 DEBUG (0): FINAL RESULT: MIN: 0
-0:1:59.750000010 DEBUG (0): 
+0:1:59.750000010 DEBUG (0): measurement is: 7
+0:1:59.750000020 DEBUG (0): ChildID: 1 has max: 45
+0:1:59.750000020 DEBUG (0): ChildID: 4 has max: 43
+0:1:59.750000020 DEBUG (0): ChildID: 5 has max: 47
+0:1:59.750000020 DEBUG (0): Node's MAX is: 47
+0:1:59.750000020 DEBUG (0): 
+0:1:59.750000020 DEBUG (0): FINAL RESULT: MAX: 47
+0:1:59.750000020 DEBUG (0): 
 0:2:0.000000010 DEBUG (0): ##################################### 
 0:2:0.000000010 DEBUG (0): #######   ROUND   3    ############## 
 0:2:0.000000010 DEBUG (0): #####################################
-0:2:58.773437510 DEBUG (8): NodeID = 8 curdepth= 4
-0:2:58.773437510 DEBUG (8): Starting Data transmission to parent!
-0:2:58.773437510 DEBUG (8): measurement is: 32
-0:2:58.773437510 DEBUG (8): Node's MIN is: 32
-0:2:58.773437510 DEBUG (8): Measurement passes tct! Previous query: 18, Now sent: 32
-0:2:58.782821631 DEBUG (7): Received from childID: 8 - min: 32
-0:2:59.014648448 DEBUG (5): NodeID = 5 curdepth= 3
-0:2:59.014648448 DEBUG (5): Starting Data transmission to parent!
-0:2:59.014648448 DEBUG (5): measurement is: 20
-0:2:59.014648448 DEBUG (5): Node's MIN is: 20
-0:2:59.014648448 DEBUG (5): Measurement passes tct! Previous query: 42, Now sent: 20
-0:2:59.019836426 DEBUG (4): Received from childID: 5 - min: 20
+0:2:59.008789072 DEBUG (3): NodeID = 3 curdepth= 3
+0:2:59.008789072 DEBUG (3): Starting Data transmission to parent!
+0:2:59.008789072 DEBUG (3): measurement is: 4
+0:2:59.008789082 DEBUG (3): Node's MAX is: 4
+0:2:59.017547576 DEBUG (2): Measurement received from: 3
+0:2:59.017547586 DEBUG (2): Received from childID: 3 - max: 4
 0:2:59.020507823 DEBUG (7): NodeID = 7 curdepth= 3
 0:2:59.020507823 DEBUG (7): Starting Data transmission to parent!
-0:2:59.020507823 DEBUG (7): measurement is: 38
-0:2:59.020507823 DEBUG (7): ChildID: 8 has min: 32
-0:2:59.020507823 DEBUG (7): Node's MIN is: 32
-0:2:59.020507823 DEBUG (7): Measurement passes tct! Previous query: 18, Now sent: 32
-0:2:59.025436403 DEBUG (4): Received from childID: 7 - min: 32
+0:2:59.020507823 DEBUG (7): measurement is: 21
+0:2:59.020507833 DEBUG (7): Node's MAX is: 21
+0:2:59.029464690 DEBUG (2): Measurement received from: 7
+0:2:59.029464700 DEBUG (2): Received from childID: 7 - max: 21
+0:2:59.032226573 DEBUG (11): NodeID = 11 curdepth= 3
+0:2:59.032226573 DEBUG (11): Starting Data transmission to parent!
+0:2:59.032226573 DEBUG (11): measurement is: 43
+0:2:59.032226583 DEBUG (11): Node's MAX is: 43
+0:2:59.035156261 DEBUG (12): NodeID = 12 curdepth= 3
+0:2:59.035156261 DEBUG (12): Starting Data transmission to parent!
+0:2:59.035156261 DEBUG (12): measurement is: 26
+0:2:59.035156271 DEBUG (12): Node's MAX is: 26
+0:2:59.036163328 DEBUG (6): Measurement received from: 11
+0:2:59.036163338 DEBUG (6): Received from childID: 11 - max: 43
+0:2:59.038085948 DEBUG (13): NodeID = 13 curdepth= 3
+0:2:59.038085948 DEBUG (13): Starting Data transmission to parent!
+0:2:59.038085948 DEBUG (13): measurement is: 29
+0:2:59.038085958 DEBUG (13): Node's MAX is: 29
+0:2:59.041015636 DEBUG (14): NodeID = 14 curdepth= 3
+0:2:59.041015636 DEBUG (14): Starting Data transmission to parent!
+0:2:59.041015636 DEBUG (14): measurement is: 23
+0:2:59.041015646 DEBUG (14): Node's MAX is: 23
+0:2:59.043945324 DEBUG (15): NodeID = 15 curdepth= 3
+0:2:59.043945324 DEBUG (15): Starting Data transmission to parent!
+0:2:59.043945324 DEBUG (15): measurement is: 35
+0:2:59.043945334 DEBUG (15): Node's MAX is: 35
+0:2:59.044738734 DEBUG (8): Measurement received from: 12
+0:2:59.044738744 DEBUG (8): Received from childID: 12 - max: 26
+0:2:59.046493502 DEBUG (9): Measurement received from: 13
+0:2:59.046493512 DEBUG (9): Received from childID: 13 - max: 29
+0:2:59.051818806 DEBUG (10): Measurement received from: 14
+0:2:59.051818816 DEBUG (10): Received from childID: 14 - max: 23
+0:2:59.053665125 DEBUG (10): Measurement received from: 15
+0:2:59.053665135 DEBUG (10): Received from childID: 15 - max: 35
 0:2:59.255859385 DEBUG (2): NodeID = 2 curdepth= 2
 0:2:59.255859385 DEBUG (2): Starting Data transmission to parent!
-0:2:59.255859385 DEBUG (2): measurement is: 11
-0:2:59.255859385 DEBUG (2): Node's MIN is: 11
-0:2:59.255859385 DEBUG (2): Measurement passes tct! Previous query: 15, Now sent: 11
-0:2:59.261138915 DEBUG (1): Received from childID: 2 - min: 11
-0:2:59.261718760 DEBUG (4): NodeID = 4 curdepth= 2
-0:2:59.261718760 DEBUG (4): Starting Data transmission to parent!
-0:2:59.261718760 DEBUG (4): measurement is: 3
-0:2:59.261718760 DEBUG (4): ChildID: 5 has min: 20
-0:2:59.261718760 DEBUG (4): ChildID: 7 has min: 32
-0:2:59.261718760 DEBUG (4): Node's MIN is: 3
-0:2:59.261718760 DEBUG (4): Measurement passes tct! Previous query: 18, Now sent: 3
-0:2:59.264328018 DEBUG (3): Received from childID: 4 - min: 3
+0:2:59.255859385 DEBUG (2): measurement is: 5
+0:2:59.255859395 DEBUG (2): ChildID: 3 has max: 4
+0:2:59.255859395 DEBUG (2): ChildID: 7 has max: 21
+0:2:59.255859395 DEBUG (2): Node's MAX is: 21
+0:2:59.261383044 DEBUG (1): Measurement received from: 2
+0:2:59.261383054 DEBUG (1): Received from childID: 2 - max: 21
 0:2:59.267578135 DEBUG (6): NodeID = 6 curdepth= 2
 0:2:59.267578135 DEBUG (6): Starting Data transmission to parent!
-0:2:59.267578135 DEBUG (6): measurement is: 22
-0:2:59.267578135 DEBUG (6): Node's MIN is: 22
-0:2:59.267578135 DEBUG (6): Measurement passes tct! Previous query: 42, Now sent: 22
-0:2:59.274307242 DEBUG (3): Received from childID: 6 - min: 22
+0:2:59.267578135 DEBUG (6): measurement is: 38
+0:2:59.267578145 DEBUG (6): ChildID: 11 has max: 43
+0:2:59.267578145 DEBUG (6): Node's MAX is: 43
+0:2:59.270080572 DEBUG (1): Measurement received from: 6
+0:2:59.270080582 DEBUG (1): Received from childID: 6 - max: 43
+0:2:59.273437510 DEBUG (8): NodeID = 8 curdepth= 2
+0:2:59.273437510 DEBUG (8): Starting Data transmission to parent!
+0:2:59.273437510 DEBUG (8): measurement is: 25
+0:2:59.273437520 DEBUG (8): ChildID: 12 has max: 26
+0:2:59.273437520 DEBUG (8): Node's MAX is: 26
+0:2:59.276367198 DEBUG (9): NodeID = 9 curdepth= 2
+0:2:59.276367198 DEBUG (9): Starting Data transmission to parent!
+0:2:59.276367198 DEBUG (9): measurement is: 39
+0:2:59.276367208 DEBUG (9): ChildID: 13 has max: 29
+0:2:59.276367208 DEBUG (9): Node's MAX is: 39
+0:2:59.279296886 DEBUG (10): NodeID = 10 curdepth= 2
+0:2:59.279296886 DEBUG (10): Starting Data transmission to parent!
+0:2:59.279296886 DEBUG (10): measurement is: 34
+0:2:59.279296896 DEBUG (10): ChildID: 14 has max: 23
+0:2:59.279296896 DEBUG (10): ChildID: 15 has max: 35
+0:2:59.279296896 DEBUG (10): Node's MAX is: 35
+0:2:59.280303953 DEBUG (4): Measurement received from: 9
+0:2:59.280303963 DEBUG (4): Received from childID: 9 - max: 39
+0:2:59.283508262 DEBUG (4): Measurement received from: 8
+0:2:59.283508272 DEBUG (4): Received from childID: 8 - max: 26
+0:2:59.289001429 DEBUG (5): Measurement received from: 10
+0:2:59.289001439 DEBUG (5): Received from childID: 10 - max: 35
 0:2:59.502929697 DEBUG (1): NodeID = 1 curdepth= 1
 0:2:59.502929697 DEBUG (1): Starting Data transmission to parent!
-0:2:59.502929697 DEBUG (1): measurement is: 12
-0:2:59.502929697 DEBUG (1): ChildID: 2 has min: 11
-0:2:59.502929697 DEBUG (1): Node's MIN is: 11
-0:2:59.502929697 DEBUG (1): Measurement passes tct! Previous query: 15, Now sent: 11
-0:2:59.506607064 DEBUG (0): Received from childID: 1 - min: 11
-0:2:59.508789072 DEBUG (3): NodeID = 3 curdepth= 1
-0:2:59.508789072 DEBUG (3): Starting Data transmission to parent!
-0:2:59.508789072 DEBUG (3): measurement is: 20
-0:2:59.508789072 DEBUG (3): ChildID: 4 has min: 3
-0:2:59.508789072 DEBUG (3): ChildID: 6 has min: 22
-0:2:59.508789072 DEBUG (3): Node's MIN is: 3
-0:2:59.508789072 DEBUG (3): Measurement passes tct! Previous query: 0, Now sent: 3
-0:2:59.519256561 DEBUG (0): Received from childID: 3 - min: 3
+0:2:59.502929697 DEBUG (1): measurement is: 17
+0:2:59.502929707 DEBUG (1): ChildID: 2 has max: 21
+0:2:59.502929707 DEBUG (1): ChildID: 6 has max: 43
+0:2:59.502929707 DEBUG (1): Node's MAX is: 43
+0:2:59.508804307 DEBUG (0): Measurement received from: 1
+0:2:59.508804317 DEBUG (0): Received from childID: 1 - max: 43
+0:2:59.511718760 DEBUG (4): NodeID = 4 curdepth= 1
+0:2:59.511718760 DEBUG (4): Starting Data transmission to parent!
+0:2:59.511718760 DEBUG (4): measurement is: 16
+0:2:59.511718770 DEBUG (4): ChildID: 8 has max: 26
+0:2:59.511718770 DEBUG (4): ChildID: 9 has max: 39
+0:2:59.511718770 DEBUG (4): Node's MAX is: 39
+0:2:59.514648448 DEBUG (5): NodeID = 5 curdepth= 1
+0:2:59.514648448 DEBUG (5): Starting Data transmission to parent!
+0:2:59.514648448 DEBUG (5): measurement is: 25
+0:2:59.514648458 DEBUG (5): ChildID: 10 has max: 35
+0:2:59.514648458 DEBUG (5): Node's MAX is: 35
+0:2:59.516052241 DEBUG (0): Measurement received from: 4
+0:2:59.516052251 DEBUG (0): Received from childID: 4 - max: 39
 0:2:59.750000010 DEBUG (0): NodeID = 0 curdepth= 0
-0:2:59.750000010 DEBUG (0): measurement is: 10
-0:2:59.750000010 DEBUG (0): ChildID: 1 has min: 11
-0:2:59.750000010 DEBUG (0): ChildID: 3 has min: 3
-0:2:59.750000010 DEBUG (0): Node's MIN is: 3
-0:2:59.750000010 DEBUG (0): 
-0:2:59.750000010 DEBUG (0): FINAL RESULT: MIN: 3
-0:2:59.750000010 DEBUG (0): 
+0:2:59.750000010 DEBUG (0): measurement is: 24
+0:2:59.750000020 DEBUG (0): ChildID: 1 has max: 43
+0:2:59.750000020 DEBUG (0): ChildID: 4 has max: 39
+0:2:59.750000020 DEBUG (0): ChildID: 5 has max: 47
+0:2:59.750000020 DEBUG (0): Node's MAX is: 47
+0:2:59.750000020 DEBUG (0): 
+0:2:59.750000020 DEBUG (0): FINAL RESULT: MAX: 47
+0:2:59.750000020 DEBUG (0): 
 0:3:0.000000010 DEBUG (0): ##################################### 
 0:3:0.000000010 DEBUG (0): #######   ROUND   4    ############## 
 0:3:0.000000010 DEBUG (0): #####################################
-0:3:58.773437510 DEBUG (8): NodeID = 8 curdepth= 4
-0:3:58.773437510 DEBUG (8): Starting Data transmission to parent!
-0:3:58.773437510 DEBUG (8): measurement is: 34
-0:3:58.773437510 DEBUG (8): Node's MIN is: 34
-0:3:58.773437510 DEBUG (8): Measurement doesn't pass tct! Previous query: 32, Now measured: 34
-0:3:58.773437510 DEBUG (8): Doesn't send because of tct
-0:3:59.014648448 DEBUG (5): NodeID = 5 curdepth= 3
-0:3:59.014648448 DEBUG (5): Starting Data transmission to parent!
-0:3:59.014648448 DEBUG (5): measurement is: 3
-0:3:59.014648448 DEBUG (5): Node's MIN is: 3
-0:3:59.014648448 DEBUG (5): Measurement passes tct! Previous query: 20, Now sent: 3
+0:3:59.008789072 DEBUG (3): NodeID = 3 curdepth= 3
+0:3:59.008789072 DEBUG (3): Starting Data transmission to parent!
+0:3:59.008789072 DEBUG (3): measurement is: 40
+0:3:59.008789082 DEBUG (3): Node's MAX is: 40
+0:3:59.015304547 DEBUG (2): Measurement received from: 3
+0:3:59.015304557 DEBUG (2): Received from childID: 3 - max: 40
 0:3:59.020507823 DEBUG (7): NodeID = 7 curdepth= 3
 0:3:59.020507823 DEBUG (7): Starting Data transmission to parent!
-0:3:59.020507823 DEBUG (7): measurement is: 33
-0:3:59.020507823 DEBUG (7): ChildID: 8 has min: 32
-0:3:59.020507823 DEBUG (7): Node's MIN is: 32
-0:3:59.020507823 DEBUG (7): Measurement doesn't pass tct! Previous query: 32, Now measured: 32
-0:3:59.020507823 DEBUG (7): Doesn't send because of tct
-0:3:59.025268523 DEBUG (4): Received from childID: 5 - min: 3
+0:3:59.020507823 DEBUG (7): measurement is: 7
+0:3:59.020507833 DEBUG (7): Node's MAX is: 7
+0:3:59.023391727 DEBUG (2): Measurement received from: 7
+0:3:59.023391737 DEBUG (2): Received from childID: 7 - max: 7
+0:3:59.032226573 DEBUG (11): NodeID = 11 curdepth= 3
+0:3:59.032226573 DEBUG (11): Starting Data transmission to parent!
+0:3:59.032226573 DEBUG (11): measurement is: 18
+0:3:59.032226583 DEBUG (11): Node's MAX is: 18
+0:3:59.035156261 DEBUG (12): NodeID = 12 curdepth= 3
+0:3:59.035156261 DEBUG (12): Starting Data transmission to parent!
+0:3:59.035156261 DEBUG (12): measurement is: 27
+0:3:59.035156271 DEBUG (12): Node's MAX is: 27
+0:3:59.038085948 DEBUG (13): NodeID = 13 curdepth= 3
+0:3:59.038085948 DEBUG (13): Starting Data transmission to parent!
+0:3:59.038085948 DEBUG (13): measurement is: 9
+0:3:59.038085958 DEBUG (13): Node's MAX is: 9
+0:3:59.040069589 DEBUG (9): Measurement received from: 13
+0:3:59.040069599 DEBUG (9): Received from childID: 13 - max: 9
+0:3:59.041015636 DEBUG (14): NodeID = 14 curdepth= 3
+0:3:59.041015636 DEBUG (14): Starting Data transmission to parent!
+0:3:59.041015636 DEBUG (14): measurement is: 48
+0:3:59.041015646 DEBUG (14): Node's MAX is: 48
+0:3:59.042953449 DEBUG (6): Measurement received from: 11
+0:3:59.042953459 DEBUG (6): Received from childID: 11 - max: 18
+0:3:59.043945324 DEBUG (15): NodeID = 15 curdepth= 3
+0:3:59.043945324 DEBUG (15): Starting Data transmission to parent!
+0:3:59.043945324 DEBUG (15): measurement is: 21
+0:3:59.043945334 DEBUG (15): Node's MAX is: 21
+0:3:59.045120202 DEBUG (8): Measurement received from: 12
+0:3:59.045120212 DEBUG (8): Received from childID: 12 - max: 27
+0:3:59.048706031 DEBUG (10): Measurement received from: 14
+0:3:59.048706041 DEBUG (10): Received from childID: 14 - max: 48
+0:3:59.052200290 DEBUG (10): Measurement received from: 15
+0:3:59.052200300 DEBUG (10): Received from childID: 15 - max: 21
 0:3:59.255859385 DEBUG (2): NodeID = 2 curdepth= 2
 0:3:59.255859385 DEBUG (2): Starting Data transmission to parent!
-0:3:59.255859385 DEBUG (2): measurement is: 6
-0:3:59.255859385 DEBUG (2): Node's MIN is: 6
-0:3:59.255859385 DEBUG (2): Measurement passes tct! Previous query: 11, Now sent: 6
-0:3:59.261718760 DEBUG (4): NodeID = 4 curdepth= 2
-0:3:59.261718760 DEBUG (4): Starting Data transmission to parent!
-0:3:59.261718760 DEBUG (4): measurement is: 29
-0:3:59.261718760 DEBUG (4): ChildID: 5 has min: 3
-0:3:59.261718760 DEBUG (4): ChildID: 7 has min: 32
-0:3:59.261718760 DEBUG (4): Node's MIN is: 3
-0:3:59.261718760 DEBUG (4): Measurement doesn't pass tct! Previous query: 3, Now measured: 3
-0:3:59.261718760 DEBUG (4): Doesn't send because of tct
-0:3:59.264648416 DEBUG (1): Received from childID: 2 - min: 6
+0:3:59.255859385 DEBUG (2): measurement is: 22
+0:3:59.255859395 DEBUG (2): ChildID: 3 has max: 40
+0:3:59.255859395 DEBUG (2): ChildID: 7 has max: 7
+0:3:59.255859395 DEBUG (2): Node's MAX is: 40
+0:3:59.262084944 DEBUG (1): Measurement received from: 2
+0:3:59.262084954 DEBUG (1): Received from childID: 2 - max: 40
 0:3:59.267578135 DEBUG (6): NodeID = 6 curdepth= 2
 0:3:59.267578135 DEBUG (6): Starting Data transmission to parent!
-0:3:59.267578135 DEBUG (6): measurement is: 44
-0:3:59.267578135 DEBUG (6): Node's MIN is: 44
-0:3:59.267578135 DEBUG (6): Measurement passes tct! Previous query: 22, Now sent: 44
-0:3:59.276184062 DEBUG (3): Received from childID: 6 - min: 44
+0:3:59.267578135 DEBUG (6): measurement is: 46
+0:3:59.267578145 DEBUG (6): ChildID: 11 has max: 18
+0:3:59.267578145 DEBUG (6): Node's MAX is: 46
+0:3:59.273437510 DEBUG (8): NodeID = 8 curdepth= 2
+0:3:59.273437510 DEBUG (8): Starting Data transmission to parent!
+0:3:59.273437510 DEBUG (8): measurement is: 46
+0:3:59.273437520 DEBUG (8): ChildID: 12 has max: 27
+0:3:59.273437520 DEBUG (8): Node's MAX is: 46
+0:3:59.276367198 DEBUG (9): NodeID = 9 curdepth= 2
+0:3:59.276367198 DEBUG (9): Starting Data transmission to parent!
+0:3:59.276367198 DEBUG (9): measurement is: 20
+0:3:59.276367208 DEBUG (9): ChildID: 13 has max: 9
+0:3:59.276367208 DEBUG (9): Node's MAX is: 20
+0:3:59.276397708 DEBUG (4): Measurement received from: 8
+0:3:59.276397718 DEBUG (4): Received from childID: 8 - max: 46
+0:3:59.277450524 DEBUG (1): Measurement received from: 6
+0:3:59.277450534 DEBUG (1): Received from childID: 6 - max: 46
+0:3:59.279296886 DEBUG (10): NodeID = 10 curdepth= 2
+0:3:59.279296886 DEBUG (10): Starting Data transmission to parent!
+0:3:59.279296886 DEBUG (10): measurement is: 4
+0:3:59.279296896 DEBUG (10): ChildID: 14 has max: 48
+0:3:59.279296896 DEBUG (10): ChildID: 15 has max: 21
+0:3:59.279296896 DEBUG (10): Node's MAX is: 48
+0:3:59.283737160 DEBUG (4): Measurement received from: 9
+0:3:59.283737170 DEBUG (4): Received from childID: 9 - max: 20
+0:3:59.290283160 DEBUG (5): Measurement received from: 10
+0:3:59.290283170 DEBUG (5): Received from childID: 10 - max: 48
 0:3:59.502929697 DEBUG (1): NodeID = 1 curdepth= 1
 0:3:59.502929697 DEBUG (1): Starting Data transmission to parent!
-0:3:59.502929697 DEBUG (1): measurement is: 23
-0:3:59.502929697 DEBUG (1): ChildID: 2 has min: 6
-0:3:59.502929697 DEBUG (1): Node's MIN is: 6
-0:3:59.502929697 DEBUG (1): Measurement passes tct! Previous query: 11, Now sent: 6
-0:3:59.505233781 DEBUG (0): Received from childID: 1 - min: 6
-0:3:59.508789072 DEBUG (3): NodeID = 3 curdepth= 1
-0:3:59.508789072 DEBUG (3): Starting Data transmission to parent!
-0:3:59.508789072 DEBUG (3): measurement is: 12
-0:3:59.508789072 DEBUG (3): ChildID: 4 has min: 3
-0:3:59.508789072 DEBUG (3): ChildID: 6 has min: 44
-0:3:59.508789072 DEBUG (3): Node's MIN is: 3
-0:3:59.508789072 DEBUG (3): Measurement doesn't pass tct! Previous query: 3, Now measured: 3
-0:3:59.508789072 DEBUG (3): Doesn't send because of tct
+0:3:59.502929697 DEBUG (1): measurement is: 9
+0:3:59.502929707 DEBUG (1): ChildID: 2 has max: 40
+0:3:59.502929707 DEBUG (1): ChildID: 6 has max: 46
+0:3:59.502929707 DEBUG (1): Node's MAX is: 46
+0:3:59.509368879 DEBUG (0): Measurement received from: 1
+0:3:59.509368889 DEBUG (0): Received from childID: 1 - max: 46
+0:3:59.511718760 DEBUG (4): NodeID = 4 curdepth= 1
+0:3:59.511718760 DEBUG (4): Starting Data transmission to parent!
+0:3:59.511718760 DEBUG (4): measurement is: 17
+0:3:59.511718770 DEBUG (4): ChildID: 8 has max: 46
+0:3:59.511718770 DEBUG (4): ChildID: 9 has max: 20
+0:3:59.511718770 DEBUG (4): Node's MAX is: 46
+0:3:59.514648448 DEBUG (5): NodeID = 5 curdepth= 1
+0:3:59.514648448 DEBUG (5): Starting Data transmission to parent!
+0:3:59.514648448 DEBUG (5): measurement is: 23
+0:3:59.514648458 DEBUG (5): ChildID: 10 has max: 48
+0:3:59.514648458 DEBUG (5): Node's MAX is: 48
+0:3:59.518051148 DEBUG (0): Measurement received from: 5
+0:3:59.518051158 DEBUG (0): Received from childID: 5 - max: 48
+0:3:59.522003134 DEBUG (0): Measurement received from: 4
+0:3:59.522003144 DEBUG (0): Received from childID: 4 - max: 46
 0:3:59.750000010 DEBUG (0): NodeID = 0 curdepth= 0
-0:3:59.750000010 DEBUG (0): measurement is: 25
-0:3:59.750000010 DEBUG (0): ChildID: 1 has min: 6
-0:3:59.750000010 DEBUG (0): ChildID: 3 has min: 3
-0:3:59.750000010 DEBUG (0): Node's MIN is: 3
-0:3:59.750000010 DEBUG (0): 
-0:3:59.750000010 DEBUG (0): FINAL RESULT: MIN: 3
-0:3:59.750000010 DEBUG (0): 
+0:3:59.750000010 DEBUG (0): measurement is: 46
+0:3:59.750000020 DEBUG (0): ChildID: 1 has max: 46
+0:3:59.750000020 DEBUG (0): ChildID: 4 has max: 46
+0:3:59.750000020 DEBUG (0): ChildID: 5 has max: 48
+0:3:59.750000020 DEBUG (0): Node's MAX is: 48
+0:3:59.750000020 DEBUG (0): 
+0:3:59.750000020 DEBUG (0): FINAL RESULT: MAX: 48
+0:3:59.750000020 DEBUG (0): 
 0:4:0.000000010 DEBUG (0): ##################################### 
 0:4:0.000000010 DEBUG (0): #######   ROUND   5    ############## 
 0:4:0.000000010 DEBUG (0): #####################################
-0:4:58.773437510 DEBUG (8): NodeID = 8 curdepth= 4
-0:4:58.773437510 DEBUG (8): Starting Data transmission to parent!
-0:4:58.773437510 DEBUG (8): measurement is: 2
-0:4:58.773437510 DEBUG (8): Node's MIN is: 2
-0:4:58.773437510 DEBUG (8): Measurement passes tct! Previous query: 32, Now sent: 2
-0:4:58.783889740 DEBUG (7): Received from childID: 8 - min: 2
-0:4:59.014648448 DEBUG (5): NodeID = 5 curdepth= 3
-0:4:59.014648448 DEBUG (5): Starting Data transmission to parent!
-0:4:59.014648448 DEBUG (5): measurement is: 47
-0:4:59.014648448 DEBUG (5): Node's MIN is: 47
-0:4:59.014648448 DEBUG (5): Measurement passes tct! Previous query: 3, Now sent: 47
+0:4:59.008789072 DEBUG (3): NodeID = 3 curdepth= 3
+0:4:59.008789072 DEBUG (3): Starting Data transmission to parent!
+0:4:59.008789072 DEBUG (3): measurement is: 15
+0:4:59.008789082 DEBUG (3): Node's MAX is: 15
+0:4:59.015624980 DEBUG (2): Measurement received from: 3
+0:4:59.015624990 DEBUG (2): Received from childID: 3 - max: 15
 0:4:59.020507823 DEBUG (7): NodeID = 7 curdepth= 3
 0:4:59.020507823 DEBUG (7): Starting Data transmission to parent!
-0:4:59.020507823 DEBUG (7): measurement is: 8
-0:4:59.020507823 DEBUG (7): ChildID: 8 has min: 2
-0:4:59.020507823 DEBUG (7): Node's MIN is: 2
-0:4:59.020507823 DEBUG (7): Measurement passes tct! Previous query: 32, Now sent: 2
-0:4:59.022460922 DEBUG (4): Received from childID: 5 - min: 47
+0:4:59.020507823 DEBUG (7): measurement is: 19
+0:4:59.020507833 DEBUG (7): Node's MAX is: 19
+0:4:59.025604239 DEBUG (2): Measurement received from: 7
+0:4:59.025604249 DEBUG (2): Received from childID: 7 - max: 19
+0:4:59.032226573 DEBUG (11): NodeID = 11 curdepth= 3
+0:4:59.032226573 DEBUG (11): Starting Data transmission to parent!
+0:4:59.032226573 DEBUG (11): measurement is: 42
+0:4:59.032226583 DEBUG (11): Node's MAX is: 42
+0:4:59.035156261 DEBUG (12): NodeID = 12 curdepth= 3
+0:4:59.035156261 DEBUG (12): Starting Data transmission to parent!
+0:4:59.035156261 DEBUG (12): measurement is: 15
+0:4:59.035156271 DEBUG (12): Node's MAX is: 15
+0:4:59.038085948 DEBUG (13): NodeID = 13 curdepth= 3
+0:4:59.038085948 DEBUG (13): Starting Data transmission to parent!
+0:4:59.038085948 DEBUG (13): measurement is: 19
+0:4:59.038085958 DEBUG (13): Node's MAX is: 19
+0:4:59.041015636 DEBUG (14): NodeID = 14 curdepth= 3
+0:4:59.041015636 DEBUG (14): Starting Data transmission to parent!
+0:4:59.041015636 DEBUG (14): measurement is: 35
+0:4:59.041015646 DEBUG (14): Node's MAX is: 35
+0:4:59.041976910 DEBUG (8): Measurement received from: 12
+0:4:59.041976920 DEBUG (8): Received from childID: 12 - max: 15
+0:4:59.043029743 DEBUG (6): Measurement received from: 11
+0:4:59.043029753 DEBUG (6): Received from childID: 11 - max: 42
+0:4:59.043945324 DEBUG (15): NodeID = 15 curdepth= 3
+0:4:59.043945324 DEBUG (15): Starting Data transmission to parent!
+0:4:59.043945324 DEBUG (15): measurement is: 10
+0:4:59.043945334 DEBUG (15): Node's MAX is: 10
+0:4:59.045242306 DEBUG (10): Measurement received from: 14
+0:4:59.045242316 DEBUG (10): Received from childID: 14 - max: 35
+0:4:59.048034631 DEBUG (9): Measurement received from: 13
+0:4:59.048034641 DEBUG (9): Received from childID: 13 - max: 19
 0:4:59.255859385 DEBUG (2): NodeID = 2 curdepth= 2
 0:4:59.255859385 DEBUG (2): Starting Data transmission to parent!
-0:4:59.255859385 DEBUG (2): measurement is: 20
-0:4:59.255859385 DEBUG (2): Node's MIN is: 20
-0:4:59.255859385 DEBUG (2): Measurement passes tct! Previous query: 6, Now sent: 20
-0:4:59.259216319 DEBUG (1): Received from childID: 2 - min: 20
-0:4:59.261718760 DEBUG (4): NodeID = 4 curdepth= 2
-0:4:59.261718760 DEBUG (4): Starting Data transmission to parent!
-0:4:59.261718760 DEBUG (4): measurement is: 25
-0:4:59.261718760 DEBUG (4): ChildID: 5 has min: 47
-0:4:59.261718760 DEBUG (4): ChildID: 7 has min: 32
-0:4:59.261718760 DEBUG (4): Node's MIN is: 25
-0:4:59.261718760 DEBUG (4): Measurement passes tct! Previous query: 3, Now sent: 25
-0:4:59.266601564 DEBUG (3): Received from childID: 4 - min: 25
+0:4:59.255859385 DEBUG (2): measurement is: 28
+0:4:59.255859395 DEBUG (2): ChildID: 3 has max: 15
+0:4:59.255859395 DEBUG (2): ChildID: 7 has max: 19
+0:4:59.255859395 DEBUG (2): Node's MAX is: 28
+0:4:59.263412451 DEBUG (1): Measurement received from: 2
+0:4:59.263412461 DEBUG (1): Received from childID: 2 - max: 28
 0:4:59.267578135 DEBUG (6): NodeID = 6 curdepth= 2
 0:4:59.267578135 DEBUG (6): Starting Data transmission to parent!
-0:4:59.267578135 DEBUG (6): measurement is: 26
-0:4:59.267578135 DEBUG (6): Node's MIN is: 26
-0:4:59.267578135 DEBUG (6): Measurement passes tct! Previous query: 44, Now sent: 26
-0:4:59.278320280 DEBUG (3): Received from childID: 6 - min: 26
+0:4:59.267578135 DEBUG (6): measurement is: 9
+0:4:59.267578145 DEBUG (6): ChildID: 11 has max: 42
+0:4:59.267578145 DEBUG (6): Node's MAX is: 42
+0:4:59.273437510 DEBUG (8): NodeID = 8 curdepth= 2
+0:4:59.273437510 DEBUG (8): Starting Data transmission to parent!
+0:4:59.273437510 DEBUG (8): measurement is: 7
+0:4:59.273437520 DEBUG (8): ChildID: 12 has max: 15
+0:4:59.273437520 DEBUG (8): Node's MAX is: 15
+0:4:59.276367198 DEBUG (9): NodeID = 9 curdepth= 2
+0:4:59.276367198 DEBUG (9): Starting Data transmission to parent!
+0:4:59.276367198 DEBUG (9): measurement is: 41
+0:4:59.276367208 DEBUG (9): ChildID: 13 has max: 19
+0:4:59.276367208 DEBUG (9): Node's MAX is: 41
+0:4:59.276519778 DEBUG (4): Measurement received from: 8
+0:4:59.276519788 DEBUG (4): Received from childID: 8 - max: 15
+0:4:59.276824917 DEBUG (1): Measurement received from: 6
+0:4:59.276824927 DEBUG (1): Received from childID: 6 - max: 42
+0:4:59.279296886 DEBUG (10): NodeID = 10 curdepth= 2
+0:4:59.279296886 DEBUG (10): Starting Data transmission to parent!
+0:4:59.279296886 DEBUG (10): measurement is: 48
+0:4:59.279296896 DEBUG (10): ChildID: 14 has max: 35
+0:4:59.279296896 DEBUG (10): ChildID: 15 has max: 21
+0:4:59.279296896 DEBUG (10): Node's MAX is: 48
+0:4:59.283432003 DEBUG (5): Measurement received from: 10
+0:4:59.283432013 DEBUG (5): Received from childID: 10 - max: 48
+0:4:59.284988373 DEBUG (4): Measurement received from: 9
+0:4:59.284988383 DEBUG (4): Received from childID: 9 - max: 41
 0:4:59.502929697 DEBUG (1): NodeID = 1 curdepth= 1
 0:4:59.502929697 DEBUG (1): Starting Data transmission to parent!
-0:4:59.502929697 DEBUG (1): measurement is: 33
-0:4:59.502929697 DEBUG (1): ChildID: 2 has min: 20
-0:4:59.502929697 DEBUG (1): Node's MIN is: 20
-0:4:59.502929697 DEBUG (1): Measurement passes tct! Previous query: 6, Now sent: 20
-0:4:59.508239745 DEBUG (0): Received from childID: 1 - min: 20
-0:4:59.508789072 DEBUG (3): NodeID = 3 curdepth= 1
-0:4:59.508789072 DEBUG (3): Starting Data transmission to parent!
-0:4:59.508789072 DEBUG (3): measurement is: 28
-0:4:59.508789072 DEBUG (3): ChildID: 4 has min: 25
-0:4:59.508789072 DEBUG (3): ChildID: 6 has min: 26
-0:4:59.508789072 DEBUG (3): Node's MIN is: 25
-0:4:59.508789072 DEBUG (3): Measurement passes tct! Previous query: 3, Now sent: 25
-0:4:59.519699063 DEBUG (0): Received from childID: 3 - min: 25
+0:4:59.502929697 DEBUG (1): measurement is: 9
+0:4:59.502929707 DEBUG (1): ChildID: 2 has max: 28
+0:4:59.502929707 DEBUG (1): ChildID: 6 has max: 42
+0:4:59.502929707 DEBUG (1): Node's MAX is: 42
+0:4:59.504791269 DEBUG (0): Measurement received from: 1
+0:4:59.504791279 DEBUG (0): Received from childID: 1 - max: 42
+0:4:59.511718760 DEBUG (4): NodeID = 4 curdepth= 1
+0:4:59.511718760 DEBUG (4): Starting Data transmission to parent!
+0:4:59.511718760 DEBUG (4): measurement is: 40
+0:4:59.511718770 DEBUG (4): ChildID: 8 has max: 15
+0:4:59.511718770 DEBUG (4): ChildID: 9 has max: 41
+0:4:59.511718770 DEBUG (4): Node's MAX is: 41
+0:4:59.514648448 DEBUG (5): NodeID = 5 curdepth= 1
+0:4:59.514648448 DEBUG (5): Starting Data transmission to parent!
+0:4:59.514648448 DEBUG (5): measurement is: 7
+0:4:59.514648458 DEBUG (5): ChildID: 10 has max: 48
+0:4:59.514648458 DEBUG (5): Node's MAX is: 48
+0:4:59.516998297 DEBUG (0): Measurement received from: 5
+0:4:59.516998307 DEBUG (0): Received from childID: 5 - max: 48
+0:4:59.521697960 DEBUG (0): Measurement received from: 4
+0:4:59.521697970 DEBUG (0): Received from childID: 4 - max: 41
 0:4:59.750000010 DEBUG (0): NodeID = 0 curdepth= 0
-0:4:59.750000010 DEBUG (0): measurement is: 38
-0:4:59.750000010 DEBUG (0): ChildID: 1 has min: 20
-0:4:59.750000010 DEBUG (0): ChildID: 3 has min: 25
-0:4:59.750000010 DEBUG (0): Node's MIN is: 20
-0:4:59.750000010 DEBUG (0): 
-0:4:59.750000010 DEBUG (0): FINAL RESULT: MIN: 20
-0:4:59.750000010 DEBUG (0): 
+0:4:59.750000010 DEBUG (0): measurement is: 31
+0:4:59.750000020 DEBUG (0): ChildID: 1 has max: 42
+0:4:59.750000020 DEBUG (0): ChildID: 4 has max: 41
+0:4:59.750000020 DEBUG (0): ChildID: 5 has max: 48
+0:4:59.750000020 DEBUG (0): Node's MAX is: 48
+0:4:59.750000020 DEBUG (0): 
+0:4:59.750000020 DEBUG (0): FINAL RESULT: MAX: 48
+0:4:59.750000020 DEBUG (0): 
 0:5:0.000000010 DEBUG (0): ##################################### 
 0:5:0.000000010 DEBUG (0): #######   ROUND   6    ############## 
 0:5:0.000000010 DEBUG (0): #####################################
-0:5:58.773437510 DEBUG (8): NodeID = 8 curdepth= 4
-0:5:58.773437510 DEBUG (8): Starting Data transmission to parent!
-0:5:58.773437510 DEBUG (8): measurement is: 32
-0:5:58.773437510 DEBUG (8): Node's MIN is: 32
-0:5:58.773437510 DEBUG (8): Measurement passes tct! Previous query: 2, Now sent: 32
-0:5:59.014648448 DEBUG (5): NodeID = 5 curdepth= 3
-0:5:59.014648448 DEBUG (5): Starting Data transmission to parent!
-0:5:59.014648448 DEBUG (5): measurement is: 12
-0:5:59.014648448 DEBUG (5): Node's MIN is: 12
-0:5:59.014648448 DEBUG (5): Measurement passes tct! Previous query: 47, Now sent: 12
+0:5:59.008789072 DEBUG (3): NodeID = 3 curdepth= 3
+0:5:59.008789072 DEBUG (3): Starting Data transmission to parent!
+0:5:59.008789072 DEBUG (3): measurement is: 49
+0:5:59.008789082 DEBUG (3): Node's MAX is: 49
+0:5:59.015914895 DEBUG (2): Measurement received from: 3
+0:5:59.015914905 DEBUG (2): Received from childID: 3 - max: 49
 0:5:59.020507823 DEBUG (7): NodeID = 7 curdepth= 3
 0:5:59.020507823 DEBUG (7): Starting Data transmission to parent!
-0:5:59.020507823 DEBUG (7): measurement is: 2
-0:5:59.020507823 DEBUG (7): ChildID: 8 has min: 2
-0:5:59.020507823 DEBUG (7): Node's MIN is: 2
-0:5:59.020507823 DEBUG (7): Measurement doesn't pass tct! Previous query: 2, Now measured: 2
-0:5:59.020507823 DEBUG (7): Doesn't send because of tct
-0:5:59.020828241 DEBUG (4): Received from childID: 5 - min: 12
+0:5:59.020507823 DEBUG (7): measurement is: 43
+0:5:59.020507833 DEBUG (7): Node's MAX is: 43
+0:5:59.022689827 DEBUG (2): Measurement received from: 7
+0:5:59.022689837 DEBUG (2): Received from childID: 7 - max: 43
+0:5:59.032226573 DEBUG (11): NodeID = 11 curdepth= 3
+0:5:59.032226573 DEBUG (11): Starting Data transmission to parent!
+0:5:59.032226573 DEBUG (11): measurement is: 4
+0:5:59.032226583 DEBUG (11): Node's MAX is: 4
+0:5:59.035156261 DEBUG (12): NodeID = 12 curdepth= 3
+0:5:59.035156261 DEBUG (12): Starting Data transmission to parent!
+0:5:59.035156261 DEBUG (12): measurement is: 7
+0:5:59.035156271 DEBUG (12): Node's MAX is: 7
+0:5:59.035339358 DEBUG (6): Measurement received from: 11
+0:5:59.035339368 DEBUG (6): Received from childID: 11 - max: 4
+0:5:59.038085948 DEBUG (13): NodeID = 13 curdepth= 3
+0:5:59.038085948 DEBUG (13): Starting Data transmission to parent!
+0:5:59.038085948 DEBUG (13): measurement is: 24
+0:5:59.038085958 DEBUG (13): Node's MAX is: 24
+0:5:59.038772583 DEBUG (8): Measurement received from: 12
+0:5:59.038772593 DEBUG (8): Received from childID: 12 - max: 7
+0:5:59.041015636 DEBUG (14): NodeID = 14 curdepth= 3
+0:5:59.041015636 DEBUG (14): Starting Data transmission to parent!
+0:5:59.041015636 DEBUG (14): measurement is: 13
+0:5:59.041015646 DEBUG (14): Node's MAX is: 13
+0:5:59.043945324 DEBUG (15): NodeID = 15 curdepth= 3
+0:5:59.043945324 DEBUG (15): Starting Data transmission to parent!
+0:5:59.043945324 DEBUG (15): measurement is: 15
+0:5:59.043945334 DEBUG (15): Node's MAX is: 15
+0:5:59.045501687 DEBUG (9): Measurement received from: 13
+0:5:59.045501697 DEBUG (9): Received from childID: 13 - max: 24
+0:5:59.047790509 DEBUG (10): Measurement received from: 14
+0:5:59.047790519 DEBUG (10): Received from childID: 14 - max: 13
+0:5:59.052841156 DEBUG (10): Measurement received from: 15
+0:5:59.052841166 DEBUG (10): Received from childID: 15 - max: 15
 0:5:59.255859385 DEBUG (2): NodeID = 2 curdepth= 2
 0:5:59.255859385 DEBUG (2): Starting Data transmission to parent!
-0:5:59.255859385 DEBUG (2): measurement is: 47
-0:5:59.255859385 DEBUG (2): Node's MIN is: 47
-0:5:59.255859385 DEBUG (2): Measurement passes tct! Previous query: 20, Now sent: 47
-0:5:59.261718760 DEBUG (4): NodeID = 4 curdepth= 2
-0:5:59.261718760 DEBUG (4): Starting Data transmission to parent!
-0:5:59.261718760 DEBUG (4): measurement is: 31
-0:5:59.261718760 DEBUG (4): ChildID: 5 has min: 12
-0:5:59.261718760 DEBUG (4): ChildID: 7 has min: 32
-0:5:59.261718760 DEBUG (4): Node's MIN is: 12
-0:5:59.261718760 DEBUG (4): Measurement passes tct! Previous query: 25, Now sent: 12
-0:5:59.262283317 DEBUG (1): Received from childID: 2 - min: 47
-0:5:59.263519307 DEBUG (3): Received from childID: 4 - min: 12
+0:5:59.255859385 DEBUG (2): measurement is: 25
+0:5:59.255859395 DEBUG (2): ChildID: 3 has max: 49
+0:5:59.255859395 DEBUG (2): ChildID: 7 has max: 43
+0:5:59.255859395 DEBUG (2): Node's MAX is: 49
+0:5:59.257858284 DEBUG (1): Measurement received from: 2
+0:5:59.257858294 DEBUG (1): Received from childID: 2 - max: 49
 0:5:59.267578135 DEBUG (6): NodeID = 6 curdepth= 2
 0:5:59.267578135 DEBUG (6): Starting Data transmission to parent!
 0:5:59.267578135 DEBUG (6): measurement is: 21
-0:5:59.267578135 DEBUG (6): Node's MIN is: 21
-0:5:59.267578135 DEBUG (6): Measurement passes tct! Previous query: 26, Now sent: 21
-0:5:59.278442350 DEBUG (3): Received from childID: 6 - min: 21
+0:5:59.267578145 DEBUG (6): ChildID: 11 has max: 4
+0:5:59.267578145 DEBUG (6): Node's MAX is: 21
+0:5:59.273437510 DEBUG (8): NodeID = 8 curdepth= 2
+0:5:59.273437510 DEBUG (8): Starting Data transmission to parent!
+0:5:59.273437510 DEBUG (8): measurement is: 44
+0:5:59.273437520 DEBUG (8): ChildID: 12 has max: 7
+0:5:59.273437520 DEBUG (8): Node's MAX is: 44
+0:5:59.274505595 DEBUG (1): Measurement received from: 6
+0:5:59.274505605 DEBUG (1): Received from childID: 6 - max: 21
+0:5:59.276367198 DEBUG (9): NodeID = 9 curdepth= 2
+0:5:59.276367198 DEBUG (9): Starting Data transmission to parent!
+0:5:59.276367198 DEBUG (9): measurement is: 29
+0:5:59.276367208 DEBUG (9): ChildID: 13 has max: 24
+0:5:59.276367208 DEBUG (9): Node's MAX is: 29
+0:5:59.279296886 DEBUG (10): NodeID = 10 curdepth= 2
+0:5:59.279296886 DEBUG (10): Starting Data transmission to parent!
+0:5:59.279296886 DEBUG (10): measurement is: 49
+0:5:59.279296896 DEBUG (10): ChildID: 14 has max: 13
+0:5:59.279296896 DEBUG (10): ChildID: 15 has max: 15
+0:5:59.279296896 DEBUG (10): Node's MAX is: 49
+0:5:59.283477745 DEBUG (4): Measurement received from: 8
+0:5:59.283477755 DEBUG (4): Received from childID: 8 - max: 44
+0:5:59.287078815 DEBUG (4): Measurement received from: 9
+0:5:59.287078825 DEBUG (4): Received from childID: 9 - max: 29
 0:5:59.502929697 DEBUG (1): NodeID = 1 curdepth= 1
 0:5:59.502929697 DEBUG (1): Starting Data transmission to parent!
-0:5:59.502929697 DEBUG (1): measurement is: 28
-0:5:59.502929697 DEBUG (1): ChildID: 2 has min: 47
-0:5:59.502929697 DEBUG (1): Node's MIN is: 28
-0:5:59.502929697 DEBUG (1): Measurement passes tct! Previous query: 20, Now sent: 28
-0:5:59.508789072 DEBUG (3): NodeID = 3 curdepth= 1
-0:5:59.508789072 DEBUG (3): Starting Data transmission to parent!
-0:5:59.508789072 DEBUG (3): measurement is: 32
-0:5:59.508789072 DEBUG (3): ChildID: 4 has min: 12
-0:5:59.508789072 DEBUG (3): ChildID: 6 has min: 21
-0:5:59.508789072 DEBUG (3): Node's MIN is: 12
-0:5:59.508789072 DEBUG (3): Measurement passes tct! Previous query: 25, Now sent: 12
-0:5:59.509841908 DEBUG (0): Received from childID: 1 - min: 28
-0:5:59.511352554 DEBUG (0): Received from childID: 3 - min: 12
+0:5:59.502929697 DEBUG (1): measurement is: 33
+0:5:59.502929707 DEBUG (1): ChildID: 2 has max: 49
+0:5:59.502929707 DEBUG (1): ChildID: 6 has max: 21
+0:5:59.502929707 DEBUG (1): Node's MAX is: 49
+0:5:59.506668089 DEBUG (0): Measurement received from: 1
+0:5:59.506668099 DEBUG (0): Received from childID: 1 - max: 49
+0:5:59.511718760 DEBUG (4): NodeID = 4 curdepth= 1
+0:5:59.511718760 DEBUG (4): Starting Data transmission to parent!
+0:5:59.511718760 DEBUG (4): measurement is: 46
+0:5:59.511718770 DEBUG (4): ChildID: 8 has max: 44
+0:5:59.511718770 DEBUG (4): ChildID: 9 has max: 29
+0:5:59.511718770 DEBUG (4): Node's MAX is: 46
+0:5:59.514648448 DEBUG (5): NodeID = 5 curdepth= 1
+0:5:59.514648448 DEBUG (5): Starting Data transmission to parent!
+0:5:59.514648448 DEBUG (5): measurement is: 20
+0:5:59.514648458 DEBUG (5): ChildID: 10 has max: 48
+0:5:59.514648458 DEBUG (5): Node's MAX is: 48
+0:5:59.518356304 DEBUG (0): Measurement received from: 4
+0:5:59.518356314 DEBUG (0): Received from childID: 4 - max: 46
+0:5:59.521438579 DEBUG (0): Measurement received from: 5
+0:5:59.521438589 DEBUG (0): Received from childID: 5 - max: 48
 0:5:59.750000010 DEBUG (0): NodeID = 0 curdepth= 0
-0:5:59.750000010 DEBUG (0): measurement is: 24
-0:5:59.750000010 DEBUG (0): ChildID: 1 has min: 28
-0:5:59.750000010 DEBUG (0): ChildID: 3 has min: 12
-0:5:59.750000010 DEBUG (0): Node's MIN is: 12
-0:5:59.750000010 DEBUG (0): 
-0:5:59.750000010 DEBUG (0): FINAL RESULT: MIN: 12
-0:5:59.750000010 DEBUG (0): 
+0:5:59.750000010 DEBUG (0): measurement is: 41
+0:5:59.750000020 DEBUG (0): ChildID: 1 has max: 49
+0:5:59.750000020 DEBUG (0): ChildID: 4 has max: 46
+0:5:59.750000020 DEBUG (0): ChildID: 5 has max: 48
+0:5:59.750000020 DEBUG (0): Node's MAX is: 49
+0:5:59.750000020 DEBUG (0): 
+0:5:59.750000020 DEBUG (0): FINAL RESULT: MAX: 49
+0:5:59.750000020 DEBUG (0): 
 0:6:0.000000010 DEBUG (0): ##################################### 
 0:6:0.000000010 DEBUG (0): #######   ROUND   7    ############## 
 0:6:0.000000010 DEBUG (0): #####################################
-0:6:58.773437510 DEBUG (8): NodeID = 8 curdepth= 4
-0:6:58.773437510 DEBUG (8): Starting Data transmission to parent!
-0:6:58.773437510 DEBUG (8): measurement is: 41
-0:6:58.773437510 DEBUG (8): Node's MIN is: 41
-0:6:58.773437510 DEBUG (8): Measurement passes tct! Previous query: 32, Now sent: 41
-0:6:58.780868517 DEBUG (7): Received from childID: 8 - min: 41
-0:6:59.014648448 DEBUG (5): NodeID = 5 curdepth= 3
-0:6:59.014648448 DEBUG (5): Starting Data transmission to parent!
-0:6:59.014648448 DEBUG (5): measurement is: 8
-0:6:59.014648448 DEBUG (5): Node's MIN is: 8
-0:6:59.014648448 DEBUG (5): Measurement passes tct! Previous query: 12, Now sent: 8
+0:6:59.008789072 DEBUG (3): NodeID = 3 curdepth= 3
+0:6:59.008789072 DEBUG (3): Starting Data transmission to parent!
+0:6:59.008789072 DEBUG (3): measurement is: 41
+0:6:59.008789082 DEBUG (3): Node's MAX is: 41
+0:6:59.013092036 DEBUG (2): Measurement received from: 3
+0:6:59.013092046 DEBUG (2): Received from childID: 3 - max: 41
 0:6:59.020507823 DEBUG (7): NodeID = 7 curdepth= 3
 0:6:59.020507823 DEBUG (7): Starting Data transmission to parent!
-0:6:59.020507823 DEBUG (7): measurement is: 19
-0:6:59.020507823 DEBUG (7): ChildID: 8 has min: 41
-0:6:59.020507823 DEBUG (7): Node's MIN is: 19
-0:6:59.020507823 DEBUG (7): Measurement passes tct! Previous query: 2, Now sent: 19
-0:6:59.021835315 DEBUG (4): Received from childID: 5 - min: 8
-0:6:59.024093637 DEBUG (4): Received from childID: 7 - min: 19
+0:6:59.020507823 DEBUG (7): measurement is: 45
+0:6:59.020507833 DEBUG (7): Node's MAX is: 45
+0:6:59.028472874 DEBUG (2): Measurement received from: 7
+0:6:59.028472884 DEBUG (2): Received from childID: 7 - max: 45
+0:6:59.032226573 DEBUG (11): NodeID = 11 curdepth= 3
+0:6:59.032226573 DEBUG (11): Starting Data transmission to parent!
+0:6:59.032226573 DEBUG (11): measurement is: 11
+0:6:59.032226583 DEBUG (11): Node's MAX is: 11
+0:6:59.035156261 DEBUG (12): NodeID = 12 curdepth= 3
+0:6:59.035156261 DEBUG (12): Starting Data transmission to parent!
+0:6:59.035156261 DEBUG (12): measurement is: 20
+0:6:59.035156271 DEBUG (12): Node's MAX is: 20
+0:6:59.035720825 DEBUG (6): Measurement received from: 11
+0:6:59.035720835 DEBUG (6): Received from childID: 11 - max: 11
+0:6:59.038085948 DEBUG (13): NodeID = 13 curdepth= 3
+0:6:59.038085948 DEBUG (13): Starting Data transmission to parent!
+0:6:59.038085948 DEBUG (13): measurement is: 36
+0:6:59.038085958 DEBUG (13): Node's MAX is: 36
+0:6:59.039398189 DEBUG (8): Measurement received from: 12
+0:6:59.039398199 DEBUG (8): Received from childID: 12 - max: 20
+0:6:59.040740972 DEBUG (9): Measurement received from: 13
+0:6:59.040740982 DEBUG (9): Received from childID: 13 - max: 36
+0:6:59.041015636 DEBUG (14): NodeID = 14 curdepth= 3
+0:6:59.041015636 DEBUG (14): Starting Data transmission to parent!
+0:6:59.041015636 DEBUG (14): measurement is: 48
+0:6:59.041015646 DEBUG (14): Node's MAX is: 48
+0:6:59.043167123 DEBUG (10): Measurement received from: 14
+0:6:59.043167133 DEBUG (10): Received from childID: 14 - max: 48
+0:6:59.043945324 DEBUG (15): NodeID = 15 curdepth= 3
+0:6:59.043945324 DEBUG (15): Starting Data transmission to parent!
+0:6:59.043945324 DEBUG (15): measurement is: 27
+0:6:59.043945334 DEBUG (15): Node's MAX is: 27
+0:6:59.050369246 DEBUG (10): Measurement received from: 15
+0:6:59.050369256 DEBUG (10): Received from childID: 15 - max: 27
 0:6:59.255859385 DEBUG (2): NodeID = 2 curdepth= 2
 0:6:59.255859385 DEBUG (2): Starting Data transmission to parent!
-0:6:59.255859385 DEBUG (2): measurement is: 2
-0:6:59.255859385 DEBUG (2): Node's MIN is: 2
-0:6:59.255859385 DEBUG (2): Measurement passes tct! Previous query: 47, Now sent: 2
-0:6:59.261718760 DEBUG (4): NodeID = 4 curdepth= 2
-0:6:59.261718760 DEBUG (4): Starting Data transmission to parent!
-0:6:59.261718760 DEBUG (4): measurement is: 16
-0:6:59.261718760 DEBUG (4): ChildID: 5 has min: 8
-0:6:59.261718760 DEBUG (4): ChildID: 7 has min: 19
-0:6:59.261718760 DEBUG (4): Node's MIN is: 8
-0:6:59.261718760 DEBUG (4): Measurement passes tct! Previous query: 12, Now sent: 8
-0:6:59.264831520 DEBUG (1): Received from childID: 2 - min: 2
-0:6:59.266510012 DEBUG (3): Received from childID: 4 - min: 8
+0:6:59.255859385 DEBUG (2): measurement is: 14
+0:6:59.255859395 DEBUG (2): ChildID: 3 has max: 41
+0:6:59.255859395 DEBUG (2): ChildID: 7 has max: 45
+0:6:59.255859395 DEBUG (2): Node's MAX is: 45
+0:6:59.259017946 DEBUG (1): Measurement received from: 2
+0:6:59.259017956 DEBUG (1): Received from childID: 2 - max: 45
 0:6:59.267578135 DEBUG (6): NodeID = 6 curdepth= 2
 0:6:59.267578135 DEBUG (6): Starting Data transmission to parent!
-0:6:59.267578135 DEBUG (6): measurement is: 18
-0:6:59.267578135 DEBUG (6): Node's MIN is: 18
-0:6:59.267578135 DEBUG (6): Measurement passes tct! Previous query: 21, Now sent: 18
-0:6:59.277526828 DEBUG (3): Received from childID: 6 - min: 18
+0:6:59.267578135 DEBUG (6): measurement is: 34
+0:6:59.267578145 DEBUG (6): ChildID: 11 has max: 11
+0:6:59.267578145 DEBUG (6): Node's MAX is: 34
+0:6:59.273025501 DEBUG (1): Measurement received from: 6
+0:6:59.273025511 DEBUG (1): Received from childID: 6 - max: 34
+0:6:59.273437510 DEBUG (8): NodeID = 8 curdepth= 2
+0:6:59.273437510 DEBUG (8): Starting Data transmission to parent!
+0:6:59.273437510 DEBUG (8): measurement is: 46
+0:6:59.273437520 DEBUG (8): ChildID: 12 has max: 20
+0:6:59.273437520 DEBUG (8): Node's MAX is: 46
+0:6:59.276367198 DEBUG (9): NodeID = 9 curdepth= 2
+0:6:59.276367198 DEBUG (9): Starting Data transmission to parent!
+0:6:59.276367198 DEBUG (9): measurement is: 26
+0:6:59.276367208 DEBUG (9): ChildID: 13 has max: 36
+0:6:59.276367208 DEBUG (9): Node's MAX is: 36
+0:6:59.278274528 DEBUG (4): Measurement received from: 8
+0:6:59.278274538 DEBUG (4): Received from childID: 8 - max: 46
+0:6:59.279296886 DEBUG (10): NodeID = 10 curdepth= 2
+0:6:59.279296886 DEBUG (10): Starting Data transmission to parent!
+0:6:59.279296886 DEBUG (10): measurement is: 34
+0:6:59.279296896 DEBUG (10): ChildID: 14 has max: 48
+0:6:59.279296896 DEBUG (10): ChildID: 15 has max: 27
+0:6:59.279296896 DEBUG (10): Node's MAX is: 48
+0:6:59.283996575 DEBUG (5): Measurement received from: 10
+0:6:59.283996585 DEBUG (5): Received from childID: 10 - max: 48
+0:6:59.286666830 DEBUG (4): Measurement received from: 9
+0:6:59.286666840 DEBUG (4): Received from childID: 9 - max: 36
 0:6:59.502929697 DEBUG (1): NodeID = 1 curdepth= 1
 0:6:59.502929697 DEBUG (1): Starting Data transmission to parent!
-0:6:59.502929697 DEBUG (1): measurement is: 31
-0:6:59.502929697 DEBUG (1): ChildID: 2 has min: 2
-0:6:59.502929697 DEBUG (1): Node's MIN is: 2
-0:6:59.502929697 DEBUG (1): Measurement passes tct! Previous query: 28, Now sent: 2
-0:6:59.508789072 DEBUG (3): NodeID = 3 curdepth= 1
-0:6:59.508789072 DEBUG (3): Starting Data transmission to parent!
-0:6:59.508789072 DEBUG (3): measurement is: 15
-0:6:59.508789072 DEBUG (3): ChildID: 4 has min: 8
-0:6:59.508789072 DEBUG (3): ChildID: 6 has min: 18
-0:6:59.508789072 DEBUG (3): Node's MIN is: 8
-0:6:59.508789072 DEBUG (3): Measurement passes tct! Previous query: 12, Now sent: 8
-0:6:59.509628286 DEBUG (0): Received from childID: 1 - min: 2
-0:6:59.513381961 DEBUG (0): Received from childID: 3 - min: 8
+0:6:59.502929697 DEBUG (1): measurement is: 1
+0:6:59.502929707 DEBUG (1): ChildID: 2 has max: 45
+0:6:59.502929707 DEBUG (1): ChildID: 6 has max: 34
+0:6:59.502929707 DEBUG (1): Node's MAX is: 45
+0:6:59.506454467 DEBUG (0): Measurement received from: 1
+0:6:59.506454477 DEBUG (0): Received from childID: 1 - max: 45
+0:6:59.511718760 DEBUG (4): NodeID = 4 curdepth= 1
+0:6:59.511718760 DEBUG (4): Starting Data transmission to parent!
+0:6:59.511718760 DEBUG (4): measurement is: 38
+0:6:59.511718770 DEBUG (4): ChildID: 8 has max: 46
+0:6:59.511718770 DEBUG (4): ChildID: 9 has max: 36
+0:6:59.511718770 DEBUG (4): Node's MAX is: 46
+0:6:59.514648448 DEBUG (5): NodeID = 5 curdepth= 1
+0:6:59.514648448 DEBUG (5): Starting Data transmission to parent!
+0:6:59.514648448 DEBUG (5): measurement is: 13
+0:6:59.514648458 DEBUG (5): ChildID: 10 has max: 48
+0:6:59.514648458 DEBUG (5): Node's MAX is: 48
+0:6:59.519393896 DEBUG (0): Measurement received from: 4
+0:6:59.519393906 DEBUG (0): Received from childID: 4 - max: 46
+0:6:59.524017299 DEBUG (0): Measurement received from: 5
+0:6:59.524017309 DEBUG (0): Received from childID: 5 - max: 48
 0:6:59.750000010 DEBUG (0): NodeID = 0 curdepth= 0
-0:6:59.750000010 DEBUG (0): measurement is: 40
-0:6:59.750000010 DEBUG (0): ChildID: 1 has min: 2
-0:6:59.750000010 DEBUG (0): ChildID: 3 has min: 8
-0:6:59.750000010 DEBUG (0): Node's MIN is: 2
-0:6:59.750000010 DEBUG (0): 
-0:6:59.750000010 DEBUG (0): FINAL RESULT: MIN: 2
-0:6:59.750000010 DEBUG (0): 
+0:6:59.750000010 DEBUG (0): measurement is: 36
+0:6:59.750000020 DEBUG (0): ChildID: 1 has max: 45
+0:6:59.750000020 DEBUG (0): ChildID: 4 has max: 46
+0:6:59.750000020 DEBUG (0): ChildID: 5 has max: 48
+0:6:59.750000020 DEBUG (0): Node's MAX is: 48
+0:6:59.750000020 DEBUG (0): 
+0:6:59.750000020 DEBUG (0): FINAL RESULT: MAX: 48
+0:6:59.750000020 DEBUG (0): 
 0:7:0.000000010 DEBUG (0): ##################################### 
 0:7:0.000000010 DEBUG (0): #######   ROUND   8    ############## 
 0:7:0.000000010 DEBUG (0): #####################################
-0:7:58.773437510 DEBUG (8): NodeID = 8 curdepth= 4
-0:7:58.773437510 DEBUG (8): Starting Data transmission to parent!
-0:7:58.773437510 DEBUG (8): measurement is: 25
-0:7:58.773437510 DEBUG (8): Node's MIN is: 25
-0:7:58.773437510 DEBUG (8): Measurement passes tct! Previous query: 41, Now sent: 25
-0:7:58.778518677 DEBUG (7): Received from childID: 8 - min: 25
-0:7:59.014648448 DEBUG (5): NodeID = 5 curdepth= 3
-0:7:59.014648448 DEBUG (5): Starting Data transmission to parent!
-0:7:59.014648448 DEBUG (5): measurement is: 45
-0:7:59.014648448 DEBUG (5): Node's MIN is: 45
-0:7:59.014648448 DEBUG (5): Measurement passes tct! Previous query: 8, Now sent: 45
-0:7:59.018417366 DEBUG (4): Received from childID: 5 - min: 45
+0:7:59.008789072 DEBUG (3): NodeID = 3 curdepth= 3
+0:7:59.008789072 DEBUG (3): Starting Data transmission to parent!
+0:7:59.008789072 DEBUG (3): measurement is: 12
+0:7:59.008789082 DEBUG (3): Node's MAX is: 12
+0:7:59.017013522 DEBUG (2): Measurement received from: 3
+0:7:59.017013532 DEBUG (2): Received from childID: 3 - max: 12
 0:7:59.020507823 DEBUG (7): NodeID = 7 curdepth= 3
 0:7:59.020507823 DEBUG (7): Starting Data transmission to parent!
-0:7:59.020507823 DEBUG (7): measurement is: 31
-0:7:59.020507823 DEBUG (7): ChildID: 8 has min: 25
-0:7:59.020507823 DEBUG (7): Node's MIN is: 25
-0:7:59.020507823 DEBUG (7): Measurement passes tct! Previous query: 19, Now sent: 25
-0:7:59.028717023 DEBUG (4): Received from childID: 7 - min: 25
+0:7:59.020507823 DEBUG (7): measurement is: 39
+0:7:59.020507833 DEBUG (7): Node's MAX is: 39
+0:7:59.027389506 DEBUG (2): Measurement received from: 7
+0:7:59.027389516 DEBUG (2): Received from childID: 7 - max: 39
+0:7:59.032226573 DEBUG (11): NodeID = 11 curdepth= 3
+0:7:59.032226573 DEBUG (11): Starting Data transmission to parent!
+0:7:59.032226573 DEBUG (11): measurement is: 46
+0:7:59.032226583 DEBUG (11): Node's MAX is: 46
+0:7:59.035156261 DEBUG (12): NodeID = 12 curdepth= 3
+0:7:59.035156261 DEBUG (12): Starting Data transmission to parent!
+0:7:59.035156261 DEBUG (12): measurement is: 22
+0:7:59.035156271 DEBUG (12): Node's MAX is: 22
+0:7:59.037063608 DEBUG (8): Measurement received from: 12
+0:7:59.037063618 DEBUG (8): Received from childID: 12 - max: 22
+0:7:59.038085948 DEBUG (13): NodeID = 13 curdepth= 3
+0:7:59.038085948 DEBUG (13): Starting Data transmission to parent!
+0:7:59.038085948 DEBUG (13): measurement is: 45
+0:7:59.038085958 DEBUG (13): Node's MAX is: 45
+0:7:59.041015636 DEBUG (14): NodeID = 14 curdepth= 3
+0:7:59.041015636 DEBUG (14): Starting Data transmission to parent!
+0:7:59.041015636 DEBUG (14): measurement is: 36
+0:7:59.041015646 DEBUG (14): Node's MAX is: 36
+0:7:59.042419395 DEBUG (6): Measurement received from: 11
+0:7:59.042419405 DEBUG (6): Received from childID: 11 - max: 46
+0:7:59.043945324 DEBUG (15): NodeID = 15 curdepth= 3
+0:7:59.043945324 DEBUG (15): Starting Data transmission to parent!
+0:7:59.043945324 DEBUG (15): measurement is: 16
+0:7:59.043945334 DEBUG (15): Node's MAX is: 16
+0:7:59.044204714 DEBUG (10): Measurement received from: 14
+0:7:59.044204724 DEBUG (10): Received from childID: 14 - max: 36
+0:7:59.046844452 DEBUG (9): Measurement received from: 13
+0:7:59.046844462 DEBUG (9): Received from childID: 13 - max: 45
+0:7:59.056259104 DEBUG (10): Measurement received from: 15
+0:7:59.056259114 DEBUG (10): Received from childID: 15 - max: 16
 0:7:59.255859385 DEBUG (2): NodeID = 2 curdepth= 2
 0:7:59.255859385 DEBUG (2): Starting Data transmission to parent!
-0:7:59.255859385 DEBUG (2): measurement is: 45
-0:7:59.255859385 DEBUG (2): Node's MIN is: 45
-0:7:59.255859385 DEBUG (2): Measurement passes tct! Previous query: 2, Now sent: 45
-0:7:59.260879517 DEBUG (1): Received from childID: 2 - min: 45
-0:7:59.261718760 DEBUG (4): NodeID = 4 curdepth= 2
-0:7:59.261718760 DEBUG (4): Starting Data transmission to parent!
-0:7:59.261718760 DEBUG (4): measurement is: 31
-0:7:59.261718760 DEBUG (4): ChildID: 5 has min: 45
-0:7:59.261718760 DEBUG (4): ChildID: 7 has min: 25
-0:7:59.261718760 DEBUG (4): Node's MIN is: 25
-0:7:59.261718760 DEBUG (4): Measurement passes tct! Previous query: 8, Now sent: 25
-0:7:59.265701301 DEBUG (3): Received from childID: 4 - min: 25
+0:7:59.255859385 DEBUG (2): measurement is: 25
+0:7:59.255859395 DEBUG (2): ChildID: 3 has max: 12
+0:7:59.255859395 DEBUG (2): ChildID: 7 has max: 39
+0:7:59.255859395 DEBUG (2): Node's MAX is: 39
+0:7:59.264602630 DEBUG (1): Measurement received from: 2
+0:7:59.264602640 DEBUG (1): Received from childID: 2 - max: 39
 0:7:59.267578135 DEBUG (6): NodeID = 6 curdepth= 2
 0:7:59.267578135 DEBUG (6): Starting Data transmission to parent!
-0:7:59.267578135 DEBUG (6): measurement is: 39
-0:7:59.267578135 DEBUG (6): Node's MIN is: 39
-0:7:59.267578135 DEBUG (6): Measurement passes tct! Previous query: 18, Now sent: 39
-0:7:59.273147581 DEBUG (3): Received from childID: 6 - min: 39
+0:7:59.267578135 DEBUG (6): measurement is: 26
+0:7:59.267578145 DEBUG (6): ChildID: 11 has max: 46
+0:7:59.267578145 DEBUG (6): Node's MAX is: 46
+0:7:59.270431522 DEBUG (1): Measurement received from: 6
+0:7:59.270431532 DEBUG (1): Received from childID: 6 - max: 46
+0:7:59.273437510 DEBUG (8): NodeID = 8 curdepth= 2
+0:7:59.273437510 DEBUG (8): Starting Data transmission to parent!
+0:7:59.273437510 DEBUG (8): measurement is: 45
+0:7:59.273437520 DEBUG (8): ChildID: 12 has max: 22
+0:7:59.273437520 DEBUG (8): Node's MAX is: 45
+0:7:59.276367198 DEBUG (9): NodeID = 9 curdepth= 2
+0:7:59.276367198 DEBUG (9): Starting Data transmission to parent!
+0:7:59.276367198 DEBUG (9): measurement is: 38
+0:7:59.276367208 DEBUG (9): ChildID: 13 has max: 45
+0:7:59.276367208 DEBUG (9): Node's MAX is: 45
+0:7:59.278610220 DEBUG (4): Measurement received from: 8
+0:7:59.278610230 DEBUG (4): Received from childID: 8 - max: 45
+0:7:59.279296886 DEBUG (10): NodeID = 10 curdepth= 2
+0:7:59.279296886 DEBUG (10): Starting Data transmission to parent!
+0:7:59.279296886 DEBUG (10): measurement is: 7
+0:7:59.279296896 DEBUG (10): ChildID: 14 has max: 36
+0:7:59.279296896 DEBUG (10): ChildID: 15 has max: 16
+0:7:59.279296896 DEBUG (10): Node's MAX is: 36
+0:7:59.283782936 DEBUG (4): Measurement received from: 9
+0:7:59.283782946 DEBUG (4): Received from childID: 9 - max: 45
+0:7:59.290206866 DEBUG (5): Measurement received from: 10
+0:7:59.290206876 DEBUG (5): Received from childID: 10 - max: 36
 0:7:59.502929697 DEBUG (1): NodeID = 1 curdepth= 1
 0:7:59.502929697 DEBUG (1): Starting Data transmission to parent!
-0:7:59.502929697 DEBUG (1): measurement is: 15
-0:7:59.502929697 DEBUG (1): ChildID: 2 has min: 45
-0:7:59.502929697 DEBUG (1): Node's MIN is: 15
-0:7:59.502929697 DEBUG (1): Measurement passes tct! Previous query: 2, Now sent: 15
-0:7:59.508789072 DEBUG (3): NodeID = 3 curdepth= 1
-0:7:59.508789072 DEBUG (3): Starting Data transmission to parent!
-0:7:59.508789072 DEBUG (3): measurement is: 34
-0:7:59.508789072 DEBUG (3): ChildID: 4 has min: 25
-0:7:59.508789072 DEBUG (3): ChildID: 6 has min: 39
-0:7:59.508789072 DEBUG (3): Node's MIN is: 25
-0:7:59.508789072 DEBUG (3): Measurement passes tct! Previous query: 8, Now sent: 25
-0:7:59.518890352 DEBUG (0): Received from childID: 3 - min: 25
+0:7:59.502929697 DEBUG (1): measurement is: 19
+0:7:59.502929707 DEBUG (1): ChildID: 2 has max: 39
+0:7:59.502929707 DEBUG (1): ChildID: 6 has max: 46
+0:7:59.502929707 DEBUG (1): Node's MAX is: 46
+0:7:59.504745492 DEBUG (0): Measurement received from: 1
+0:7:59.504745502 DEBUG (0): Received from childID: 1 - max: 46
+0:7:59.511718760 DEBUG (4): NodeID = 4 curdepth= 1
+0:7:59.511718760 DEBUG (4): Starting Data transmission to parent!
+0:7:59.511718760 DEBUG (4): measurement is: 24
+0:7:59.511718770 DEBUG (4): ChildID: 8 has max: 45
+0:7:59.511718770 DEBUG (4): ChildID: 9 has max: 45
+0:7:59.511718770 DEBUG (4): Node's MAX is: 45
+0:7:59.514404301 DEBUG (0): Measurement received from: 4
+0:7:59.514404311 DEBUG (0): Received from childID: 4 - max: 45
+0:7:59.514648448 DEBUG (5): NodeID = 5 curdepth= 1
+0:7:59.514648448 DEBUG (5): Starting Data transmission to parent!
+0:7:59.514648448 DEBUG (5): measurement is: 7
+0:7:59.514648458 DEBUG (5): ChildID: 10 has max: 36
+0:7:59.514648458 DEBUG (5): Node's MAX is: 36
+0:7:59.520446764 DEBUG (0): Measurement received from: 5
+0:7:59.520446774 DEBUG (0): Received from childID: 5 - max: 36
 0:7:59.750000010 DEBUG (0): NodeID = 0 curdepth= 0
-0:7:59.750000010 DEBUG (0): measurement is: 45
-0:7:59.750000010 DEBUG (0): ChildID: 1 has min: 2
-0:7:59.750000010 DEBUG (0): ChildID: 3 has min: 25
-0:7:59.750000010 DEBUG (0): Node's MIN is: 2
-0:7:59.750000010 DEBUG (0): 
-0:7:59.750000010 DEBUG (0): FINAL RESULT: MIN: 2
-0:7:59.750000010 DEBUG (0): 
+0:7:59.750000010 DEBUG (0): measurement is: 10
+0:7:59.750000020 DEBUG (0): ChildID: 1 has max: 46
+0:7:59.750000020 DEBUG (0): ChildID: 4 has max: 45
+0:7:59.750000020 DEBUG (0): ChildID: 5 has max: 36
+0:7:59.750000020 DEBUG (0): Node's MAX is: 46
+0:7:59.750000020 DEBUG (0): 
+0:7:59.750000020 DEBUG (0): FINAL RESULT: MAX: 46
+0:7:59.750000020 DEBUG (0): 
 0:8:0.000000010 DEBUG (0): ##################################### 
 0:8:0.000000010 DEBUG (0): #######   ROUND   9    ############## 
 0:8:0.000000010 DEBUG (0): #####################################
-0:8:58.773437510 DEBUG (8): NodeID = 8 curdepth= 4
-0:8:58.773437510 DEBUG (8): Starting Data transmission to parent!
-0:8:58.773437510 DEBUG (8): measurement is: 36
-0:8:58.773437510 DEBUG (8): Node's MIN is: 36
-0:8:58.773437510 DEBUG (8): Measurement passes tct! Previous query: 25, Now sent: 36
-0:8:58.780212393 DEBUG (7): Received from childID: 8 - min: 36
-0:8:59.014648448 DEBUG (5): NodeID = 5 curdepth= 3
-0:8:59.014648448 DEBUG (5): Starting Data transmission to parent!
-0:8:59.014648448 DEBUG (5): measurement is: 28
-0:8:59.014648448 DEBUG (5): Node's MIN is: 28
-0:8:59.014648448 DEBUG (5): Measurement passes tct! Previous query: 45, Now sent: 28
+0:8:59.008789072 DEBUG (3): NodeID = 3 curdepth= 3
+0:8:59.008789072 DEBUG (3): Starting Data transmission to parent!
+0:8:59.008789072 DEBUG (3): measurement is: 30
+0:8:59.008789082 DEBUG (3): Node's MAX is: 30
+0:8:59.019103964 DEBUG (2): Measurement received from: 3
+0:8:59.019103974 DEBUG (2): Received from childID: 3 - max: 30
 0:8:59.020507823 DEBUG (7): NodeID = 7 curdepth= 3
 0:8:59.020507823 DEBUG (7): Starting Data transmission to parent!
-0:8:59.020507823 DEBUG (7): measurement is: 13
-0:8:59.020507823 DEBUG (7): ChildID: 8 has min: 36
-0:8:59.020507823 DEBUG (7): Node's MIN is: 13
-0:8:59.020507823 DEBUG (7): Measurement passes tct! Previous query: 25, Now sent: 13
-0:8:59.024948090 DEBUG (4): Received from childID: 5 - min: 28
-0:8:59.027282706 DEBUG (4): Received from childID: 7 - min: 13
+0:8:59.020507823 DEBUG (7): measurement is: 49
+0:8:59.020507833 DEBUG (7): Node's MAX is: 49
+0:8:59.030273401 DEBUG (2): Measurement received from: 7
+0:8:59.030273411 DEBUG (2): Received from childID: 7 - max: 49
+0:8:59.032226573 DEBUG (11): NodeID = 11 curdepth= 3
+0:8:59.032226573 DEBUG (11): Starting Data transmission to parent!
+0:8:59.032226573 DEBUG (11): measurement is: 18
+0:8:59.032226583 DEBUG (11): Node's MAX is: 18
+0:8:59.035156261 DEBUG (12): NodeID = 12 curdepth= 3
+0:8:59.035156261 DEBUG (12): Starting Data transmission to parent!
+0:8:59.035156261 DEBUG (12): measurement is: 7
+0:8:59.035156271 DEBUG (12): Node's MAX is: 7
+0:8:59.038085948 DEBUG (13): NodeID = 13 curdepth= 3
+0:8:59.038085948 DEBUG (13): Starting Data transmission to parent!
+0:8:59.038085948 DEBUG (13): measurement is: 27
+0:8:59.038085958 DEBUG (13): Node's MAX is: 27
+0:8:59.041015636 DEBUG (14): NodeID = 14 curdepth= 3
+0:8:59.041015636 DEBUG (14): Starting Data transmission to parent!
+0:8:59.041015636 DEBUG (14): measurement is: 7
+0:8:59.041015646 DEBUG (14): Node's MAX is: 7
+0:8:59.042190549 DEBUG (9): Measurement received from: 13
+0:8:59.042190559 DEBUG (9): Received from childID: 13 - max: 27
+0:8:59.043563814 DEBUG (8): Measurement received from: 12
+0:8:59.043563824 DEBUG (8): Received from childID: 12 - max: 7
+0:8:59.043945324 DEBUG (15): NodeID = 15 curdepth= 3
+0:8:59.043945324 DEBUG (15): Starting Data transmission to parent!
+0:8:59.043945324 DEBUG (15): measurement is: 40
+0:8:59.043945334 DEBUG (15): Node's MAX is: 40
 0:8:59.255859385 DEBUG (2): NodeID = 2 curdepth= 2
 0:8:59.255859385 DEBUG (2): Starting Data transmission to parent!
-0:8:59.255859385 DEBUG (2): measurement is: 16
-0:8:59.255859385 DEBUG (2): Node's MIN is: 16
-0:8:59.255859385 DEBUG (2): Measurement passes tct! Previous query: 45, Now sent: 16
-0:8:59.261718760 DEBUG (4): NodeID = 4 curdepth= 2
-0:8:59.261718760 DEBUG (4): Starting Data transmission to parent!
-0:8:59.261718760 DEBUG (4): measurement is: 48
-0:8:59.261718760 DEBUG (4): ChildID: 5 has min: 28
-0:8:59.261718760 DEBUG (4): ChildID: 7 has min: 13
-0:8:59.261718760 DEBUG (4): Node's MIN is: 13
-0:8:59.261718760 DEBUG (4): Measurement passes tct! Previous query: 25, Now sent: 13
-0:8:59.265487644 DEBUG (1): Received from childID: 2 - min: 16
+0:8:59.255859385 DEBUG (2): measurement is: 18
+0:8:59.255859395 DEBUG (2): ChildID: 3 has max: 30
+0:8:59.255859395 DEBUG (2): ChildID: 7 has max: 49
+0:8:59.255859395 DEBUG (2): Node's MAX is: 49
+0:8:59.258834841 DEBUG (1): Measurement received from: 2
+0:8:59.258834851 DEBUG (1): Received from childID: 2 - max: 49
 0:8:59.267578135 DEBUG (6): NodeID = 6 curdepth= 2
 0:8:59.267578135 DEBUG (6): Starting Data transmission to parent!
-0:8:59.267578135 DEBUG (6): measurement is: 20
-0:8:59.267578135 DEBUG (6): Node's MIN is: 20
-0:8:59.267578135 DEBUG (6): Measurement passes tct! Previous query: 39, Now sent: 20
-0:8:59.270874000 DEBUG (3): Received from childID: 4 - min: 13
-0:8:59.277786225 DEBUG (3): Received from childID: 6 - min: 20
+0:8:59.267578135 DEBUG (6): measurement is: 46
+0:8:59.267578145 DEBUG (6): ChildID: 11 has max: 46
+0:8:59.267578145 DEBUG (6): Node's MAX is: 46
+0:8:59.270828248 DEBUG (1): Measurement received from: 6
+0:8:59.270828258 DEBUG (1): Received from childID: 6 - max: 46
+0:8:59.273437510 DEBUG (8): NodeID = 8 curdepth= 2
+0:8:59.273437510 DEBUG (8): Starting Data transmission to parent!
+0:8:59.273437510 DEBUG (8): measurement is: 15
+0:8:59.273437520 DEBUG (8): ChildID: 12 has max: 7
+0:8:59.273437520 DEBUG (8): Node's MAX is: 15
+0:8:59.276367198 DEBUG (9): NodeID = 9 curdepth= 2
+0:8:59.276367198 DEBUG (9): Starting Data transmission to parent!
+0:8:59.276367198 DEBUG (9): measurement is: 37
+0:8:59.276367208 DEBUG (9): ChildID: 13 has max: 27
+0:8:59.276367208 DEBUG (9): Node's MAX is: 37
+0:8:59.277770991 DEBUG (4): Measurement received from: 8
+0:8:59.277771001 DEBUG (4): Received from childID: 8 - max: 15
+0:8:59.279296886 DEBUG (10): NodeID = 10 curdepth= 2
+0:8:59.279296886 DEBUG (10): Starting Data transmission to parent!
+0:8:59.279296886 DEBUG (10): measurement is: 45
+0:8:59.279296896 DEBUG (10): ChildID: 14 has max: 36
+0:8:59.279296896 DEBUG (10): ChildID: 15 has max: 16
+0:8:59.279296896 DEBUG (10): Node's MAX is: 45
+0:8:59.282897949 DEBUG (5): Measurement received from: 10
+0:8:59.282897959 DEBUG (5): Received from childID: 10 - max: 45
+0:8:59.284805269 DEBUG (4): Measurement received from: 9
+0:8:59.284805279 DEBUG (4): Received from childID: 9 - max: 37
 0:8:59.502929697 DEBUG (1): NodeID = 1 curdepth= 1
 0:8:59.502929697 DEBUG (1): Starting Data transmission to parent!
-0:8:59.502929697 DEBUG (1): measurement is: 1
-0:8:59.502929697 DEBUG (1): ChildID: 2 has min: 16
-0:8:59.502929697 DEBUG (1): Node's MIN is: 1
-0:8:59.502929697 DEBUG (1): Measurement passes tct! Previous query: 15, Now sent: 1
-0:8:59.506454477 DEBUG (0): Received from childID: 1 - min: 1
-0:8:59.508789072 DEBUG (3): NodeID = 3 curdepth= 1
-0:8:59.508789072 DEBUG (3): Starting Data transmission to parent!
-0:8:59.508789072 DEBUG (3): measurement is: 2
-0:8:59.508789072 DEBUG (3): ChildID: 4 has min: 13
-0:8:59.508789072 DEBUG (3): ChildID: 6 has min: 20
-0:8:59.508789072 DEBUG (3): Node's MIN is: 2
-0:8:59.508789072 DEBUG (3): Measurement passes tct! Previous query: 25, Now sent: 2
-0:8:59.519592252 DEBUG (0): Received from childID: 3 - min: 2
+0:8:59.502929697 DEBUG (1): measurement is: 36
+0:8:59.502929707 DEBUG (1): ChildID: 2 has max: 49
+0:8:59.502929707 DEBUG (1): ChildID: 6 has max: 46
+0:8:59.502929707 DEBUG (1): Node's MAX is: 49
+0:8:59.506225586 DEBUG (0): Measurement received from: 1
+0:8:59.506225596 DEBUG (0): Received from childID: 1 - max: 49
+0:8:59.511718760 DEBUG (4): NodeID = 4 curdepth= 1
+0:8:59.511718760 DEBUG (4): Starting Data transmission to parent!
+0:8:59.511718760 DEBUG (4): measurement is: 20
+0:8:59.511718770 DEBUG (4): ChildID: 8 has max: 15
+0:8:59.511718770 DEBUG (4): ChildID: 9 has max: 37
+0:8:59.511718770 DEBUG (4): Node's MAX is: 37
+0:8:59.514648448 DEBUG (5): NodeID = 5 curdepth= 1
+0:8:59.514648448 DEBUG (5): Starting Data transmission to parent!
+0:8:59.514648448 DEBUG (5): measurement is: 18
+0:8:59.514648458 DEBUG (5): ChildID: 10 has max: 45
+0:8:59.514648458 DEBUG (5): Node's MAX is: 45
+0:8:59.516418467 DEBUG (0): Measurement received from: 5
+0:8:59.516418477 DEBUG (0): Received from childID: 5 - max: 45
+0:8:59.522705034 DEBUG (0): Measurement received from: 4
+0:8:59.522705044 DEBUG (0): Received from childID: 4 - max: 37
 0:8:59.750000010 DEBUG (0): NodeID = 0 curdepth= 0
-0:8:59.750000010 DEBUG (0): measurement is: 49
-0:8:59.750000010 DEBUG (0): ChildID: 1 has min: 1
-0:8:59.750000010 DEBUG (0): ChildID: 3 has min: 2
-0:8:59.750000010 DEBUG (0): Node's MIN is: 1
-0:8:59.750000010 DEBUG (0): 
-0:8:59.750000010 DEBUG (0): FINAL RESULT: MIN: 1
-0:8:59.750000010 DEBUG (0): 
+0:8:59.750000010 DEBUG (0): measurement is: 16
+0:8:59.750000020 DEBUG (0): ChildID: 1 has max: 49
+0:8:59.750000020 DEBUG (0): ChildID: 4 has max: 37
+0:8:59.750000020 DEBUG (0): ChildID: 5 has max: 45
+0:8:59.750000020 DEBUG (0): Node's MAX is: 49
+0:8:59.750000020 DEBUG (0): 
+0:8:59.750000020 DEBUG (0): FINAL RESULT: MAX: 49
+0:8:59.750000020 DEBUG (0): 
 0:9:0.000000010 DEBUG (0): ##################################### 
 0:9:0.000000010 DEBUG (0): #######   ROUND   10    ############## 
 0:9:0.000000010 DEBUG (0): #####################################
-0:9:58.773437510 DEBUG (8): NodeID = 8 curdepth= 4
-0:9:58.773437510 DEBUG (8): Starting Data transmission to parent!
-0:9:58.773437510 DEBUG (8): measurement is: 41
-0:9:58.773437510 DEBUG (8): Node's MIN is: 41
-0:9:58.773437510 DEBUG (8): Measurement doesn't pass tct! Previous query: 36, Now measured: 41
-0:9:58.773437510 DEBUG (8): Doesn't send because of tct
-0:9:59.014648448 DEBUG (5): NodeID = 5 curdepth= 3
-0:9:59.014648448 DEBUG (5): Starting Data transmission to parent!
-0:9:59.014648448 DEBUG (5): measurement is: 34
-0:9:59.014648448 DEBUG (5): Node's MIN is: 34
-0:9:59.014648448 DEBUG (5): Measurement passes tct! Previous query: 28, Now sent: 34
-0:9:59.017044083 DEBUG (4): Received from childID: 5 - min: 34
+0:9:59.008789072 DEBUG (3): NodeID = 3 curdepth= 3
+0:9:59.008789072 DEBUG (3): Starting Data transmission to parent!
+0:9:59.008789072 DEBUG (3): measurement is: 30
+0:9:59.008789082 DEBUG (3): Node's MAX is: 30
+0:9:59.015151960 DEBUG (2): Measurement received from: 3
+0:9:59.015151970 DEBUG (2): Received from childID: 3 - max: 30
 0:9:59.020507823 DEBUG (7): NodeID = 7 curdepth= 3
 0:9:59.020507823 DEBUG (7): Starting Data transmission to parent!
-0:9:59.020507823 DEBUG (7): measurement is: 26
-0:9:59.020507823 DEBUG (7): ChildID: 8 has min: 36
-0:9:59.020507823 DEBUG (7): Node's MIN is: 26
-0:9:59.020507823 DEBUG (7): Measurement passes tct! Previous query: 13, Now sent: 26
-0:9:59.030715913 DEBUG (4): Received from childID: 7 - min: 26
+0:9:59.020507823 DEBUG (7): measurement is: 23
+0:9:59.020507833 DEBUG (7): Node's MAX is: 23
+0:9:59.025085443 DEBUG (2): Measurement received from: 7
+0:9:59.025085453 DEBUG (2): Received from childID: 7 - max: 23
+0:9:59.032226573 DEBUG (11): NodeID = 11 curdepth= 3
+0:9:59.032226573 DEBUG (11): Starting Data transmission to parent!
+0:9:59.032226573 DEBUG (11): measurement is: 26
+0:9:59.032226583 DEBUG (11): Node's MAX is: 26
+0:9:59.035156261 DEBUG (12): NodeID = 12 curdepth= 3
+0:9:59.035156261 DEBUG (12): Starting Data transmission to parent!
+0:9:59.035156261 DEBUG (12): measurement is: 43
+0:9:59.035156271 DEBUG (12): Node's MAX is: 43
+0:9:59.037200919 DEBUG (6): Measurement received from: 11
+0:9:59.037200929 DEBUG (6): Received from childID: 11 - max: 26
+0:9:59.038085948 DEBUG (13): NodeID = 13 curdepth= 3
+0:9:59.038085948 DEBUG (13): Starting Data transmission to parent!
+0:9:59.038085948 DEBUG (13): measurement is: 10
+0:9:59.038085958 DEBUG (13): Node's MAX is: 10
+0:9:59.040359487 DEBUG (8): Measurement received from: 12
+0:9:59.040359497 DEBUG (8): Received from childID: 12 - max: 43
+0:9:59.041015636 DEBUG (14): NodeID = 14 curdepth= 3
+0:9:59.041015636 DEBUG (14): Starting Data transmission to parent!
+0:9:59.041015636 DEBUG (14): measurement is: 26
+0:9:59.041015646 DEBUG (14): Node's MAX is: 26
+0:9:59.043731695 DEBUG (10): Measurement received from: 14
+0:9:59.043731705 DEBUG (10): Received from childID: 14 - max: 26
+0:9:59.043945324 DEBUG (15): NodeID = 15 curdepth= 3
+0:9:59.043945324 DEBUG (15): Starting Data transmission to parent!
+0:9:59.043945324 DEBUG (15): measurement is: 43
+0:9:59.043945334 DEBUG (15): Node's MAX is: 43
+0:9:59.045654274 DEBUG (9): Measurement received from: 13
+0:9:59.045654284 DEBUG (9): Received from childID: 13 - max: 10
+0:9:59.047027591 DEBUG (10): Measurement received from: 15
+0:9:59.047027601 DEBUG (10): Received from childID: 15 - max: 43
 0:9:59.255859385 DEBUG (2): NodeID = 2 curdepth= 2
 0:9:59.255859385 DEBUG (2): Starting Data transmission to parent!
-0:9:59.255859385 DEBUG (2): measurement is: 9
-0:9:59.255859385 DEBUG (2): Node's MIN is: 9
-0:9:59.255859385 DEBUG (2): Measurement passes tct! Previous query: 16, Now sent: 9
-0:9:59.258605971 DEBUG (1): Received from childID: 2 - min: 9
-0:9:59.261718760 DEBUG (4): NodeID = 4 curdepth= 2
-0:9:59.261718760 DEBUG (4): Starting Data transmission to parent!
-0:9:59.261718760 DEBUG (4): measurement is: 49
-0:9:59.261718760 DEBUG (4): ChildID: 5 has min: 34
-0:9:59.261718760 DEBUG (4): ChildID: 7 has min: 26
-0:9:59.261718760 DEBUG (4): Node's MIN is: 26
-0:9:59.261718760 DEBUG (4): Measurement passes tct! Previous query: 13, Now sent: 26
+0:9:59.255859385 DEBUG (2): measurement is: 37
+0:9:59.255859395 DEBUG (2): ChildID: 3 has max: 30
+0:9:59.255859395 DEBUG (2): ChildID: 7 has max: 23
+0:9:59.255859395 DEBUG (2): Node's MAX is: 37
+0:9:59.258605961 DEBUG (1): Measurement received from: 2
+0:9:59.258605971 DEBUG (1): Received from childID: 2 - max: 37
 0:9:59.267578135 DEBUG (6): NodeID = 6 curdepth= 2
 0:9:59.267578135 DEBUG (6): Starting Data transmission to parent!
-0:9:59.267578135 DEBUG (6): measurement is: 16
-0:9:59.267578135 DEBUG (6): Node's MIN is: 16
-0:9:59.267578135 DEBUG (6): Measurement passes tct! Previous query: 20, Now sent: 16
+0:9:59.267578135 DEBUG (6): measurement is: 44
+0:9:59.267578145 DEBUG (6): ChildID: 11 has max: 26
+0:9:59.267578145 DEBUG (6): Node's MAX is: 44
+0:9:59.271820064 DEBUG (1): Measurement received from: 6
+0:9:59.271820074 DEBUG (1): Received from childID: 6 - max: 44
+0:9:59.273437510 DEBUG (8): NodeID = 8 curdepth= 2
+0:9:59.273437510 DEBUG (8): Starting Data transmission to parent!
+0:9:59.273437510 DEBUG (8): measurement is: 46
+0:9:59.273437520 DEBUG (8): ChildID: 12 has max: 43
+0:9:59.273437520 DEBUG (8): Node's MAX is: 46
+0:9:59.276367198 DEBUG (9): NodeID = 9 curdepth= 2
+0:9:59.276367198 DEBUG (9): Starting Data transmission to parent!
+0:9:59.276367198 DEBUG (9): measurement is: 2
+0:9:59.276367208 DEBUG (9): ChildID: 13 has max: 10
+0:9:59.276367208 DEBUG (9): Node's MAX is: 10
+0:9:59.279296886 DEBUG (10): NodeID = 10 curdepth= 2
+0:9:59.279296886 DEBUG (10): Starting Data transmission to parent!
+0:9:59.279296886 DEBUG (10): measurement is: 21
+0:9:59.279296896 DEBUG (10): ChildID: 14 has max: 26
+0:9:59.279296896 DEBUG (10): ChildID: 15 has max: 43
+0:9:59.279296896 DEBUG (10): Node's MAX is: 43
+0:9:59.280853266 DEBUG (4): Measurement received from: 9
+0:9:59.280853276 DEBUG (4): Received from childID: 9 - max: 10
+0:9:59.283279382 DEBUG (4): Measurement received from: 8
+0:9:59.283279392 DEBUG (4): Received from childID: 8 - max: 46
+0:9:59.289031946 DEBUG (5): Measurement received from: 10
+0:9:59.289031956 DEBUG (5): Received from childID: 10 - max: 43
 0:9:59.502929697 DEBUG (1): NodeID = 1 curdepth= 1
 0:9:59.502929697 DEBUG (1): Starting Data transmission to parent!
-0:9:59.502929697 DEBUG (1): measurement is: 28
-0:9:59.502929697 DEBUG (1): ChildID: 2 has min: 9
-0:9:59.502929697 DEBUG (1): Node's MIN is: 9
-0:9:59.502929697 DEBUG (1): Measurement passes tct! Previous query: 1, Now sent: 9
-0:9:59.508789072 DEBUG (3): NodeID = 3 curdepth= 1
-0:9:59.508789072 DEBUG (3): Starting Data transmission to parent!
-0:9:59.508789072 DEBUG (3): measurement is: 41
-0:9:59.508789072 DEBUG (3): ChildID: 4 has min: 13
-0:9:59.508789072 DEBUG (3): ChildID: 6 has min: 20
-0:9:59.508789072 DEBUG (3): Node's MIN is: 13
-0:9:59.508789072 DEBUG (3): Measurement passes tct! Previous query: 2, Now sent: 13
-0:9:59.511611917 DEBUG (0): Received from childID: 1 - min: 9
-0:9:59.513900757 DEBUG (0): Received from childID: 3 - min: 13
+0:9:59.502929697 DEBUG (1): measurement is: 20
+0:9:59.502929707 DEBUG (1): ChildID: 2 has max: 37
+0:9:59.502929707 DEBUG (1): ChildID: 6 has max: 44
+0:9:59.502929707 DEBUG (1): Node's MAX is: 44
+0:9:59.507705680 DEBUG (0): Measurement received from: 1
+0:9:59.507705690 DEBUG (0): Received from childID: 1 - max: 44
+0:9:59.511718760 DEBUG (4): NodeID = 4 curdepth= 1
+0:9:59.511718760 DEBUG (4): Starting Data transmission to parent!
+0:9:59.511718760 DEBUG (4): measurement is: 46
+0:9:59.511718770 DEBUG (4): ChildID: 8 has max: 46
+0:9:59.511718770 DEBUG (4): ChildID: 9 has max: 10
+0:9:59.511718770 DEBUG (4): Node's MAX is: 46
+0:9:59.514648448 DEBUG (5): NodeID = 5 curdepth= 1
+0:9:59.514648448 DEBUG (5): Starting Data transmission to parent!
+0:9:59.514648448 DEBUG (5): measurement is: 45
+0:9:59.514648458 DEBUG (5): ChildID: 10 has max: 43
+0:9:59.514648458 DEBUG (5): Node's MAX is: 45
+0:9:59.521072353 DEBUG (0): Measurement received from: 4
+0:9:59.521072363 DEBUG (0): Received from childID: 4 - max: 46
+0:9:59.524597130 DEBUG (0): Measurement received from: 5
+0:9:59.524597140 DEBUG (0): Received from childID: 5 - max: 45
 0:9:59.750000010 DEBUG (0): NodeID = 0 curdepth= 0
-0:9:59.750000010 DEBUG (0): measurement is: 3
-0:9:59.750000010 DEBUG (0): ChildID: 1 has min: 9
-0:9:59.750000010 DEBUG (0): ChildID: 3 has min: 13
-0:9:59.750000010 DEBUG (0): Node's MIN is: 3
-0:9:59.750000010 DEBUG (0): 
-0:9:59.750000010 DEBUG (0): FINAL RESULT: MIN: 3
-0:9:59.750000010 DEBUG (0): 
+0:9:59.750000010 DEBUG (0): measurement is: 16
+0:9:59.750000020 DEBUG (0): ChildID: 1 has max: 44
+0:9:59.750000020 DEBUG (0): ChildID: 4 has max: 46
+0:9:59.750000020 DEBUG (0): ChildID: 5 has max: 45
+0:9:59.750000020 DEBUG (0): Node's MAX is: 46
+0:9:59.750000020 DEBUG (0): 
+0:9:59.750000020 DEBUG (0): FINAL RESULT: MAX: 46
+0:9:59.750000020 DEBUG (0): 
 0:10:0.000000010 DEBUG (0): ##################################### 
 0:10:0.000000010 DEBUG (0): #######   ROUND   11    ############## 
 0:10:0.000000010 DEBUG (0): #####################################
-0:10:58.773437510 DEBUG (8): NodeID = 8 curdepth= 4
-0:10:58.773437510 DEBUG (8): Starting Data transmission to parent!
-0:10:58.773437510 DEBUG (8): measurement is: 38
-0:10:58.773437510 DEBUG (8): Node's MIN is: 38
-0:10:58.773437510 DEBUG (8): Measurement doesn't pass tct! Previous query: 36, Now measured: 38
-0:10:58.773437510 DEBUG (8): Doesn't send because of tct
-0:10:59.014648448 DEBUG (5): NodeID = 5 curdepth= 3
-0:10:59.014648448 DEBUG (5): Starting Data transmission to parent!
-0:10:59.014648448 DEBUG (5): measurement is: 14
-0:10:59.014648448 DEBUG (5): Node's MIN is: 14
-0:10:59.014648448 DEBUG (5): Measurement passes tct! Previous query: 34, Now sent: 14
-0:10:59.016677875 DEBUG (4): Received from childID: 5 - min: 14
+0:10:59.008789072 DEBUG (3): NodeID = 3 curdepth= 3
+0:10:59.008789072 DEBUG (3): Starting Data transmission to parent!
+0:10:59.008789072 DEBUG (3): measurement is: 23
+0:10:59.008789082 DEBUG (3): Node's MAX is: 23
+0:10:59.010711679 DEBUG (2): Measurement received from: 3
+0:10:59.010711689 DEBUG (2): Received from childID: 3 - max: 23
 0:10:59.020507823 DEBUG (7): NodeID = 7 curdepth= 3
 0:10:59.020507823 DEBUG (7): Starting Data transmission to parent!
-0:10:59.020507823 DEBUG (7): measurement is: 31
-0:10:59.020507823 DEBUG (7): ChildID: 8 has min: 36
-0:10:59.020507823 DEBUG (7): Node's MIN is: 31
-0:10:59.020507823 DEBUG (7): Measurement passes tct! Previous query: 26, Now sent: 31
-0:10:59.029739356 DEBUG (4): Received from childID: 7 - min: 31
+0:10:59.020507823 DEBUG (7): measurement is: 36
+0:10:59.020507833 DEBUG (7): Node's MAX is: 36
+0:10:59.029357879 DEBUG (2): Measurement received from: 7
+0:10:59.029357889 DEBUG (2): Received from childID: 7 - max: 36
+0:10:59.032226573 DEBUG (11): NodeID = 11 curdepth= 3
+0:10:59.032226573 DEBUG (11): Starting Data transmission to parent!
+0:10:59.032226573 DEBUG (11): measurement is: 30
+0:10:59.032226583 DEBUG (11): Node's MAX is: 30
+0:10:59.035156261 DEBUG (12): NodeID = 12 curdepth= 3
+0:10:59.035156261 DEBUG (12): Starting Data transmission to parent!
+0:10:59.035156261 DEBUG (12): measurement is: 29
+0:10:59.035156271 DEBUG (12): Node's MAX is: 29
+0:10:59.037109367 DEBUG (6): Measurement received from: 11
+0:10:59.037109377 DEBUG (6): Received from childID: 11 - max: 30
+0:10:59.038085948 DEBUG (13): NodeID = 13 curdepth= 3
+0:10:59.038085948 DEBUG (13): Starting Data transmission to parent!
+0:10:59.038085948 DEBUG (13): measurement is: 31
+0:10:59.038085958 DEBUG (13): Node's MAX is: 31
+0:10:59.040924059 DEBUG (8): Measurement received from: 12
+0:10:59.040924069 DEBUG (8): Received from childID: 12 - max: 29
+0:10:59.041015636 DEBUG (14): NodeID = 14 curdepth= 3
+0:10:59.041015636 DEBUG (14): Starting Data transmission to parent!
+0:10:59.041015636 DEBUG (14): measurement is: 4
+0:10:59.041015646 DEBUG (14): Node's MAX is: 4
+0:10:59.042526240 DEBUG (9): Measurement received from: 13
+0:10:59.042526250 DEBUG (9): Received from childID: 13 - max: 31
+0:10:59.043945324 DEBUG (15): NodeID = 15 curdepth= 3
+0:10:59.043945324 DEBUG (15): Starting Data transmission to parent!
+0:10:59.043945324 DEBUG (15): measurement is: 17
+0:10:59.043945334 DEBUG (15): Node's MAX is: 17
+0:10:59.049484242 DEBUG (10): Measurement received from: 15
+0:10:59.049484252 DEBUG (10): Received from childID: 15 - max: 17
+0:10:59.052246049 DEBUG (10): Measurement received from: 14
+0:10:59.052246059 DEBUG (10): Received from childID: 14 - max: 4
 0:10:59.255859385 DEBUG (2): NodeID = 2 curdepth= 2
 0:10:59.255859385 DEBUG (2): Starting Data transmission to parent!
-0:10:59.255859385 DEBUG (2): measurement is: 29
-0:10:59.255859385 DEBUG (2): Node's MIN is: 29
-0:10:59.255859385 DEBUG (2): Measurement passes tct! Previous query: 9, Now sent: 29
-0:10:59.257690449 DEBUG (1): Received from childID: 2 - min: 29
-0:10:59.261718760 DEBUG (4): NodeID = 4 curdepth= 2
-0:10:59.261718760 DEBUG (4): Starting Data transmission to parent!
-0:10:59.261718760 DEBUG (4): measurement is: 12
-0:10:59.261718760 DEBUG (4): ChildID: 5 has min: 14
-0:10:59.261718760 DEBUG (4): ChildID: 7 has min: 31
-0:10:59.261718760 DEBUG (4): Node's MIN is: 12
-0:10:59.261718760 DEBUG (4): Measurement passes tct! Previous query: 26, Now sent: 12
+0:10:59.255859385 DEBUG (2): measurement is: 7
+0:10:59.255859395 DEBUG (2): ChildID: 3 has max: 23
+0:10:59.255859395 DEBUG (2): ChildID: 7 has max: 36
+0:10:59.255859395 DEBUG (2): Node's MAX is: 36
+0:10:59.266662554 DEBUG (1): Measurement received from: 2
+0:10:59.266662564 DEBUG (1): Received from childID: 2 - max: 36
 0:10:59.267578135 DEBUG (6): NodeID = 6 curdepth= 2
 0:10:59.267578135 DEBUG (6): Starting Data transmission to parent!
-0:10:59.267578135 DEBUG (6): measurement is: 32
-0:10:59.267578135 DEBUG (6): Node's MIN is: 32
-0:10:59.267578135 DEBUG (6): Measurement passes tct! Previous query: 16, Now sent: 32
-0:10:59.271392796 DEBUG (3): Received from childID: 4 - min: 12
-0:10:59.275299057 DEBUG (3): Received from childID: 6 - min: 32
+0:10:59.267578135 DEBUG (6): measurement is: 36
+0:10:59.267578145 DEBUG (6): ChildID: 11 has max: 30
+0:10:59.267578145 DEBUG (6): Node's MAX is: 36
+0:10:59.270904542 DEBUG (1): Measurement received from: 6
+0:10:59.270904552 DEBUG (1): Received from childID: 6 - max: 36
+0:10:59.273437510 DEBUG (8): NodeID = 8 curdepth= 2
+0:10:59.273437510 DEBUG (8): Starting Data transmission to parent!
+0:10:59.273437510 DEBUG (8): measurement is: 41
+0:10:59.273437520 DEBUG (8): ChildID: 12 has max: 29
+0:10:59.273437520 DEBUG (8): Node's MAX is: 41
+0:10:59.276367198 DEBUG (9): NodeID = 9 curdepth= 2
+0:10:59.276367198 DEBUG (9): Starting Data transmission to parent!
+0:10:59.276367198 DEBUG (9): measurement is: 33
+0:10:59.276367208 DEBUG (9): ChildID: 13 has max: 31
+0:10:59.276367208 DEBUG (9): Node's MAX is: 33
+0:10:59.279296886 DEBUG (10): NodeID = 10 curdepth= 2
+0:10:59.279296886 DEBUG (10): Starting Data transmission to parent!
+0:10:59.279296886 DEBUG (10): measurement is: 14
+0:10:59.279296896 DEBUG (10): ChildID: 14 has max: 4
+0:10:59.279296896 DEBUG (10): ChildID: 15 has max: 17
+0:10:59.279296896 DEBUG (10): Node's MAX is: 17
+0:10:59.279846174 DEBUG (4): Measurement received from: 8
+0:10:59.279846184 DEBUG (4): Received from childID: 8 - max: 41
+0:10:59.284057593 DEBUG (4): Measurement received from: 9
+0:10:59.284057603 DEBUG (4): Received from childID: 9 - max: 33
+0:10:59.288680996 DEBUG (5): Measurement received from: 10
+0:10:59.288681006 DEBUG (5): Received from childID: 10 - max: 17
 0:10:59.502929697 DEBUG (1): NodeID = 1 curdepth= 1
 0:10:59.502929697 DEBUG (1): Starting Data transmission to parent!
-0:10:59.502929697 DEBUG (1): measurement is: 22
-0:10:59.502929697 DEBUG (1): ChildID: 2 has min: 29
-0:10:59.502929697 DEBUG (1): Node's MIN is: 22
-0:10:59.502929697 DEBUG (1): Measurement passes tct! Previous query: 9, Now sent: 22
-0:10:59.506942755 DEBUG (0): Received from childID: 1 - min: 22
-0:10:59.508789072 DEBUG (3): NodeID = 3 curdepth= 1
-0:10:59.508789072 DEBUG (3): Starting Data transmission to parent!
-0:10:59.508789072 DEBUG (3): measurement is: 37
-0:10:59.508789072 DEBUG (3): ChildID: 4 has min: 12
-0:10:59.508789072 DEBUG (3): ChildID: 6 has min: 32
-0:10:59.508789072 DEBUG (3): Node's MIN is: 12
-0:10:59.508789072 DEBUG (3): Measurement doesn't pass tct! Previous query: 13, Now measured: 12
-0:10:59.508789072 DEBUG (3): Doesn't send because of tct
+0:10:59.502929697 DEBUG (1): measurement is: 44
+0:10:59.502929707 DEBUG (1): ChildID: 2 has max: 36
+0:10:59.502929707 DEBUG (1): ChildID: 6 has max: 36
+0:10:59.502929707 DEBUG (1): Node's MAX is: 44
+0:10:59.507080074 DEBUG (0): Measurement received from: 1
+0:10:59.507080084 DEBUG (0): Received from childID: 1 - max: 44
+0:10:59.511718760 DEBUG (4): NodeID = 4 curdepth= 1
+0:10:59.511718760 DEBUG (4): Starting Data transmission to parent!
+0:10:59.511718760 DEBUG (4): measurement is: 41
+0:10:59.511718770 DEBUG (4): ChildID: 8 has max: 41
+0:10:59.511718770 DEBUG (4): ChildID: 9 has max: 33
+0:10:59.511718770 DEBUG (4): Node's MAX is: 41
+0:10:59.514648448 DEBUG (5): NodeID = 5 curdepth= 1
+0:10:59.514648448 DEBUG (5): Starting Data transmission to parent!
+0:10:59.514648448 DEBUG (5): measurement is: 9
+0:10:59.514648458 DEBUG (5): ChildID: 10 has max: 17
+0:10:59.514648458 DEBUG (5): Node's MAX is: 17
+0:10:59.516998280 DEBUG (0): Measurement received from: 4
+0:10:59.516998290 DEBUG (0): Received from childID: 4 - max: 41
+0:10:59.519149774 DEBUG (0): Measurement received from: 5
+0:10:59.519149784 DEBUG (0): Received from childID: 5 - max: 17
 0:10:59.750000010 DEBUG (0): NodeID = 0 curdepth= 0
-0:10:59.750000010 DEBUG (0): measurement is: 43
-0:10:59.750000010 DEBUG (0): ChildID: 1 has min: 22
-0:10:59.750000010 DEBUG (0): ChildID: 3 has min: 13
-0:10:59.750000010 DEBUG (0): Node's MIN is: 13
-0:10:59.750000010 DEBUG (0): 
-0:10:59.750000010 DEBUG (0): FINAL RESULT: MIN: 13
-0:10:59.750000010 DEBUG (0): 
+0:10:59.750000010 DEBUG (0): measurement is: 25
+0:10:59.750000020 DEBUG (0): ChildID: 1 has max: 44
+0:10:59.750000020 DEBUG (0): ChildID: 4 has max: 41
+0:10:59.750000020 DEBUG (0): ChildID: 5 has max: 17
+0:10:59.750000020 DEBUG (0): Node's MAX is: 44
+0:10:59.750000020 DEBUG (0): 
+0:10:59.750000020 DEBUG (0): FINAL RESULT: MAX: 44
+0:10:59.750000020 DEBUG (0): 
 0:11:0.000000010 DEBUG (0): ##################################### 
 0:11:0.000000010 DEBUG (0): #######   ROUND   12    ############## 
 0:11:0.000000010 DEBUG (0): #####################################
-0:11:58.773437510 DEBUG (8): NodeID = 8 curdepth= 4
-0:11:58.773437510 DEBUG (8): Starting Data transmission to parent!
-0:11:58.773437510 DEBUG (8): measurement is: 44
-0:11:58.773437510 DEBUG (8): Node's MIN is: 44
-0:11:58.773437510 DEBUG (8): Measurement passes tct! Previous query: 36, Now sent: 44
-0:11:58.778701782 DEBUG (7): Received from childID: 8 - min: 44
-0:11:59.014648448 DEBUG (5): NodeID = 5 curdepth= 3
-0:11:59.014648448 DEBUG (5): Starting Data transmission to parent!
-0:11:59.014648448 DEBUG (5): measurement is: 14
-0:11:59.014648448 DEBUG (5): Node's MIN is: 14
-0:11:59.014648448 DEBUG (5): Measurement doesn't pass tct! Previous query: 14, Now measured: 14
-0:11:59.014648448 DEBUG (5): Doesn't send because of tct
+0:11:59.008789072 DEBUG (3): NodeID = 3 curdepth= 3
+0:11:59.008789072 DEBUG (3): Starting Data transmission to parent!
+0:11:59.008789072 DEBUG (3): measurement is: 41
+0:11:59.008789082 DEBUG (3): Node's MAX is: 41
+0:11:59.015136702 DEBUG (2): Measurement received from: 3
+0:11:59.015136712 DEBUG (2): Received from childID: 3 - max: 41
 0:11:59.020507823 DEBUG (7): NodeID = 7 curdepth= 3
 0:11:59.020507823 DEBUG (7): Starting Data transmission to parent!
-0:11:59.020507823 DEBUG (7): measurement is: 42
-0:11:59.020507823 DEBUG (7): ChildID: 8 has min: 44
-0:11:59.020507823 DEBUG (7): Node's MIN is: 42
-0:11:59.020507823 DEBUG (7): Measurement passes tct! Previous query: 31, Now sent: 42
-0:11:59.028533919 DEBUG (4): Received from childID: 7 - min: 42
+0:11:59.020507823 DEBUG (7): measurement is: 6
+0:11:59.020507833 DEBUG (7): Node's MAX is: 6
+0:11:59.022628792 DEBUG (2): Measurement received from: 7
+0:11:59.022628802 DEBUG (2): Received from childID: 7 - max: 6
+0:11:59.032226573 DEBUG (11): NodeID = 11 curdepth= 3
+0:11:59.032226573 DEBUG (11): Starting Data transmission to parent!
+0:11:59.032226573 DEBUG (11): measurement is: 12
+0:11:59.032226583 DEBUG (11): Node's MAX is: 12
+0:11:59.035156261 DEBUG (12): NodeID = 12 curdepth= 3
+0:11:59.035156261 DEBUG (12): Starting Data transmission to parent!
+0:11:59.035156261 DEBUG (12): measurement is: 10
+0:11:59.035156271 DEBUG (12): Node's MAX is: 10
+0:11:59.037857043 DEBUG (6): Measurement received from: 11
+0:11:59.037857053 DEBUG (6): Received from childID: 11 - max: 12
+0:11:59.038085948 DEBUG (13): NodeID = 13 curdepth= 3
+0:11:59.038085948 DEBUG (13): Starting Data transmission to parent!
+0:11:59.038085948 DEBUG (13): measurement is: 32
+0:11:59.038085958 DEBUG (13): Node's MAX is: 32
+0:11:59.039688105 DEBUG (8): Measurement received from: 12
+0:11:59.039688115 DEBUG (8): Received from childID: 12 - max: 10
+0:11:59.041015636 DEBUG (14): NodeID = 14 curdepth= 3
+0:11:59.041015636 DEBUG (14): Starting Data transmission to parent!
+0:11:59.041015636 DEBUG (14): measurement is: 3
+0:11:59.041015646 DEBUG (14): Node's MAX is: 3
+0:11:59.043685901 DEBUG (9): Measurement received from: 13
+0:11:59.043685911 DEBUG (9): Received from childID: 13 - max: 32
+0:11:59.043945324 DEBUG (15): NodeID = 15 curdepth= 3
+0:11:59.043945324 DEBUG (15): Starting Data transmission to parent!
+0:11:59.043945324 DEBUG (15): measurement is: 11
+0:11:59.043945334 DEBUG (15): Node's MAX is: 11
+0:11:59.046203604 DEBUG (10): Measurement received from: 14
+0:11:59.046203614 DEBUG (10): Received from childID: 14 - max: 3
+0:11:59.053405728 DEBUG (10): Measurement received from: 15
+0:11:59.053405738 DEBUG (10): Received from childID: 15 - max: 11
 0:11:59.255859385 DEBUG (2): NodeID = 2 curdepth= 2
 0:11:59.255859385 DEBUG (2): Starting Data transmission to parent!
-0:11:59.255859385 DEBUG (2): measurement is: 25
-0:11:59.255859385 DEBUG (2): Node's MIN is: 25
-0:11:59.255859385 DEBUG (2): Measurement doesn't pass tct! Previous query: 29, Now measured: 25
-0:11:59.255859385 DEBUG (2): Doesn't send because of tct
-0:11:59.261718760 DEBUG (4): NodeID = 4 curdepth= 2
-0:11:59.261718760 DEBUG (4): Starting Data transmission to parent!
-0:11:59.261718760 DEBUG (4): measurement is: 38
-0:11:59.261718760 DEBUG (4): ChildID: 5 has min: 14
-0:11:59.261718760 DEBUG (4): ChildID: 7 has min: 42
-0:11:59.261718760 DEBUG (4): Node's MIN is: 14
-0:11:59.261718760 DEBUG (4): Measurement passes tct! Previous query: 12, Now sent: 14
-0:11:59.264999400 DEBUG (3): Received from childID: 4 - min: 14
+0:11:59.255859385 DEBUG (2): measurement is: 28
+0:11:59.255859395 DEBUG (2): ChildID: 3 has max: 41
+0:11:59.255859395 DEBUG (2): ChildID: 7 has max: 6
+0:11:59.255859395 DEBUG (2): Node's MAX is: 41
+0:11:59.261383044 DEBUG (1): Measurement received from: 2
+0:11:59.261383054 DEBUG (1): Received from childID: 2 - max: 41
 0:11:59.267578135 DEBUG (6): NodeID = 6 curdepth= 2
 0:11:59.267578135 DEBUG (6): Starting Data transmission to parent!
-0:11:59.267578135 DEBUG (6): measurement is: 7
-0:11:59.267578135 DEBUG (6): Node's MIN is: 7
-0:11:59.267578135 DEBUG (6): Measurement passes tct! Previous query: 32, Now sent: 7
-0:11:59.277725191 DEBUG (3): Received from childID: 6 - min: 7
+0:11:59.267578135 DEBUG (6): measurement is: 15
+0:11:59.267578145 DEBUG (6): ChildID: 11 has max: 12
+0:11:59.267578145 DEBUG (6): Node's MAX is: 15
+0:11:59.273437510 DEBUG (8): NodeID = 8 curdepth= 2
+0:11:59.273437510 DEBUG (8): Starting Data transmission to parent!
+0:11:59.273437510 DEBUG (8): measurement is: 32
+0:11:59.273437520 DEBUG (8): ChildID: 12 has max: 10
+0:11:59.273437520 DEBUG (8): Node's MAX is: 32
+0:11:59.276367198 DEBUG (9): NodeID = 9 curdepth= 2
+0:11:59.276367198 DEBUG (9): Starting Data transmission to parent!
+0:11:59.276367198 DEBUG (9): measurement is: 47
+0:11:59.276367208 DEBUG (9): ChildID: 13 has max: 32
+0:11:59.276367208 DEBUG (9): Node's MAX is: 47
+0:11:59.277481041 DEBUG (1): Measurement received from: 6
+0:11:59.277481051 DEBUG (1): Received from childID: 6 - max: 15
+0:11:59.277877802 DEBUG (4): Measurement received from: 8
+0:11:59.277877812 DEBUG (4): Received from childID: 8 - max: 32
+0:11:59.279296886 DEBUG (10): NodeID = 10 curdepth= 2
+0:11:59.279296886 DEBUG (10): Starting Data transmission to parent!
+0:11:59.279296886 DEBUG (10): measurement is: 43
+0:11:59.279296896 DEBUG (10): ChildID: 14 has max: 3
+0:11:59.279296896 DEBUG (10): ChildID: 15 has max: 11
+0:11:59.279296896 DEBUG (10): Node's MAX is: 43
+0:11:59.281341561 DEBUG (5): Measurement received from: 10
+0:11:59.281341571 DEBUG (5): Received from childID: 10 - max: 43
+0:11:59.284713717 DEBUG (4): Measurement received from: 9
+0:11:59.284713727 DEBUG (4): Received from childID: 9 - max: 47
 0:11:59.502929697 DEBUG (1): NodeID = 1 curdepth= 1
 0:11:59.502929697 DEBUG (1): Starting Data transmission to parent!
-0:11:59.502929697 DEBUG (1): measurement is: 36
-0:11:59.502929697 DEBUG (1): ChildID: 2 has min: 29
-0:11:59.502929697 DEBUG (1): Node's MIN is: 29
-0:11:59.502929697 DEBUG (1): Measurement passes tct! Previous query: 22, Now sent: 29
-0:11:59.507278447 DEBUG (0): Received from childID: 1 - min: 29
-0:11:59.508789072 DEBUG (3): NodeID = 3 curdepth= 1
-0:11:59.508789072 DEBUG (3): Starting Data transmission to parent!
-0:11:59.508789072 DEBUG (3): measurement is: 1
-0:11:59.508789072 DEBUG (3): ChildID: 4 has min: 14
-0:11:59.508789072 DEBUG (3): ChildID: 6 has min: 7
-0:11:59.508789072 DEBUG (3): Node's MIN is: 1
-0:11:59.508789072 DEBUG (3): Measurement passes tct! Previous query: 13, Now sent: 1
-0:11:59.514968866 DEBUG (0): Received from childID: 3 - min: 1
+0:11:59.502929697 DEBUG (1): measurement is: 46
+0:11:59.502929707 DEBUG (1): ChildID: 2 has max: 41
+0:11:59.502929707 DEBUG (1): ChildID: 6 has max: 15
+0:11:59.502929707 DEBUG (1): Node's MAX is: 46
+0:11:59.508483874 DEBUG (0): Measurement received from: 1
+0:11:59.508483884 DEBUG (0): Received from childID: 1 - max: 46
+0:11:59.511718760 DEBUG (4): NodeID = 4 curdepth= 1
+0:11:59.511718760 DEBUG (4): Starting Data transmission to parent!
+0:11:59.511718760 DEBUG (4): measurement is: 2
+0:11:59.511718770 DEBUG (4): ChildID: 8 has max: 32
+0:11:59.511718770 DEBUG (4): ChildID: 9 has max: 47
+0:11:59.511718770 DEBUG (4): Node's MAX is: 47
+0:11:59.514648448 DEBUG (5): NodeID = 5 curdepth= 1
+0:11:59.514648448 DEBUG (5): Starting Data transmission to parent!
+0:11:59.514648448 DEBUG (5): measurement is: 49
+0:11:59.514648458 DEBUG (5): ChildID: 10 has max: 43
+0:11:59.514648458 DEBUG (5): Node's MAX is: 49
+0:11:59.517517076 DEBUG (0): Measurement received from: 4
+0:11:59.517517086 DEBUG (0): Received from childID: 4 - max: 47
+0:11:59.522598240 DEBUG (0): Measurement received from: 5
+0:11:59.522598250 DEBUG (0): Received from childID: 5 - max: 49
 0:11:59.750000010 DEBUG (0): NodeID = 0 curdepth= 0
-0:11:59.750000010 DEBUG (0): measurement is: 28
-0:11:59.750000010 DEBUG (0): ChildID: 1 has min: 29
-0:11:59.750000010 DEBUG (0): ChildID: 3 has min: 1
-0:11:59.750000010 DEBUG (0): Node's MIN is: 1
-0:11:59.750000010 DEBUG (0): 
-0:11:59.750000010 DEBUG (0): FINAL RESULT: MIN: 1
-0:11:59.750000010 DEBUG (0): 
+0:11:59.750000010 DEBUG (0): measurement is: 36
+0:11:59.750000020 DEBUG (0): ChildID: 1 has max: 46
+0:11:59.750000020 DEBUG (0): ChildID: 4 has max: 47
+0:11:59.750000020 DEBUG (0): ChildID: 5 has max: 49
+0:11:59.750000020 DEBUG (0): Node's MAX is: 49
+0:11:59.750000020 DEBUG (0): 
+0:11:59.750000020 DEBUG (0): FINAL RESULT: MAX: 49
+0:11:59.750000020 DEBUG (0): 
 0:12:0.000000010 DEBUG (0): ##################################### 
 0:12:0.000000010 DEBUG (0): #######   ROUND   13    ############## 
 0:12:0.000000010 DEBUG (0): #####################################
-0:12:58.773437510 DEBUG (8): NodeID = 8 curdepth= 4
-0:12:58.773437510 DEBUG (8): Starting Data transmission to parent!
-0:12:58.773437510 DEBUG (8): measurement is: 45
-0:12:58.773437510 DEBUG (8): Node's MIN is: 45
-0:12:58.773437510 DEBUG (8): Measurement doesn't pass tct! Previous query: 44, Now measured: 45
-0:12:58.773437510 DEBUG (8): Doesn't send because of tct
-0:12:59.014648448 DEBUG (5): NodeID = 5 curdepth= 3
-0:12:59.014648448 DEBUG (5): Starting Data transmission to parent!
-0:12:59.014648448 DEBUG (5): measurement is: 14
-0:12:59.014648448 DEBUG (5): Node's MIN is: 14
-0:12:59.014648448 DEBUG (5): Measurement doesn't pass tct! Previous query: 14, Now measured: 14
-0:12:59.014648448 DEBUG (5): Doesn't send because of tct
+0:12:59.008789072 DEBUG (3): NodeID = 3 curdepth= 3
+0:12:59.008789072 DEBUG (3): Starting Data transmission to parent!
+0:12:59.008789072 DEBUG (3): measurement is: 45
+0:12:59.008789082 DEBUG (3): Node's MAX is: 45
+0:12:59.010589609 DEBUG (2): Measurement received from: 3
+0:12:59.010589619 DEBUG (2): Received from childID: 3 - max: 45
 0:12:59.020507823 DEBUG (7): NodeID = 7 curdepth= 3
 0:12:59.020507823 DEBUG (7): Starting Data transmission to parent!
-0:12:59.020507823 DEBUG (7): measurement is: 14
-0:12:59.020507823 DEBUG (7): ChildID: 8 has min: 44
-0:12:59.020507823 DEBUG (7): Node's MIN is: 14
-0:12:59.020507823 DEBUG (7): Measurement passes tct! Previous query: 42, Now sent: 14
-0:12:59.022827165 DEBUG (4): Received from childID: 7 - min: 14
+0:12:59.020507823 DEBUG (7): measurement is: 13
+0:12:59.020507833 DEBUG (7): Node's MAX is: 13
+0:12:59.030380212 DEBUG (2): Measurement received from: 7
+0:12:59.030380222 DEBUG (2): Received from childID: 7 - max: 13
+0:12:59.032226573 DEBUG (11): NodeID = 11 curdepth= 3
+0:12:59.032226573 DEBUG (11): Starting Data transmission to parent!
+0:12:59.032226573 DEBUG (11): measurement is: 2
+0:12:59.032226583 DEBUG (11): Node's MAX is: 2
+0:12:59.035156261 DEBUG (12): NodeID = 12 curdepth= 3
+0:12:59.035156261 DEBUG (12): Starting Data transmission to parent!
+0:12:59.035156261 DEBUG (12): measurement is: 4
+0:12:59.035156271 DEBUG (12): Node's MAX is: 4
+0:12:59.036071776 DEBUG (6): Measurement received from: 11
+0:12:59.036071786 DEBUG (6): Received from childID: 11 - max: 2
+0:12:59.038085948 DEBUG (13): NodeID = 13 curdepth= 3
+0:12:59.038085948 DEBUG (13): Starting Data transmission to parent!
+0:12:59.038085948 DEBUG (13): measurement is: 29
+0:12:59.038085958 DEBUG (13): Node's MAX is: 29
+0:12:59.040527333 DEBUG (8): Measurement received from: 12
+0:12:59.040527343 DEBUG (8): Received from childID: 12 - max: 4
+0:12:59.041015636 DEBUG (14): NodeID = 14 curdepth= 3
+0:12:59.041015636 DEBUG (14): Starting Data transmission to parent!
+0:12:59.041015636 DEBUG (14): measurement is: 40
+0:12:59.041015646 DEBUG (14): Node's MAX is: 40
+0:12:59.043823230 DEBUG (9): Measurement received from: 13
+0:12:59.043823240 DEBUG (9): Received from childID: 13 - max: 29
+0:12:59.043945324 DEBUG (15): NodeID = 15 curdepth= 3
+0:12:59.043945324 DEBUG (15): Starting Data transmission to parent!
+0:12:59.043945324 DEBUG (15): measurement is: 4
+0:12:59.043945334 DEBUG (15): Node's MAX is: 4
+0:12:59.048507668 DEBUG (10): Measurement received from: 14
+0:12:59.048507678 DEBUG (10): Received from childID: 14 - max: 40
+0:12:59.050689679 DEBUG (10): Measurement received from: 15
+0:12:59.050689689 DEBUG (10): Received from childID: 15 - max: 4
 0:12:59.255859385 DEBUG (2): NodeID = 2 curdepth= 2
 0:12:59.255859385 DEBUG (2): Starting Data transmission to parent!
-0:12:59.255859385 DEBUG (2): measurement is: 20
-0:12:59.255859385 DEBUG (2): Node's MIN is: 20
-0:12:59.255859385 DEBUG (2): Measurement passes tct! Previous query: 29, Now sent: 20
-0:12:59.261718760 DEBUG (4): NodeID = 4 curdepth= 2
-0:12:59.261718760 DEBUG (4): Starting Data transmission to parent!
-0:12:59.261718760 DEBUG (4): measurement is: 37
-0:12:59.261718760 DEBUG (4): ChildID: 5 has min: 14
-0:12:59.261718760 DEBUG (4): ChildID: 7 has min: 14
-0:12:59.261718760 DEBUG (4): Node's MIN is: 14
-0:12:59.261718760 DEBUG (4): Measurement doesn't pass tct! Previous query: 14, Now measured: 14
-0:12:59.261718760 DEBUG (4): Doesn't send because of tct
-0:12:59.265426610 DEBUG (1): Received from childID: 2 - min: 20
+0:12:59.255859385 DEBUG (2): measurement is: 8
+0:12:59.255859395 DEBUG (2): ChildID: 3 has max: 45
+0:12:59.255859395 DEBUG (2): ChildID: 7 has max: 13
+0:12:59.255859395 DEBUG (2): Node's MAX is: 45
+0:12:59.257644663 DEBUG (1): Measurement received from: 2
+0:12:59.257644673 DEBUG (1): Received from childID: 2 - max: 45
 0:12:59.267578135 DEBUG (6): NodeID = 6 curdepth= 2
 0:12:59.267578135 DEBUG (6): Starting Data transmission to parent!
-0:12:59.267578135 DEBUG (6): measurement is: 13
-0:12:59.267578135 DEBUG (6): Node's MIN is: 13
-0:12:59.267578135 DEBUG (6): Measurement passes tct! Previous query: 7, Now sent: 13
-0:12:59.276397684 DEBUG (3): Received from childID: 6 - min: 13
+0:12:59.267578135 DEBUG (6): measurement is: 12
+0:12:59.267578145 DEBUG (6): ChildID: 11 has max: 2
+0:12:59.267578145 DEBUG (6): Node's MAX is: 12
+0:12:59.271209716 DEBUG (1): Measurement received from: 6
+0:12:59.271209726 DEBUG (1): Received from childID: 6 - max: 12
+0:12:59.273437510 DEBUG (8): NodeID = 8 curdepth= 2
+0:12:59.273437510 DEBUG (8): Starting Data transmission to parent!
+0:12:59.273437510 DEBUG (8): measurement is: 49
+0:12:59.273437520 DEBUG (8): ChildID: 12 has max: 4
+0:12:59.273437520 DEBUG (8): Node's MAX is: 49
+0:12:59.276367198 DEBUG (9): NodeID = 9 curdepth= 2
+0:12:59.276367198 DEBUG (9): Starting Data transmission to parent!
+0:12:59.276367198 DEBUG (9): measurement is: 14
+0:12:59.276367208 DEBUG (9): ChildID: 13 has max: 29
+0:12:59.276367208 DEBUG (9): Node's MAX is: 29
+0:12:59.279296886 DEBUG (10): NodeID = 10 curdepth= 2
+0:12:59.279296886 DEBUG (10): Starting Data transmission to parent!
+0:12:59.279296886 DEBUG (10): measurement is: 30
+0:12:59.279296896 DEBUG (10): ChildID: 14 has max: 40
+0:12:59.279296896 DEBUG (10): ChildID: 15 has max: 4
+0:12:59.279296896 DEBUG (10): Node's MAX is: 40
+0:12:59.288406339 DEBUG (5): Measurement received from: 10
+0:12:59.288406349 DEBUG (5): Received from childID: 10 - max: 40
 0:12:59.502929697 DEBUG (1): NodeID = 1 curdepth= 1
 0:12:59.502929697 DEBUG (1): Starting Data transmission to parent!
-0:12:59.502929697 DEBUG (1): measurement is: 43
-0:12:59.502929697 DEBUG (1): ChildID: 2 has min: 20
-0:12:59.502929697 DEBUG (1): Node's MIN is: 20
-0:12:59.502929697 DEBUG (1): Measurement passes tct! Previous query: 29, Now sent: 20
-0:12:59.508789072 DEBUG (3): NodeID = 3 curdepth= 1
-0:12:59.508789072 DEBUG (3): Starting Data transmission to parent!
-0:12:59.508789072 DEBUG (3): measurement is: 16
-0:12:59.508789072 DEBUG (3): ChildID: 4 has min: 14
-0:12:59.508789072 DEBUG (3): ChildID: 6 has min: 13
-0:12:59.508789072 DEBUG (3): Node's MIN is: 13
-0:12:59.508789072 DEBUG (3): Measurement passes tct! Previous query: 1, Now sent: 13
+0:12:59.502929697 DEBUG (1): measurement is: 20
+0:12:59.502929707 DEBUG (1): ChildID: 2 has max: 45
+0:12:59.502929707 DEBUG (1): ChildID: 6 has max: 12
+0:12:59.502929707 DEBUG (1): Node's MAX is: 45
+0:12:59.508926376 DEBUG (0): Measurement received from: 1
+0:12:59.508926386 DEBUG (0): Received from childID: 1 - max: 45
+0:12:59.511718760 DEBUG (4): NodeID = 4 curdepth= 1
+0:12:59.511718760 DEBUG (4): Starting Data transmission to parent!
+0:12:59.511718760 DEBUG (4): measurement is: 37
+0:12:59.511718770 DEBUG (4): ChildID: 8 has max: 32
+0:12:59.511718770 DEBUG (4): ChildID: 9 has max: 47
+0:12:59.511718770 DEBUG (4): Node's MAX is: 47
+0:12:59.514648448 DEBUG (5): NodeID = 5 curdepth= 1
+0:12:59.514648448 DEBUG (5): Starting Data transmission to parent!
+0:12:59.514648448 DEBUG (5): measurement is: 32
+0:12:59.514648458 DEBUG (5): ChildID: 10 has max: 40
+0:12:59.514648458 DEBUG (5): Node's MAX is: 40
+0:12:59.524108852 DEBUG (0): Measurement received from: 5
+0:12:59.524108862 DEBUG (0): Received from childID: 5 - max: 40
 0:12:59.750000010 DEBUG (0): NodeID = 0 curdepth= 0
-0:12:59.750000010 DEBUG (0): measurement is: 10
-0:12:59.750000010 DEBUG (0): ChildID: 1 has min: 29
-0:12:59.750000010 DEBUG (0): ChildID: 3 has min: 1
-0:12:59.750000010 DEBUG (0): Node's MIN is: 1
-0:12:59.750000010 DEBUG (0): 
-0:12:59.750000010 DEBUG (0): FINAL RESULT: MIN: 1
-0:12:59.750000010 DEBUG (0): 
+0:12:59.750000010 DEBUG (0): measurement is: 42
+0:12:59.750000020 DEBUG (0): ChildID: 1 has max: 45
+0:12:59.750000020 DEBUG (0): ChildID: 4 has max: 47
+0:12:59.750000020 DEBUG (0): ChildID: 5 has max: 40
+0:12:59.750000020 DEBUG (0): Node's MAX is: 47
+0:12:59.750000020 DEBUG (0): 
+0:12:59.750000020 DEBUG (0): FINAL RESULT: MAX: 47
+0:12:59.750000020 DEBUG (0): 
 0:13:0.000000010 DEBUG (0): ##################################### 
 0:13:0.000000010 DEBUG (0): #######   ROUND   14    ############## 
 0:13:0.000000010 DEBUG (0): #####################################
-0:13:58.773437510 DEBUG (8): NodeID = 8 curdepth= 4
-0:13:58.773437510 DEBUG (8): Starting Data transmission to parent!
-0:13:58.773437510 DEBUG (8): measurement is: 25
-0:13:58.773437510 DEBUG (8): Node's MIN is: 25
-0:13:58.773437510 DEBUG (8): Measurement passes tct! Previous query: 44, Now sent: 25
-0:13:58.778442384 DEBUG (7): Received from childID: 8 - min: 25
-0:13:59.014648448 DEBUG (5): NodeID = 5 curdepth= 3
-0:13:59.014648448 DEBUG (5): Starting Data transmission to parent!
-0:13:59.014648448 DEBUG (5): measurement is: 48
-0:13:59.014648448 DEBUG (5): Node's MIN is: 48
-0:13:59.014648448 DEBUG (5): Measurement passes tct! Previous query: 14, Now sent: 48
+0:13:59.008789072 DEBUG (3): NodeID = 3 curdepth= 3
+0:13:59.008789072 DEBUG (3): Starting Data transmission to parent!
+0:13:59.008789072 DEBUG (3): measurement is: 12
+0:13:59.008789082 DEBUG (3): Node's MAX is: 12
 0:13:59.020507823 DEBUG (7): NodeID = 7 curdepth= 3
 0:13:59.020507823 DEBUG (7): Starting Data transmission to parent!
-0:13:59.020507823 DEBUG (7): measurement is: 47
-0:13:59.020507823 DEBUG (7): ChildID: 8 has min: 25
-0:13:59.020507823 DEBUG (7): Node's MIN is: 25
-0:13:59.020507823 DEBUG (7): Measurement passes tct! Previous query: 14, Now sent: 25
-0:13:59.023269667 DEBUG (4): Received from childID: 7 - min: 25
-0:13:59.025360075 DEBUG (4): Received from childID: 5 - min: 48
+0:13:59.020507823 DEBUG (7): measurement is: 7
+0:13:59.020507833 DEBUG (7): Node's MAX is: 7
+0:13:59.020767162 DEBUG (2): Measurement received from: 3
+0:13:59.020767172 DEBUG (2): Received from childID: 3 - max: 12
+0:13:59.024291990 DEBUG (2): Measurement received from: 7
+0:13:59.024292000 DEBUG (2): Received from childID: 7 - max: 7
+0:13:59.032226573 DEBUG (11): NodeID = 11 curdepth= 3
+0:13:59.032226573 DEBUG (11): Starting Data transmission to parent!
+0:13:59.032226573 DEBUG (11): measurement is: 44
+0:13:59.032226583 DEBUG (11): Node's MAX is: 44
+0:13:59.035156261 DEBUG (12): NodeID = 12 curdepth= 3
+0:13:59.035156261 DEBUG (12): Starting Data transmission to parent!
+0:13:59.035156261 DEBUG (12): measurement is: 47
+0:13:59.035156271 DEBUG (12): Node's MAX is: 47
+0:13:59.036788934 DEBUG (6): Measurement received from: 11
+0:13:59.036788944 DEBUG (6): Received from childID: 11 - max: 44
+0:13:59.038085948 DEBUG (13): NodeID = 13 curdepth= 3
+0:13:59.038085948 DEBUG (13): Starting Data transmission to parent!
+0:13:59.038085948 DEBUG (13): measurement is: 44
+0:13:59.038085958 DEBUG (13): Node's MAX is: 44
+0:13:59.038177493 DEBUG (8): Measurement received from: 12
+0:13:59.038177503 DEBUG (8): Received from childID: 12 - max: 47
+0:13:59.041015636 DEBUG (14): NodeID = 14 curdepth= 3
+0:13:59.041015636 DEBUG (14): Starting Data transmission to parent!
+0:13:59.041015636 DEBUG (14): measurement is: 49
+0:13:59.041015646 DEBUG (14): Node's MAX is: 49
+0:13:59.043945324 DEBUG (15): NodeID = 15 curdepth= 3
+0:13:59.043945324 DEBUG (15): Starting Data transmission to parent!
+0:13:59.043945324 DEBUG (15): measurement is: 26
+0:13:59.043945334 DEBUG (15): Node's MAX is: 26
+0:13:59.046768159 DEBUG (9): Measurement received from: 13
+0:13:59.046768169 DEBUG (9): Received from childID: 13 - max: 44
+0:13:59.048629737 DEBUG (10): Measurement received from: 14
+0:13:59.048629747 DEBUG (10): Received from childID: 14 - max: 49
+0:13:59.051773047 DEBUG (10): Measurement received from: 15
+0:13:59.051773057 DEBUG (10): Received from childID: 15 - max: 26
 0:13:59.255859385 DEBUG (2): NodeID = 2 curdepth= 2
 0:13:59.255859385 DEBUG (2): Starting Data transmission to parent!
-0:13:59.255859385 DEBUG (2): measurement is: 20
-0:13:59.255859385 DEBUG (2): Node's MIN is: 20
-0:13:59.255859385 DEBUG (2): Measurement doesn't pass tct! Previous query: 20, Now measured: 20
-0:13:59.255859385 DEBUG (2): Doesn't send because of tct
-0:13:59.261718760 DEBUG (4): NodeID = 4 curdepth= 2
-0:13:59.261718760 DEBUG (4): Starting Data transmission to parent!
-0:13:59.261718760 DEBUG (4): measurement is: 30
-0:13:59.261718760 DEBUG (4): ChildID: 5 has min: 48
-0:13:59.261718760 DEBUG (4): ChildID: 7 has min: 25
-0:13:59.261718760 DEBUG (4): Node's MIN is: 25
-0:13:59.261718760 DEBUG (4): Measurement passes tct! Previous query: 14, Now sent: 25
-0:13:59.264953624 DEBUG (3): Received from childID: 4 - min: 25
+0:13:59.255859385 DEBUG (2): measurement is: 49
+0:13:59.255859395 DEBUG (2): ChildID: 3 has max: 12
+0:13:59.255859395 DEBUG (2): ChildID: 7 has max: 7
+0:13:59.255859395 DEBUG (2): Node's MAX is: 49
+0:13:59.260620109 DEBUG (1): Measurement received from: 2
+0:13:59.260620119 DEBUG (1): Received from childID: 2 - max: 49
 0:13:59.267578135 DEBUG (6): NodeID = 6 curdepth= 2
 0:13:59.267578135 DEBUG (6): Starting Data transmission to parent!
-0:13:59.267578135 DEBUG (6): measurement is: 25
-0:13:59.267578135 DEBUG (6): Node's MIN is: 25
-0:13:59.267578135 DEBUG (6): Measurement passes tct! Previous query: 13, Now sent: 25
-0:13:59.272811889 DEBUG (3): Received from childID: 6 - min: 25
+0:13:59.267578135 DEBUG (6): measurement is: 16
+0:13:59.267578145 DEBUG (6): ChildID: 11 has max: 44
+0:13:59.267578145 DEBUG (6): Node's MAX is: 44
+0:13:59.272796621 DEBUG (1): Measurement received from: 6
+0:13:59.272796631 DEBUG (1): Received from childID: 6 - max: 44
+0:13:59.273437510 DEBUG (8): NodeID = 8 curdepth= 2
+0:13:59.273437510 DEBUG (8): Starting Data transmission to parent!
+0:13:59.273437510 DEBUG (8): measurement is: 13
+0:13:59.273437520 DEBUG (8): ChildID: 12 has max: 47
+0:13:59.273437520 DEBUG (8): Node's MAX is: 47
+0:13:59.276367198 DEBUG (9): NodeID = 9 curdepth= 2
+0:13:59.276367198 DEBUG (9): Starting Data transmission to parent!
+0:13:59.276367198 DEBUG (9): measurement is: 17
+0:13:59.276367208 DEBUG (9): ChildID: 13 has max: 44
+0:13:59.276367208 DEBUG (9): Node's MAX is: 44
+0:13:59.279296886 DEBUG (10): NodeID = 10 curdepth= 2
+0:13:59.279296886 DEBUG (10): Starting Data transmission to parent!
+0:13:59.279296886 DEBUG (10): measurement is: 33
+0:13:59.279296896 DEBUG (10): ChildID: 14 has max: 49
+0:13:59.279296896 DEBUG (10): ChildID: 15 has max: 26
+0:13:59.279296896 DEBUG (10): Node's MAX is: 49
+0:13:59.279357913 DEBUG (4): Measurement received from: 9
+0:13:59.279357923 DEBUG (4): Received from childID: 9 - max: 44
+0:13:59.284011799 DEBUG (4): Measurement received from: 8
+0:13:59.284011809 DEBUG (4): Received from childID: 8 - max: 47
+0:13:59.286499002 DEBUG (5): Measurement received from: 10
+0:13:59.286499012 DEBUG (5): Received from childID: 10 - max: 49
 0:13:59.502929697 DEBUG (1): NodeID = 1 curdepth= 1
 0:13:59.502929697 DEBUG (1): Starting Data transmission to parent!
-0:13:59.502929697 DEBUG (1): measurement is: 17
-0:13:59.502929697 DEBUG (1): ChildID: 2 has min: 20
-0:13:59.502929697 DEBUG (1): Node's MIN is: 17
-0:13:59.502929697 DEBUG (1): Measurement passes tct! Previous query: 20, Now sent: 17
-0:13:59.508789072 DEBUG (3): NodeID = 3 curdepth= 1
-0:13:59.508789072 DEBUG (3): Starting Data transmission to parent!
-0:13:59.508789072 DEBUG (3): measurement is: 20
-0:13:59.508789072 DEBUG (3): ChildID: 4 has min: 25
-0:13:59.508789072 DEBUG (3): ChildID: 6 has min: 25
-0:13:59.508789072 DEBUG (3): Node's MIN is: 20
-0:13:59.508789072 DEBUG (3): Measurement passes tct! Previous query: 13, Now sent: 20
-0:13:59.510986345 DEBUG (0): Received from childID: 3 - min: 20
-0:13:59.513519255 DEBUG (0): Received from childID: 1 - min: 17
+0:13:59.502929697 DEBUG (1): measurement is: 48
+0:13:59.502929707 DEBUG (1): ChildID: 2 has max: 49
+0:13:59.502929707 DEBUG (1): ChildID: 6 has max: 44
+0:13:59.502929707 DEBUG (1): Node's MAX is: 49
+0:13:59.507217402 DEBUG (0): Measurement received from: 1
+0:13:59.507217412 DEBUG (0): Received from childID: 1 - max: 49
+0:13:59.511718760 DEBUG (4): NodeID = 4 curdepth= 1
+0:13:59.511718760 DEBUG (4): Starting Data transmission to parent!
+0:13:59.511718760 DEBUG (4): measurement is: 24
+0:13:59.511718770 DEBUG (4): ChildID: 8 has max: 47
+0:13:59.511718770 DEBUG (4): ChildID: 9 has max: 44
+0:13:59.511718770 DEBUG (4): Node's MAX is: 47
+0:13:59.514648448 DEBUG (5): NodeID = 5 curdepth= 1
+0:13:59.514648448 DEBUG (5): Starting Data transmission to parent!
+0:13:59.514648448 DEBUG (5): measurement is: 31
+0:13:59.514648458 DEBUG (5): ChildID: 10 has max: 49
+0:13:59.514648458 DEBUG (5): Node's MAX is: 49
+0:13:59.517105091 DEBUG (0): Measurement received from: 4
+0:13:59.517105101 DEBUG (0): Received from childID: 4 - max: 47
+0:13:59.519256585 DEBUG (0): Measurement received from: 5
+0:13:59.519256595 DEBUG (0): Received from childID: 5 - max: 49
 0:13:59.750000010 DEBUG (0): NodeID = 0 curdepth= 0
-0:13:59.750000010 DEBUG (0): measurement is: 17
-0:13:59.750000010 DEBUG (0): ChildID: 1 has min: 17
-0:13:59.750000010 DEBUG (0): ChildID: 3 has min: 20
-0:13:59.750000010 DEBUG (0): Node's MIN is: 17
-0:13:59.750000010 DEBUG (0): 
-0:13:59.750000010 DEBUG (0): FINAL RESULT: MIN: 17
-0:13:59.750000010 DEBUG (0): 
+0:13:59.750000010 DEBUG (0): measurement is: 39
+0:13:59.750000020 DEBUG (0): ChildID: 1 has max: 49
+0:13:59.750000020 DEBUG (0): ChildID: 4 has max: 47
+0:13:59.750000020 DEBUG (0): ChildID: 5 has max: 49
+0:13:59.750000020 DEBUG (0): Node's MAX is: 49
+0:13:59.750000020 DEBUG (0): 
+0:13:59.750000020 DEBUG (0): FINAL RESULT: MAX: 49
+0:13:59.750000020 DEBUG (0): 
 0:14:0.000000010 DEBUG (0): ##################################### 
 0:14:0.000000010 DEBUG (0): #######   ROUND   15    ############## 
 0:14:0.000000010 DEBUG (0): #####################################
-0:14:58.773437510 DEBUG (8): NodeID = 8 curdepth= 4
-0:14:58.773437510 DEBUG (8): Starting Data transmission to parent!
-0:14:58.773437510 DEBUG (8): measurement is: 28
-0:14:58.773437510 DEBUG (8): Node's MIN is: 28
-0:14:58.773437510 DEBUG (8): Measurement doesn't pass tct! Previous query: 25, Now measured: 28
-0:14:58.773437510 DEBUG (8): Doesn't send because of tct
-0:14:59.014648448 DEBUG (5): NodeID = 5 curdepth= 3
-0:14:59.014648448 DEBUG (5): Starting Data transmission to parent!
-0:14:59.014648448 DEBUG (5): measurement is: 17
-0:14:59.014648448 DEBUG (5): Node's MIN is: 17
-0:14:59.014648448 DEBUG (5): Measurement passes tct! Previous query: 48, Now sent: 17
-0:14:59.017425551 DEBUG (4): Received from childID: 5 - min: 17
+0:14:59.008789072 DEBUG (3): NodeID = 3 curdepth= 3
+0:14:59.008789072 DEBUG (3): Starting Data transmission to parent!
+0:14:59.008789072 DEBUG (3): measurement is: 14
+0:14:59.008789082 DEBUG (3): Node's MAX is: 14
+0:14:59.017532317 DEBUG (2): Measurement received from: 3
+0:14:59.017532327 DEBUG (2): Received from childID: 3 - max: 14
 0:14:59.020507823 DEBUG (7): NodeID = 7 curdepth= 3
 0:14:59.020507823 DEBUG (7): Starting Data transmission to parent!
-0:14:59.020507823 DEBUG (7): measurement is: 9
-0:14:59.020507823 DEBUG (7): ChildID: 8 has min: 25
-0:14:59.020507823 DEBUG (7): Node's MIN is: 9
-0:14:59.020507823 DEBUG (7): Measurement passes tct! Previous query: 25, Now sent: 9
-0:14:59.025207522 DEBUG (4): Received from childID: 7 - min: 9
+0:14:59.020507823 DEBUG (7): measurement is: 31
+0:14:59.020507833 DEBUG (7): Node's MAX is: 31
+0:14:59.029724088 DEBUG (2): Measurement received from: 7
+0:14:59.029724098 DEBUG (2): Received from childID: 7 - max: 31
+0:14:59.032226573 DEBUG (11): NodeID = 11 curdepth= 3
+0:14:59.032226573 DEBUG (11): Starting Data transmission to parent!
+0:14:59.032226573 DEBUG (11): measurement is: 5
+0:14:59.032226583 DEBUG (11): Node's MAX is: 5
+0:14:59.035156261 DEBUG (12): NodeID = 12 curdepth= 3
+0:14:59.035156261 DEBUG (12): Starting Data transmission to parent!
+0:14:59.035156261 DEBUG (12): measurement is: 12
+0:14:59.035156271 DEBUG (12): Node's MAX is: 12
+0:14:59.038085948 DEBUG (13): NodeID = 13 curdepth= 3
+0:14:59.038085948 DEBUG (13): Starting Data transmission to parent!
+0:14:59.038085948 DEBUG (13): measurement is: 48
+0:14:59.038085958 DEBUG (13): Node's MAX is: 48
+0:14:59.041015636 DEBUG (14): NodeID = 14 curdepth= 3
+0:14:59.041015636 DEBUG (14): Starting Data transmission to parent!
+0:14:59.041015636 DEBUG (14): measurement is: 0
+0:14:59.041015646 DEBUG (14): Node's MAX is: 0
+0:14:59.041686977 DEBUG (6): Measurement received from: 11
+0:14:59.041686987 DEBUG (6): Received from childID: 11 - max: 5
+0:14:59.041915892 DEBUG (9): Measurement received from: 13
+0:14:59.041915902 DEBUG (9): Received from childID: 13 - max: 48
+0:14:59.043792695 DEBUG (8): Measurement received from: 12
+0:14:59.043792705 DEBUG (8): Received from childID: 12 - max: 12
+0:14:59.043945324 DEBUG (15): NodeID = 15 curdepth= 3
+0:14:59.043945324 DEBUG (15): Starting Data transmission to parent!
+0:14:59.043945324 DEBUG (15): measurement is: 41
+0:14:59.043945334 DEBUG (15): Node's MAX is: 41
+0:14:59.045425410 DEBUG (10): Measurement received from: 14
+0:14:59.045425420 DEBUG (10): Received from childID: 14 - max: 0
+0:14:59.047882078 DEBUG (10): Measurement received from: 15
+0:14:59.047882088 DEBUG (10): Received from childID: 15 - max: 41
 0:14:59.255859385 DEBUG (2): NodeID = 2 curdepth= 2
 0:14:59.255859385 DEBUG (2): Starting Data transmission to parent!
-0:14:59.255859385 DEBUG (2): measurement is: 13
-0:14:59.255859385 DEBUG (2): Node's MIN is: 13
-0:14:59.255859385 DEBUG (2): Measurement passes tct! Previous query: 20, Now sent: 13
-0:14:59.261291502 DEBUG (1): Received from childID: 2 - min: 13
-0:14:59.261718760 DEBUG (4): NodeID = 4 curdepth= 2
-0:14:59.261718760 DEBUG (4): Starting Data transmission to parent!
-0:14:59.261718760 DEBUG (4): measurement is: 6
-0:14:59.261718760 DEBUG (4): ChildID: 5 has min: 17
-0:14:59.261718760 DEBUG (4): ChildID: 7 has min: 9
-0:14:59.261718760 DEBUG (4): Node's MIN is: 6
-0:14:59.261718760 DEBUG (4): Measurement passes tct! Previous query: 25, Now sent: 6
-0:14:59.266571047 DEBUG (3): Received from childID: 4 - min: 6
+0:14:59.255859385 DEBUG (2): measurement is: 40
+0:14:59.255859395 DEBUG (2): ChildID: 3 has max: 14
+0:14:59.255859395 DEBUG (2): ChildID: 7 has max: 31
+0:14:59.255859395 DEBUG (2): Node's MAX is: 40
+0:14:59.264480560 DEBUG (1): Measurement received from: 2
+0:14:59.264480570 DEBUG (1): Received from childID: 2 - max: 40
 0:14:59.267578135 DEBUG (6): NodeID = 6 curdepth= 2
 0:14:59.267578135 DEBUG (6): Starting Data transmission to parent!
-0:14:59.267578135 DEBUG (6): measurement is: 20
-0:14:59.267578135 DEBUG (6): Node's MIN is: 20
-0:14:59.267578135 DEBUG (6): Measurement passes tct! Previous query: 25, Now sent: 20
-0:14:59.272903441 DEBUG (3): Received from childID: 6 - min: 20
+0:14:59.267578135 DEBUG (6): measurement is: 2
+0:14:59.267578145 DEBUG (6): ChildID: 11 has max: 5
+0:14:59.267578145 DEBUG (6): Node's MAX is: 5
+0:14:59.273437510 DEBUG (8): NodeID = 8 curdepth= 2
+0:14:59.273437510 DEBUG (8): Starting Data transmission to parent!
+0:14:59.273437510 DEBUG (8): measurement is: 45
+0:14:59.273437520 DEBUG (8): ChildID: 12 has max: 12
+0:14:59.273437520 DEBUG (8): Node's MAX is: 45
+0:14:59.275192236 DEBUG (1): Measurement received from: 6
+0:14:59.275192246 DEBUG (1): Received from childID: 6 - max: 5
+0:14:59.276367198 DEBUG (9): NodeID = 9 curdepth= 2
+0:14:59.276367198 DEBUG (9): Starting Data transmission to parent!
+0:14:59.276367198 DEBUG (9): measurement is: 2
+0:14:59.276367208 DEBUG (9): ChildID: 13 has max: 48
+0:14:59.276367208 DEBUG (9): Node's MAX is: 48
+0:14:59.276733400 DEBUG (4): Measurement received from: 8
+0:14:59.276733410 DEBUG (4): Received from childID: 8 - max: 45
+0:14:59.279296886 DEBUG (10): NodeID = 10 curdepth= 2
+0:14:59.279296886 DEBUG (10): Starting Data transmission to parent!
+0:14:59.279296886 DEBUG (10): measurement is: 6
+0:14:59.279296896 DEBUG (10): ChildID: 14 has max: 0
+0:14:59.279296896 DEBUG (10): ChildID: 15 has max: 41
+0:14:59.279296896 DEBUG (10): Node's MAX is: 41
+0:14:59.280288694 DEBUG (4): Measurement received from: 9
+0:14:59.280288704 DEBUG (4): Received from childID: 9 - max: 48
+0:14:59.289230309 DEBUG (5): Measurement received from: 10
+0:14:59.289230319 DEBUG (5): Received from childID: 10 - max: 41
 0:14:59.502929697 DEBUG (1): NodeID = 1 curdepth= 1
 0:14:59.502929697 DEBUG (1): Starting Data transmission to parent!
-0:14:59.502929697 DEBUG (1): measurement is: 10
-0:14:59.502929697 DEBUG (1): ChildID: 2 has min: 13
-0:14:59.502929697 DEBUG (1): Node's MIN is: 10
-0:14:59.502929697 DEBUG (1): Measurement passes tct! Previous query: 17, Now sent: 10
-0:14:59.506851203 DEBUG (0): Received from childID: 1 - min: 10
-0:14:59.508789072 DEBUG (3): NodeID = 3 curdepth= 1
-0:14:59.508789072 DEBUG (3): Starting Data transmission to parent!
-0:14:59.508789072 DEBUG (3): measurement is: 36
-0:14:59.508789072 DEBUG (3): ChildID: 4 has min: 6
-0:14:59.508789072 DEBUG (3): ChildID: 6 has min: 20
-0:14:59.508789072 DEBUG (3): Node's MIN is: 6
-0:14:59.508789072 DEBUG (3): Measurement passes tct! Previous query: 20, Now sent: 6
+0:14:59.502929697 DEBUG (1): measurement is: 21
+0:14:59.502929707 DEBUG (1): ChildID: 2 has max: 40
+0:14:59.502929707 DEBUG (1): ChildID: 6 has max: 5
+0:14:59.502929707 DEBUG (1): Node's MAX is: 40
+0:14:59.511718760 DEBUG (4): NodeID = 4 curdepth= 1
+0:14:59.511718760 DEBUG (4): Starting Data transmission to parent!
+0:14:59.511718760 DEBUG (4): measurement is: 41
+0:14:59.511718770 DEBUG (4): ChildID: 8 has max: 45
+0:14:59.511718770 DEBUG (4): ChildID: 9 has max: 48
+0:14:59.511718770 DEBUG (4): Node's MAX is: 48
+0:14:59.514648448 DEBUG (5): NodeID = 5 curdepth= 1
+0:14:59.514648448 DEBUG (5): Starting Data transmission to parent!
+0:14:59.514648448 DEBUG (5): measurement is: 33
+0:14:59.514648458 DEBUG (5): ChildID: 10 has max: 41
+0:14:59.514648458 DEBUG (5): Node's MAX is: 41
+0:14:59.521469096 DEBUG (0): Measurement received from: 5
+0:14:59.521469106 DEBUG (0): Received from childID: 5 - max: 41
+0:14:59.523696849 DEBUG (0): Measurement received from: 4
+0:14:59.523696859 DEBUG (0): Received from childID: 4 - max: 48
 0:14:59.750000010 DEBUG (0): NodeID = 0 curdepth= 0
-0:14:59.750000010 DEBUG (0): measurement is: 29
-0:14:59.750000010 DEBUG (0): ChildID: 1 has min: 10
-0:14:59.750000010 DEBUG (0): ChildID: 3 has min: 20
-0:14:59.750000010 DEBUG (0): Node's MIN is: 10
-0:14:59.750000010 DEBUG (0): 
-0:14:59.750000010 DEBUG (0): FINAL RESULT: MIN: 10
-0:14:59.750000010 DEBUG (0): 
+0:14:59.750000010 DEBUG (0): measurement is: 34
+0:14:59.750000020 DEBUG (0): ChildID: 1 has max: 49
+0:14:59.750000020 DEBUG (0): ChildID: 4 has max: 48
+0:14:59.750000020 DEBUG (0): ChildID: 5 has max: 41
+0:14:59.750000020 DEBUG (0): Node's MAX is: 49
+0:14:59.750000020 DEBUG (0): 
+0:14:59.750000020 DEBUG (0): FINAL RESULT: MAX: 49
+0:14:59.750000020 DEBUG (0): 

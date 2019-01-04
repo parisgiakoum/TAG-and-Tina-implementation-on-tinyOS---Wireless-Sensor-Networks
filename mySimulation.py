@@ -10,7 +10,7 @@ f=sys.stdout #open('./logfile.txt','w')
 SIM_END_TIME= 900 * t.ticksPerSecond()
 
 # define grid size
-D = 3
+D = 4
 
 print "TicksPerSecond : ", t.ticksPerSecond(),"\n"
 

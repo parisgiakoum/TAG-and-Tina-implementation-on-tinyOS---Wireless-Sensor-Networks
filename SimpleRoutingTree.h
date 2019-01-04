@@ -26,7 +26,7 @@ enum{
 //////////////////////////////////////
 };
 
-// Tina mode
+// Tina mode or Extended TAG with 2 queries Routing
 typedef nx_struct Routing4field
 {
 	nx_uint8_t mode;
@@ -35,7 +35,7 @@ typedef nx_struct Routing4field
 	nx_uint8_t depth;
 } Routing4field;
 
-// Extended mode - 1 query
+// Extended TAG with 1 query Routing
 typedef nx_struct Routing3field
 {
 	nx_uint8_t mode;
@@ -71,7 +71,7 @@ typedef nx_struct TwoMeas8bit
 {
         nx_uint8_t measurement1;
         nx_uint8_t measurement2;
-        // flag
+        // Holds type of queries
         nx_uint8_t measurementQueries[MAX_QUERIES];
 } TwoMeas8bit;
 
